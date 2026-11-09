@@ -1,0 +1,33 @@
+{
+  "_comment": "Каналы из этого списка НИКОГДА не получают регион. Их channel_type = 'federal'. Можно дополнять по мере обнаружения новых федеральных каналов.",
+  "channels": [
+    "breakingmash",
+    "bbbreaking",
+    "shot_shot",
+    "bazabazon",
+    "rian_ru",
+    "tass_agency",
+    "rt_russian",
+    "readovkanews",
+    "lentachold",
+    "rbc_news",
+    "exploitex",
+    "forklog",
+    "rybar",
+    "nplus1",
+    "sport24",
+    "kommersant",
+    "kommersant_ru",
+    "vedomosti",
+    "forbesrussia",
+    "banki_ru",
+    "meduzalive",
+    "novaya_europe",
+    "moscowtimes",
+    "govoritmoskva",
+    "radiomayak",
+    "bbcrussian",
+    "dwglavnoe",
+    "currenttime"
+  ]
+}

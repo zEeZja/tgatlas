@@ -1,0 +1,2 @@
+﻿username,name,old_region,region_hint,new_region,channel_type,confidence,source,reason,candidates
+kazan,КазаньДА | Новости Казани,,,Республика Татарстан,regional,0.91,username-код:kazan,Определён по региональным признакам,"[{""region"": ""Республика Татарстан"", ""confidence"": 0.91}]"

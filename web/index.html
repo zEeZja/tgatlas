@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111818">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>TG Atlas — карта каналов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="logo" href="./" aria-label="TG Atlas — главная"><span class="logo-icon">↗</span> TG<span>ATLAS</span><small>НЕЗАВИСИМЫЙ КАТАЛОГ</small></a><div class="top-status"><i></i> Исследуйте информационное пространство</div><button id="help-toggle" class="quiet" aria-expanded="false">Как это работает <span>?</span></button></header>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="head">
+        <div class="brand">
+          <span class="eyebrow">ОБЗОР КАТАЛОГА / 01</span>
+          <div>
+            <h1>У каждого канала <br>своя точка на карте.</h1>
+            <p class="muted small">Находите голоса, темы и регионы</p>
+          </div>
+        </div>
+      </header>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <div class="search-box"><span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="text" placeholder="Название, @канал или тема…" spellcheck="false" aria-label="Поиск каналов">
+        <button id="clear" class="clear" aria-label="Очистить" hidden>×</button>
+      </div>
+
+      <div class="filters">
+        <div class="filter-label">Категория</div>
+        <div id="chips" class="chips"></div>
+        <div class="filter-row">
+          <div id="region-block" hidden>
+            <div class="filter-label">Регион</div>
+            <select id="region" aria-label="Регион">
+              <option value="">Все регионы</option>
+            </select>
+          </div>
+          <div>
+            <div class="filter-label">Страна</div>
+            <select id="country" aria-label="Страна">
+              <option value="">Все страны</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-head">
+        <span>КАНАЛЫ <b id="count">0</b></span><select id="sort" aria-label="Сортировка каналов"><option value="popular">По аудитории ↓</option><option value="name">По названию А–Я</option></select>
+      </div>
+
+      <ul id="list" class="results"></ul>
+    </aside>
+
+    <main id="map-wrap" class="map-wrap">
+      <canvas id="map" aria-label="Интерактивная карта каналов. Для выбора с клавиатуры используйте список каналов."></canvas>
+      <div class="map-title"><span class="eyebrow">ИНФОРМАЦИОННАЯ ГЕОГРАФИЯ</span><h2>Карта каналов<span> / Россия</span></h2><p>Одна точка — один региональный канал</p></div>
+      <button id="mobile-toggle" class="mobile-toggle">Показать карту →</button>
+      <div class="map-controls"><button id="zoom-in" aria-label="Приблизить">+</button><button id="zoom-out" aria-label="Отдалить">−</button><button id="fit-map" aria-label="Показать всю карту">⤢</button></div>
+      <div id="map-summary" class="map-summary" aria-live="polite"></div>
+      <div id="help" class="help" hidden><b>Исследуйте карту</b><p>Перетаскивайте карту и меняйте масштаб колесом или кнопками + и −. Нажмите на точку или канал в списке, чтобы открыть карточку.</p><p>Фильтры применяются к списку и карте. Федеральные каналы и каналы без координат доступны в списке.</p><p>Нажмите / для поиска, Esc — чтобы закрыть карточку.</p></div>
+      <aside id="detail" class="detail" hidden></aside>
+      <div class="map-hint"><span class="hint-dot"></span> Географическая раскладка <span class="hint-desktop">· Перетаскивайте, чтобы исследовать</span></div>
+    </main>
+  </div>
+
+  <script src="data/channels.js"></script>
+  <script src="data/geo_map.js"></script>
+  <script src="api.js"></script>
+  <script src="demo.js"></script>
+  <script src="layout.js"></script>
+  <script src="search.js"></script>
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

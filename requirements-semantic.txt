@@ -1,0 +1,5 @@
+# Необязательная экспериментальная семантическая раскладка (UMAP/t-SNE).
+-r requirements.txt
+sentence-transformers>=2.6.0
+umap-learn>=0.5.5
+scikit-learn>=1.3.0

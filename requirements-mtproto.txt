@@ -1,0 +1,4 @@
+# Необязательный поиск и обогащение через Telegram MTProto.
+-r requirements.txt
+telethon>=1.36.0,<2.0
+PySocks>=1.7.1

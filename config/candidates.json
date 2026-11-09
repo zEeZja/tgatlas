@@ -1,0 +1,4120 @@
+{
+  "candidates": [
+    {
+      "username": "mos_glyanec",
+      "title": "Москва носит Биркин",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 152016
+    },
+    {
+      "username": "tatlersheroine",
+      "title": "Героиня Татлера",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 100989
+    },
+    {
+      "username": "newsibirsk01",
+      "title": "Новосибирск №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11265
+    },
+    {
+      "username": "mskonline2024",
+      "title": "Москва онлайн",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 174874
+    },
+    {
+      "username": "expertosphere",
+      "title": "Экспертосфера",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 28077
+    },
+    {
+      "username": "frank_media",
+      "title": "Frank Media",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 30745
+    },
+    {
+      "username": "fintexno",
+      "title": "Финтехно",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 29056
+    },
+    {
+      "username": "businessincognita",
+      "title": "Business Incognita",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 20741
+    },
+    {
+      "username": "ogomoscow",
+      "title": "Москва не спит • Афиша, новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 187072
+    },
+    {
+      "username": "moscownice",
+      "title": "Москва красивая",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 134856
+    },
+    {
+      "username": "moskvaz",
+      "title": "МоскваДА | Новости Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 55691
+    },
+    {
+      "username": "progorodmsk",
+      "title": "Привет, Москва!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 89716
+    },
+    {
+      "username": "msk_state",
+      "title": "Эй, Москва!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 112931
+    },
+    {
+      "username": "moskvichka_mag",
+      "title": "Журнал «Москвичка»",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 102206
+    },
+    {
+      "username": "tyumen1",
+      "title": "Тюмень №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28838
+    },
+    {
+      "username": "TemuTyumenii",
+      "title": "Темы Тюмени | URA.RU",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22535
+    },
+    {
+      "username": "smi_tyumen",
+      "title": "Новости Тюмени и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 52627
+    },
+    {
+      "username": "bankser",
+      "title": "Деньги в банке",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 129699
+    },
+    {
+      "username": "spletni_tg",
+      "title": "Только никому...",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 189262
+    },
+    {
+      "username": "moscowsee",
+      "title": "Москва | афиша, досуг",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 79264
+    },
+    {
+      "username": "ekaterinburg_smi",
+      "title": "Новости Екатеринбурга и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 55101
+    },
+    {
+      "username": "SvetEKB",
+      "title": "СВЕТ💡Екатеринбург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 81983
+    },
+    {
+      "username": "kudaekb",
+      "title": "Афиша Екатеринбурга | Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 82564
+    },
+    {
+      "username": "today_tyumen",
+      "title": "Тюмень Live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 54935
+    },
+    {
+      "username": "moy_tumen",
+      "title": "Подслушано Тюмень",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 33802
+    },
+    {
+      "username": "tumenjtop",
+      "title": "Тюмень с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 48645
+    },
+    {
+      "username": "NashGorodru",
+      "title": "Наш Город | Тюмень",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21935
+    },
+    {
+      "username": "belaya_kaska",
+      "title": "Белая Каска",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 85297
+    },
+    {
+      "username": "dvizhpronedvizh",
+      "title": "Движ про недвиж",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 69880
+    },
+    {
+      "username": "yo_burg",
+      "title": "Екатеринбург live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 62308
+    },
+    {
+      "username": "eliterealestatemoscow",
+      "title": "Элитная недвижимость Москвы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 38760
+    },
+    {
+      "username": "znaech_li_ty_msk",
+      "title": "Знаешь ли ты, Москва?",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21700
+    },
+    {
+      "username": "mosvorona",
+      "title": "Вороны-москвички",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 45364
+    },
+    {
+      "username": "mosgul",
+      "title": "Московские Гуляки | Афиша Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 94436
+    },
+    {
+      "username": "Mskmeet",
+      "title": "Москва встречает / Афиша",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 97054
+    },
+    {
+      "username": "moskuda",
+      "title": "МосАфиша",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 181641
+    },
+    {
+      "username": "msk1_news",
+      "title": "MSK1.RU | Новости Москвы | Россия",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 123232
+    },
+    {
+      "username": "moscu",
+      "title": "Москва впечатляет",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 170658
+    },
+    {
+      "username": "moskwa_life",
+      "title": "Москва Life • Новости Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 74029
+    },
+    {
+      "username": "citymsc",
+      "title": "Москва online",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 80700
+    },
+    {
+      "username": "hamovniki_news24",
+      "title": "Хамовники 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5250
+    },
+    {
+      "username": "cao_ms",
+      "title": "ЦАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12725
+    },
+    {
+      "username": "investorbiz",
+      "title": "Инвест ревью | Финансы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 129359
+    },
+    {
+      "username": "grechne",
+      "title": "Гречка в долларах",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 69955
+    },
+    {
+      "username": "ifinvest",
+      "title": "investify! Финансы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 114787
+    },
+    {
+      "username": "ekattop",
+      "title": "Екатеринбург с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 35656
+    },
+    {
+      "username": "killerfeat",
+      "title": "Киллер-фича",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 110037
+    },
+    {
+      "username": "ktogorod",
+      "title": "кто твой город",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4380
+    },
+    {
+      "username": "afishaMoscowLove",
+      "title": "Из Москвы с любовью | Афиша",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 81133
+    },
+    {
+      "username": "moskva_inside",
+      "title": "Москва Инсайд",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 126997
+    },
+    {
+      "username": "moskva_nonstop",
+      "title": "Москва Нон-Стоп",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 168841
+    },
+    {
+      "username": "neskuchnya_msk",
+      "title": "Нескучная Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9016
+    },
+    {
+      "username": "mocdsr",
+      "title": "Интересная Москва | афиша",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 163471
+    },
+    {
+      "username": "mskdetyam",
+      "title": "Москва детям",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 64005
+    },
+    {
+      "username": "privetpoidem",
+      "title": "Привет, не хочешь сходить?",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 57994
+    },
+    {
+      "username": "nedvij_st",
+      "title": "Ставка на недвижимость",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 86160
+    },
+    {
+      "username": "nedvizhimost_betonn",
+      "title": "По уши в Бетоне • Недвижимость",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 47881
+    },
+    {
+      "username": "kvadratnymaster",
+      "title": "Квадратный Мэтр",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 50134
+    },
+    {
+      "username": "ria_realty",
+      "title": "РИА Недвижимость",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 51336
+    },
+    {
+      "username": "nedvizha",
+      "title": "Недвижа",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 47534
+    },
+    {
+      "username": "realty_rbc",
+      "title": "РБК Недвижимость",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43884
+    },
+    {
+      "username": "interesnayamsk",
+      "title": "Интересная Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 110107
+    },
+    {
+      "username": "fourbes",
+      "title": "4BS | Экономика, бизнес и финансы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 75102
+    },
+    {
+      "username": "economistg",
+      "title": "Экономист",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 162830
+    },
+    {
+      "username": "interespiter",
+      "title": "Интересный Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 57043
+    },
+    {
+      "username": "krasnodar_chp23",
+      "title": "Новости Краснодара и Края (Майкоп / Адыгея)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 87825
+    },
+    {
+      "username": "krasnodar_smi",
+      "title": "Новости Краснодара и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 133708
+    },
+    {
+      "username": "yug_24_ru",
+      "title": "Новости Краснодара и края |ЮГ-24",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 143078
+    },
+    {
+      "username": "krasnodar_segod",
+      "title": "Краснодар📍Сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 48956
+    },
+    {
+      "username": "tipichkras",
+      "title": "Краснодар | Телетайп",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 126967
+    },
+    {
+      "username": "krnd1",
+      "title": "Краснодар №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10280
+    },
+    {
+      "username": "kub_mash",
+      "title": "Kub Mash",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 115278
+    },
+    {
+      "username": "kureelka",
+      "title": "Бабская курилка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 125727
+    },
+    {
+      "username": "bozhenabozhenabozhena",
+      "title": "БОЖЕНА",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 63385
+    },
+    {
+      "username": "glavmoskvichka",
+      "title": "🐍МОСКВИЧКА🐍",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 35138
+    },
+    {
+      "username": "green_fnt",
+      "title": "Зеленые фантики",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 31194
+    },
+    {
+      "username": "procent",
+      "title": "Сложный процент | финансы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 40181
+    },
+    {
+      "username": "FatCat18",
+      "title": "Жирные коты",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 104816
+    },
+    {
+      "username": "boulevard_ring",
+      "title": "Бульварное кольцо",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 72449
+    },
+    {
+      "username": "cotlovan_contrust",
+      "title": "КОТЛОВАНЪ",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 12414
+    },
+    {
+      "username": "moscow_stroi",
+      "title": "Москвастрой",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9361
+    },
+    {
+      "username": "mariiaperev",
+      "title": "Движимая повестка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12567
+    },
+    {
+      "username": "monolitniy",
+      "title": "Монолит",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 27632
+    },
+    {
+      "username": "lietomerealty",
+      "title": "обмани меня риэлтор",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9852
+    },
+    {
+      "username": "elkaterinburg",
+      "title": "Екатеринбург LIVE",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 82252
+    },
+    {
+      "username": "url_mash",
+      "title": "Ural Mash",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 67897
+    },
+    {
+      "username": "inburg",
+      "title": "Интересный Екатеринбург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41191
+    },
+    {
+      "username": "today_ekb",
+      "title": "EKB_TODAY | Екатеринбург и Область",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 31608
+    },
+    {
+      "username": "RU66RU",
+      "title": "66.RU | Новости из Екатеринбурга",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34106
+    },
+    {
+      "username": "ekb4tv",
+      "title": "4 канал | Екатеринбург | Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34637
+    },
+    {
+      "username": "ekat01",
+      "title": "Екатеринбург №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29482
+    },
+    {
+      "username": "ekbkoroche",
+      "title": "Короче, Екатеринбург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29531
+    },
+    {
+      "username": "kukuruza_news",
+      "title": "Кукуруза | Новости Екатеринбурга и России",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28016
+    },
+    {
+      "username": "inc54",
+      "title": "Инцидент Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 182453
+    },
+    {
+      "username": "ngs_news",
+      "title": "НГС — новости Новосибирска",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 124530
+    },
+    {
+      "username": "mash_siberia",
+      "title": "Mash Siberia",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 58106
+    },
+    {
+      "username": "region_nsk54",
+      "title": "Новосибирск |Регион-54|",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 46589
+    },
+    {
+      "username": "nsk_smi",
+      "title": "Новости Новосибирска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40313
+    },
+    {
+      "username": "otsnews",
+      "title": "ОТС-Горсайт – Новости Новосибирска",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40625
+    },
+    {
+      "username": "Om1_nsk",
+      "title": "Om1: Новости Новосибирска и России",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 37935
+    },
+    {
+      "username": "vnrunsk",
+      "title": "VN.RU Новости Новосибирска",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34841
+    },
+    {
+      "username": "moynovosib",
+      "title": "Подслушано | Новосибирск и Область",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 33755
+    },
+    {
+      "username": "today_nsk",
+      "title": "Новосибирск | NSK_TODAY",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30338
+    },
+    {
+      "username": "nskpub",
+      "title": "Новосибирский паблик",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25665
+    },
+    {
+      "username": "ochevidec54",
+      "title": "Очевидец Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22928
+    },
+    {
+      "username": "mapnovosibirsk",
+      "title": "НОВОСТИ НОВОСИБИРСК",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21895
+    },
+    {
+      "username": "nsonews54",
+      "title": "Мы❤️нсо",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21147
+    },
+    {
+      "username": "svetskiekroshki",
+      "title": "Светские крошки LIVE",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 77002
+    },
+    {
+      "username": "tipanovosib",
+      "title": "Типичный Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 51809
+    },
+    {
+      "username": "nsk_live_nsk",
+      "title": "Новосибирск live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16079
+    },
+    {
+      "username": "poleznyi54",
+      "title": "Полезный Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9604
+    },
+    {
+      "username": "pervomaika_154",
+      "title": "Подслушано Первомайка Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7804
+    },
+    {
+      "username": "akademgorodok_nsk",
+      "title": "АКАДЕМГОРОДОК НОВОСИБИРСК",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13082
+    },
+    {
+      "username": "chp_novosibirsk",
+      "title": "ЧП ИНЦИДЕНТ НОВОСИБИРСК",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11979
+    },
+    {
+      "username": "nsk_novo",
+      "title": "NOVO® Новосибирск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14728
+    },
+    {
+      "username": "mosafishka",
+      "title": "Афиша бесплатных событий Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 124837
+    },
+    {
+      "username": "msk4free",
+      "title": "Бесплатно в Москве",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 83767
+    },
+    {
+      "username": "moskva_fm",
+      "title": "Москва FM",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28888
+    },
+    {
+      "username": "etomsk_channel",
+      "title": "Это Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20141
+    },
+    {
+      "username": "nefte_baza",
+      "title": "Нефтебаза",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36314
+    },
+    {
+      "username": "Coala_russia",
+      "title": "Coala",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29095
+    },
+    {
+      "username": "papagaz",
+      "title": "Газ-Батюшка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 83673
+    },
+    {
+      "username": "energytodaygroup",
+      "title": "Energy Today",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23112
+    },
+    {
+      "username": "needleraw",
+      "title": "Сырьевая игла",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20906
+    },
+    {
+      "username": "Burovaia",
+      "title": "Буровая",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26889
+    },
+    {
+      "username": "moscowcalling",
+      "title": "Мама, я в Москве!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26343
+    },
+    {
+      "username": "nerzhavey",
+      "title": "Нержавейка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28612
+    },
+    {
+      "username": "riseofelectro",
+      "title": "Высокое напряжение | энергетика",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27257
+    },
+    {
+      "username": "rybhoz_channel",
+      "title": "Рыбная полка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26558
+    },
+    {
+      "username": "mash_tech",
+      "title": "МашТех",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 43973
+    },
+    {
+      "username": "chemproms",
+      "title": "Химпром",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17947
+    },
+    {
+      "username": "delo_nom",
+      "title": "Дело в цифрах | ПО и решения для бизнеса",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 14361
+    },
+    {
+      "username": "zamkadye_new",
+      "title": "Замкадье | Подмосковье | Мытищи",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 32431
+    },
+    {
+      "username": "ilinskoe_news",
+      "title": "Ильинское. Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15159
+    },
+    {
+      "username": "odi_city",
+      "title": "Типичное Одинцово",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 99130
+    },
+    {
+      "username": "themska",
+      "title": "The Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 114253
+    },
+    {
+      "username": "odincovo_mosoblast",
+      "title": "ОДИНЦОВО ОНЛАЙН",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22153
+    },
+    {
+      "username": "podmoskow",
+      "title": "Подмосква",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 36791
+    },
+    {
+      "username": "pushkin_story",
+      "title": "Пушкинский новостной | Пушкин - Царское Село, Павловск, Славянка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12010
+    },
+    {
+      "username": "smlt_tomilino_park",
+      "title": "Новости ЖК Томилино Парк",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 2928
+    },
+    {
+      "username": "uk_Abrikosovo",
+      "title": "ЖК «Абрикосово» | Сервисная компания",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 1677
+    },
+    {
+      "username": "metropoliya2",
+      "title": "ЖК Метрополия 2 и 3 очереди",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 784
+    },
+    {
+      "username": "pushkin_online",
+      "title": "Пушкин, Царское Село, Павловск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7891
+    },
+    {
+      "username": "dtp_spb78",
+      "title": "ДТП И ЧП СПб",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 107977
+    },
+    {
+      "username": "Moscowlane",
+      "title": "Московский переулок",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 19580
+    },
+    {
+      "username": "moskvichmag",
+      "title": "Москвич Mag",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41053
+    },
+    {
+      "username": "retailer_news",
+      "title": "RETAILER.ru - новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18483
+    },
+    {
+      "username": "cao_news24",
+      "title": "ЦАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 19993
+    },
+    {
+      "username": "zao_news24",
+      "title": "ЗАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30355
+    },
+    {
+      "username": "sao_news24",
+      "title": "САО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28404
+    },
+    {
+      "username": "szao_news24",
+      "title": "СЗАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25952
+    },
+    {
+      "username": "uvao_news24",
+      "title": "ЮВАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 33408
+    },
+    {
+      "username": "svao_news24",
+      "title": "СВАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41847
+    },
+    {
+      "username": "vao_news24",
+      "title": "ВАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27996
+    },
+    {
+      "username": "uao_news24",
+      "title": "ЮАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27011
+    },
+    {
+      "username": "uzao_news24",
+      "title": "ЮЗАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 32622
+    },
+    {
+      "username": "tinao_news24",
+      "title": "ТиНАО 24/7 • Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29352
+    },
+    {
+      "username": "patriki_presnenskiy",
+      "title": "Патрики и Пресненский 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9527
+    },
+    {
+      "username": "taganskiy_news",
+      "title": "Таганский 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5514
+    },
+    {
+      "username": "zamoskvorechie_news",
+      "title": "Замоскворечье и Якиманка 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4132
+    },
+    {
+      "username": "arbat_news24",
+      "title": "Тверской и Арбат 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4044
+    },
+    {
+      "username": "basmaniy_news",
+      "title": "Басманный 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5061
+    },
+    {
+      "username": "meshanskiy_news24",
+      "title": "Красносельский и Мещанский 24/7 • ЦАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3561
+    },
+    {
+      "username": "kyncevo_news24",
+      "title": "Кунцево и Крылатское 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10568
+    },
+    {
+      "username": "mozhaiskiy_news",
+      "title": "Можайский 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6808
+    },
+    {
+      "username": "ochakovo_news",
+      "title": "Очаково-Матвеевское 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6190
+    },
+    {
+      "username": "dorogomilovo_news24",
+      "title": "Дорогомилово и Фили 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8769
+    },
+    {
+      "username": "ramenki_news24",
+      "title": "Раменки 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9033
+    },
+    {
+      "username": "solncevo_news24",
+      "title": "Солнцево и Ново-Переделкино 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11747
+    },
+    {
+      "username": "troparevo_news",
+      "title": "Тропарёво и Пр-т Вернадского 24/7 • ЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8407
+    },
+    {
+      "username": "degynino_news",
+      "title": "Дегунино и Бескудниково 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9771
+    },
+    {
+      "username": "sokol_news24",
+      "title": "Сокол и Аэропорт 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8285
+    },
+    {
+      "username": "koptevo_news",
+      "title": "Коптево и рядом 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10670
+    },
+    {
+      "username": "horoshovskiy_news",
+      "title": "Хорошёвский и рядом 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5051
+    },
+    {
+      "username": "hovrino_news",
+      "title": "Ховрино и рядом 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12124
+    },
+    {
+      "username": "dmitrovskiy_news",
+      "title": "Дмитровский 24/7 • САО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5618
+    },
+    {
+      "username": "mitino_news24",
+      "title": "Митино 24/7 • СЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7549
+    },
+    {
+      "username": "strogino_news24",
+      "title": "Строгино 24/7 • СЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7328
+    },
+    {
+      "username": "horoshovo_news",
+      "title": "Хорошёво-Мнёвники 24/7 • СЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12315
+    },
+    {
+      "username": "tyshino_news",
+      "title": "Тушино 24/7 • СЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12126
+    },
+    {
+      "username": "pokrovskoe_news",
+      "title": "Покровское-Стрешнево и Щукино 24/7 • СЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6202
+    },
+    {
+      "username": "lublino_news24",
+      "title": "Люблино 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7366
+    },
+    {
+      "username": "kuzminki_news",
+      "title": "Кузьминки 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10570
+    },
+    {
+      "username": "tekstilshiki_news24",
+      "title": "Текстильщики и Печатники 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6943
+    },
+    {
+      "username": "lefortovo_news24",
+      "title": "Лефортово и рядом 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6912
+    },
+    {
+      "username": "marino_news24",
+      "title": "Марьино 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7396
+    },
+    {
+      "username": "nekrasovka_news24",
+      "title": "Некрасовка 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5807
+    },
+    {
+      "username": "razyanski_news",
+      "title": "Рязанский 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5455
+    },
+    {
+      "username": "vuhino_zhulebino_news",
+      "title": "Выхино-Жулебино 24/7 • ЮВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8391
+    },
+    {
+      "username": "uaroslavskiy_news",
+      "title": "Ярославский 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5257
+    },
+    {
+      "username": "ostankino_news",
+      "title": "Останкино и рядом 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8372
+    },
+    {
+      "username": "babyshkinskiy_news",
+      "title": "Бабушкинский и Лосиноостровский 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9967
+    },
+    {
+      "username": "butyrskiy_news",
+      "title": "Бутырский и Марьина Роща 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6609
+    },
+    {
+      "username": "sviblovo_news24",
+      "title": "Свиблово и Ростокино 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5788
+    },
+    {
+      "username": "bibirevo_news24",
+      "title": "Бибирево 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8963
+    },
+    {
+      "username": "lianozovo_news24",
+      "title": "Лианозово и рядом 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7451
+    },
+    {
+      "username": "otradnoe_news24",
+      "title": "Отрадное 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8160
+    },
+    {
+      "username": "medvedkovo_news",
+      "title": "Медведково 24/7 • СВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8734
+    },
+    {
+      "username": "bogorodskoe_news24",
+      "title": "Богородское 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7566
+    },
+    {
+      "username": "sokolniki_news",
+      "title": "Сокольники и рядом 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7044
+    },
+    {
+      "username": "izmailovo_news24",
+      "title": "Измайлово 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11549
+    },
+    {
+      "username": "ivanovskiy_news",
+      "title": "Ивановское 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4643
+    },
+    {
+      "username": "perovo_news",
+      "title": "Перово и Новогиреево 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14117
+    },
+    {
+      "username": "golianovo_news",
+      "title": "Гольяново 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9026
+    },
+    {
+      "username": "kosino_news24",
+      "title": "Косино и рядом 24/7 • ВАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5282
+    },
+    {
+      "username": "brateevo_news24",
+      "title": "Братеево и Зябликово 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6707
+    },
+    {
+      "username": "caricino_news",
+      "title": "Царицыно и Москворечье 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8733
+    },
+    {
+      "username": "orehovo_borisovo24",
+      "title": "Орехово-Борисово и Бирюлёво 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10988
+    },
+    {
+      "username": "danilovskiy_news",
+      "title": "Даниловский и Донской 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6512
+    },
+    {
+      "username": "chertanovo_mews",
+      "title": "Чертаново 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9600
+    },
+    {
+      "username": "nagatino_news24",
+      "title": "Нагатино и рядом 24/7 • ЮАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8902
+    },
+    {
+      "username": "bytovo_news",
+      "title": "Бутово 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13391
+    },
+    {
+      "username": "konkovo_news24",
+      "title": "Коньково 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6918
+    },
+    {
+      "username": "tepliy_stan_news",
+      "title": "Теплый стан 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5177
+    },
+    {
+      "username": "iasenevo_mews24",
+      "title": "Ясенево 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6972
+    },
+    {
+      "username": "cheremyshki_news",
+      "title": "Черёмушки и рядом 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7208
+    },
+    {
+      "username": "zuzino_news",
+      "title": "Зюзино 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8867
+    },
+    {
+      "username": "akademicheskiy_news24",
+      "title": "Академический и рядом 24/7 • ЮЗАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6957
+    },
+    {
+      "username": "bolshenews",
+      "title": "Больше",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 68976
+    },
+    {
+      "username": "antidigital",
+      "title": "Нецифровая экономика",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 24788
+    },
+    {
+      "username": "telesputnik",
+      "title": "Телеспутник",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20134
+    },
+    {
+      "username": "Yaroslav_Babushkin",
+      "title": "ЯРОС",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 2344
+    },
+    {
+      "username": "empatia_manuchi",
+      "title": "ЭМПАТИЯ МАНУЧИ",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 121040
+    },
+    {
+      "username": "harmfulinvestor",
+      "title": "Вредный Инвестор",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 30676
+    },
+    {
+      "username": "angrybonds",
+      "title": "angry bonds",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 24263
+    },
+    {
+      "username": "smartlabnews",
+      "title": "СМАРТЛАБ",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 76887
+    },
+    {
+      "username": "thefinexpert",
+      "title": "Инвестиции с Александром Абрамяном",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 9956
+    },
+    {
+      "username": "divForever",
+      "title": "Дивиденды Forever",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 79018
+    },
+    {
+      "username": "Finindie",
+      "title": "Фининди | Александр Елисеев",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 73470
+    },
+    {
+      "username": "zelenogradru",
+      "title": "Zelenograd.ru - Новости Зеленограда",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 52006
+    },
+    {
+      "username": "troitsk_city",
+      "title": "Troitsk City",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20337
+    },
+    {
+      "username": "tinao_top",
+      "title": "Новая Москва / ТиНАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34527
+    },
+    {
+      "username": "moskovskyNEWS",
+      "title": "Московский NEWS ТиНАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11536
+    },
+    {
+      "username": "kazan_smi",
+      "title": "Новости Казани и Республики Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 186459
+    },
+    {
+      "username": "samaratg01",
+      "title": "Самара №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27119
+    },
+    {
+      "username": "nizhny01",
+      "title": "Нижний №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36770
+    },
+    {
+      "username": "vrn01",
+      "title": "Воронеж №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 74433
+    },
+    {
+      "username": "bashk01",
+      "title": "Уфа №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12599
+    },
+    {
+      "username": "samara_smi",
+      "title": "Новости Самары и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 89829
+    },
+    {
+      "username": "nizhniy_smi",
+      "title": "Новости Нижнего Новгорода и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 75919
+    },
+    {
+      "username": "smi_voronezh",
+      "title": "Новости Воронежа и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 192910
+    },
+    {
+      "username": "ufa_smi",
+      "title": "Новости Уфы и Республики Башкортостан | Уфа",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 152644
+    },
+    {
+      "username": "nn_sobaka_ru",
+      "title": "НН.Собака.ru",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6794
+    },
+    {
+      "username": "double_solid",
+      "title": "Двойная сплошная",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 85450
+    },
+    {
+      "username": "RationalAnswer",
+      "title": "RationalAnswer | Павел Комаровский",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 109552
+    },
+    {
+      "username": "put_investor",
+      "title": "Путь инвестора (Давыдов Артем)",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 34239
+    },
+    {
+      "username": "ShumilovPavel",
+      "title": "Павел Шумилов - инвестиции, разборы компаний",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 33134
+    },
+    {
+      "username": "particular_trader",
+      "title": "ИнвестТема | Литвинов Владимир",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 35792
+    },
+    {
+      "username": "Kondrashovinvest",
+      "title": "KondrashovInvest",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 39189
+    },
+    {
+      "username": "Kharyb",
+      "title": "📍Недвижимость с Харыбиным, новостройки, пассивный доход от аренды квартир.",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 45744
+    },
+    {
+      "username": "investoksana",
+      "title": "Инвестиции с Оксаной Мащенко",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 51889
+    },
+    {
+      "username": "smfanton",
+      "title": "Ленивый инвестор",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 52971
+    },
+    {
+      "username": "MarketDumki",
+      "title": "ФИНАНСОВЫЕ ДУМКИ",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 52210
+    },
+    {
+      "username": "div_invest",
+      "title": "Инвестиции на диване",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 98517
+    },
+    {
+      "username": "pensiya35",
+      "title": "На пенсию в 35 лет",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 123642
+    },
+    {
+      "username": "BizLike",
+      "title": "Кубышка | Евгений Марченко",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 133880
+    },
+    {
+      "username": "bitkogan_hotline",
+      "title": "bitkogan⚡️HOTLINE",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 85689
+    },
+    {
+      "username": "dengi_bitkogan",
+      "title": "bitkogan💸ПРОСТО | Инвестиции и Финансы",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 36428
+    },
+    {
+      "username": "pro100IPO",
+      "title": "Просто про IPO Pre IPO",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 14119
+    },
+    {
+      "username": "cryptokogan",
+      "title": "CryptoKogan",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 43314
+    },
+    {
+      "username": "otyumen",
+      "title": "О!Тюмень",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6174
+    },
+    {
+      "username": "moskow_my",
+      "title": "Моя Москва!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 57051
+    },
+    {
+      "username": "prodomodedovo",
+      "title": "Домодедовод: новости Домодедово",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28177
+    },
+    {
+      "username": "dmitrovreg",
+      "title": "Новости Дмитровского округа",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 27789
+    },
+    {
+      "username": "lifepetersburg",
+      "title": "Санкт-Петербург Life",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 107210
+    },
+    {
+      "username": "samnewbuild",
+      "title": "Самарские новостройки",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17743
+    },
+    {
+      "username": "kdpiter",
+      "title": "Как дела, Санкт-Петербург?",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 140696
+    },
+    {
+      "username": "paperpaper_ru",
+      "title": "Бумага: всё о Петербурге",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 84801
+    },
+    {
+      "username": "petrograd_my",
+      "title": "Мой Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 81532
+    },
+    {
+      "username": "town1703",
+      "title": "Петербург 1703",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 66016
+    },
+    {
+      "username": "piteronline1",
+      "title": "Питер онлайн",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 53500
+    },
+    {
+      "username": "dprom",
+      "title": "Добывающая промышленность онлайн dprom.online",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7738
+    },
+    {
+      "username": "svobodakassa",
+      "title": "Свободная касса (ритейл & e-com)",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 30673
+    },
+    {
+      "username": "ssluchay",
+      "title": "Страховой случай",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 25730
+    },
+    {
+      "username": "upravdom_channel",
+      "title": "Управдом | ЖКХ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 32385
+    },
+    {
+      "username": "Vgudok",
+      "title": "Vgudok",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 28248
+    },
+    {
+      "username": "prometallinfo",
+      "title": "ПРОметалл",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9984
+    },
+    {
+      "username": "alina_beauty7",
+      "title": "Пособия на детей",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 97389
+    },
+    {
+      "username": "prudent_invest",
+      "title": "Осторожный инвестор",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 9554
+    },
+    {
+      "username": "Investicii_Zarybeg",
+      "title": "Инвестиции Зарубеж",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 1355
+    },
+    {
+      "username": "prolivefy",
+      "title": "Инвестирование в зарубежную недвижимость. Релокация и бизнес миграция",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 1510
+    },
+    {
+      "username": "rusbiz",
+      "title": "Рашнбизнес",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 135129
+    },
+    {
+      "username": "afishadaily",
+      "title": "Афиша Daily",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 72258
+    },
+    {
+      "username": "pitertop",
+      "title": "Петербург с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 134465
+    },
+    {
+      "username": "anti_malware",
+      "title": "AM Live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13193
+    },
+    {
+      "username": "ekb_da",
+      "title": "Екатеринбург.ДА | Новости Екатеринбурга",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8209
+    },
+    {
+      "username": "moscow_smi",
+      "title": "Моя Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 115697
+    },
+    {
+      "username": "spb_smi",
+      "title": "Санкт-Петербург LIVE",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 159827
+    },
+    {
+      "username": "arhangelsk_smi",
+      "title": "Новости Архангельска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21249
+    },
+    {
+      "username": "astra_smi",
+      "title": "Новости Астрахани и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 37308
+    },
+    {
+      "username": "balashiha_smi",
+      "title": "Новости Балашихи",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10144
+    },
+    {
+      "username": "barnaul_smi",
+      "title": "Новости Барнаула и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41684
+    },
+    {
+      "username": "belgorod_smi",
+      "title": "Новости Белгорода и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 62434
+    },
+    {
+      "username": "blagoveshensk_smi",
+      "title": "Новости Благовещенска и Амура",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 24116
+    },
+    {
+      "username": "smi25",
+      "title": "Новости Владивостока и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34874
+    },
+    {
+      "username": "smi_vladimir",
+      "title": "Новости Владимира и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36853
+    },
+    {
+      "username": "volgograd_smi",
+      "title": "Новости Волгограда и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 74825
+    },
+    {
+      "username": "vologda_smi",
+      "title": "Новости Вологды и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21484
+    },
+    {
+      "username": "ivanovo_smi",
+      "title": "Новости Иваново и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41721
+    },
+    {
+      "username": "izhevsk_smi",
+      "title": "Новости Ижевска и Удмуртии",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 116407
+    },
+    {
+      "username": "irkutsk_smi",
+      "title": "Новости Иркутска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 106707
+    },
+    {
+      "username": "yoshka_smi",
+      "title": "Новости Йошкар-Олы и Марий Эл",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29134
+    },
+    {
+      "username": "kaliningrad_smi",
+      "title": "Новости Калининграда и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 42868
+    },
+    {
+      "username": "kamchatka_smi",
+      "title": "Новости Камчатки",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22011
+    },
+    {
+      "username": "kemerovo_smi",
+      "title": "Новости Кемерово и Кузбасс",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 53025
+    },
+    {
+      "username": "kirov_smi",
+      "title": "Новости Кирова и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 46337
+    },
+    {
+      "username": "krasnoyarsk_smi",
+      "title": "Новости Красноярска и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 89432
+    },
+    {
+      "username": "kursk_smi",
+      "title": "Новости Курска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 60894
+    },
+    {
+      "username": "kizil_smi",
+      "title": "Новости Кызыла и Тывы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21049
+    },
+    {
+      "username": "lipetsk_smi",
+      "title": "Новости Липецка и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 109560
+    },
+    {
+      "username": "maikop_smi",
+      "title": "Новости Майкопа и Адыгеи",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16567
+    },
+    {
+      "username": "murmansk_smi",
+      "title": "Новости Мурманска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 32629
+    },
+    {
+      "username": "omsk_smi",
+      "title": "Новости Омска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 39496
+    },
+    {
+      "username": "orel_smi",
+      "title": "Новости Орел и Область",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 73748
+    },
+    {
+      "username": "orenburg_smi",
+      "title": "Новости Оренбурга и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 121043
+    },
+    {
+      "username": "smi_penza",
+      "title": "Новости Пензы и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 58423
+    },
+    {
+      "username": "perm_smi",
+      "title": "Новости Перми и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 80750
+    },
+    {
+      "username": "petrozavodsk_smi",
+      "title": "Новости Петрозаводска и Карелии",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 24056
+    },
+    {
+      "username": "rostov_smi",
+      "title": "Новости Ростова и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 148682
+    },
+    {
+      "username": "ryazan_smi",
+      "title": "Новости Рязани и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 66420
+    },
+    {
+      "username": "saransk_smi",
+      "title": "Новости Саранска и Мордовии",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 50687
+    },
+    {
+      "username": "smi_saratov",
+      "title": "Новости Саратова и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 189609
+    },
+    {
+      "username": "sakhalin_smi",
+      "title": "Новости Сахалина и Курил",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15299
+    },
+    {
+      "username": "smolensk_smi",
+      "title": "Новости Смоленска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 45509
+    },
+    {
+      "username": "stavropol_smi",
+      "title": "Новости Ставрополя и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 77629
+    },
+    {
+      "username": "surgut_smi",
+      "title": "Новости Сургута и ХМАО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29780
+    },
+    {
+      "username": "siktivkar_smi",
+      "title": "Новости Сыктывкара и Коми",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18593
+    },
+    {
+      "username": "tambov_smi",
+      "title": "Новости Тамбова и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 46966
+    },
+    {
+      "username": "tver_smi",
+      "title": "Новости Твери и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 51494
+    },
+    {
+      "username": "tomsk_smi",
+      "title": "Новости Томска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30428
+    },
+    {
+      "username": "tula_smi",
+      "title": "Новости Тула и Область",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 64495
+    },
+    {
+      "username": "ulan_smi",
+      "title": "Новости Улан-Удэ и Бурятии",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 72200
+    },
+    {
+      "username": "ulyanovsk_smi",
+      "title": "Новости Ульяновска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26663
+    },
+    {
+      "username": "khabarovsk_smi",
+      "title": "Новости Хабаровска и Края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 35701
+    },
+    {
+      "username": "cheboksary_smi",
+      "title": "Новости Чебоксар и Чувашии",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 54557
+    },
+    {
+      "username": "chelyabinsk_smi",
+      "title": "Новости Челябинска и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 108145
+    },
+    {
+      "username": "chita_smi",
+      "title": "Новости Чита и Забайкалье",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 37374
+    },
+    {
+      "username": "engels_smi",
+      "title": "Мой Энгельс",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13666
+    },
+    {
+      "username": "yaroslavl_smi",
+      "title": "Новости Ярославля и Области",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 55931
+    },
+    {
+      "username": "stavropoltop",
+      "title": "Ставрополье с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28030
+    },
+    {
+      "username": "sochitop1",
+      "title": "Сочи с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 42778
+    },
+    {
+      "username": "permjtop",
+      "title": "Пермь с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 50340
+    },
+    {
+      "username": "kaliningradtop",
+      "title": "Калининград с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 39667
+    },
+    {
+      "username": "tulatop",
+      "title": "Тула с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40066
+    },
+    {
+      "username": "voronezh_r36",
+      "title": "Регион-36 (Воронеж с огоньком)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 74309
+    },
+    {
+      "username": "voronej_dtp",
+      "title": "ДТП и ЧП Воронеж",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3889
+    },
+    {
+      "username": "voronezhskoe",
+      "title": "Мой Воронеж",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14885
+    },
+    {
+      "username": "nizhniytop",
+      "title": "Нижний Новгород с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 48462
+    },
+    {
+      "username": "krasntop",
+      "title": "Красноярск с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 35285
+    },
+    {
+      "username": "krasnoyaarsk",
+      "title": "Красноярск сейчас",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25654
+    },
+    {
+      "username": "cheliabinsktop",
+      "title": "Челябинск с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 56549
+    },
+    {
+      "username": "kemertop",
+      "title": "Кемерово с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 31495
+    },
+    {
+      "username": "lipetsktop1",
+      "title": "Липецк с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 51739
+    },
+    {
+      "username": "yartop12",
+      "title": "Ярославль с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 35249
+    },
+    {
+      "username": "samartop",
+      "title": "Самара с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 64529
+    },
+    {
+      "username": "novosibtop",
+      "title": "Новосибирск с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 63185
+    },
+    {
+      "username": "izhevsktop1",
+      "title": "Ижевск с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 41009
+    },
+    {
+      "username": "kazantop1",
+      "title": "Казань с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 54406
+    },
+    {
+      "username": "omsktop1",
+      "title": "Омск с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43568
+    },
+    {
+      "username": "ufatop1",
+      "title": "Уфа с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 38044
+    },
+    {
+      "username": "chp_cheb",
+      "title": "ЧП Чебоксары (Чебоксары с огоньком)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 45338
+    },
+    {
+      "username": "rnd_my",
+      "title": "Новости Ростова-на-Дону",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 87255
+    },
+    {
+      "username": "moyrostovondon",
+      "title": "Афиша Ростова",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13104
+    },
+    {
+      "username": "volgogradtop1",
+      "title": "Волгоград с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34083
+    },
+    {
+      "username": "novgorodtop",
+      "title": "Великий Новгород с огоньком",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10309
+    },
+    {
+      "username": "tomsktop1",
+      "title": "Томск с огоньком",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 21618
+    },
+    {
+      "username": "tambovonline1",
+      "title": "Тамбов онлайн",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10661
+    },
+    {
+      "username": "maikopchp",
+      "title": "ЧП Майкоп / Республика Адыгея",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 69325
+    },
+    {
+      "username": "uaoMsc",
+      "title": "Мой ЮАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26469
+    },
+    {
+      "username": "vaoMsc",
+      "title": "Мой ВАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20397
+    },
+    {
+      "username": "uzaoMsc",
+      "title": "Мой ЮЗАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 19193
+    },
+    {
+      "username": "saoMsc",
+      "title": "Мой САО l Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16903
+    },
+    {
+      "username": "cao_msc",
+      "title": "Мой ЦАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20575
+    },
+    {
+      "username": "svaoMsc",
+      "title": "Мой СВАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18874
+    },
+    {
+      "username": "uvaoMsc",
+      "title": "Мой ЮВАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 19138
+    },
+    {
+      "username": "zao_msc",
+      "title": "Мой ЗАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18296
+    },
+    {
+      "username": "szaoMsc",
+      "title": "Мой СЗАО | Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16613
+    },
+    {
+      "username": "uzelsv",
+      "title": "🔴 Узел связи",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 118680
+    },
+    {
+      "username": "piter_v_kurce",
+      "title": "Питер в курсе",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 162218
+    },
+    {
+      "username": "piterburg",
+      "title": "Питерская Хроника",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 150123
+    },
+    {
+      "username": "Megapolisonline",
+      "title": "Мегаполис | ДТП и ЧП | Санкт-Петербург | Питер💡",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 77045
+    },
+    {
+      "username": "petersburg_live",
+      "title": "Санкт-Петербург | Питер Live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 67944
+    },
+    {
+      "username": "piter_city1",
+      "title": "Мой Питер+",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 62979
+    },
+    {
+      "username": "sp_1703",
+      "title": "1703",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 55787
+    },
+    {
+      "username": "spbnews0",
+      "title": "Новости Питера | Санкт Петербурга",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 57674
+    },
+    {
+      "username": "piterkadr",
+      "title": "Питер в кадре",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 58086
+    },
+    {
+      "username": "spb_state",
+      "title": "Эй, Питер!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 53246
+    },
+    {
+      "username": "paradnayalive",
+      "title": "Парадная Live: Новости Питера",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 48862
+    },
+    {
+      "username": "allnews47",
+      "title": "47news",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 44608
+    },
+    {
+      "username": "kuda_vpitere",
+      "title": "Куда в Питере",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40877
+    },
+    {
+      "username": "nowspb",
+      "title": "Петербург сейчас",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40565
+    },
+    {
+      "username": "spb_burg",
+      "title": "Санкт-Петербург сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40386
+    },
+    {
+      "username": "sobaka_ru",
+      "title": "Собака.ru",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 38370
+    },
+    {
+      "username": "peterburg_sever",
+      "title": "Северная столица | Санкт-Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36687
+    },
+    {
+      "username": "life_spb78",
+      "title": "Будь в курсе | Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34747
+    },
+    {
+      "username": "piter_headline",
+      "title": "Питер сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 33091
+    },
+    {
+      "username": "rotondamedia",
+      "title": "Ротонда",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 31816
+    },
+    {
+      "username": "peterburgnovosti",
+      "title": "Петербург Ньюс (Peterburg News)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30771
+    },
+    {
+      "username": "obshina_spb",
+      "title": "РУССКАЯ ОБЩИНА ПЕТРОГРАДА",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29440
+    },
+    {
+      "username": "telekudrovo",
+      "title": "Жизнь в Кудрово",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26709
+    },
+    {
+      "username": "MDK_Petersburg",
+      "title": "MDK Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26501
+    },
+    {
+      "username": "vyborggo",
+      "title": "Интересные события в Выборге",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25977
+    },
+    {
+      "username": "topspb_tv",
+      "title": "ГЛАВНОЕ / Санкт-Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25170
+    },
+    {
+      "username": "primarea",
+      "title": "🌉 Приморский район Live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23880
+    },
+    {
+      "username": "TheNevaTimes",
+      "title": "Нева Таймс (Neva Times)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23330
+    },
+    {
+      "username": "piter_novostip",
+      "title": "Глаз Питера • Новости Санкт-Петербурга",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17452
+    },
+    {
+      "username": "znach_li_ty",
+      "title": "Знаешь ли ты, Питер?",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18197
+    },
+    {
+      "username": "openparad",
+      "title": "Открытая Парадная",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15517
+    },
+    {
+      "username": "St_Petersburg_new5",
+      "title": "Питер/Новости /Места",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15427
+    },
+    {
+      "username": "nevskyarea",
+      "title": "🌃 Невский район Live",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15353
+    },
+    {
+      "username": "okidoki_spb",
+      "title": "ОКИ DОКИ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14685
+    },
+    {
+      "username": "spb_fast",
+      "title": "ПИТЕР: срочно!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13636
+    },
+    {
+      "username": "zhest_spb",
+      "title": "Жесть Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12302
+    },
+    {
+      "username": "pitercalling",
+      "title": "Мама, я в Питере!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12706
+    },
+    {
+      "username": "piter_online1",
+      "title": "Это Питер, детка!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12150
+    },
+    {
+      "username": "piternews24",
+      "title": "Piter News 24 (Новости Петербурга)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11838
+    },
+    {
+      "username": "kpspbru",
+      "title": "Комсомольская правда: СПб",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12052
+    },
+    {
+      "username": "nocommentsrussia1703",
+      "title": "У Петра за пазухой | Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10495
+    },
+    {
+      "username": "ta_samaya_vecherka",
+      "title": "Вечерний Санкт-Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9804
+    },
+    {
+      "username": "interestpiter",
+      "title": "Интересный Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9984
+    },
+    {
+      "username": "lenoblast47",
+      "title": "Уже не Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9523
+    },
+    {
+      "username": "rjevka",
+      "title": "Ржевка - Красногвардейский район СПб",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8717
+    },
+    {
+      "username": "shpspb",
+      "title": "Шпаргалки Петербурга",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8628
+    },
+    {
+      "username": "nash_Piter",
+      "title": "Питер | Санкт-Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8139
+    },
+    {
+      "username": "thepeterburg",
+      "title": "Питерская Пчёлка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7483
+    },
+    {
+      "username": "oipiter",
+      "title": "Ой, Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7088
+    },
+    {
+      "username": "flashpiter",
+      "title": "Флэш Питер | Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7053
+    },
+    {
+      "username": "TruePetersburg",
+      "title": "Честный Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6625
+    },
+    {
+      "username": "chp_piter",
+      "title": "ЧП Питер",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5354
+    },
+    {
+      "username": "piterkstati",
+      "title": "Кстати, Санкт-Петербург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4318
+    },
+    {
+      "username": "Novostroy_SPb",
+      "title": "Новострой-СПб. Петербург и ЛО. Новостройки",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3467
+    },
+    {
+      "username": "mospulse",
+      "title": "Пульс Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 160348
+    },
+    {
+      "username": "chpmoscoww",
+      "title": "ЧП / Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 135449
+    },
+    {
+      "username": "mosheadlines",
+      "title": "Москва 2033",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 109814
+    },
+    {
+      "username": "msk_today77",
+      "title": "Москва сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 107786
+    },
+    {
+      "username": "moskow_drink",
+      "title": "Москва под градусом",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 99957
+    },
+    {
+      "username": "MoscowWomen",
+      "title": "Женская Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43193
+    },
+    {
+      "username": "msk_top1",
+      "title": "Москва сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43203
+    },
+    {
+      "username": "radiogovoritmsk",
+      "title": "Говорит Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43357
+    },
+    {
+      "username": "Moscow_00",
+      "title": "Москва 2026",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 42667
+    },
+    {
+      "username": "moscow_number1",
+      "title": "Москва №1 • Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 39720
+    },
+    {
+      "username": "mscstation",
+      "title": "Станция Москвич",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36000
+    },
+    {
+      "username": "Moskva_Men",
+      "title": "Мужская Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34116
+    },
+    {
+      "username": "go_msk",
+      "title": "Новости Москвы • Самое Важное!",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29531
+    },
+    {
+      "username": "oimaskva",
+      "title": "Ой, Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28129
+    },
+    {
+      "username": "today_moscow",
+      "title": "Москва Сегодня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26477
+    },
+    {
+      "username": "tvcmoscow",
+      "title": "Москва. Город новостей",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21117
+    },
+    {
+      "username": "tut_moskva1",
+      "title": "Тут Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17693
+    },
+    {
+      "username": "zhest_moscoww",
+      "title": "Жесть Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16513
+    },
+    {
+      "username": "Mos_Never_sleep",
+      "title": "Москвичи",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13894
+    },
+    {
+      "username": "technomoskva",
+      "title": "Техно Москва",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 13869
+    },
+    {
+      "username": "okey_moscow",
+      "title": "ОК! Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13248
+    },
+    {
+      "username": "stoli_shtuchka",
+      "title": "Столичная штучка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8059
+    },
+    {
+      "username": "msk_oblast",
+      "title": "Новости Москвы • Подмосковья",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7215
+    },
+    {
+      "username": "imoscow",
+      "title": "Интересная Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6202
+    },
+    {
+      "username": "MoscowEgo",
+      "title": "Эго Москвы",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 5211
+    },
+    {
+      "username": "koroche_moscow",
+      "title": "Короче, Москва",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4586
+    },
+    {
+      "username": "myluber",
+      "title": "Мои Люберцы ®️",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 98829
+    },
+    {
+      "username": "mytischi_live",
+      "title": "💢МЫТИЩИ.LIVE • НОВОСТИ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 57096
+    },
+    {
+      "username": "pushkino_official",
+      "title": "Pushkino_official | Пушкино Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 46449
+    },
+    {
+      "username": "mytischi_official",
+      "title": "Mytischi_Official | Мытищи Новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 38248
+    },
+    {
+      "username": "himki24",
+      "title": "Химки",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22086
+    },
+    {
+      "username": "podmsk01",
+      "title": "Подмосковье №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21400
+    },
+    {
+      "username": "oursergievposad",
+      "title": "Наш Сергиев Посад",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17231
+    },
+    {
+      "username": "balashixa_mow",
+      "title": "Балашиха",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 16234
+    },
+    {
+      "username": "the_pochtalon",
+      "title": "Подмосковный Почтальон",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15637
+    },
+    {
+      "username": "podolsk_msk",
+      "title": "Подольск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14737
+    },
+    {
+      "username": "moskovskaya_oblast_24",
+      "title": "Московская область 24",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14777
+    },
+    {
+      "username": "luberci_mow",
+      "title": "Люберцы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 13489
+    },
+    {
+      "username": "Podslushano_Dolgoprudny",
+      "title": "Подслушано Долгопрудный",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12680
+    },
+    {
+      "username": "podmoskvi4",
+      "title": "Рай и МКАД | Подмосковье",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8958
+    },
+    {
+      "username": "Khimki_Podslushano",
+      "title": "Подслушано Химки",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 7508
+    },
+    {
+      "username": "top_shelkovo",
+      "title": "Топовый Щёлкопряд | Щёлково",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6600
+    },
+    {
+      "username": "vramezhit",
+      "title": "В Раменском жить",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4078
+    },
+    {
+      "username": "Balashiha_Podslushan",
+      "title": "Подслушано Балашиха",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8159
+    },
+    {
+      "username": "krasnoyarsk",
+      "title": "КрасноярскДА | Новости Красноярска",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21429
+    },
+    {
+      "username": "kazan1n",
+      "title": "Казань №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 974
+    },
+    {
+      "username": "krsk01",
+      "title": "Красноярск №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23428
+    },
+    {
+      "username": "kzn_xz",
+      "title": "Подслушано | Казань и Республика Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23776
+    },
+    {
+      "username": "aida_kazan",
+      "title": "Айда | Казань и Республика Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11754
+    },
+    {
+      "username": "today_kzn",
+      "title": "KZN_TODAY | Казань и Республика Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15596
+    },
+    {
+      "username": "today_nn",
+      "title": "Нижний Новгород | NN_TODAY",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 84390
+    },
+    {
+      "username": "pnnov",
+      "title": "Подслушано Нижний Новгород и Область",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 49604
+    },
+    {
+      "username": "nizhny801",
+      "title": "Нижний 801🌇",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5278
+    },
+    {
+      "username": "gokzn",
+      "title": "Go Kazan•Новости Казани",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 125055
+    },
+    {
+      "username": "kazanvkp",
+      "title": "В Казани Поймут",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 95830
+    },
+    {
+      "username": "tatarstan_republic",
+      "title": "Tatarstan Republic | Казань",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 56723
+    },
+    {
+      "username": "spb_korushka",
+      "title": "Корюшка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9986
+    },
+    {
+      "username": "enter_media",
+      "title": "Enter",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 52319
+    },
+    {
+      "username": "sao_ms",
+      "title": "САО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 21163
+    },
+    {
+      "username": "svao_ms",
+      "title": "СВАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27370
+    },
+    {
+      "username": "vao_mow",
+      "title": "ВАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28212
+    },
+    {
+      "username": "uvao_msc",
+      "title": "ЮВАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22891
+    },
+    {
+      "username": "uao_ms",
+      "title": "ЮАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28386
+    },
+    {
+      "username": "uzao_ms",
+      "title": "ЮЗАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 24104
+    },
+    {
+      "username": "zao_ms",
+      "title": "ЗАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 20376
+    },
+    {
+      "username": "szao_ms",
+      "title": "СЗАО • Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 19629
+    },
+    {
+      "username": "choiceekb",
+      "title": "Чойс Екатеринбург",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 22697
+    },
+    {
+      "username": "erzrf",
+      "title": "ЕРЗ | Новости, аналитика, тренды девелопмента",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 14601
+    },
+    {
+      "username": "bloodconcrete",
+      "title": "Кровь и Бетон",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 10813
+    },
+    {
+      "username": "kazan_da",
+      "title": "КазанДа | Казань",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 68203
+    },
+    {
+      "username": "kazankay",
+      "title": "Куда Пойти в Казани | Типичная Казань",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 87374
+    },
+    {
+      "username": "NeKaspersky",
+      "title": "НеКасперский",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15917
+    },
+    {
+      "username": "who_the_best",
+      "title": "Подслушано на Патриках",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28458
+    },
+    {
+      "username": "bponline",
+      "title": "БП онлайн",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 98451
+    },
+    {
+      "username": "neprofashion",
+      "title": "The Crown 👑",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 15227
+    },
+    {
+      "username": "mos24_online",
+      "title": "Москва 24/7",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 49818
+    },
+    {
+      "username": "spb24live",
+      "title": "Питер лайв: Петербург 24/7",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26771
+    },
+    {
+      "username": "vmeste_mbm",
+      "title": "MBM.MOS | Малый бизнес Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18638
+    },
+    {
+      "username": "msk_innoagency",
+      "title": "Инновации Москвы",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3549
+    },
+    {
+      "username": "kazan_only",
+      "title": "Только Казань",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 43281
+    },
+    {
+      "username": "inkazanischa",
+      "title": "Inkazan | Казань и Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30115
+    },
+    {
+      "username": "kazanlenta",
+      "title": "Вокруг Казани | Куда пойти",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 39961
+    },
+    {
+      "username": "eduvtatarstan",
+      "title": "Еду в Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40524
+    },
+    {
+      "username": "typicalkzn",
+      "title": "Город Казань | Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 12959
+    },
+    {
+      "username": "TheKazan",
+      "title": "The Казанец | Азат Кашапов | Казань",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5974
+    },
+    {
+      "username": "ttatarlar",
+      "title": "ТАТАРЛАР • Казан • Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18788
+    },
+    {
+      "username": "bizRT",
+      "title": "Татарский бизнес • Казань Татарстан",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 1833
+    },
+    {
+      "username": "kazanalga",
+      "title": "Казанские хроники | Татарстан",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 4408
+    },
+    {
+      "username": "novostroiko",
+      "title": "Недвижимость Казань Новостройки",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 3822
+    },
+    {
+      "username": "PoperlyukovCEO",
+      "title": "Цифровой баррель",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 2667
+    },
+    {
+      "username": "great_numbers",
+      "title": "Большие числа",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 4956
+    },
+    {
+      "username": "yoprom",
+      "title": "ё-Пром | Промышленные инновации России",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 6338
+    },
+    {
+      "username": "INTEKPROM",
+      "title": "Пищевая промышленность | Новости ИНТЕКПРОМ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 1764
+    },
+    {
+      "username": "propbru",
+      "title": "PRO ПБ|Пожарная безопасность",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3979
+    },
+    {
+      "username": "Fire_safety2",
+      "title": "Максим Безногих",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 2046
+    },
+    {
+      "username": "profiz_pb",
+      "title": "Промышленная безопасность",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3049
+    },
+    {
+      "username": "sport_moskvaa",
+      "title": "Москва | Спорт Здоровье",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 23336
+    },
+    {
+      "username": "ciocdo24",
+      "title": "я-ИТ-ы. Без спама",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 2660
+    },
+    {
+      "username": "babkalavka",
+      "title": "Бабка на лавке",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 69558
+    },
+    {
+      "username": "dostavim",
+      "title": "Доставим вчера",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 28190
+    },
+    {
+      "username": "gokrsndr",
+      "title": "Гуляй, Краснодар",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 11278
+    },
+    {
+      "username": "startapnaya",
+      "title": "Стартапная | Тренды и бизнес",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 58188
+    },
+    {
+      "username": "zvpdnr",
+      "title": "Зарплаты Выплаты и пособия ДНР - РФ",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 39790
+    },
+    {
+      "username": "zpregion",
+      "title": "Первый Запорожский 🇷🇺",
+      "region": null,
+      "category": "Политика",
+      "subscribers": 2480
+    },
+    {
+      "username": "yaltachp",
+      "title": "ЧП ЯЛТА АЛУШТА",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 34352
+    },
+    {
+      "username": "yalta_podslushano",
+      "title": "Подслушано Ялта / Алушта",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 46205
+    },
+    {
+      "username": "sevastopol_vkurse",
+      "title": "Севастополь в курсе",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 73767
+    },
+    {
+      "username": "Krymt",
+      "title": "Телеблог Крым",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26958
+    },
+    {
+      "username": "kerch_news",
+      "title": "Керчь ИНФО",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 39317
+    },
+    {
+      "username": "cps_feodosia",
+      "title": "ЧП ФЕОДОСИЯ (КРЫМ)",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 45225
+    },
+    {
+      "username": "chp_bakhchysarai",
+      "title": "ЧП Бахчисарай | Новости Крыма",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6938
+    },
+    {
+      "username": "ZOVcrimea",
+      "title": "КРЫМИНФОРУМ🇿 🇴 🇻",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 64508
+    },
+    {
+      "username": "vecherniylugansk",
+      "title": "Вечерний Луганск",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 102079
+    },
+    {
+      "username": "typical_makeevka",
+      "title": "Типичная Макеевка",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36987
+    },
+    {
+      "username": "tip_enakievo",
+      "title": "Типичное Енакиево",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30221
+    },
+    {
+      "username": "svodkidpr180",
+      "title": "Новости и Сводки ДНР Донецк",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 47415
+    },
+    {
+      "username": "southtower",
+      "title": "Южная башня",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 110809
+    },
+    {
+      "username": "sevinfo92",
+      "title": "Севастополь INFO",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 63112
+    },
+    {
+      "username": "severnaya_sevastopol",
+      "title": "Севастополь. Северная сторона",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14182
+    },
+    {
+      "username": "sevasday",
+      "title": "СЕВАСТОПОЛЬ СЕГОДНЯ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 18474
+    },
+    {
+      "username": "seanewskerch",
+      "title": "МыКЕРЧЬ.РФ - новости Крыма",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25285
+    },
+    {
+      "username": "ru181lnr",
+      "title": "🇷🇺181.RU | ЛНР 🅉 INFO | НОВОСТИ ЛУГАНСКА🇷🇺",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 60885
+    },
+    {
+      "username": "ohsevastopol",
+      "title": "ПОДСЛУШАНО В СЕВАСТОПОЛЕ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 17557
+    },
+    {
+      "username": "newmelitopol",
+      "title": "Новости Мелитополя и не только",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10849
+    },
+    {
+      "username": "MDK_Crimea",
+      "title": "MDK Крым",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 6433
+    },
+    {
+      "username": "mariupol_online24",
+      "title": "Мариуполь Online",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 49283
+    },
+    {
+      "username": "lugansk_online",
+      "title": "ЛУГАНСК онлайн Новости и события, блог Луганска, ЛНР, реклама",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 10216
+    },
+    {
+      "username": "lifednr",
+      "title": "ЖИЗНЬ В ДНР • Донецк • Макеевка • Харцызск • Горловка • Енакиево • Шахтерск • Торез • Снежное • Мариуполь • Донбасс",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 36365
+    },
+    {
+      "username": "HersonVestnik",
+      "title": "Херсонский Вестник",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 47672
+    },
+    {
+      "username": "forpost_sev",
+      "title": "ForPost. Новости Севастополя",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 25786
+    },
+    {
+      "username": "donetsk_dnr_info",
+      "title": "ДНР INFO 🇷🇺",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 156637
+    },
+    {
+      "username": "crimia_max",
+      "title": "Привет, это Крым",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 30262
+    },
+    {
+      "username": "crimeainform",
+      "title": "Крыминформ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 14617
+    },
+    {
+      "username": "crimea24new",
+      "title": "НОВОСТИ КРЫМ",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 94391
+    },
+    {
+      "username": "chpdn",
+      "title": "ЧП Донецк 🎖 Новости ДНР",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 9029
+    },
+    {
+      "username": "berdyansk_srochno",
+      "title": "Срочно Бердянск‼️",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 5787
+    },
+    {
+      "username": "ak_lugansk",
+      "title": "Актуальный Луганск – новости ЛНР",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3891
+    },
+    {
+      "username": "crym_novosti",
+      "title": "Крым №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 133889
+    },
+    {
+      "username": "archi_ru",
+      "title": "Archi.ru",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 26498
+    },
+    {
+      "username": "tele_satinfo",
+      "title": "Tele-SatINFO International",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 3354
+    },
+    {
+      "username": "gopeterburg",
+      "title": "Куда пойти в Питере",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 111510
+    },
+    {
+      "username": "tipichkrasnodar",
+      "title": "Типичный Краснодар и край",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 29441
+    },
+    {
+      "username": "big_kub",
+      "title": "Большая Кубань | Краснодар и край",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 61425
+    },
+    {
+      "username": "krasnodarkray1",
+      "title": "Краснодар и край",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 188575
+    },
+    {
+      "username": "news_93_ru",
+      "title": "93.RU | Новости Краснодара и края",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27879
+    },
+    {
+      "username": "chp_krd",
+      "title": "ЧП Краснодар™",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 89181
+    },
+    {
+      "username": "krasnodar_topor23",
+      "title": "Краснодарский Топор 18+",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 40626
+    },
+    {
+      "username": "kuban_23",
+      "title": "Кубань 2️⃣3️⃣ Краснодар",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 78050
+    },
+    {
+      "username": "privet_rostov_ru",
+      "title": "Privet-Rostov.ru - новости Ростов-на-Дону",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 179160
+    },
+    {
+      "username": "don_mash",
+      "title": "Don Mash",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 80023
+    },
+    {
+      "username": "glavnyi_rostov",
+      "title": "РОСТОВ ГЛАВНЫЙ новости",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 72723
+    },
+    {
+      "username": "MDK_RnD",
+      "title": "MDK Ростов",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 24407
+    },
+    {
+      "username": "rstv01",
+      "title": "Ростов №1",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 32500
+    },
+    {
+      "username": "netipichkakrd",
+      "title": "Нетипичный Краснодар🥸",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 8536
+    },
+    {
+      "username": "krd_tipich",
+      "title": "Типичный Краснодар",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 27098
+    },
+    {
+      "username": "kozakrichala",
+      "title": "Коза кричала",
+      "region": null,
+      "category": "Новости и СМИ",
+      "subscribers": 181042
+    },
+    {
+      "username": "labirint_investora",
+      "title": "Лабиринт инвестора: новостройки Москвы.",
+      "region": null,
+      "category": "Экономика",
+      "subscribers": 16300
+    }
+  ]
+}

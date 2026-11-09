@@ -1,0 +1,7000 @@
+{
+  "channels": [
+    {
+      "username": "breakingmash",
+      "name": "Mash",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "bbbreaking",
+      "name": "BB Breaking",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "shot_shot",
+      "name": "SHOT",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "bazabazon",
+      "name": "Baza",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "rian_ru",
+      "name": "РИА Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "tass_agency",
+      "name": "ТАСС",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "rt_russian",
+      "name": "RT на русском",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "readovkanews",
+      "name": "Readovka",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "lentachold",
+      "name": "Лентач",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "rbc_news",
+      "name": "РБК",
+      "category": "news",
+      "subcategory": "business",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "exploitex",
+      "name": "Эксплойт",
+      "category": "news",
+      "subcategory": "tech",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "forklog",
+      "name": "ForkLog",
+      "category": "news",
+      "subcategory": "crypto",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "rybar",
+      "name": "Рыбарь",
+      "category": "news",
+      "subcategory": "military",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "nplus1",
+      "name": "N + 1",
+      "category": "news",
+      "subcategory": "science",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "sport24",
+      "name": "Sport24",
+      "category": "news",
+      "subcategory": "sport",
+      "country": "RU",
+      "source": "manual"
+    },
+    {
+      "username": "kub_mash",
+      "name": "Mash Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "don_mash",
+      "name": "Mash Ростов-на-Дону",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростов-на-Дону"
+    },
+    {
+      "username": "mash_gor",
+      "name": "Mash Дагестан и Кавказ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Дагестан"
+    },
+    {
+      "username": "amber_mash",
+      "name": "Mash Калининград",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Калининград"
+    },
+    {
+      "username": "mashmoyka",
+      "name": "Mash Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "mash_nimash",
+      "name": "Mash Нижний Новгород",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижний Новгород"
+    },
+    {
+      "username": "mash_iptash",
+      "name": "Mash Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Татарстан"
+    },
+    {
+      "username": "mash_batash",
+      "name": "Mash Башкортостан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Башкортостан"
+    },
+    {
+      "username": "url_mash",
+      "name": "Mash Екатеринбург и Урал",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "mash_siberia",
+      "name": "Mash Новосибирск и Сибирь",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "babr_mash",
+      "name": "Mash Иркутск, Бурятия",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "kras_mash",
+      "name": "Mash Красноярск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "amur_mash",
+      "name": "Mash Хабаровск и Дальний Восток",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хабаровск"
+    },
+    {
+      "username": "mash_donbass",
+      "name": "Mash Донбасс",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Донбасс"
+    },
+    {
+      "username": "angara18",
+      "name": "Ангара",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутская область"
+    },
+    {
+      "username": "korifeyhab",
+      "name": "Корифей Хабаров",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хабаровский край"
+    },
+    {
+      "username": "kuzbassinfo",
+      "name": "Кузбасс инфо",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Кузбасс"
+    },
+    {
+      "username": "nedebri2",
+      "name": "Недебри",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Дальний Восток"
+    },
+    {
+      "username": "dirtytatarstan",
+      "name": "Неудаща",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Татарстан"
+    },
+    {
+      "username": "saratovshyna",
+      "name": "Саратовщина Z",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Саратовская область"
+    },
+    {
+      "username": "sidpolit",
+      "name": "Сибиряк",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Сибирь"
+    },
+    {
+      "username": "streli_kazbeka",
+      "name": "Стрелы Казбека",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "СКФО"
+    },
+    {
+      "username": "Leningrad_guide",
+      "name": "Тайны Ленинградского двора",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ленинградская область"
+    },
+    {
+      "username": "polit70",
+      "name": "Томск политический",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томская область"
+    },
+    {
+      "username": "kuraifutlar",
+      "name": "Футляр для курая",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Башкирия"
+    },
+    {
+      "username": "ShaltayBabay",
+      "name": "Шалтай-Бабай",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Поволжье"
+    },
+    {
+      "username": "cho_opyat",
+      "name": "Шо, опять?",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Крым"
+    },
+    {
+      "username": "olen_nn",
+      "name": "Нижегородский Олень",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижний Новгород"
+    },
+    {
+      "username": "decembrist_spb",
+      "name": "Записки декабриста",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "askrasul",
+      "name": "Спросите у Расула",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "СКФО"
+    },
+    {
+      "username": "rostov_compro",
+      "name": "Rostov Com",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростовская область"
+    },
+    {
+      "username": "tadza",
+      "name": "Татарский Якудза",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Татарстан"
+    },
+    {
+      "username": "fyodork",
+      "name": "Телеграммы Ф. Крашенинникова",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "fcpeshka",
+      "name": "Крымский канал",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Крым"
+    },
+    {
+      "username": "kavkaz_leakbez",
+      "name": "Kavkaz Leakbez",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "СКФО"
+    },
+    {
+      "username": "buzoters_and_crows",
+      "name": "Бузотёры и вороньё",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Сибирь"
+    },
+    {
+      "username": "babr24",
+      "name": "Бабр",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Восточная Сибирь"
+    },
+    {
+      "username": "obrech",
+      "name": "Очки Бречалова",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Удмуртия"
+    },
+    {
+      "username": "teatrvz",
+      "name": "Театр взрослого зрителя",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Саратов"
+    },
+    {
+      "username": "nightguber",
+      "name": "Ночной губернатор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "ugasapiens",
+      "name": "Юга Сапиенс",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "ЮФО"
+    },
+    {
+      "username": "rostov_na_konu",
+      "name": "Ростов на кону",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростовская область"
+    },
+    {
+      "username": "informburo_sfd",
+      "name": "Информбюро ЮФО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "ЮФО"
+    },
+    {
+      "username": "apparatustatar",
+      "name": "Аппаратная",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Татарстан"
+    },
+    {
+      "username": "gate24rus",
+      "name": "Красноярскгейт",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярский край"
+    },
+    {
+      "username": "apostolaki_the_cat",
+      "name": "Дионис Апостолаки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Крым"
+    },
+    {
+      "username": "nedebri",
+      "name": "НЕДЕБРИ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Дальний Восток"
+    },
+    {
+      "username": "marinewolves",
+      "name": "КФО — Китайский федеральный округ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Дальний Восток"
+    },
+    {
+      "username": "mordoded",
+      "name": "МордоДед",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самарская область"
+    },
+    {
+      "username": "StepDozor",
+      "name": "Степной Дозор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Бурятия"
+    },
+    {
+      "username": "skfo_telegraph",
+      "name": "СКФО Telegraph",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "СКФО"
+    },
+    {
+      "username": "sakhco",
+      "name": "Sakh&Co",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Сахалин"
+    },
+    {
+      "username": "PolitKurai",
+      "name": "ПолитКурай",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Башкортостан"
+    },
+    {
+      "username": "samarawh",
+      "name": "Столовка белого дома",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "ПФО"
+    },
+    {
+      "username": "vovknn",
+      "name": "ВОВК",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижегородская область"
+    },
+    {
+      "username": "GovoritKavkaz",
+      "name": "Говорит Кавказ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "СКФО"
+    },
+    {
+      "username": "northm",
+      "name": "Северное измерение",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Северные регионы"
+    },
+    {
+      "username": "solenyushi",
+      "name": "Солены Уши",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Пермский край"
+    },
+    {
+      "username": "gasitel",
+      "name": "Гаситель",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоградская область"
+    },
+    {
+      "username": "chitaru75",
+      "name": "Чита.ру",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Забайкальский край"
+    },
+    {
+      "username": "Babyshka33",
+      "name": "Бабушка надвое",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Владимирская область"
+    },
+    {
+      "username": "moscomtourism",
+      "name": "Мостуризм",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "umvd_ast",
+      "name": "Астраханская полиция",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Астрахань"
+    },
+    {
+      "username": "newsspbtop",
+      "name": "Новости Санкт-Петербурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "dpskontrol_28rus",
+      "name": "ДПС Контроль 28",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Амурская область"
+    },
+    {
+      "username": "sevdortrans_ru",
+      "name": "Транспорт Севастополя",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Севастополь"
+    },
+    {
+      "username": "transportspb",
+      "name": "Транспорт Петербурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "kttukrd",
+      "name": "КТТУ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "genplan_institute",
+      "name": "Институт Генплана Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "drugoigorod",
+      "name": "Другой город",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "trassa_ural_m5",
+      "name": "Трасса М5 Урал",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Урал"
+    },
+    {
+      "username": "saratovtransport",
+      "name": "Саратов транспортный",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Саратов"
+    },
+    {
+      "username": "mchs_rso_a",
+      "name": "МЧС Северной Осетии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Северная Осетия"
+    },
+    {
+      "username": "liptur",
+      "name": "Липецкая Земля",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Липецк"
+    },
+    {
+      "username": "avtodorgk",
+      "name": "Автодор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Кемерово"
+    },
+    {
+      "username": "plsovetov",
+      "name": "Площадь Советов",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Барнаул"
+    },
+    {
+      "username": "n4k_021",
+      "name": "Новости Новочебоксарск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новочебоксарск"
+    },
+    {
+      "username": "kolpino_tut",
+      "name": "Колпино Тут",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Колпино"
+    },
+    {
+      "username": "polevskoy_trubach",
+      "name": "Полевской Трубач",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Полевской"
+    },
+    {
+      "username": "admdzd",
+      "name": "Джидинский район",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Бурятия"
+    },
+    {
+      "username": "ekat01",
+      "name": "Екатеринбург №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "itsmycity",
+      "name": "ItsMyCity",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "msk_live",
+      "name": "Москва Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "moslenta",
+      "name": "Мослента",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "mosc_daily",
+      "name": "Москва Daily",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "gorodovoy_1",
+      "name": "Городовой",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "odsosedi_moscow",
+      "name": "Соседи Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "glavnoemos",
+      "name": "Московские новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "krdru",
+      "name": "KRD.RU",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "mcu_krd",
+      "name": "МЦУ Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "ki_krd",
+      "name": "Краснодарские известия",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "t_khabarovsk",
+      "name": "Типичный Хабаровск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хабаровск"
+    },
+    {
+      "username": "derz_khab",
+      "name": "Дерзкий Хабаровск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хабаровск"
+    },
+    {
+      "username": "live_piter",
+      "name": "Питер Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "krd_tipich_ru",
+      "name": "Типичный Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Краснодар"
+    },
+    {
+      "username": "tyumenreads",
+      "name": "Тюмень Читает",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Тюмень"
+    },
+    {
+      "username": "omskpub55",
+      "name": "Типичный Омск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "GorSovetOmsk",
+      "name": "ОмГорСовет",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "typicalvoronezh",
+      "name": "Типичный Воронеж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "kursk_tipich",
+      "name": "Типичный Курск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Курск"
+    },
+    {
+      "username": "TObinisk",
+      "name": "Типичный Обнинск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Обнинск"
+    },
+    {
+      "username": "gorod_zheleznogorsk",
+      "name": "Типичный Железногорск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Железногорск"
+    },
+    {
+      "username": "tipichyi_dzhankoi",
+      "name": "Типичный Джанкой",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Джанкой"
+    },
+    {
+      "username": "netip_stav",
+      "name": "Нетипичный Ставрополь",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ставрополь"
+    },
+    {
+      "username": "mzk_love",
+      "name": "Типичный Междуреченск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Междуреченск"
+    },
+    {
+      "username": "tobtt",
+      "name": "Типичный Тобольск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Тобольск"
+    },
+    {
+      "username": "typical_kursk",
+      "name": "Нетипичный Курск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Курск"
+    },
+    {
+      "username": "dolgopacity",
+      "name": "Типичный Долгопрудный",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Долгопрудный"
+    },
+    {
+      "username": "tipich_sochi",
+      "name": "Типичный Сочи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Сочи"
+    },
+    {
+      "username": "narofominskLife",
+      "name": "Типичный Наро-Фоминск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Наро-Фоминск"
+    },
+    {
+      "username": "chp26ru",
+      "name": "Нетипичный Ставрополь ЧП",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ставрополь"
+    },
+    {
+      "username": "tipich_timashevsk",
+      "name": "Типичный Тимашевск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Тимашевск"
+    },
+    {
+      "username": "altayvalenok",
+      "name": "Алтайский валенок",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Алтай"
+    },
+    {
+      "username": "omskb",
+      "name": "КолчакСити",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "omskwillnotleave",
+      "name": "ОмскЦентрСилы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "y555142",
+      "name": "Татарское Прииртышье",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "epanchintsev",
+      "name": "Епаничев",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "oxxxy_mer_omsk",
+      "name": "Оксана Мельникова",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "tusovochk",
+      "name": "Тусовочка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "avmazur",
+      "name": "Новосибирск выбирает мэра",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "vesti_kusbass",
+      "name": "Кузбасский вестник",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Кемерово"
+    },
+    {
+      "username": "govoryn_krasnoyarsk",
+      "name": "Красноярский говорун",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "nia_krsk",
+      "name": "НИА Красноярск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "prapalitiku",
+      "name": "Прапалитику",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "kraskrai",
+      "name": "Край",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "zheleznogorskgovorun",
+      "name": "Железногорский говорун",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Железногорск"
+    },
+    {
+      "username": "delakrasnoyarsk",
+      "name": "Дела ру",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "rvkazakov",
+      "name": "Ветер перемен",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "tomskpolit",
+      "name": "Tomskpolit",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томск"
+    },
+    {
+      "username": "vtomskeru",
+      "name": "Новости Vtomske",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томск"
+    },
+    {
+      "username": "Nabludatelvtomske",
+      "name": "Наблюдатель в Томске",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томск"
+    },
+    {
+      "username": "miliy_tomsk",
+      "name": "Милый милый Томск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томск"
+    },
+    {
+      "username": "usyarshaulova",
+      "name": "Усы Аршаулова",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Томск"
+    },
+    {
+      "username": "hakinc",
+      "name": "Хакасский инсайдер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хакасия"
+    },
+    {
+      "username": "iakhakasia",
+      "name": "ИА Хакасия",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хакасия"
+    },
+    {
+      "username": "FosterPR",
+      "name": "Медиаархангел Хакасии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Хакасия"
+    },
+    {
+      "username": "drinkirk",
+      "name": "Иркутский дринк",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "Irkpolicy",
+      "name": "Иркутск политический",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "irkdzen",
+      "name": "Иркутский дзынь",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "angarskcorruption",
+      "name": "Ангарский коррупционер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ангарск"
+    },
+    {
+      "username": "Speckor38",
+      "name": "Спецкорр",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "govoritirkutsk",
+      "name": "Говорит Иркутск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "sarma38",
+      "name": "Сарма",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Иркутск"
+    },
+    {
+      "username": "moscowplus",
+      "name": "Москва+",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "official_moscow",
+      "name": "Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "omoskva",
+      "name": "Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "mos_off",
+      "name": "Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "mos_feed",
+      "name": "Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Москва"
+    },
+    {
+      "username": "Piter",
+      "name": "Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "telega_piterburg",
+      "name": "Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "official_spb",
+      "name": "Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "v_piterburge",
+      "name": "Санкт- Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Санкт-Петербург"
+    },
+    {
+      "username": "novosibirski",
+      "name": "Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "novosibirsx",
+      "name": "Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "novosibirsxy",
+      "name": "НОВОСИБИРСК СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "novosibtop",
+      "name": "Новосибирск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Новосибирск"
+    },
+    {
+      "username": "ekaterinburgt",
+      "name": "Екатеринбург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "ekaterinburga",
+      "name": "ЕКАТЕРИНБУРГ СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "yo_burg",
+      "name": "Екатеринбург live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "ekaterinburg1",
+      "name": "Екатеринбург Онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "ekattop",
+      "name": "Екатеринбург с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Екатеринбург"
+    },
+    {
+      "username": "trudovye_kazan",
+      "name": "«Казань»",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Казань"
+    },
+    {
+      "username": "zakazanb",
+      "name": "каЗАнь",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Казань"
+    },
+    {
+      "username": "kznjournal",
+      "name": "Казань на максималках",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Казань"
+    },
+    {
+      "username": "nn800top",
+      "name": "Нижний Новгород",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижний Новгород"
+    },
+    {
+      "username": "nncoo202202",
+      "name": "НИЖНИЙ НОВГОРОД",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижний Новгород"
+    },
+    {
+      "username": "today_nn",
+      "name": "Нижний Новгород | NN_TODAY",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Нижний Новгород"
+    },
+    {
+      "username": "chel9binsk",
+      "name": "Челябинск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Челябинск"
+    },
+    {
+      "username": "chelyabinsk",
+      "name": "Челябинск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Челябинск"
+    },
+    {
+      "username": "samara_vip",
+      "name": "САМАРА",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "samaradtp",
+      "name": "Самара ДТП | samara.dtp.official",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "samaray",
+      "name": "САМАРА СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "samartop",
+      "name": "Самара с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "samara5",
+      "name": "Самара Онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Самара"
+    },
+    {
+      "username": "omsks",
+      "name": "ОМСК СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "omsk_putevoditel",
+      "name": "Омск_путеводитель",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "omsktop1",
+      "name": "Омск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Омск"
+    },
+    {
+      "username": "rostov_bat9",
+      "name": "Ростов-на-Дону",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростов-на-Дону"
+    },
+    {
+      "username": "rostov3",
+      "name": "РОСТОВ-НА-ДОНУ СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростов-на-Дону"
+    },
+    {
+      "username": "Rostov_MIR",
+      "name": "Ростов-на-Дону * Ростовская область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Ростов-на-Дону"
+    },
+    {
+      "username": "ufa_tyt",
+      "name": "Уфа ТУТ! Афиша и новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Уфа"
+    },
+    {
+      "username": "ufatop1",
+      "name": "Уфа с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Уфа"
+    },
+    {
+      "username": "bash_ufa",
+      "name": "Уфа Башкортостан | Новости 🗞",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Уфа"
+    },
+    {
+      "username": "ufa_novosti",
+      "name": "Уфа | Новости | События",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Уфа"
+    },
+    {
+      "username": "krsnyarsk",
+      "name": "Красноярск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "tvk6_tv",
+      "name": "Красноярск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "krasnouarsk",
+      "name": "Красноярск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "krasnoyarsxy",
+      "name": "КРАСНОЯРСК СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "region_krsk24",
+      "name": "Красноярск |Регион-24|",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Красноярск"
+    },
+    {
+      "username": "voronezhrest",
+      "name": "Воронеж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "voronezh1",
+      "name": "ВОРОНЕЖ СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "voronezha",
+      "name": "Воронеж Онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "vrn01",
+      "name": "Воронеж №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "vrn36v",
+      "name": "Воронеж VRN ️",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Воронеж"
+    },
+    {
+      "username": "permjtop",
+      "name": "Пермь с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Пермь"
+    },
+    {
+      "username": "perm1",
+      "name": "ПЕРМЬ СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Пермь"
+    },
+    {
+      "username": "chp_prm",
+      "name": "Пермь ЧП и ДТП, новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Пермь"
+    },
+    {
+      "username": "perm_active",
+      "name": "Пермь Активная",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Пермь"
+    },
+    {
+      "username": "vlgchp",
+      "name": "Волгоград",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоград"
+    },
+    {
+      "username": "volgogrd",
+      "name": "Волгоград",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоград"
+    },
+    {
+      "username": "volgograds",
+      "name": "ВОЛГОГРАД СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоград"
+    },
+    {
+      "username": "volgograd34_vkurse",
+      "name": "Волгоград ВКУРСЕ!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоград"
+    },
+    {
+      "username": "volgograda",
+      "name": "Волгоград Онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": "Волгоград"
+    },
+    {
+      "username": "mos_glyanec",
+      "name": "Москва носит Биркин",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tatlersheroine",
+      "name": "Героиня Татлера",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "newsibirsk01",
+      "name": "Новосибирск №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mskonline2024",
+      "name": "Москва онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "frank_media",
+      "name": "Frank Media",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "fintexno",
+      "name": "Финтехно",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ogomoscow",
+      "name": "Москва не спит • Афиша, новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskvaz",
+      "name": "МоскваДА | Новости Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "progorodmsk",
+      "name": "Привет, Москва!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk_state",
+      "name": "Эй, Москва!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskvichka_mag",
+      "name": "Журнал «Москвичка»",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tyumen1",
+      "name": "Тюмень №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "TemuTyumenii",
+      "name": "Темы Тюмени | URA.RU",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi_tyumen",
+      "name": "Новости Тюмени и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bankser",
+      "name": "Деньги в банке",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spletni_tg",
+      "name": "Только никому...",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscowsee",
+      "name": "Москва | афиша, досуг",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ekaterinburg_smi",
+      "name": "Новости Екатеринбурга и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "SvetEKB",
+      "name": "СВЕТ💡Екатеринбург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kudaekb",
+      "name": "Афиша Екатеринбурга | Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "today_tyumen",
+      "name": "Тюмень Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moy_tumen",
+      "name": "Подслушано Тюмень",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tumenjtop",
+      "name": "Тюмень с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "NashGorodru",
+      "name": "Наш Город | Тюмень",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "belaya_kaska",
+      "name": "Белая Каска",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dvizhpronedvizh",
+      "name": "Движ про недвиж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "eliterealestatemoscow",
+      "name": "Элитная недвижимость Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "znaech_li_ty_msk",
+      "name": "Знаешь ли ты, Москва?",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mosvorona",
+      "name": "Вороны-москвички",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mosgul",
+      "name": "Московские Гуляки | Афиша Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Mskmeet",
+      "name": "Москва встречает / Афиша",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskuda",
+      "name": "МосАфиша",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk1_news",
+      "name": "MSK1.RU | Новости Москвы | Россия",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscu",
+      "name": "Москва впечатляет",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskwa_life",
+      "name": "Москва Life • Новости Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "citymsc",
+      "name": "Москва online",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "hamovniki_news24",
+      "name": "Хамовники 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cao_ms",
+      "name": "ЦАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "investorbiz",
+      "name": "Инвест ревью | Финансы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "grechne",
+      "name": "Гречка в долларах",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ifinvest",
+      "name": "investify! Финансы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "killerfeat",
+      "name": "Киллер-фича",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ktogorod",
+      "name": "кто твой город",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "afishaMoscowLove",
+      "name": "Из Москвы с любовью | Афиша",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskva_inside",
+      "name": "Москва Инсайд",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskva_nonstop",
+      "name": "Москва Нон-Стоп",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "neskuchnya_msk",
+      "name": "Нескучная Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mocdsr",
+      "name": "Интересная Москва | афиша",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mskdetyam",
+      "name": "Москва детям",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "privetpoidem",
+      "name": "Привет, не хочешь сходить?",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nedvij_st",
+      "name": "Ставка на недвижимость",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nedvizhimost_betonn",
+      "name": "По уши в Бетоне • Недвижимость",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kvadratnymaster",
+      "name": "Квадратный Мэтр",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ria_realty",
+      "name": "РИА Недвижимость",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nedvizha",
+      "name": "Недвижа",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "realty_rbc",
+      "name": "РБК Недвижимость",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "interesnayamsk",
+      "name": "Интересная Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "fourbes",
+      "name": "4BS | Экономика, бизнес и финансы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "economistg",
+      "name": "Экономист",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "interespiter",
+      "name": "Интересный Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnodar_chp23",
+      "name": "Новости Краснодара и Края (Майкоп / Адыгея)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnodar_smi",
+      "name": "Новости Краснодара и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yug_24_ru",
+      "name": "Новости Краснодара и края |ЮГ-24",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnodar_segod",
+      "name": "Краснодар📍Сегодня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tipichkras",
+      "name": "Краснодар | Телетайп",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krnd1",
+      "name": "Краснодар №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kureelka",
+      "name": "Бабская курилка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bozhenabozhenabozhena",
+      "name": "БОЖЕНА",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "glavmoskvichka",
+      "name": "🐍МОСКВИЧКА🐍",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "green_fnt",
+      "name": "Зеленые фантики",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "procent",
+      "name": "Сложный процент | финансы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "FatCat18",
+      "name": "Жирные коты",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "boulevard_ring",
+      "name": "Бульварное кольцо",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cotlovan_contrust",
+      "name": "КОТЛОВАНЪ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscow_stroi",
+      "name": "Москвастрой",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mariiaperev",
+      "name": "Движимая повестка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "monolitniy",
+      "name": "Монолит",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lietomerealty",
+      "name": "обмани меня риэлтор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "inburg",
+      "name": "Интересный Екатеринбург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "today_ekb",
+      "name": "EKB_TODAY | Екатеринбург и Область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "RU66RU",
+      "name": "66.RU | Новости из Екатеринбурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ekb4tv",
+      "name": "4 канал | Екатеринбург | Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ekbkoroche",
+      "name": "Короче, Екатеринбург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kukuruza_news",
+      "name": "Кукуруза | Новости Екатеринбурга и России",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "inc54",
+      "name": "Инцидент Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ngs_news",
+      "name": "НГС — новости Новосибирска",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "region_nsk54",
+      "name": "Новосибирск |Регион-54|",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nsk_smi",
+      "name": "Новости Новосибирска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "otsnews",
+      "name": "ОТС-Горсайт – Новости Новосибирска",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Om1_nsk",
+      "name": "Om1: Новости Новосибирска и России",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vnrunsk",
+      "name": "VN.RU Новости Новосибирска",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moynovosib",
+      "name": "Подслушано | Новосибирск и Область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "today_nsk",
+      "name": "Новосибирск | NSK_TODAY",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nskpub",
+      "name": "Новосибирский паблик",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ochevidec54",
+      "name": "Очевидец Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mapnovosibirsk",
+      "name": "НОВОСТИ НОВОСИБИРСК",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nsonews54",
+      "name": "Мы❤️нсо",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svetskiekroshki",
+      "name": "Светские крошки LIVE",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tipanovosib",
+      "name": "Типичный Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nsk_live_nsk",
+      "name": "Новосибирск live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pervomaika_154",
+      "name": "Подслушано Первомайка Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "akademgorodok_nsk",
+      "name": "АКАДЕМГОРОДОК НОВОСИБИРСК",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chp_novosibirsk",
+      "name": "ЧП ИНЦИДЕНТ НОВОСИБИРСК",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nsk_novo",
+      "name": "NOVO® Новосибирск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mosafishka",
+      "name": "Афиша бесплатных событий Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk4free",
+      "name": "Бесплатно в Москве",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskva_fm",
+      "name": "Москва FM",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "etomsk_channel",
+      "name": "Это Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nefte_baza",
+      "name": "Нефтебаза",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Coala_russia",
+      "name": "Coala",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "papagaz",
+      "name": "Газ-Батюшка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "energytodaygroup",
+      "name": "Energy Today",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "needleraw",
+      "name": "Сырьевая игла",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Burovaia",
+      "name": "Буровая",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscowcalling",
+      "name": "Мама, я в Москве!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nerzhavey",
+      "name": "Нержавейка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "riseofelectro",
+      "name": "Высокое напряжение | энергетика",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rybhoz_channel",
+      "name": "Рыбная полка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mash_tech",
+      "name": "МашТех",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chemproms",
+      "name": "Химпром",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "delo_nom",
+      "name": "Дело в цифрах | ПО и решения для бизнеса",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zamkadye_new",
+      "name": "Замкадье | Подмосковье | Мытищи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ilinskoe_news",
+      "name": "Ильинское. Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "odi_city",
+      "name": "Типичное Одинцово",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "themska",
+      "name": "The Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "odincovo_mosoblast",
+      "name": "ОДИНЦОВО ОНЛАЙН",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "podmoskow",
+      "name": "Подмосква",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pushkin_story",
+      "name": "Пушкинский новостной | Пушкин - Царское Село, Павловск, Славянка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smlt_tomilino_park",
+      "name": "Новости ЖК Томилино Парк",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uk_Abrikosovo",
+      "name": "ЖК «Абрикосово» | Сервисная компания",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pushkin_online",
+      "name": "Пушкин, Царское Село, Павловск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dtp_spb78",
+      "name": "ДТП И ЧП СПб",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Moscowlane",
+      "name": "Московский переулок",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskvichmag",
+      "name": "Москвич Mag",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "retailer_news",
+      "name": "RETAILER.ru - новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cao_news24",
+      "name": "ЦАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zao_news24",
+      "name": "ЗАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sao_news24",
+      "name": "САО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "szao_news24",
+      "name": "СЗАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uvao_news24",
+      "name": "ЮВАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svao_news24",
+      "name": "СВАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vao_news24",
+      "name": "ВАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uao_news24",
+      "name": "ЮАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uzao_news24",
+      "name": "ЮЗАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tinao_news24",
+      "name": "ТиНАО 24/7 • Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "patriki_presnenskiy",
+      "name": "Патрики и Пресненский 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "taganskiy_news",
+      "name": "Таганский 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zamoskvorechie_news",
+      "name": "Замоскворечье и Якиманка 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "arbat_news24",
+      "name": "Тверской и Арбат 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "basmaniy_news",
+      "name": "Басманный 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "meshanskiy_news24",
+      "name": "Красносельский и Мещанский 24/7 • ЦАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kyncevo_news24",
+      "name": "Кунцево и Крылатское 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mozhaiskiy_news",
+      "name": "Можайский 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ochakovo_news",
+      "name": "Очаково-Матвеевское 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dorogomilovo_news24",
+      "name": "Дорогомилово и Фили 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ramenki_news24",
+      "name": "Раменки 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "solncevo_news24",
+      "name": "Солнцево и Ново-Переделкино 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "troparevo_news",
+      "name": "Тропарёво и Пр-т Вернадского 24/7 • ЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "degynino_news",
+      "name": "Дегунино и Бескудниково 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sokol_news24",
+      "name": "Сокол и Аэропорт 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "koptevo_news",
+      "name": "Коптево и рядом 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "horoshovskiy_news",
+      "name": "Хорошёвский и рядом 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "hovrino_news",
+      "name": "Ховрино и рядом 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dmitrovskiy_news",
+      "name": "Дмитровский 24/7 • САО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mitino_news24",
+      "name": "Митино 24/7 • СЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "strogino_news24",
+      "name": "Строгино 24/7 • СЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "horoshovo_news",
+      "name": "Хорошёво-Мнёвники 24/7 • СЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tyshino_news",
+      "name": "Тушино 24/7 • СЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pokrovskoe_news",
+      "name": "Покровское-Стрешнево и Щукино 24/7 • СЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lublino_news24",
+      "name": "Люблино 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kuzminki_news",
+      "name": "Кузьминки 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tekstilshiki_news24",
+      "name": "Текстильщики и Печатники 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lefortovo_news24",
+      "name": "Лефортово и рядом 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "marino_news24",
+      "name": "Марьино 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nekrasovka_news24",
+      "name": "Некрасовка 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "razyanski_news",
+      "name": "Рязанский 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vuhino_zhulebino_news",
+      "name": "Выхино-Жулебино 24/7 • ЮВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uaroslavskiy_news",
+      "name": "Ярославский 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ostankino_news",
+      "name": "Останкино и рядом 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "babyshkinskiy_news",
+      "name": "Бабушкинский и Лосиноостровский 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "butyrskiy_news",
+      "name": "Бутырский и Марьина Роща 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sviblovo_news24",
+      "name": "Свиблово и Ростокино 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bibirevo_news24",
+      "name": "Бибирево 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lianozovo_news24",
+      "name": "Лианозово и рядом 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "otradnoe_news24",
+      "name": "Отрадное 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "medvedkovo_news",
+      "name": "Медведково 24/7 • СВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bogorodskoe_news24",
+      "name": "Богородское 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sokolniki_news",
+      "name": "Сокольники и рядом 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "izmailovo_news24",
+      "name": "Измайлово 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ivanovskiy_news",
+      "name": "Ивановское 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "perovo_news",
+      "name": "Перово и Новогиреево 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "golianovo_news",
+      "name": "Гольяново 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kosino_news24",
+      "name": "Косино и рядом 24/7 • ВАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "brateevo_news24",
+      "name": "Братеево и Зябликово 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "caricino_news",
+      "name": "Царицыно и Москворечье 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "orehovo_borisovo24",
+      "name": "Орехово-Борисово и Бирюлёво 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "danilovskiy_news",
+      "name": "Даниловский и Донской 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chertanovo_mews",
+      "name": "Чертаново 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nagatino_news24",
+      "name": "Нагатино и рядом 24/7 • ЮАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bytovo_news",
+      "name": "Бутово 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "konkovo_news24",
+      "name": "Коньково 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tepliy_stan_news",
+      "name": "Теплый стан 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "iasenevo_mews24",
+      "name": "Ясенево 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cheremyshki_news",
+      "name": "Черёмушки и рядом 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zuzino_news",
+      "name": "Зюзино 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "akademicheskiy_news24",
+      "name": "Академический и рядом 24/7 • ЮЗАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bolshenews",
+      "name": "Больше",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "antidigital",
+      "name": "Нецифровая экономика",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "telesputnik",
+      "name": "Телеспутник",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Yaroslav_Babushkin",
+      "name": "ЯРОС",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "harmfulinvestor",
+      "name": "Вредный Инвестор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "angrybonds",
+      "name": "angry bonds",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smartlabnews",
+      "name": "СМАРТЛАБ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "thefinexpert",
+      "name": "Инвестиции с Александром Абрамяном",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "divForever",
+      "name": "Дивиденды Forever",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Finindie",
+      "name": "Фининди | Александр Елисеев",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zelenogradru",
+      "name": "Zelenograd.ru - Новости Зеленограда",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "troitsk_city",
+      "name": "Troitsk City",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tinao_top",
+      "name": "Новая Москва / ТиНАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskovskyNEWS",
+      "name": "Московский NEWS ТиНАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazan_smi",
+      "name": "Новости Казани и Республики Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "samaratg01",
+      "name": "Самара №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nizhny01",
+      "name": "Нижний №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bashk01",
+      "name": "Уфа №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "samara_smi",
+      "name": "Новости Самары и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nizhniy_smi",
+      "name": "Новости Нижнего Новгорода и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi_voronezh",
+      "name": "Новости Воронежа и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ufa_smi",
+      "name": "Новости Уфы и Республики Башкортостан | Уфа",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nn_sobaka_ru",
+      "name": "НН.Собака.ru",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "double_solid",
+      "name": "Двойная сплошная",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "RationalAnswer",
+      "name": "RationalAnswer | Павел Комаровский",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "put_investor",
+      "name": "Путь инвестора (Давыдов Артем)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ShumilovPavel",
+      "name": "Павел Шумилов - инвестиции, разборы компаний",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "particular_trader",
+      "name": "ИнвестТема | Литвинов Владимир",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Kondrashovinvest",
+      "name": "KondrashovInvest",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Kharyb",
+      "name": "📍Недвижимость с Харыбиным, новостройки, пассивный доход от аренды квартир.",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "investoksana",
+      "name": "Инвестиции с Оксаной Мащенко",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smfanton",
+      "name": "Ленивый инвестор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "MarketDumki",
+      "name": "ФИНАНСОВЫЕ ДУМКИ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "div_invest",
+      "name": "Инвестиции на диване",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pensiya35",
+      "name": "На пенсию в 35 лет",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "BizLike",
+      "name": "Кубышка | Евгений Марченко",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bitkogan_hotline",
+      "name": "bitkogan⚡️HOTLINE",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pro100IPO",
+      "name": "Просто про IPO Pre IPO",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cryptokogan",
+      "name": "CryptoKogan",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "otyumen",
+      "name": "О!Тюмень",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskow_my",
+      "name": "Моя Москва!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "prodomodedovo",
+      "name": "Домодедовод: новости Домодедово",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dmitrovreg",
+      "name": "Новости Дмитровского округа",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lifepetersburg",
+      "name": "Санкт-Петербург Life",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "samnewbuild",
+      "name": "Самарские новостройки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kdpiter",
+      "name": "Как дела, Санкт-Петербург?",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "paperpaper_ru",
+      "name": "Бумага: всё о Петербурге",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "petrograd_my",
+      "name": "Мой Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "town1703",
+      "name": "Петербург 1703",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piteronline1",
+      "name": "Питер онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dprom",
+      "name": "Добывающая промышленность онлайн dprom.online",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svobodakassa",
+      "name": "Свободная касса (ритейл & e-com)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ssluchay",
+      "name": "Страховой случай",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "upravdom_channel",
+      "name": "Управдом | ЖКХ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Vgudok",
+      "name": "Vgudok",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "prometallinfo",
+      "name": "ПРОметалл",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "alina_beauty7",
+      "name": "Пособия на детей",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "prudent_invest",
+      "name": "Осторожный инвестор",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Investicii_Zarybeg",
+      "name": "Инвестиции Зарубеж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "prolivefy",
+      "name": "Инвестирование в зарубежную недвижимость. Релокация и бизнес миграция",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rusbiz",
+      "name": "Рашнбизнес",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "afishadaily",
+      "name": "Афиша Daily",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pitertop",
+      "name": "Петербург с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "anti_malware",
+      "name": "AM Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ekb_da",
+      "name": "Екатеринбург.ДА | Новости Екатеринбурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscow_smi",
+      "name": "Моя Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spb_smi",
+      "name": "Санкт-Петербург LIVE",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "arhangelsk_smi",
+      "name": "Новости Архангельска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "astra_smi",
+      "name": "Новости Астрахани и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "balashiha_smi",
+      "name": "Новости Балашихи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "barnaul_smi",
+      "name": "Новости Барнаула и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "belgorod_smi",
+      "name": "Новости Белгорода и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "blagoveshensk_smi",
+      "name": "Новости Благовещенска и Амура",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi25",
+      "name": "Новости Владивостока и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi_vladimir",
+      "name": "Новости Владимира и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "volgograd_smi",
+      "name": "Новости Волгограда и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vologda_smi",
+      "name": "Новости Вологды и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ivanovo_smi",
+      "name": "Новости Иваново и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "izhevsk_smi",
+      "name": "Новости Ижевска и Удмуртии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "irkutsk_smi",
+      "name": "Новости Иркутска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yoshka_smi",
+      "name": "Новости Йошкар-Олы и Марий Эл",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kaliningrad_smi",
+      "name": "Новости Калининграда и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kamchatka_smi",
+      "name": "Новости Камчатки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kemerovo_smi",
+      "name": "Новости Кемерово и Кузбасс",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kirov_smi",
+      "name": "Новости Кирова и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnoyarsk_smi",
+      "name": "Новости Красноярска и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kursk_smi",
+      "name": "Новости Курска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kizil_smi",
+      "name": "Новости Кызыла и Тывы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lipetsk_smi",
+      "name": "Новости Липецка и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "maikop_smi",
+      "name": "Новости Майкопа и Адыгеи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "murmansk_smi",
+      "name": "Новости Мурманска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "omsk_smi",
+      "name": "Новости Омска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "orel_smi",
+      "name": "Новости Орел и Область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "orenburg_smi",
+      "name": "Новости Оренбурга и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi_penza",
+      "name": "Новости Пензы и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "perm_smi",
+      "name": "Новости Перми и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "petrozavodsk_smi",
+      "name": "Новости Петрозаводска и Карелии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rostov_smi",
+      "name": "Новости Ростова и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ryazan_smi",
+      "name": "Новости Рязани и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "saransk_smi",
+      "name": "Новости Саранска и Мордовии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smi_saratov",
+      "name": "Новости Саратова и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sakhalin_smi",
+      "name": "Новости Сахалина и Курил",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "smolensk_smi",
+      "name": "Новости Смоленска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "stavropol_smi",
+      "name": "Новости Ставрополя и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "surgut_smi",
+      "name": "Новости Сургута и ХМАО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "siktivkar_smi",
+      "name": "Новости Сыктывкара и Коми",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tambov_smi",
+      "name": "Новости Тамбова и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tver_smi",
+      "name": "Новости Твери и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tomsk_smi",
+      "name": "Новости Томска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tula_smi",
+      "name": "Новости Тула и Область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ulan_smi",
+      "name": "Новости Улан-Удэ и Бурятии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ulyanovsk_smi",
+      "name": "Новости Ульяновска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "khabarovsk_smi",
+      "name": "Новости Хабаровска и Края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cheboksary_smi",
+      "name": "Новости Чебоксар и Чувашии",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chelyabinsk_smi",
+      "name": "Новости Челябинска и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chita_smi",
+      "name": "Новости Чита и Забайкалье",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "engels_smi",
+      "name": "Мой Энгельс",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yaroslavl_smi",
+      "name": "Новости Ярославля и Области",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "stavropoltop",
+      "name": "Ставрополье с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sochitop1",
+      "name": "Сочи с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kaliningradtop",
+      "name": "Калининград с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tulatop",
+      "name": "Тула с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "voronezh_r36",
+      "name": "Регион-36 (Воронеж с огоньком)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "voronej_dtp",
+      "name": "ДТП и ЧП Воронеж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "voronezhskoe",
+      "name": "Мой Воронеж",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nizhniytop",
+      "name": "Нижний Новгород с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasntop",
+      "name": "Красноярск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnoyaarsk",
+      "name": "Красноярск сейчас",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cheliabinsktop",
+      "name": "Челябинск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kemertop",
+      "name": "Кемерово с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lipetsktop1",
+      "name": "Липецк с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yartop12",
+      "name": "Ярославль с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "izhevsktop1",
+      "name": "Ижевск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazantop1",
+      "name": "Казань с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chp_cheb",
+      "name": "ЧП Чебоксары (Чебоксары с огоньком)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rnd_my",
+      "name": "Новости Ростова-на-Дону",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moyrostovondon",
+      "name": "Афиша Ростова",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "volgogradtop1",
+      "name": "Волгоград с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "novgorodtop",
+      "name": "Великий Новгород с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tomsktop1",
+      "name": "Томск с огоньком",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tambovonline1",
+      "name": "Тамбов онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "maikopchp",
+      "name": "ЧП Майкоп / Республика Адыгея",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uaoMsc",
+      "name": "Мой ЮАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vaoMsc",
+      "name": "Мой ВАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uzaoMsc",
+      "name": "Мой ЮЗАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "saoMsc",
+      "name": "Мой САО l Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cao_msc",
+      "name": "Мой ЦАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svaoMsc",
+      "name": "Мой СВАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uvaoMsc",
+      "name": "Мой ЮВАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zao_msc",
+      "name": "Мой ЗАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "szaoMsc",
+      "name": "Мой СЗАО | Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uzelsv",
+      "name": "🔴 Узел связи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piter_v_kurce",
+      "name": "Питер в курсе",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piterburg",
+      "name": "Питерская Хроника",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Megapolisonline",
+      "name": "Мегаполис | ДТП и ЧП | Санкт-Петербург | Питер💡",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "petersburg_live",
+      "name": "Санкт-Петербург | Питер Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piter_city1",
+      "name": "Мой Питер+",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sp_1703",
+      "name": "1703",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spbnews0",
+      "name": "Новости Питера | Санкт Петербурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piterkadr",
+      "name": "Питер в кадре",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spb_state",
+      "name": "Эй, Питер!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "paradnayalive",
+      "name": "Парадная Live: Новости Питера",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "allnews47",
+      "name": "47news",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kuda_vpitere",
+      "name": "Куда в Питере",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nowspb",
+      "name": "Петербург сейчас",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spb_burg",
+      "name": "Санкт-Петербург сегодня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sobaka_ru",
+      "name": "Собака.ru",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "peterburg_sever",
+      "name": "Северная столица | Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "life_spb78",
+      "name": "Будь в курсе | Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piter_headline",
+      "name": "Питер сегодня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rotondamedia",
+      "name": "Ротонда",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "peterburgnovosti",
+      "name": "Петербург Ньюс (Peterburg News)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "obshina_spb",
+      "name": "РУССКАЯ ОБЩИНА ПЕТРОГРАДА",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "telekudrovo",
+      "name": "Жизнь в Кудрово",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "MDK_Petersburg",
+      "name": "MDK Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vyborggo",
+      "name": "Интересные события в Выборге",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "topspb_tv",
+      "name": "ГЛАВНОЕ / Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "primarea",
+      "name": "🌉 Приморский район Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "TheNevaTimes",
+      "name": "Нева Таймс (Neva Times)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "znach_li_ty",
+      "name": "Знаешь ли ты, Питер?",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "openparad",
+      "name": "Открытая Парадная",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "St_Petersburg_new5",
+      "name": "Питер/Новости /Места",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nevskyarea",
+      "name": "🌃 Невский район Live",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "okidoki_spb",
+      "name": "ОКИ DОКИ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zhest_spb",
+      "name": "Жесть Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pitercalling",
+      "name": "Мама, я в Питере!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piter_online1",
+      "name": "Это Питер, детка!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piternews24",
+      "name": "Piter News 24 (Новости Петербурга)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kpspbru",
+      "name": "Комсомольская правда: СПб",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nocommentsrussia1703",
+      "name": "У Петра за пазухой | Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ta_samaya_vecherka",
+      "name": "Вечерний Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "interestpiter",
+      "name": "Интересный Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lenoblast47",
+      "name": "Уже не Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rjevka",
+      "name": "Ржевка - Красногвардейский район СПб",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "shpspb",
+      "name": "Шпаргалки Петербурга",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nash_Piter",
+      "name": "Питер | Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "thepeterburg",
+      "name": "Питерская Пчёлка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "oipiter",
+      "name": "Ой, Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "flashpiter",
+      "name": "Флэш Питер | Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "TruePetersburg",
+      "name": "Честный Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chp_piter",
+      "name": "ЧП Питер",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "piterkstati",
+      "name": "Кстати, Санкт-Петербург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Novostroy_SPb",
+      "name": "Новострой-СПб. Петербург и ЛО. Новостройки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mospulse",
+      "name": "Пульс Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chpmoscoww",
+      "name": "ЧП / Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mosheadlines",
+      "name": "Москва 2033",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk_today77",
+      "name": "Москва сегодня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskow_drink",
+      "name": "Москва под градусом",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk_top1",
+      "name": "Москва сегодня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "radiogovoritmsk",
+      "name": "Говорит Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Moscow_00",
+      "name": "Москва 2026",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moscow_number1",
+      "name": "Москва №1 • Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mscstation",
+      "name": "Станция Москвич",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "go_msk",
+      "name": "Новости Москвы • Самое Важное!",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "oimaskva",
+      "name": "Ой, Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tvcmoscow",
+      "name": "Москва. Город новостей",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tut_moskva1",
+      "name": "Тут Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zhest_moscoww",
+      "name": "Жесть Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Mos_Never_sleep",
+      "name": "Москвичи",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "technomoskva",
+      "name": "Техно Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "okey_moscow",
+      "name": "ОК! Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "stoli_shtuchka",
+      "name": "Столичная штучка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk_oblast",
+      "name": "Новости Москвы • Подмосковья",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "imoscow",
+      "name": "Интересная Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "MoscowEgo",
+      "name": "Эго Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "koroche_moscow",
+      "name": "Короче, Москва",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "myluber",
+      "name": "Мои Люберцы ®️",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mytischi_live",
+      "name": "💢МЫТИЩИ.LIVE • НОВОСТИ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pushkino_official",
+      "name": "Pushkino_official | Пушкино Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mytischi_official",
+      "name": "Mytischi_Official | Мытищи Новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "himki24",
+      "name": "Химки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "podmsk01",
+      "name": "Подмосковье №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "oursergievposad",
+      "name": "Наш Сергиев Посад",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "balashixa_mow",
+      "name": "Балашиха",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "the_pochtalon",
+      "name": "Подмосковный Почтальон",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "podolsk_msk",
+      "name": "Подольск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "moskovskaya_oblast_24",
+      "name": "Московская область 24",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "luberci_mow",
+      "name": "Люберцы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Podslushano_Dolgoprudny",
+      "name": "Подслушано Долгопрудный",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "podmoskvi4",
+      "name": "Рай и МКАД | Подмосковье",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Khimki_Podslushano",
+      "name": "Подслушано Химки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "top_shelkovo",
+      "name": "Топовый Щёлкопряд | Щёлково",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vramezhit",
+      "name": "В Раменском жить",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Balashiha_Podslushan",
+      "name": "Подслушано Балашиха",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnoyarsk",
+      "name": "КрасноярскДА | Новости Красноярска",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazan1n",
+      "name": "Казань №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krsk01",
+      "name": "Красноярск №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kzn_xz",
+      "name": "Подслушано | Казань и Республика Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "aida_kazan",
+      "name": "Айда | Казань и Республика Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "today_kzn",
+      "name": "KZN_TODAY | Казань и Республика Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "pnnov",
+      "name": "Подслушано Нижний Новгород и Область",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "nizhny801",
+      "name": "Нижний 801🌇",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "gokzn",
+      "name": "Go Kazan•Новости Казани",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazanvkp",
+      "name": "В Казани Поймут",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tatarstan_republic",
+      "name": "Tatarstan Republic | Казань",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spb_korushka",
+      "name": "Корюшка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "enter_media",
+      "name": "Enter",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sao_ms",
+      "name": "САО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svao_ms",
+      "name": "СВАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vao_mow",
+      "name": "ВАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uvao_msc",
+      "name": "ЮВАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uao_ms",
+      "name": "ЮАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "uzao_ms",
+      "name": "ЮЗАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zao_ms",
+      "name": "ЗАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "szao_ms",
+      "name": "СЗАО • Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "choiceekb",
+      "name": "Чойс Екатеринбург",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "erzrf",
+      "name": "ЕРЗ | Новости, аналитика, тренды девелопмента",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bloodconcrete",
+      "name": "Кровь и Бетон",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazan_da",
+      "name": "КазанДа | Казань",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazankay",
+      "name": "Куда Пойти в Казани | Типичная Казань",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "NeKaspersky",
+      "name": "НеКасперский",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "who_the_best",
+      "name": "Подслушано на Патриках",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bponline",
+      "name": "БП онлайн",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "neprofashion",
+      "name": "The Crown 👑",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mos24_online",
+      "name": "Москва 24/7",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "spb24live",
+      "name": "Питер лайв: Петербург 24/7",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vmeste_mbm",
+      "name": "MBM.MOS | Малый бизнес Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "msk_innoagency",
+      "name": "Инновации Москвы",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazan_only",
+      "name": "Только Казань",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "inkazanischa",
+      "name": "Inkazan | Казань и Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazanlenta",
+      "name": "Вокруг Казани | Куда пойти",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "eduvtatarstan",
+      "name": "Еду в Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "typicalkzn",
+      "name": "Город Казань | Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "TheKazan",
+      "name": "The Казанец | Азат Кашапов | Казань",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ttatarlar",
+      "name": "ТАТАРЛАР • Казан • Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "bizRT",
+      "name": "Татарский бизнес • Казань Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kazanalga",
+      "name": "Казанские хроники | Татарстан",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "novostroiko",
+      "name": "Недвижимость Казань Новостройки",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "PoperlyukovCEO",
+      "name": "Цифровой баррель",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "great_numbers",
+      "name": "Большие числа",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yoprom",
+      "name": "ё-Пром | Промышленные инновации России",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "INTEKPROM",
+      "name": "Пищевая промышленность | Новости ИНТЕКПРОМ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "propbru",
+      "name": "PRO ПБ|Пожарная безопасность",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Fire_safety2",
+      "name": "Максим Безногих",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "profiz_pb",
+      "name": "Промышленная безопасность",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sport_moskvaa",
+      "name": "Москва | Спорт Здоровье",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ciocdo24",
+      "name": "я-ИТ-ы. Без спама",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "babkalavka",
+      "name": "Бабка на лавке",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "dostavim",
+      "name": "Доставим вчера",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "gokrsndr",
+      "name": "Гуляй, Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "startapnaya",
+      "name": "Стартапная | Тренды и бизнес",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zvpdnr",
+      "name": "Зарплаты Выплаты и пособия ДНР - РФ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "zpregion",
+      "name": "Первый Запорожский 🇷🇺",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yaltachp",
+      "name": "ЧП ЯЛТА АЛУШТА",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "yalta_podslushano",
+      "name": "Подслушано Ялта / Алушта",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sevastopol_vkurse",
+      "name": "Севастополь в курсе",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "Krymt",
+      "name": "Телеблог Крым",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kerch_news",
+      "name": "Керчь ИНФО",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "cps_feodosia",
+      "name": "ЧП ФЕОДОСИЯ (КРЫМ)",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chp_bakhchysarai",
+      "name": "ЧП Бахчисарай | Новости Крыма",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ZOVcrimea",
+      "name": "КРЫМИНФОРУМ🇿 🇴 🇻",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "vecherniylugansk",
+      "name": "Вечерний Луганск",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "typical_makeevka",
+      "name": "Типичная Макеевка",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tip_enakievo",
+      "name": "Типичное Енакиево",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "svodkidpr180",
+      "name": "Новости и Сводки ДНР Донецк",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "southtower",
+      "name": "Южная башня",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sevinfo92",
+      "name": "Севастополь INFO",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "severnaya_sevastopol",
+      "name": "Севастополь. Северная сторона",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "sevasday",
+      "name": "СЕВАСТОПОЛЬ СЕГОДНЯ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "seanewskerch",
+      "name": "МыКЕРЧЬ.РФ - новости Крыма",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ru181lnr",
+      "name": "🇷🇺181.RU | ЛНР 🅉 INFO | НОВОСТИ ЛУГАНСКА🇷🇺",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ohsevastopol",
+      "name": "ПОДСЛУШАНО В СЕВАСТОПОЛЕ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "newmelitopol",
+      "name": "Новости Мелитополя и не только",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "MDK_Crimea",
+      "name": "MDK Крым",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "mariupol_online24",
+      "name": "Мариуполь Online",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lugansk_online",
+      "name": "ЛУГАНСК онлайн Новости и события, блог Луганска, ЛНР, реклама",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "lifednr",
+      "name": "ЖИЗНЬ В ДНР • Донецк • Макеевка • Харцызск • Горловка • Енакиево • Шахтерск • Торез • Снежное • Мариуполь • Донбасс",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "HersonVestnik",
+      "name": "Херсонский Вестник",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "forpost_sev",
+      "name": "ForPost. Новости Севастополя",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "donetsk_dnr_info",
+      "name": "ДНР INFO 🇷🇺",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "crimia_max",
+      "name": "Привет, это Крым",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "crimeainform",
+      "name": "Крыминформ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "crimea24new",
+      "name": "НОВОСТИ КРЫМ",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chpdn",
+      "name": "ЧП Донецк 🎖 Новости ДНР",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "berdyansk_srochno",
+      "name": "Срочно Бердянск‼️",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "ak_lugansk",
+      "name": "Актуальный Луганск – новости ЛНР",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "crym_novosti",
+      "name": "Крым №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "archi_ru",
+      "name": "Archi.ru",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tele_satinfo",
+      "name": "Tele-SatINFO International",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "gopeterburg",
+      "name": "Куда пойти в Питере",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "tipichkrasnodar",
+      "name": "Типичный Краснодар и край",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "big_kub",
+      "name": "Большая Кубань | Краснодар и край",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnodarkray1",
+      "name": "Краснодар и край",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "news_93_ru",
+      "name": "93.RU | Новости Краснодара и края",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "chp_krd",
+      "name": "ЧП Краснодар™",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krasnodar_topor23",
+      "name": "Краснодарский Топор 18+",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kuban_23",
+      "name": "Кубань 2️⃣3️⃣ Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "privet_rostov_ru",
+      "name": "Privet-Rostov.ru - новости Ростов-на-Дону",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "glavnyi_rostov",
+      "name": "РОСТОВ ГЛАВНЫЙ новости",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "MDK_RnD",
+      "name": "MDK Ростов",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "rstv01",
+      "name": "Ростов №1",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "netipichkakrd",
+      "name": "Нетипичный Краснодар🥸",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "krd_tipich",
+      "name": "Типичный Краснодар",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "kozakrichala",
+      "name": "Коза кричала",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    },
+    {
+      "username": "labirint_investora",
+      "name": "Лабиринт инвестора: новостройки Москвы.",
+      "category": "news",
+      "subcategory": "general",
+      "country": "RU",
+      "source": "discover",
+      "region_hint": null
+    }
+  ]
+}

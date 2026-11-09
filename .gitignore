@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Telethon
+*.session
+*.session-journal
+sessions/
+
+# Логи
+*.log
+
+# Сгенерированные данные (пересоздаются через `python main.py export`)
+web/data/channels.json
+web/data/channels.js
+web/data/semantic_map.json
+web/data/semantic_map.js
+web/data/geo_map.json
+web/data/geo_map.js
+
+# OS
+.DS_Store
+Thumbs.db

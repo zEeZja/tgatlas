@@ -1,0 +1,4 @@
+{
+  "_comment": "Ручные исключения по username. Пример: \"channel_name\": {\"region\": \"Москва\", \"channel_type\": \"regional\", \"reason\": \"Подтверждено вручную\"}. Допустимые channel_type: regional, federal, unknown.",
+  "channels": {}
+}
