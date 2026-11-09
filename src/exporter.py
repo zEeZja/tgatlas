@@ -5,12 +5,14 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .topic_keywords import resolve_topic
+
 log = logging.getLogger(__name__)
 
 def _channel_to_row(ch: dict) -> dict:
     username = ch["username"]
     last_parsed = ch.get("last_parsed_at")
-    return {
+    row = {
         "id": username,
         "telegram_id": ch.get("telegram_id"),
         "username": username,
@@ -33,6 +35,10 @@ def _channel_to_row(ch: dict) -> dict:
         "url": f"https://t.me/{username}",
         "last_parsed_at": last_parsed.isoformat() if last_parsed else None,
     }
+
+    row["original_subcategory"] = ch.get("subcategory")
+    row.update(resolve_topic(row))
+    return row
 
 def export_channels(conn, db_module) -> int:
     channels = db_module.get_channels_with_meta(conn)

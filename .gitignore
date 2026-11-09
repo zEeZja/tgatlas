@@ -25,3 +25,8 @@ web/data/geo_map.js
 # OS
 .DS_Store
 Thumbs.db
+
+# Optional frontend test dependencies
+node_modules/
+test-results/
+playwright-report/
