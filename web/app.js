@@ -81,6 +81,13 @@
     onSelect: (id) => selectChannel(id),
   });
   map.setLayout(layout);
+  document.getElementById("relief-toggle").onclick = (e) => {
+    map.showRelief = !map.showRelief;
+    e.currentTarget.setAttribute("aria-pressed", String(map.showRelief));
+    e.currentTarget.textContent =
+      "Рельеф: " + (map.showRelief ? "вкл." : "выкл.");
+    map._schedule();
+  };
   document.getElementById("zoom-in").onclick = () => map.zoomBy(1.35);
   document.getElementById("zoom-out").onclick = () => map.zoomBy(1 / 1.35);
   document.getElementById("fit-map").onclick = () => map.fitVisible();
@@ -417,8 +424,7 @@
       const key =
         state.group === "topic"
           ? ch.subcategory
-          : ch.region ||
-            (ch.channel_type === "federal" ? "Федеральные" : "Без региона");
+          : window.Layout.geographyGroup(ch);
       counts.set(key, (counts.get(key) || 0) + 1);
     }
     legendEl.replaceChildren();

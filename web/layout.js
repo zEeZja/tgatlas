@@ -1,124 +1,264 @@
-/* Deterministic, collision-free clusters. Filters never move individual channels. */
+/* Seeded organic archipelagos: topic → geographic neighbourhood, never a matrix.
+ * Distances express curated category/coverage membership, not embedding similarity.
+ */
 (function () {
   "use strict";
-  const GAP = 28,
-    PAD = 28,
-    HEADER = 70,
-    TILE_GAP = 42;
-  function nodeRadius(channel) {
-    const subscribers = Number(channel.subscribers) || 0;
-    return subscribers > 0
-      ? 4 + 3 * Math.min(1, Math.log10(subscribers) / 7)
-      : 4;
+  function nodeRadius(ch) {
+    const n = Number(ch.subscribers) || 0;
+    return n > 0 ? 4 + 3 * Math.min(1, Math.log10(n) / 7) : 4;
   }
-  function hash(value) {
+  function hash(s) {
     let h = 2166136261;
-    for (const char of String(value))
-      h = Math.imul(h ^ char.charCodeAt(0), 16777619);
+    for (const c of String(s)) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
     return h >>> 0;
+  }
+  function random(seed) {
+    let a = hash(seed);
+    return () => {
+      a += 0x6d2b79f5;
+      let t = a;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function geo(ch) {
+    if (ch.geography_regions?.length) return ch.geography_regions.join(" · ");
+    if (ch.geography_scope === "country")
+      return (
+        "Вся страна · " + (ch.geography_country || ch.country || "не уточнена")
+      );
+    if (ch.geography_scope === "global") return "Международный охват";
+    if (ch.geography_scope) return "География не уточнена";
+    return ch.region || "Без региона";
+  }
+  // Greedy radial packing leaves empty water between independent islands.
+  function pack(items, gap) {
+    const placed = [];
+    for (const item of items) {
+      let p = { x: 0, y: 0 };
+      if (placed.length) {
+        let found = false;
+        for (let k = 0; k < 20000; k++) {
+          const angle = k * 2.399963229728653;
+          const d = 12 * Math.sqrt(k);
+          p = { x: Math.cos(angle) * d, y: Math.sin(angle) * d };
+          if (
+            placed.every(
+              (q) =>
+                Math.hypot(p.x - q.x, p.y - q.y) >=
+                item.radius + q.radius + gap,
+            )
+          ) {
+            found = true;
+            break;
+          }
+        }
+        if (!found)
+          p = {
+            x:
+              Math.max(...placed.map((q) => q.x + q.radius)) +
+              gap +
+              item.radius,
+            y: 0,
+          };
+      }
+      Object.assign(item, p);
+      placed.push(item);
+    }
+    return placed;
+  }
+  function scatter(channels, seed) {
+    const list = [...channels].sort(
+      (a, b) =>
+        hash(a.id) - hash(b.id) || String(a.id).localeCompare(String(b.id)),
+    );
+    const grid = new Map(),
+      nodes = [];
+    const cell = 24;
+    let bound = Math.max(26, Math.sqrt(list.length) * 16);
+    for (const ch of list) {
+      const rnd = random(seed + ":" + ch.id);
+      let x,
+        y,
+        r = nodeRadius(ch),
+        placed = false;
+      for (let k = 0; k < 10000; k++) {
+        const angle = rnd() * Math.PI * 2,
+          dist = Math.sqrt(rnd()) * bound;
+        const warp =
+          1 +
+          0.13 * Math.sin(angle * 3 + (hash(seed) % 13)) +
+          0.08 * Math.cos(angle * 5);
+        x = Math.cos(angle) * dist * warp;
+        y =
+          Math.sin(angle) * dist * (0.82 + 0.12 * Math.sin(hash(seed))) * warp;
+        const cx = Math.floor(x / cell),
+          cy = Math.floor(y / cell);
+        let good = true;
+        for (let i = cx - 2; i <= cx + 2 && good; i++)
+          for (let j = cy - 2; j <= cy + 2 && good; j++)
+            for (const n of grid.get(i + ":" + j) || [])
+              if (Math.hypot(x - n.x, y - n.y) < r + n.radius + 10) {
+                good = false;
+                break;
+              }
+        if (good) {
+          const n = { ...ch, x, y, radius: r };
+          nodes.push(n);
+          const key = cx + ":" + cy;
+          if (!grid.has(key)) grid.set(key, []);
+          grid.get(key).push(n);
+          placed = true;
+          break;
+        }
+        if (k % 300 === 299) bound *= 1.04;
+      }
+      if (!placed) throw new Error("Не удалось разместить канал " + ch.id);
+    }
+    const radius =
+      Math.max(30, ...nodes.map((n) => Math.hypot(n.x, n.y) + n.radius)) + 28;
+    return { nodes, radius };
+  }
+  function hull(nodes) {
+    const p = nodes
+      .map((n) => ({ x: n.x, y: n.y }))
+      .sort((a, b) => a.x - b.x || a.y - b.y);
+    if (p.length < 3) return p;
+    const cross = (o, a, b) =>
+      (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);
+    const low = [],
+      high = [];
+    for (const a of p) {
+      while (low.length > 1 && cross(low.at(-2), low.at(-1), a) <= 0) low.pop();
+      low.push(a);
+    }
+    for (const a of [...p].reverse()) {
+      while (high.length > 1 && cross(high.at(-2), high.at(-1), a) <= 0)
+        high.pop();
+      high.push(a);
+    }
+    return low.slice(0, -1).concat(high.slice(0, -1));
   }
   function buildClusterLayout(channels, mode = "topic") {
     const groups = new Map();
     for (const ch of channels) {
-      const topic =
-        window.Topics.byId[ch.subcategory] || window.Topics.byId.other;
-      const key =
-        mode === "region"
-          ? ch.region ||
-            (ch.channel_type === "federal" ? "Федеральные" : "Без региона")
-          : topic.id;
-      if (!groups.has(key))
-        groups.set(key, {
-          id: key,
-          label: mode === "region" ? key : topic.label,
-          color: mode === "region" ? "#a6cbb2" : topic.color,
+      const t = window.Topics.byId[ch.subcategory] || window.Topics.byId.other;
+      const id = mode === "region" ? geo(ch) : t.id;
+      if (!groups.has(id))
+        groups.set(id, {
+          id,
+          label: mode === "region" ? id : t.label,
+          color: mode === "region" ? "#a6cbb2" : t.color,
           channels: [],
         });
-      groups.get(key).channels.push(ch);
+      groups.get(id).channels.push(ch);
     }
-    const clusters = [...groups.values()].sort(
+    const macros = [...groups.values()].sort(
       (a, b) =>
         b.channels.length - a.channels.length || a.id.localeCompare(b.id),
     );
-    const tiles = [],
-      nodes = [];
-    let width = 0,
-      height = 0;
-    for (const group of clusters) {
-      const count = group.channels.length;
-      const cols = Math.max(1, Math.ceil(Math.sqrt(count * 1.3)));
-      const rows = Math.ceil(count / cols);
-      const tileWidth = Math.max(248, (cols - 1) * GAP + PAD * 2);
-      const tileHeight = Math.max(138, (rows - 1) * GAP + PAD * 2 + HEADER);
-      const candidates = [{ x: 0, y: 0 }];
-      for (const t of tiles)
-        candidates.push(
-          { x: t.x + t.width + TILE_GAP, y: t.y },
-          { x: t.x, y: t.y + t.height + TILE_GAP },
-        );
-      const allowed = candidates.filter((p) =>
-        tiles.every(
-          (t) =>
-            p.x + tileWidth + TILE_GAP <= t.x ||
-            p.x >= t.x + t.width + TILE_GAP ||
-            p.y + tileHeight + TILE_GAP <= t.y ||
-            p.y >= t.y + t.height + TILE_GAP,
-        ),
-      );
-      const cost = (p) => {
-        const w = Math.max(width, p.x + tileWidth),
-          h = Math.max(height, p.y + tileHeight);
-        return w * h + 0.4 * (w - h * 1.35) ** 2;
-      };
-      allowed.sort((a, b) => cost(a) - cost(b) || a.y - b.y || a.x - b.x);
-      const place = allowed[0];
-      const tile = {
-        id: group.id,
-        label: group.label,
-        color: group.color,
-        count,
-        x: place.x,
-        y: place.y,
-        width: tileWidth,
-        height: tileHeight,
-      };
-      tiles.push(tile);
-      width = Math.max(width, tile.x + tileWidth);
-      height = Math.max(height, tile.y + tileHeight);
-      const sorted = group.channels.sort(
-        (a, b) =>
-          hash(a.id) - hash(b.id) || String(a.id).localeCompare(String(b.id)),
-      );
-      for (let i = 0; i < count; i++) {
-        const ch = sorted[i],
-          row = Math.floor(i / cols),
-          col = i % cols;
-        nodes.push({
-          ...ch,
-          cluster: group.id,
-          color: window.Topics.byId[ch.subcategory]?.color || "#83968c",
-          x: tile.x + (tileWidth - (cols - 1) * GAP) / 2 + col * GAP,
-          y: tile.y + HEADER + PAD + row * GAP,
-          radius: nodeRadius(ch),
+    for (const macro of macros) {
+      const buckets = new Map();
+      for (const ch of macro.channels) {
+        const key = mode === "region" ? ch.subcategory : geo(ch);
+        if (!buckets.has(key)) buckets.set(key, []);
+        buckets.get(key).push(ch);
+      }
+      macro.clouds = [...buckets]
+        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
+        .map(([id, list]) => ({
+          ...scatter(list, macro.id + ":" + id),
+          id,
+          label: mode === "region" ? window.Topics.byId[id]?.label || id : id,
+        }));
+      pack(macro.clouds, 24);
+      macro.radius =
+        Math.max(
+          40,
+          ...macro.clouds.map((c) => Math.hypot(c.x, c.y) + c.radius),
+        ) + 45;
+    }
+    pack(macros, 90);
+    const nodes = [],
+      clusters = [],
+      clouds = [];
+    for (const m of macros) {
+      const own = [];
+      for (const c of m.clouds) {
+        const ns = c.nodes.map((n) => ({
+          ...n,
+          x: n.x + c.x + m.x,
+          y: n.y + c.y + m.y,
+          cluster: m.id,
+          neighbourhood: m.id + ":" + c.id,
+          color: window.Topics.byId[n.subcategory]?.color || "#83968c",
+        }));
+        nodes.push(...ns);
+        own.push(...ns);
+        clouds.push({
+          id: m.id + ":" + c.id,
+          cluster: m.id,
+          label: c.label,
+          color: m.color,
+          count: ns.length,
+          x: m.x + c.x,
+          y: m.y + c.y,
+          radius: c.radius,
+          outline: hull(ns),
+          labelY: Math.min(...ns.map((n) => n.y)) - 24,
         });
       }
+      clusters.push({
+        id: m.id,
+        label: m.label,
+        color: m.color,
+        count: own.length,
+        x: m.x - m.radius,
+        y: m.y - m.radius,
+        width: 2 * m.radius,
+        height: 2 * m.radius,
+        cx: m.x,
+        cy: m.y,
+        labelY:
+          m.y +
+          m.clouds[0].y +
+          Math.min(...m.clouds[0].nodes.map((n) => n.y)) -
+          65,
+      });
     }
-    // World-space margins reserve room for the fixed map title/footer.
+    if (!nodes.length)
+      return { nodes, clusters, clouds, width: 640, height: 480, mode };
+    const left = Math.min(...clusters.map((c) => c.x)) - 80,
+      top = Math.min(...clusters.map((c) => c.y)) - 160;
     for (const n of nodes) {
-      n.x += 60;
-      n.y += 140;
+      n.x -= left;
+      n.y -= top;
     }
-    for (const t of tiles) {
-      t.x += 60;
-      t.y += 140;
+    for (const c of clusters) {
+      c.x -= left;
+      c.y -= top;
+      c.cx -= left;
+      c.cy -= top;
+      c.labelY -= top;
+    }
+    for (const c of clouds) {
+      c.x -= left;
+      c.y -= top;
+      c.labelY -= top;
+      for (const p of c.outline) {
+        p.x -= left;
+        p.y -= top;
+      }
     }
     return {
       nodes,
-      clusters: tiles,
-      width: Math.max(640, width + 120),
-      height: Math.max(480, height + 240),
+      clusters,
+      clouds,
+      width: Math.max(640, ...clusters.map((c) => c.x + c.width + 80)),
+      height: Math.max(480, ...clusters.map((c) => c.y + c.height + 100)),
       mode,
     };
   }
-  window.Layout = { buildClusterLayout, nodeRadius };
+  window.Layout = { buildClusterLayout, nodeRadius, geographyGroup: geo };
 })();

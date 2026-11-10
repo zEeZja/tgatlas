@@ -1605,3 +1605,31 @@ select:focus-visible {
   padding-left: 10px;
   margin: 0 0 15px;
 }
+
+.relief-toggle {
+  position: absolute;
+  right: 26px;
+  top: 150px;
+  background: #1d2b23;
+  color: #afcdb9;
+  border: 1px solid #34473b;
+  border-radius: 7px;
+  padding: 7px 12px;
+  font-size: 10px;
+}
+.relief-toggle[aria-pressed="false"] {
+  background: transparent;
+  color: #8aa393;
+}
+@media (max-width: 1000px) {
+  .relief-toggle {
+    top: 115px;
+    right: 24px;
+  }
+}
+@media (max-width: 760px) {
+  .relief-toggle {
+    top: 110px;
+    right: 20px;
+  }
+}
