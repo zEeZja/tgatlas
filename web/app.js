@@ -5,6 +5,8 @@
     window.Topics.taxonomy.sections.map((s) => [s.id, s.label]),
   );
   const COUNTRY_LABELS = {
+    PT: "Португалия",
+    UZ: "Узбекистан",
     RU: "Россия",
     UA: "Украина",
     BY: "Беларусь",

@@ -1,35 +1,216 @@
 [
- {"name":"Политические новости","subcategory":"general","category":"news","expected":"politics"},
- {"name":"Новости науки","category":"news","expected":"science"},
- {"name":"Новости медицины","expected":"health"},
- {"name":"Нейросети и ChatGPT","expected":"ai"},
- {"name":"Искусственный интеллект","expected":"ai"},
- {"name":"Финансы и инвестиции","expected":"business"},
- {"name":"Биткоин и блокчейн","expected":"crypto"},
- {"name":"Новости программирования","expected":"tech"},
- {"name":"Самарские новостройки","expected":"realestate"},
- {"name":"Транспорт Петербурга","expected":"auto"},
- {"name":"Английский для начинающих","expected":"education"},
- {"name":"Путешествия и туризм","expected":"travel"},
- {"name":"Кино и сериалы","expected":"culture"},
- {"name":"Мемы и юмор","expected":"entertainment"},
- {"name":"Видеоигры и PlayStation","expected":"gaming"},
- {"name":"Футбол сегодня","expected":"sport"},
- {"name":"Армия и фронт","expected":"military"},
- {"name":"Международные новости","expected":"world"},
- {"name":"Новости города","expected":"general"},
- {"name":"Непонятное название","description":"Политика, парламент и выборы. Новости законодательства.","expected":"politics"},
- {"name":"Непонятное название","username":"tomskpolit","expected":"politics"},
- {"name":"Market of ideas","username":"earth_party_career","expected":"other"},
- {"name":"Партнеры и карьера","expected":"other"},
- {"name":"Местные новости","description":"По рекламе: менеджер. События города.","expected":"general"},
- {"name":"Яркое название","description":"Здесь рассказываем о жизни.","expected":"other"},
- {"name":"Яркое название","category":"sports","expected":"sport"},
- {"name":"Политика","subcategory":"science","expected":"science"},
- {"name":"Политика","subcategory":"mystery","expected":"politics"},
- {"name":"Политика","original_subcategory":null,"subcategory":"tech","expected":"politics"},
- {"name":"Наука","subcategory":"news","expected":"science"},
- {"name":"Политика","username":"manual_channel","override":"culture","expected":"culture"},
- {"name":"ПОЛИТИКА И ВЫБОРЫ","expected":"politics"},
- {"name":"Новости","description":"Политика и экономика","expected":"general"}
+  {
+    "name": "Политические новости",
+    "subcategory": "general",
+    "category": "news",
+    "expected": "politics"
+  },
+  {
+    "name": "Новости науки",
+    "category": "news",
+    "expected": "science"
+  },
+  {
+    "name": "Новости медицины",
+    "expected": "health"
+  },
+  {
+    "name": "Нейросети и ChatGPT",
+    "expected": "ai"
+  },
+  {
+    "name": "Искусственный интеллект",
+    "expected": "ai"
+  },
+  {
+    "name": "Финансы и инвестиции",
+    "expected": "business"
+  },
+  {
+    "name": "Биткоин и блокчейн",
+    "expected": "crypto"
+  },
+  {
+    "name": "Новости программирования",
+    "expected": "tech"
+  },
+  {
+    "name": "Самарские новостройки",
+    "expected": "realestate"
+  },
+  {
+    "name": "Транспорт Петербурга",
+    "expected": "auto"
+  },
+  {
+    "name": "Английский для начинающих",
+    "expected": "education"
+  },
+  {
+    "name": "Путешествия и туризм",
+    "expected": "travel"
+  },
+  {
+    "name": "Кино и сериалы",
+    "expected": "culture"
+  },
+  {
+    "name": "Мемы и юмор",
+    "expected": "entertainment"
+  },
+  {
+    "name": "Видеоигры и PlayStation",
+    "expected": "gaming"
+  },
+  {
+    "name": "Футбол сегодня",
+    "expected": "sport"
+  },
+  {
+    "name": "Армия и фронт",
+    "expected": "military"
+  },
+  {
+    "name": "Международные новости",
+    "expected": "world"
+  },
+  {
+    "name": "Новости города",
+    "expected": "general"
+  },
+  {
+    "name": "Непонятное название",
+    "description": "Политика, парламент и выборы. Новости законодательства.",
+    "expected": "politics"
+  },
+  {
+    "name": "Непонятное название",
+    "username": "tomskpolit",
+    "expected": "politics"
+  },
+  {
+    "name": "Market of ideas",
+    "username": "earth_party_career",
+    "expected": "other"
+  },
+  {
+    "name": "Партнеры и карьера",
+    "expected": "career"
+  },
+  {
+    "name": "Местные новости",
+    "description": "По рекламе: менеджер. События города.",
+    "expected": "general"
+  },
+  {
+    "name": "Яркое название",
+    "description": "Здесь рассказываем о жизни.",
+    "expected": "other"
+  },
+  {
+    "name": "Яркое название",
+    "category": "sports",
+    "expected": "sport"
+  },
+  {
+    "name": "Политика",
+    "subcategory": "science",
+    "expected": "science"
+  },
+  {
+    "name": "Политика",
+    "subcategory": "mystery",
+    "expected": "politics"
+  },
+  {
+    "name": "Политика",
+    "original_subcategory": null,
+    "subcategory": "tech",
+    "expected": "politics"
+  },
+  {
+    "name": "Наука",
+    "subcategory": "news",
+    "expected": "science"
+  },
+  {
+    "name": "Политика",
+    "username": "manual_channel",
+    "override": "culture",
+    "expected": "culture"
+  },
+  {
+    "name": "ПОЛИТИКА И ВЫБОРЫ",
+    "expected": "politics"
+  },
+  {
+    "name": "Новости",
+    "description": "Политика и экономика",
+    "expected": "general"
+  },
+  {
+    "name": "Мурманск сейчас",
+    "username": "murmansknow",
+    "description": "Поделиться новостью: @murmansknow_bot\nРазместить рекламу: @adMurmansk",
+    "expected": "general"
+  },
+  {
+    "name": "Подслушано Химки",
+    "username": "khimki_podslushano",
+    "description": "По рекламе: @Sofia_Reklama",
+    "expected": "general"
+  },
+  {
+    "name": "Саратов Live",
+    "expected": "general"
+  },
+  {
+    "name": "Барнаул №1",
+    "expected": "general"
+  },
+  {
+    "name": "Вологда Онлайн",
+    "expected": "general"
+  },
+  {
+    "name": "Развлечения в Ташкенте",
+    "expected": "entertainment"
+  },
+  {
+    "name": "Карьера в Португалии",
+    "expected": "career"
+  },
+  {
+    "name": "Добывающая промышленность",
+    "expected": "industry"
+  },
+  {
+    "name": "Интерпром",
+    "category": "news",
+    "description": "Промышленность и производство. Новости отрасли.",
+    "expected": "industry"
+  },
+  {
+    "name": "Мурманск сейчас",
+    "description": "Врач и клиника. Медицинские консультации.",
+    "expected": "health"
+  },
+  {
+    "name": "Кто твой город",
+    "description": "По вопросам рекламы пишите менеджеру",
+    "expected": "other"
+  },
+  {
+    "name": "Теория",
+    "description": "Нейросети и машинное обучение",
+    "expected": "ai"
+  },
+  {
+    "name": "Калининград.Ru ✔",
+    "expected": "general"
+  },
+  {
+    "name": "Автоматизация",
+    "expected": "tech"
+  }
 ]

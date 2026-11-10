@@ -84,9 +84,9 @@ const server = http.createServer((req, res) => {
     await page.keyboard.press("Escape");
     await page.locator("#clear").click();
     await page.locator("#region").selectOption("Москва");
-    assert.equal(await page.locator("#count").textContent(), "165");
+    assert.equal(await page.locator("#count").textContent(), "167");
     await page.locator("#group-by").selectOption("region");
-    assert.equal(await page.locator("#count").textContent(), "165");
+    assert.equal(await page.locator("#count").textContent(), "167");
     assert(
       (await page.locator("#group-caption").innerText()).includes(
         "По регионам",
@@ -223,6 +223,53 @@ const server = http.createServer((req, res) => {
       (await page.locator(".detail-badges").innerText()).includes("Наука"),
     );
     assert(!requests.some((r) => r.includes("geo-map")));
+    // Regression cases from the user's real screenshots, with public profile descriptions.
+    const screenshots = [
+      {
+        id: "murmansknow",
+        username: "murmansknow",
+        name: "Мурманск сейчас",
+        description:
+          "Поделиться новостью: @murmansknow_bot. Разместить рекламу: @adMurmansk",
+        subcategory: "other",
+        region_review_required: true,
+        country: "RU",
+      },
+      {
+        id: "khimki_podslushano",
+        username: "khimki_podslushano",
+        name: "Подслушано Химки",
+        description: "По рекламе: @Sofia_Reklama",
+        subcategory: "general",
+        region_review_required: true,
+        country: "RU",
+      },
+    ].map((c) => ({ ...c, url: "https://t.me/" + c.username }));
+    await page.unroute("**/api/channels");
+    await page.route("**/api/channels", (route) =>
+      route.fulfill({ json: { channels: screenshots } }),
+    );
+    await page.reload();
+    await page.waitForFunction(
+      () => document.querySelector("#count").textContent === "2",
+    );
+    await page.locator(".result").first().click();
+    assert(
+      (await page.locator(".detail-badges").innerText()).includes("Новости"),
+    );
+    assert(
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Мурманская область",
+      ),
+    );
+    await page.keyboard.press("Escape");
+    await page.locator("#mobile-toggle").click();
+    await page.locator(".result").nth(1).click();
+    assert(
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Московская область",
+      ),
+    );
     // Opt-in: managed Chromium may prohibit file:// navigation by administrator policy.
     // Category first, then coverage and contextual regions. Unknown is not global.
     const hierarchyRows = [

@@ -30,6 +30,7 @@
     const pattern = normalize(keyword);
     if (pattern.includes(" ")) return ` ${text} `.includes(` ${pattern} `);
     return text.split(" ").some((token) => {
+      if (keyword === "авто" && token.startsWith("автомат")) return false;
       if (keyword === "новост" && token.startsWith("новостро")) return false;
       return (
         token === pattern ||
@@ -46,7 +47,7 @@
     const fields = [
       ["name", normalize(name), 4],
       ["username", normalize(username), 3],
-      ["description", normalize(description), 1],
+      ["description", normalize(description), 2],
     ];
     const ranked = [];
     for (const topic of taxonomy.topics) {
@@ -65,11 +66,19 @@
     ranked.sort(
       (a, b) => b.score - a.score || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
     );
-    const best = ranked[0] || { id: "other", score: 0, evidence: [] };
-    const winner =
-      best.score >= (best.id === "general" ? Math.min(threshold, 2) : threshold)
-        ? best.id
-        : "other";
+    const qualified = ranked.filter(
+      (r) =>
+        r.score >= (r.id === "general" ? Math.min(threshold, 2) : threshold),
+    );
+    let best = qualified[0] ||
+      ranked[0] || { id: "other", score: 0, evidence: [] };
+    let winner = qualified.length ? best.id : "other";
+    const contextual =
+      winner === "other" ? localNewsEvidence(name, description) : null;
+    if (contextual) {
+      winner = "general";
+      best = { id: "general", score: 3, evidence: [contextual] };
+    }
     const ambiguous =
       ranked.length > 1 &&
       ranked[1].id !== "general" &&
@@ -79,7 +88,10 @@
       score: best.score,
       evidence: best.evidence,
       candidates: ranked.slice(0, 3).map((t) => ({ id: t.id, score: t.score })),
-      review_required: winner === "other" || ambiguous,
+      review_required:
+        winner === "other" ||
+        ambiguous ||
+        !!(contextual && contextual.includes("требует проверки")),
     };
   }
   const titleRules = Object.entries(taxonomy.region_aliases || {}).flatMap(
@@ -117,6 +129,62 @@
     const result = regions.length === 1 ? regions[0] : null;
     titleCache.set(name, result);
     return result;
+  }
+  function inferForeignTitle(name) {
+    const words = normalize(name).split(" ");
+    const found = (taxonomy.foreign_geography || []).filter((p) =>
+      p.aliases.some((alias) =>
+        words.some(
+          (t) => t === alias || (alias.length >= 5 && t.startsWith(alias)),
+        ),
+      ),
+    );
+    if (new Set(found.map((p) => p.country)).size !== 1) return null;
+    const cities = found.filter((p) => p.scope === "region");
+    return cities.length === 1
+      ? cities[0]
+      : !cities.length && found.length === 1
+        ? found[0]
+        : null;
+  }
+  function localNewsEvidence(name, description) {
+    const text = normalize(name),
+      words = text.split(" "),
+      region = inferTitleRegion(name),
+      foreign = inferForeignTitle(name);
+    if (!region && !(foreign && foreign.scope === "region")) return null;
+    const markers = [
+      "сейчас",
+      "сегодня",
+      "онлайн",
+      "online",
+      "live",
+      "подслушано",
+      "типичный",
+      "типичная",
+      "главный",
+      "события",
+    ];
+    if (
+      words.some((t) => markers.includes(t)) ||
+      /№\s*1\b|\.(?:ru|рф)\b/iu.test(name)
+    )
+      return "name:городской формат (город + сейчас/онлайн/подслушано)";
+    const desc = normalize(description);
+    if (
+      [
+        "поделиться новост",
+        "прислать новост",
+        "присылайте новост",
+        "новости города",
+        "новости нашего города",
+      ].some((p) => desc.includes(p))
+    )
+      return "description:приём городских новостей";
+    const aliases = region ? taxonomy.region_aliases[region] : foreign.aliases;
+    if (aliases.map(normalize).includes(text))
+      return "name:название города (требует проверки темы)";
+    return null;
   }
   function geography(channel) {
     const key = String(channel.username || "")
@@ -156,19 +224,26 @@
     const federal =
       channel.channel_type === "federal" ||
       taxonomy.federal_channels.some((x) => x.toLowerCase() === key);
+    let foreign = null;
     if (!regions.length && !override && !federal && !channel.geographic_scope) {
       const inferred = inferTitleRegion(channel.name || "");
-      if (inferred) regions = [inferred];
+      const candidateForeign = inferForeignTitle(channel.name || "");
+      if (inferred && !candidateForeign) regions = [inferred];
+      else if (candidateForeign && !inferred) {
+        foreign = candidateForeign;
+        if (foreign.scope === "region") regions = [foreign.label];
+      }
     }
     let scope;
     if (["global", "country", "unknown"].includes(channel.geographic_scope)) {
       scope = channel.geographic_scope;
       regions = [];
-    } else if (regions.length > 1) scope = "multi_region";
+    } else if (foreign?.scope === "country") scope = "country";
+    else if (regions.length > 1) scope = "multi_region";
     else if (regions.length) scope = "region";
-    else if (channel.channel_type === "federal") scope = "country";
+    else if (federal) scope = "country";
     else scope = "unknown";
-    const country = String(channel.country || "")
+    const country = String(foreign?.country || channel.country || "")
       .trim()
       .toUpperCase();
     if (scope === "country" && !country) scope = "unknown";

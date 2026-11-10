@@ -12,6 +12,7 @@ import unicodedata
 from functools import lru_cache
 from pathlib import Path
 from .geography import resolve_geography
+from .title_region import local_news_evidence
 
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = json.loads((ROOT / 'config/topics.json').read_text(encoding='utf-8'))
@@ -38,6 +39,8 @@ def _matches(keyword: str, text: str, field: str) -> bool:
         return f' {pattern} ' in f' {text} '
     # Short terms must be whole tokens: art/party/car/eth should not match arbitrary words.
     for token in text.split():
+        if keyword == 'авто' and token.startswith('автомат'):
+            continue
         if keyword == 'новост' and token.startswith('новостро'):
             continue
         if token == pattern or (len(pattern) >= (5 if pattern.isascii() else 4) and token.startswith(pattern)):
@@ -49,7 +52,7 @@ def _matches(keyword: str, text: str, field: str) -> bool:
 
 def classify_topic(name: str = '', username: str = '', description: str = '', threshold: float = 3.0) -> dict:
     fields = [('name', _normalize(name), 4), ('username', _normalize(username), 3),
-              ('description', _normalize(description), 1)]
+              ('description', _normalize(description), 2)]
     ranked = []
     for topic in TAXONOMY['topics']:
         score = 0
@@ -65,12 +68,17 @@ def classify_topic(name: str = '', username: str = '', description: str = '', th
         if score:
             ranked.append(dict(id=topic['id'], score=score, evidence=evidence))
     ranked.sort(key=lambda t: (-t['score'], t['id']))
-    best = ranked[0] if ranked else dict(id='other', score=0, evidence=[])
-    winner = best['id'] if best['score'] >= (min(threshold, 2) if best['id'] == 'general' else threshold) else 'other'
+    qualified = [r for r in ranked if r['score'] >= (min(threshold,2) if r['id']=='general' else threshold)]
+    best = qualified[0] if qualified else ranked[0] if ranked else dict(id='other', score=0, evidence=[])
+    winner = best['id'] if qualified else 'other'
+    contextual = local_news_evidence(name,description) if winner=='other' else None
+    if contextual:
+        winner='general'
+        best=dict(id='general',score=3,evidence=[contextual])
     candidates = [dict(id=t['id'], score=t['score']) for t in ranked[:3]]
     ambiguous = len(ranked) > 1 and ranked[1]['id'] != 'general' and best['score'] - ranked[1]['score'] < 2
     return dict(subcategory=winner, score=best['score'], evidence=best['evidence'],
-                candidates=candidates, review_required=winner == 'other' or ambiguous)
+                candidates=candidates, review_required=winner == 'other' or ambiguous or bool(contextual and 'требует проверки' in contextual))
 
 
 def resolve_topic(channel: dict, overrides: dict | None = None) -> dict:
