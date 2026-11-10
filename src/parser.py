@@ -106,6 +106,7 @@ def parse_channel_meta(html: str) -> dict:
         soup,
         "div.tgme_channel_info_description",
         "div[class*='channel_info_description']",
+        "div.tgme_page_description",
     )
     if desc_node:
         result["description"] = _node_to_text(desc_node)
@@ -134,6 +135,15 @@ def parse_channel_meta(html: str) -> dict:
             result["subscribers"] = parsed_count if parsed_count is not None else parse_views(raw_count)
             break
 
+    # Public profile contains metadata without loading the /s/ publication feed.
+    extra = soup.select_one('.tgme_page_extra')
+    if extra and result['subscribers'] is None:
+        text = extra.get_text(' ', strip=True)
+        match = re.search(r'([\d\s.,\u00a0]+[kKmMКкМм]?)\s*(?:subscribers|подписчик\w*)', text, re.IGNORECASE)
+        if match:
+            result['subscribers'] = parse_count(match.group(1).strip())
+            if result['name'] and not desc_node:
+                result['description'] = ''  # Successful empty profile clears an old description.
     return result
 
 def parse_channel_page(html: str, username: str, channel_id: int) -> List[Post]:

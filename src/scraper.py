@@ -78,14 +78,14 @@ def _backoff(attempt: int) -> float:
     ceiling = min(MAX_BACKOFF, 2.0 ** attempt)
     return random.uniform(0, ceiling)
 
-def fetch_channel_html(username: str, before: Optional[int] = None) -> str:
+def fetch_channel_html(username: str, before: Optional[int] = None, *, profile: bool = False) -> str:
     """Скачать HTML страницы канала.
 
     before — id поста, старше которого тянем страницу (пагинация t.me/s/).
     Бросает ScrapeError для «безнадёжных» случаев (404/403, 429 после
     исчерпания попыток).
     """
-    url = f"https://t.me/s/{username}"
+    url = f"https://t.me/{username}" if profile else f"https://t.me/s/{username}"
     params = {"before": before} if before else None
 
     for attempt in range(MAX_ATTEMPTS):

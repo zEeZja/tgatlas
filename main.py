@@ -43,6 +43,12 @@ def cmd_scrape(args) -> int:
     return 0
 
 
+def cmd_refresh_metadata(args):
+    from src import public_metadata
+    result=public_metadata.run(channels=args.channel,workers=args.workers,from_config=args.from_config)
+    return 1 if result['failed'] or not result['total'] else 0
+
+
 def cmd_stats(args) -> int:
     from src import db
     conn = db.connect()
@@ -334,6 +340,12 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument('--pages', type=positive_int, help='лимит страниц на канал (по умолчанию MAX_PAGES)')
     sp.add_argument('--full-history', action='store_true', help='читать историю без остановки на уже сохранённых постах, в пределах лимита страниц')
     sp.set_defaults(func=cmd_scrape)
+
+    sp = sub.add_parser('refresh-metadata', help='обновить публичные название, описание и подписчиков без публикаций и Telethon')
+    sp.add_argument('--channel','-c',action='append',metavar='USERNAME')
+    sp.add_argument('--workers',type=int,choices=range(1,9),help='сетевые загрузчики (1–8)')
+    sp.add_argument('--from-config',action='store_true',help='импортировать каталог config/channels.json перед обновлением')
+    sp.set_defaults(func=cmd_refresh_metadata)
 
     sp = sub.add_parser("stats", help="статистика каналов и публикаций")
     sp.set_defaults(func=cmd_stats)
