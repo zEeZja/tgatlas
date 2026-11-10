@@ -1,0 +1,478 @@
+{
+  "version": 2,
+  "sections": [
+    {
+      "id": "society",
+      "label": "Общество и новости"
+    },
+    {
+      "id": "business",
+      "label": "Бизнес и деньги"
+    },
+    {
+      "id": "knowledge",
+      "label": "Технологии и знания"
+    },
+    {
+      "id": "lifestyle",
+      "label": "Жизнь и интересы"
+    },
+    {
+      "id": "other",
+      "label": "Без раздела"
+    }
+  ],
+  "topics": [
+    {
+      "id": "general",
+      "label": "Новости",
+      "section": "society",
+      "color": "#8aafa3",
+      "keywords": [
+        "новост",
+        "news",
+        "срочно",
+        "breaking",
+        "происшеств",
+        "инцидент",
+        "молния",
+        "репортаж",
+        "репортер",
+        "хроник",
+        "информ",
+        "сводк",
+        "чп",
+        "сми",
+        "медиа"
+      ]
+    },
+    {
+      "id": "politics",
+      "label": "Политика",
+      "section": "society",
+      "color": "#df9cba",
+      "keywords": [
+        "полит",
+        "politic",
+        "polit",
+        "выборы",
+        "election",
+        "депутат",
+        "госдум",
+        "парламент",
+        "правительств",
+        "президент",
+        "министр",
+        "губернатор",
+        "мэр",
+        "законопроект",
+        "санкци",
+        "дипломат"
+      ]
+    },
+    {
+      "id": "world",
+      "label": "Международное",
+      "section": "society",
+      "color": "#72bdc6",
+      "keywords": [
+        "геополит",
+        "международн",
+        "зарубежн",
+        "мировая повестка",
+        "мировые новости",
+        "international news",
+        "world news"
+      ]
+    },
+    {
+      "id": "military",
+      "label": "Военная тематика",
+      "section": "society",
+      "color": "#b7b892",
+      "keywords": [
+        "военн",
+        "military",
+        "армия",
+        "army",
+        "война",
+        "вооруж",
+        "всу",
+        "мобилизац",
+        "оружи",
+        "weapon",
+        "ракеты",
+        "танк",
+        "бпла",
+        "фронт",
+        "наступлен",
+        "генштаб",
+        "военкор",
+        "оборон"
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Бизнес и экономика",
+      "section": "business",
+      "color": "#e5bd7c",
+      "keywords": [
+        "бизнес",
+        "business",
+        "экономик",
+        "economy",
+        "финанс",
+        "finance",
+        "инвест",
+        "invest",
+        "акции",
+        "бирж",
+        "банк",
+        "деньги",
+        "money",
+        "валют",
+        "кредит",
+        "налог",
+        "предпринимат",
+        "стартап",
+        "startup",
+        "венчур",
+        "капитал",
+        "дивиденд",
+        "облигац"
+      ]
+    },
+    {
+      "id": "crypto",
+      "label": "Криптовалюты",
+      "section": "business",
+      "color": "#e7a365",
+      "keywords": [
+        "крипт",
+        "crypto",
+        "биткоин",
+        "bitcoin",
+        "btc",
+        "эфириум",
+        "ethereum",
+        "eth",
+        "блокчейн",
+        "blockchain",
+        "токен",
+        "майнинг",
+        "mining",
+        "defi",
+        "nft",
+        "web3",
+        "binance",
+        "altcoin",
+        "стейблкоин"
+      ]
+    },
+    {
+      "id": "realestate",
+      "label": "Недвижимость",
+      "section": "business",
+      "color": "#c5af76",
+      "keywords": [
+        "недвиж",
+        "realestate",
+        "новострой",
+        "застройщик",
+        "ипотек",
+        "риелтор",
+        "риэлтор",
+        "девелопмент",
+        "жилье"
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "Маркетинг",
+      "section": "business",
+      "color": "#d7a87c",
+      "keywords": [
+        "маркетинг",
+        "marketing",
+        "smm",
+        "таргет",
+        "брендинг",
+        "копирайтинг",
+        "маркетолог",
+        "рекламщик",
+        "рекламный рынок",
+        "рекламные кампании"
+      ]
+    },
+    {
+      "id": "tech",
+      "label": "Технологии и IT",
+      "section": "knowledge",
+      "color": "#a89cde",
+      "keywords": [
+        "технолог",
+        "technology",
+        "tech",
+        "гаджет",
+        "gadget",
+        "смартфон",
+        "компьютер",
+        "ноутбук",
+        "программ",
+        "software",
+        "разработк",
+        "программист",
+        "developer",
+        "кибербезопас",
+        "хакер",
+        "сервер",
+        "linux",
+        "javascript",
+        "python",
+        "devops",
+        "frontend",
+        "backend"
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "ИИ и нейросети",
+      "section": "knowledge",
+      "color": "#c6a1ec",
+      "keywords": [
+        "нейросет",
+        "llm",
+        "chatgpt",
+        "openai",
+        "midjourney",
+        "ai",
+        "искусственный интеллект",
+        "искусственного интеллекта",
+        "artificial intelligence",
+        "machine learning",
+        "машинное обучение"
+      ]
+    },
+    {
+      "id": "science",
+      "label": "Наука",
+      "section": "knowledge",
+      "color": "#7eb8dc",
+      "keywords": [
+        "наук",
+        "science",
+        "исследован",
+        "research",
+        "космос",
+        "space",
+        "космонавт",
+        "физик",
+        "physics",
+        "химия",
+        "chemistry",
+        "биолог",
+        "biology",
+        "генетик",
+        "днк",
+        "археолог",
+        "астроном",
+        "телескоп",
+        "математ",
+        "quantum"
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Образование",
+      "section": "knowledge",
+      "color": "#9bbfdf",
+      "keywords": [
+        "образован",
+        "education",
+        "обучени",
+        "обучение",
+        "учеба",
+        "учебн",
+        "английск",
+        "english",
+        "языки",
+        "экзамен",
+        "егэ",
+        "огэ",
+        "репетитор",
+        "университет",
+        "лектор",
+        "лекции",
+        "педагог"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Культура",
+      "section": "lifestyle",
+      "color": "#cba2cf",
+      "keywords": [
+        "культур",
+        "culture",
+        "кино",
+        "фильм",
+        "movie",
+        "театр",
+        "theatre",
+        "музык",
+        "music",
+        "концерт",
+        "афиша",
+        "выставк",
+        "литератур",
+        "книги",
+        "книг",
+        "писател",
+        "искусств",
+        "дизайн",
+        "мода",
+        "fashion",
+        "сериал"
+      ]
+    },
+    {
+      "id": "entertainment",
+      "label": "Юмор и развлечения",
+      "section": "lifestyle",
+      "color": "#df9fa1",
+      "keywords": [
+        "юмор",
+        "humor",
+        "мемы",
+        "memes",
+        "анекдот",
+        "comedy",
+        "комедия",
+        "приколы",
+        "развлек",
+        "развлекатель"
+      ]
+    },
+    {
+      "id": "sport",
+      "label": "Спорт",
+      "section": "lifestyle",
+      "color": "#8fca97",
+      "keywords": [
+        "спорт",
+        "sport",
+        "футбол",
+        "football",
+        "хоккей",
+        "hockey",
+        "баскетбол",
+        "basketball",
+        "волейбол",
+        "теннис",
+        "бокс",
+        "boxing",
+        "mma",
+        "ufc",
+        "олимпиад",
+        "чемпионат",
+        "матч",
+        "турнир",
+        "тренер",
+        "стадион"
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Здоровье",
+      "section": "lifestyle",
+      "color": "#87c8ba",
+      "keywords": [
+        "здоров",
+        "health",
+        "медицин",
+        "medicine",
+        "врач",
+        "doctor",
+        "клиник",
+        "больниц",
+        "лекарств",
+        "фарма",
+        "психолог",
+        "психотерап",
+        "диет",
+        "фитнес"
+      ]
+    },
+    {
+      "id": "auto",
+      "label": "Авто и транспорт",
+      "section": "lifestyle",
+      "color": "#d6b889",
+      "keywords": [
+        "авто",
+        "автомобил",
+        "машины",
+        "motor",
+        "мото",
+        "водител",
+        "дтп",
+        "транспорт",
+        "тюнинг",
+        "шины"
+      ]
+    },
+    {
+      "id": "travel",
+      "label": "Путешествия",
+      "section": "lifestyle",
+      "color": "#8dbbb1",
+      "keywords": [
+        "путешеств",
+        "travel",
+        "туризм",
+        "турист",
+        "отели",
+        "авиабилеты",
+        "отпуск",
+        "экспедиц",
+        "hiking",
+        "tourism"
+      ]
+    },
+    {
+      "id": "gaming",
+      "label": "Игры",
+      "section": "lifestyle",
+      "color": "#b2a5d7",
+      "keywords": [
+        "игры",
+        "gaming",
+        "games",
+        "гейминг",
+        "видеоигр",
+        "playstation",
+        "xbox",
+        "nintendo",
+        "steam",
+        "киберспорт"
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Не определено",
+      "section": "other",
+      "color": "#83968c",
+      "keywords": []
+    }
+  ],
+  "aliases": {
+    "news": "general",
+    "sports": "sport",
+    "technology": "tech",
+    "finance": "business",
+    "medicine": "health",
+    "it": "tech",
+    "entertainment": "entertainment"
+  },
+  "overrides": {}
+}

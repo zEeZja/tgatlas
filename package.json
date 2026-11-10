@@ -1,0 +1,11 @@
+{
+  "name": "tg-atlas-frontend-checks",
+  "private": true,
+  "scripts": {
+    "test:layout": "node tests/layout.cjs && node tests/map.cjs",
+    "test:frontend": "node tests/frontend.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

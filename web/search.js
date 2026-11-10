@@ -9,18 +9,23 @@
   const MIN_SCORE = 50;
 
   function normalize(s) {
-    return String(s ?? '')
+    return String(s ?? "")
       .toLowerCase()
-      .replace(/ё/g, 'е')
-      .replace(/\s+/g, ' ')
+      .replace(/ё/g, "е")
+      .replace(/\s+/g, " ")
       .trim();
   }
 
   function scoreToken(token, ch) {
     const name = normalize(ch.name);
     const user = normalize(ch.username);
-    const desc = normalize(ch.description || '');
-    const region = normalize(ch.region || '');
+    const desc = normalize(ch.description || "");
+    const region = normalize(ch.region || "");
+    const topic = normalize(window.Topics?.byId[ch.subcategory]?.label || "");
+    const section = normalize(
+      window.Topics?.taxonomy.sections.find((s) => s.id === ch.topic_category)
+        ?.label || "",
+    );
 
     // 1. Точное слово в названии
     const nameWords = name.split(/[\s\-_.,:;!?()/]+/).filter(Boolean);
@@ -40,6 +45,8 @@
     // 5. Подстрока в названии
     if (name.includes(token)) return 60;
 
+    if (topic.includes(token) || section.includes(token)) return 70;
+
     // 6. Регион
     if (region.includes(token)) return 55;
 
@@ -50,7 +57,7 @@
   }
 
   function scoreChannel(query, ch) {
-    const q = normalize(query).replace(/(^|\s)@/g, '$1');
+    const q = normalize(query).replace(/(^|\s)@/g, "$1");
     if (!q) return 1;
     const tokens = q.split(/\s+/).filter(Boolean);
     if (tokens.length === 0) return 1;
@@ -69,10 +76,10 @@
     if (!q) return [...channels];
 
     return channels
-      .map(ch => ({ ch, score: scoreChannel(q, ch) }))
-      .filter(x => x.score >= MIN_SCORE)
+      .map((ch) => ({ ch, score: scoreChannel(q, ch) }))
+      .filter((x) => x.score >= MIN_SCORE)
       .sort((a, b) => b.score - a.score)
-      .map(x => x.ch);
+      .map((x) => x.ch);
   }
 
   window.Search = { searchChannels, scoreChannel };
