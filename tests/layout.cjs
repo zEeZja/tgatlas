@@ -25,6 +25,15 @@ const channels = Array.from({ length: 2200 }, (_, i) =>
 function validate(layout) {
   assert.equal(layout.nodes.length, channels.length);
   assert.equal(new Set(layout.nodes.map((n) => n.id)).size, channels.length);
+  assert(layout.clouds.length > 0);
+  assert(
+    new Set(layout.nodes.map((n) => n.x)).size > layout.nodes.length * 0.9,
+    "Clouds must not form aligned columns",
+  );
+  assert(
+    new Set(layout.nodes.map((n) => n.y)).size > layout.nodes.length * 0.9,
+    "Clouds must not form aligned rows",
+  );
   const tiles = new Map(layout.clusters.map((c) => [c.id, c]));
   for (const n of layout.nodes) {
     const t = tiles.get(n.cluster);

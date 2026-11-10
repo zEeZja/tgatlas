@@ -61,6 +61,7 @@
       this.layout = { nodes: [], width: 1, height: 1 };
       this.visibleIds = null;
       this.selectedId = null;
+      this.showRelief = true;
 
       this._grid = null;
       this._maxRadius = 3;
@@ -282,21 +283,12 @@
       ctx.fillRect(0, 0, W, H);
 
       // Quiet coordinate grid in screen space, anchored to the projection.
-      ctx.strokeStyle = "#26382b";
-      ctx.lineWidth = 0.5;
-      const step = 100 * v.scale;
-      if (step > 12) {
-        ctx.beginPath();
-        for (let x = ((v.x % step) + step) % step; x < W; x += step) {
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, H);
-        }
+      ctx.fillStyle = "#294033";
+      const step = 60;
+      for (let x = ((v.x % step) + step) % step; x < W; x += step)
         for (let y = ((v.y % step) + step) % step; y < H; y += step) {
-          ctx.moveTo(0, y);
-          ctx.lineTo(W, y);
+          ctx.fillRect(x, y, 1, 1);
         }
-        ctx.stroke();
-      }
 
       // Границы видимой области в мировых координатах (+ отступ)
       const margin = (this._maxRadius + 20) / v.scale;
@@ -314,40 +306,114 @@
         if (!this.visibleIds || this.visibleIds.has(n.id))
           visibleCounts.set(n.cluster, (visibleCounts.get(n.cluster) || 0) + 1);
       }
+      // Topographic neighbourhood contours replace all category containers.
+      const labels = [];
+      const label = (text, x, y, color, size) => {
+        const sx = x * v.scale + v.x,
+          originalY = y * v.scale + v.y;
+        if (sx < 35 || sx > W - 35 || originalY < 80 || originalY > H - 65)
+          return;
+        const sy = Math.max(150, originalY);
+        y = (sy - v.y) / v.scale;
+        ctx.font = `500 ${size / v.scale}px Arial, sans-serif`;
+        const w = ctx.measureText(text).width * v.scale;
+        if (
+          labels.some(
+            (b) =>
+              Math.abs(b.x - sx) < (b.w + w) / 2 + 12 &&
+              Math.abs(b.y - sy) < 24,
+          )
+        )
+          return;
+        labels.push({ x: sx, y: sy, w });
+        ctx.textAlign = "center";
+        ctx.lineWidth = 4 / v.scale;
+        ctx.strokeStyle = "#111a18";
+        ctx.strokeText(text, x, y);
+        ctx.fillStyle = color;
+        ctx.fillText(text, x, y);
+      };
+      for (const cloud of this.layout.clouds || []) {
+        if (!this.showRelief) continue;
+        const members = nodes.filter(
+          (n) =>
+            n.neighbourhood === cloud.id &&
+            (!this.visibleIds || this.visibleIds.has(n.id)),
+        );
+        if (!members.length) continue;
+        if (
+          cloud.x + cloud.radius < worldLeft ||
+          cloud.x - cloud.radius > worldRight ||
+          cloud.y + cloud.radius < worldTop ||
+          cloud.y - cloud.radius > worldBottom
+        )
+          continue;
+        const halo = ctx.createRadialGradient(
+          cloud.x,
+          cloud.y,
+          0,
+          cloud.x,
+          cloud.y,
+          cloud.radius,
+        );
+        halo.addColorStop(0, _hexA(cloud.color, 0.09));
+        halo.addColorStop(1, _hexA(cloud.color, 0));
+        ctx.fillStyle = halo;
+        ctx.fillRect(
+          cloud.x - cloud.radius,
+          cloud.y - cloud.radius,
+          cloud.radius * 2,
+          cloud.radius * 2,
+        );
+        if (cloud.outline.length > 4)
+          for (const scale of [1.07, 1.2]) {
+            const points = cloud.outline.map((p) => ({
+              x: cloud.x + (p.x - cloud.x) * scale,
+              y: cloud.y + (p.y - cloud.y) * scale,
+            }));
+            ctx.beginPath();
+            const last = points.at(-1),
+              first = points[0];
+            ctx.moveTo((last.x + first.x) / 2, (last.y + first.y) / 2);
+            for (let i = 0; i < points.length; i++) {
+              const p = points[i],
+                next = points[(i + 1) % points.length];
+              ctx.quadraticCurveTo(
+                p.x,
+                p.y,
+                (p.x + next.x) / 2,
+                (p.y + next.y) / 2,
+              );
+            }
+            ctx.closePath();
+            ctx.lineWidth = 0.7 / v.scale;
+            ctx.strokeStyle = _hexA(cloud.color, scale < 1.1 ? 0.16 : 0.075);
+            ctx.stroke();
+          }
+      }
       for (const cluster of this.layout.clusters || []) {
         const count = visibleCounts.get(cluster.id) || 0;
         if (!count) continue;
-        ctx.fillStyle = _hexA(cluster.color, 0.045);
-        ctx.strokeStyle = _hexA(cluster.color, 0.24);
-        ctx.lineWidth = 1 / v.scale;
-        _roundRect(
-          ctx,
-          cluster.x,
-          cluster.y,
-          cluster.width,
-          cluster.height,
-          18,
-        );
-        ctx.fill();
-        ctx.stroke();
-        const fontSize = Math.min(18, 13 / v.scale);
-        ctx.font = `500 ${fontSize}px Arial, sans-serif`;
-        ctx.textAlign = "left";
-        ctx.fillStyle = cluster.color;
-        let title = cluster.label;
-        const available = cluster.width - 40;
-        while (title.length > 1 && ctx.measureText(title).width > available)
-          title = title.slice(0, -1);
-        if (title !== cluster.label) title = title.slice(0, -1) + "…";
-        ctx.fillText(title, cluster.x + 22, cluster.y + 30);
-        ctx.font = `${Math.min(13, 10 / v.scale)}px Arial, sans-serif`;
-        ctx.fillStyle = "#8fa397";
-        ctx.fillText(
-          `${count} / ${cluster.count} каналов`,
-          cluster.x + 22,
-          cluster.y + 51,
+        label(
+          cluster.label + " · " + count,
+          cluster.cx,
+          cluster.labelY,
+          cluster.color,
+          14,
         );
       }
+      if (v.scale > 0.65)
+        for (const cloud of this.layout.clouds || []) {
+          if (
+            !nodes.some(
+              (n) =>
+                n.neighbourhood === cloud.id &&
+                (!this.visibleIds || this.visibleIds.has(n.id)),
+            )
+          )
+            continue;
+          label(cloud.label, cloud.x, cloud.labelY, "#94afa0", 10);
+        }
       for (const n of nodes) {
         // Viewport culling
         if (
@@ -359,6 +425,7 @@
           continue;
 
         const active = !this.visibleIds || this.visibleIds.has(n.id);
+        const drawRadius = Math.max(n.radius, Math.min(8, 1.6 / v.scale));
         const isSel = n.id === this.selectedId;
         const isHov = this.hover && this.hover.id === n.id;
 
@@ -367,20 +434,20 @@
         if (isHov || isSel) {
           ctx.beginPath();
           ctx.fillStyle = _hexA(n.color || "#6b8afd", 0.25);
-          ctx.arc(n.x, n.y, n.radius + 5, 0, Math.PI * 2);
+          ctx.arc(n.x, n.y, drawRadius + 5, 0, Math.PI * 2);
           ctx.fill();
         }
 
         ctx.beginPath();
         ctx.fillStyle = n.color || "#6b8afd";
-        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, drawRadius, 0, Math.PI * 2);
         ctx.fill();
 
         if (isSel) {
           ctx.beginPath();
           ctx.lineWidth = 2 / v.scale;
           ctx.strokeStyle = "#ffffff";
-          ctx.arc(n.x, n.y, n.radius + 2, 0, Math.PI * 2);
+          ctx.arc(n.x, n.y, drawRadius + 2, 0, Math.PI * 2);
           ctx.stroke();
         }
       }

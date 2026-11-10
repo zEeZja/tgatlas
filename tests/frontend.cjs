@@ -59,6 +59,12 @@ const server = http.createServer((req, res) => {
     await page.waitForFunction(
       () => document.querySelector("#count").textContent === "779",
     );
+    await page.locator("#relief-toggle").click();
+    assert.equal(
+      await page.locator("#relief-toggle").getAttribute("aria-pressed"),
+      "false",
+    );
+    await page.locator("#relief-toggle").click();
     assert.equal(await page.locator(".result").count(), 200);
     await page.locator(".load-more").click();
     assert.equal(await page.locator(".result").count(), 400);
