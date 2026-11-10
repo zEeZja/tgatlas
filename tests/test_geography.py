@@ -15,14 +15,29 @@ CASES = [
     ({'geographic_scope':'global','region':'Москва'}, 'global'),
     ({'channel_type':'federal'}, 'unknown'),
 ]
+CASES += [
+    ({'name':'Новости Перми','region_review_required':True},'region'),
+    ({'name':'Читаем книги'},'unknown'),
+    ({'name':'Москва и Санкт-Петербург'},'unknown'),
+    ({'name':'Нижний Новгород'},'region'),
+]
 class GeographyTests(unittest.TestCase):
     def test_scopes_and_topic_independence(self):
         for data, expected in CASES:
             with self.subTest(data=data):
-                result=resolve_topic(dict(data,name='Политика',subcategory='general'),{})
+                result=resolve_topic(dict(data,name=data.get('name','Политика'),subcategory='politics'),{})
                 self.assertEqual(result['primary_category'],'politics')
                 self.assertEqual(result['geography_scope'],expected)
         self.assertEqual(resolve_geography(CASES[1][0])['geography_regions'],['Москва','Татарстан'])
+
+    def test_clear_titles_recover_stale_unknown_geography(self):
+        examples={'Новости Перми':'Пермский край','Омск сегодня':'Омская область','Новости Твери':'Тверская область','Сочи сейчас':'Краснодарский край','Чита новости':'Забайкальский край'}
+        for name,region in examples.items():
+            result=resolve_geography({'name':name,'region_review_required':True})
+            self.assertEqual(result['geography_regions'],[region])
+        for name in ['Читаем книги','Москва и Санкт-Петербург']:
+            self.assertEqual(resolve_geography({'name':name})['geography_scope'],'unknown')
+        self.assertEqual(resolve_geography({'username':'rian_ru','name':'Новости Москвы','channel_type':'federal','country':'RU'})['geography_scope'],'country')
 
     def test_manual_coverage(self):
         result=resolve_geography({'username':'test','region':'Москва'}, {'test':{'scope':'global'}})

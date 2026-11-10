@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from .title_region import infer_title_region
 
 
 def resolve_geography(channel: dict, overrides: dict | None = None) -> dict:
@@ -21,6 +22,14 @@ def resolve_geography(channel: dict, overrides: dict | None = None) -> dict:
         regions = [channel['region'].strip()]
     if channel.get('region_review_required'):
         regions = []
+    # Recover clear title geography even when an old export marked it for review.
+    federal = channel.get('channel_type') == 'federal'
+    federal_path = Path(__file__).resolve().parent.parent / 'config/federal_channels.json'
+    federal = federal or key in {x.lower() for x in json.loads(federal_path.read_text(encoding='utf-8'))['channels']}
+    if not regions and not override and not federal and not channel.get('geographic_scope'):
+        inferred = infer_title_region(channel.get('name') or '')
+        if inferred:
+            regions = [inferred]
     explicit = channel.get('geographic_scope')
     if explicit in ('global', 'country', 'unknown'):
         scope, regions = explicit, []
@@ -28,7 +37,7 @@ def resolve_geography(channel: dict, overrides: dict | None = None) -> dict:
         scope = 'multi_region'
     elif regions:
         scope = 'region'
-    elif channel.get('channel_type') == 'federal':
+    elif federal:
         scope = 'country'
     else:
         scope = 'unknown'

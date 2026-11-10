@@ -58,6 +58,33 @@ for (const mode of ["topic", "region"]) {
     JSON.stringify(Layout.buildClusterLayout([...channels].reverse(), mode)),
   );
 }
+const regionalRows = [
+  "Москва",
+  "Омская область",
+  "Новосибирская область",
+  "Хабаровский край",
+].map((region, i) =>
+  Topics.enrich({
+    id: "geo" + i,
+    username: "geo" + i,
+    name: "Новости",
+    subcategory: "general",
+    region,
+  }),
+);
+const geographic = Layout.buildClusterLayout(regionalRows, "region");
+const centers = regionalRows.map((r) =>
+  geographic.clusters.find((c) => c.id === r.region),
+);
+for (let i = 0; i < centers.length - 1; i++)
+  assert(
+    centers[i].cx < centers[i + 1].cx,
+    "Regional layout must preserve west-to-east order",
+  );
+assert(
+  new Set(centers.map((c) => Math.round(c.cy))).size > 2,
+  "Regions must not form one eastward row",
+);
 const empty = Layout.buildClusterLayout([]);
 assert.equal(empty.nodes.length, 0);
 assert(Number.isFinite(empty.width));

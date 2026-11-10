@@ -58,3 +58,7 @@ TG_PROXY_PORT = int(os.getenv("TG_PROXY_PORT", "0") or "0") or None
 TG_PROXY_TYPE = os.getenv("TG_PROXY_TYPE", "socks5").strip().lower()
 TG_PROXY_USER = os.getenv("TG_PROXY_USER", "").strip() or None
 TG_PROXY_PASS = os.getenv("TG_PROXY_PASS", "").strip() or None
+
+# Bounded public-preview polling. One global request gate is shared by all workers.
+SCRAPE_WORKERS = max(1, min(8, int(os.getenv("SCRAPE_WORKERS", "4"))))
+SCRAPE_REQUEST_INTERVAL = max(0.1, float(os.getenv("SCRAPE_REQUEST_INTERVAL", "1.0")))

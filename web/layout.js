@@ -140,6 +140,78 @@
     }
     return low.slice(0, -1).concat(high.slice(0, -1));
   }
+  function placeOnRussia(macros) {
+    const centers = window.Topics.taxonomy.region_centers || {};
+    const known = macros.filter((m) => centers[m.id]),
+      extra = macros.filter((m) => !centers[m.id]);
+    // LCC projection anchors; local collision relaxation preserves the continental silhouette.
+    for (const m of known) {
+      const [x, y] = centers[m.id];
+      m.x = m.anchorX = x * 5000;
+      m.y = m.anchorY = -y * 5000;
+    }
+    for (let pass = 0; pass < 260; pass++) {
+      for (const m of known)
+        if (pass < 100) {
+          m.x += (m.anchorX - m.x) * 0.015;
+          m.y += (m.anchorY - m.y) * 0.015;
+        }
+      for (let i = 0; i < known.length; i++)
+        for (let j = i + 1; j < known.length; j++) {
+          const a = known[i],
+            b = known[j];
+          let dx = b.x - a.x,
+            dy = b.y - a.y,
+            d = Math.hypot(dx, dy);
+          const min = a.radius + b.radius + 35;
+          if (d < min) {
+            if (d < 0.001) {
+              dx = 0.001;
+              dy = 0.001;
+              d = Math.hypot(dx, dy);
+            }
+            const f = ((min - d) / d) * 1.02;
+            const massA = a.radius * a.radius,
+              massB = b.radius * b.radius;
+            const weightA = massB / (massA + massB),
+              weightB = 1 - weightA;
+            a.x -= dx * f * weightA;
+            a.y -= dy * f * weightA;
+            b.x += dx * f * weightB;
+            b.y += dy * f * weightB;
+          }
+        }
+    }
+    let expand = 1;
+    for (let i = 0; i < known.length; i++)
+      for (let j = i + 1; j < known.length; j++)
+        expand = Math.max(
+          expand,
+          (known[i].radius + known[j].radius + 35) /
+            Math.max(
+              0.001,
+              Math.hypot(known[i].x - known[j].x, known[i].y - known[j].y),
+            ),
+        );
+    for (const m of known) {
+      m.x *= expand;
+      m.y *= expand;
+    }
+    if (extra.length) {
+      pack(extra, 50);
+      const minY = Math.min(...extra.map((m) => m.y - m.radius));
+      const y = known.length
+        ? Math.max(...known.map((m) => m.y + m.radius)) + 180
+        : 0;
+      const cx = known.length
+        ? known.reduce((n, m) => n + m.x, 0) / known.length
+        : 0;
+      for (const m of extra) {
+        m.x += cx;
+        m.y += y - minY;
+      }
+    }
+  }
   function buildClusterLayout(channels, mode = "topic") {
     const groups = new Map();
     for (const ch of channels) {
@@ -179,7 +251,8 @@
           ...macro.clouds.map((c) => Math.hypot(c.x, c.y) + c.radius),
         ) + 45;
     }
-    pack(macros, 90);
+    if (mode === "region") placeOnRussia(macros);
+    else pack(macros, 90);
     const nodes = [],
       clusters = [],
       clouds = [];

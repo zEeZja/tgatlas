@@ -13,14 +13,16 @@
 
 import json
 import logging
-import random
-import time
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from typing import Iterable, List, Optional
 
 from . import config
 from .db import (
     connect,
     get_active_channels,
+    get_post_watermarks,
+    get_scrape_checkpoints,
+    save_scrape_checkpoint,
     insert_posts,
     mark_parsed,
     transaction,
@@ -59,40 +61,58 @@ def load_channels() -> List[Channel]:
         )
     return result
 
-def _fetch_pages(ch: Channel) -> tuple[Optional[str], List[list]]:
-    """Скачать до MAX_PAGES страниц канала.
+def _fetch_pages(ch: Channel, last_seen: int = 0, full_history: bool = False,
+                 max_pages: int | None = None, checkpoint=None):
+    """Poll the head, then resume any interrupted delta backfill within the page budget.
 
-    Возвращает (first_html, page_posts) где page_posts — список списков Post
-    (channel_id пока 0; будет проставлен после upsert_channel).
+    Cursor and posts are persisted together. A large backlog cannot be skipped merely
+    because the latest saved ID advanced during an earlier bounded poll.
     """
-    page_posts: List[list] = []
-    first_html: Optional[str] = None
-    before: Optional[int] = None
-    pages = max(1, config.MAX_PAGES)
-
+    page_posts, first_html = [], None
+    before = None
+    pages = max(1, config.MAX_PAGES if max_pages is None else max_pages)
+    target = last_seen
+    pending = checkpoint
+    out = False if full_history else checkpoint
     for page_num in range(pages):
         html = fetch_channel_html(ch.username, before=before)
         if page_num == 0:
             first_html = html
-
         posts = parse_channel_page(html, ch.username, 0)
         if not posts:
+            if pending and before is None and not full_history:
+                before, target = pending
+                pending = None
+                out = (before,target)
+                continue
+            out = False if full_history else None
             break
-        page_posts.append(posts)
-
-        before = min(p.tg_message_id for p in posts)
-
-        if page_num < pages - 1:
-            delay = random.uniform(config.DELAY_MIN, config.DELAY_MAX)
-            time.sleep(delay)
-
-    return first_html, page_posts
+        oldest = min(p.tg_message_id for p in posts)
+        if before is not None and oldest >= before:
+            # Keep the cursor for the next attempt instead of silently losing a gap.
+            out = False if full_history else ((before,target) if last_seen else None)
+            break
+        page_posts.append(posts if full_history else [p for p in posts if p.tg_message_id > target])
+        if not full_history and oldest <= target:
+            if pending:
+                before,target = pending
+                pending = None
+                out = (before,target)
+                continue
+            out = None
+            break
+        before = oldest
+        out = False if full_history else ((before, pending[1] if pending else target) if last_seen else None)
+    return first_html, page_posts, out
 
 def _scrape_channel(conn, ch: Channel, prefix: str) -> tuple[int, int]:
     """Скачать все страницы канала и записать их одной транзакцией."""
     log.info("%s — запрашиваю t.me/s/...", prefix)
-    first_html, page_posts = _fetch_pages(ch)
+    first_html, page_posts, _ = _fetch_pages(ch)
 
+    return _store_channel(conn, ch, prefix, first_html, page_posts)
+
+def _store_channel(conn, ch, prefix, first_html, page_posts, checkpoint=False):
     # ─── Write phase: одна транзакция на канал ────────────────────────
     with transaction(conn):
         channel_id = upsert_channel(conn, ch)
@@ -120,6 +140,7 @@ def _scrape_channel(conn, ch: Channel, prefix: str) -> tuple[int, int]:
             total_found += len(posts)
             total_new += new_count
 
+        save_scrape_checkpoint(conn, channel_id, checkpoint)
         mark_parsed(conn, channel_id)
 
     subs = meta.get("subscribers")
@@ -130,7 +151,7 @@ def _scrape_channel(conn, ch: Channel, prefix: str) -> tuple[int, int]:
     )
     return total_found, total_new
 
-def run(channels_filter: Optional[Iterable[str]] = None) -> None:
+def run(channels_filter: Optional[Iterable[str]] = None, *, workers: int | None = None, full_history: bool = False, max_pages: int | None = None) -> None:
     """Синхронизировать статический каталог с БД и обработать все активные каналы.
 
     Источником истины после импорта становится PostgreSQL: сюда попадают как
@@ -174,22 +195,40 @@ def run(channels_filter: Optional[Iterable[str]] = None) -> None:
         total_new = 0
         failed = 0
 
-        for i, ch in enumerate(all_channels, start=1):
-            prefix = f"[{i}/{len(all_channels)}] @{ch.username}"
-            try:
-                found, new = _scrape_channel(conn, ch, prefix)
-                total_found += found
-                total_new += new
-            except ScrapeError as e:
-                failed += 1
-                log.warning("%s — %s", prefix, e)
-            except Exception:
-                failed += 1
-                log.exception("%s — неожиданная ошибка, пропускаю", prefix)
-
-            if i < len(all_channels):
-                delay = random.uniform(config.DELAY_MIN, config.DELAY_MAX)
-                time.sleep(delay)
+        checkpoints = get_scrape_checkpoints(conn)
+        watermarks = {} if full_history else get_post_watermarks(conn)
+        conn.commit()  # End the read transaction before waiting on network.
+        worker_count = max(1, min(8, workers if workers is not None else config.SCRAPE_WORKERS))
+        items = iter(enumerate(all_channels, start=1))
+        def submit_one(pool, pending):
+            item = next(items, None)
+            if item is None:
+                return
+            i, ch = item
+            log.info("[%d/%d] @%s — загрузка", i, len(all_channels), ch.username)
+            future = pool.submit(_fetch_pages, ch, watermarks.get(ch.id, 0), full_history, max_pages, checkpoints.get(ch.id))
+            pending[future] = (i, ch)
+        with ThreadPoolExecutor(max_workers=worker_count) as pool:
+            pending = {}
+            for _ in range(worker_count):
+                submit_one(pool, pending)
+            while pending:
+                completed, _ = wait(pending, return_when=FIRST_COMPLETED)
+                for future in completed:
+                    i, ch = pending.pop(future)
+                    prefix = f"[{i}/{len(all_channels)}] @{ch.username}"
+                    try:
+                        first_html, page_posts, checkpoint = future.result()
+                        found, new = _store_channel(conn, ch, prefix, first_html, page_posts, checkpoint)
+                        total_found += found
+                        total_new += new
+                    except ScrapeError as e:
+                        failed += 1
+                        log.warning("%s — %s", prefix, e)
+                    except Exception:
+                        failed += 1
+                        log.exception("%s — ошибка обработки", prefix)
+                    submit_one(pool, pending)
 
         log.info(
             "Готово. Найдено постов: %d, новых: %d, ошибок: %d",
