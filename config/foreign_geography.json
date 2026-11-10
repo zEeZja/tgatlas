@@ -1,0 +1,29 @@
+[
+  {
+    "label": "Ташкент",
+    "country": "UZ",
+    "scope": "region",
+    "aliases": [
+      "ташкент",
+      "tashkent"
+    ]
+  },
+  {
+    "label": "Португалия",
+    "country": "PT",
+    "scope": "country",
+    "aliases": [
+      "португал",
+      "portugal"
+    ]
+  },
+  {
+    "label": "Узбекистан",
+    "country": "UZ",
+    "scope": "country",
+    "aliases": [
+      "узбекистан",
+      "uzbekistan"
+    ]
+  }
+]

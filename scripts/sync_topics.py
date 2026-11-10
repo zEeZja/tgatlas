@@ -13,6 +13,7 @@ def render():
     data = json.loads((ROOT / 'config/topics.json').read_text(encoding='utf-8'))
     data['overrides'] = json.loads((ROOT / 'config/topic_overrides.json').read_text(encoding='utf-8'))
     data['geography_overrides'] = json.loads((ROOT / 'config/geography_overrides.json').read_text(encoding='utf-8'))
+    data['foreign_geography'] = json.loads((ROOT / 'config/foreign_geography.json').read_text(encoding='utf-8'))
     data['region_aliases'] = REGION_ALIASES
     data['region_centers'] = {name:list(project_lcc(*coords)) for name,coords in FEDERAL_SUBJECTS.items()}
     data['federal_channels'] = json.loads((ROOT / 'config/federal_channels.json').read_text(encoding='utf-8'))['channels']

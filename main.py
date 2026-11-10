@@ -43,6 +43,12 @@ def cmd_scrape(args) -> int:
     return 0
 
 
+def cmd_audit_classification(args):
+    from src.classification_audit import run
+    run(args.input,args.report)
+    return 0
+
+
 def cmd_refresh_metadata(args):
     from src import public_metadata
     result=public_metadata.run(channels=args.channel,workers=args.workers,from_config=args.from_config)
@@ -346,6 +352,11 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument('--workers',type=int,choices=range(1,9),help='сетевые загрузчики (1–8)')
     sp.add_argument('--from-config',action='store_true',help='импортировать каталог config/channels.json перед обновлением')
     sp.set_defaults(func=cmd_refresh_metadata)
+
+    sp = sub.add_parser('audit-classification',help='проверить классификацию выгрузки без запросов к Telegram и БД')
+    sp.add_argument('--input',default='web/data/channels.json')
+    sp.add_argument('--report',default='reports/classification-review.csv')
+    sp.set_defaults(func=cmd_audit_classification)
 
     sp = sub.add_parser("stats", help="статистика каналов и публикаций")
     sp.set_defaults(func=cmd_stats)

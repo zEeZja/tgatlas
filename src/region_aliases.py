@@ -406,3 +406,7 @@ for _region, _forms in {
     'Псковская область':['пскова','пскове'],
 }.items():
     REGION_ALIASES[_region].extend(_forms)
+
+# Exact forms of short stems and omitted large towns; never relax all short aliases.
+REGION_ALIASES['Московская область'].extend(['химки','химок','химках','химкам','khimki','пушкино','pushkino','мытищи','мытищах','клин','клина','клину','лобня','лобне','лобни','дубна','дубне','дубны','видное','видном'])
+REGION_ALIASES['Москва'].extend(['зеленоград','zelenograd','тинао'])

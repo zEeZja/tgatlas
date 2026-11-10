@@ -21,6 +21,15 @@ CASES += [
     ({'name':'Москва и Санкт-Петербург'},'unknown'),
     ({'name':'Нижний Новгород'},'region'),
 ]
+CASES += [
+    ({'name':'Подслушано Химки','region_review_required':True},'region'),
+    ({'name':'Pushkino_official | Пушкино'},'region'),
+    ({'name':'Zelenograd.ru — Новости'},'region'),
+    ({'name':'Развлечения в Ташкенте'},'region'),
+    ({'name':'Карьера в Португалии','country':'RU'},'country'),
+    ({'name':'Москва и Ташкент'},'unknown'),
+    ({'name':'Новости Москвы','username':'rian_ru','country':'RU'},'country'),
+]
 class GeographyTests(unittest.TestCase):
     def test_scopes_and_topic_independence(self):
         for data, expected in CASES:
@@ -29,6 +38,9 @@ class GeographyTests(unittest.TestCase):
                 self.assertEqual(result['primary_category'],'politics')
                 self.assertEqual(result['geography_scope'],expected)
         self.assertEqual(resolve_geography(CASES[1][0])['geography_regions'],['Москва','Татарстан'])
+        self.assertEqual(resolve_geography({'name':'Подслушано Химки'})['geography_regions'],['Московская область'])
+        self.assertEqual(resolve_geography({'name':'Развлечения в Ташкенте'})['geography_country'],'UZ')
+        self.assertEqual(resolve_geography({'name':'Карьера в Португалии','country':'RU'})['geography_country'],'PT')
 
     def test_clear_titles_recover_stale_unknown_geography(self):
         examples={'Новости Перми':'Пермский край','Омск сегодня':'Омская область','Новости Твери':'Тверская область','Сочи сейчас':'Краснодарский край','Чита новости':'Забайкальский край'}
