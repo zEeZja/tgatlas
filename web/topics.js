@@ -82,6 +82,60 @@
       review_required: winner === "other" || ambiguous,
     };
   }
+  function geography(channel) {
+    const key = String(channel.username || "")
+      .replace(/^@/, "")
+      .toLowerCase();
+    const override = taxonomy.geography_overrides?.[key];
+    if (override) {
+      if (
+        !["region", "multi_region", "country", "global", "unknown"].includes(
+          override.scope,
+        )
+      )
+        throw new Error("Неизвестный географический охват");
+      channel = {
+        ...channel,
+        ...override,
+        geographic_scope: override.scope,
+        region_review_required: false,
+      };
+    }
+    let regions = Array.isArray(channel.regions)
+      ? [
+          ...new Set(
+            channel.regions
+              .filter((x) => typeof x === "string" && x.trim())
+              .map((x) => x.trim()),
+          ),
+        ].sort()
+      : [];
+    if (
+      !regions.length &&
+      typeof channel.region === "string" &&
+      channel.region.trim()
+    )
+      regions = [channel.region.trim()];
+    if (channel.region_review_required) regions = [];
+    let scope;
+    if (["global", "country", "unknown"].includes(channel.geographic_scope)) {
+      scope = channel.geographic_scope;
+      regions = [];
+    } else if (regions.length > 1) scope = "multi_region";
+    else if (regions.length) scope = "region";
+    else if (channel.channel_type === "federal") scope = "country";
+    else scope = "unknown";
+    const country = String(channel.country || "")
+      .trim()
+      .toUpperCase();
+    if (scope === "country" && !country) scope = "unknown";
+    return {
+      geography_scope: scope,
+      geography_regions: regions,
+      geography_country: country,
+      geography_review_required: scope === "unknown",
+    };
+  }
   function enrich(channel) {
     const username = String(channel.username || "")
       .replace(/^@/, "")
@@ -123,6 +177,8 @@
     return {
       ...channel,
       original_subcategory: original ?? null,
+      ...geography(channel),
+      primary_category: topic,
       subcategory: topic,
       topic_category: byId[topic].section,
       topic_source: source,
@@ -149,6 +205,7 @@
     taxonomy,
     byId,
     classify,
+    geography,
     enrich,
     canonical,
     setLocal,

@@ -37,6 +37,9 @@ def _channel_to_row(ch: dict) -> dict:
     }
 
     row["original_subcategory"] = ch.get("subcategory")
+    for key in ("regions", "geographic_scope"):
+        if key in ch:
+            row[key] = ch[key]
     row.update(resolve_topic(row))
     return row
 
