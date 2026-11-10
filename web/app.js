@@ -181,7 +181,7 @@
     refresh();
     map.fitVisible();
     document.getElementById("group-caption").textContent =
-      state.group === "topic" ? " / По темам" : " / По регионам";
+      state.group === "topic" ? " / По темам" : " / По регионам России";
   };
   renderChips();
   renderRegions();
@@ -228,7 +228,9 @@
     const rows = categoryChannels();
     for (const scope of [
       { id: "", label: "Любая география" },
-      ...window.Topics.taxonomy.geography_scopes,
+      ...window.Topics.taxonomy.geography_scopes.filter(
+        (g) => g.id !== "region",
+      ),
     ]) {
       const count = rows.filter(
         (c) => !scope.id || c.geography_scope === scope.id,
@@ -479,9 +481,10 @@
     const badges = [
       `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(sub.label)}</span>`,
     ];
-    badges.push(
-      `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,
-    );
+    if (ch.geography_scope !== "region")
+      badges.push(
+        `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,
+      );
     if (ch.geography_regions.length > 1) {
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(ch.geography_regions.join(", "))}</span>`,
@@ -497,7 +500,7 @@
     } else {
       badges.push(`<span class="badge badge-muted">Регион не определён</span>`);
     }
-    if (ch.region_review_required) {
+    if (ch.region_review_required && ch.geography_review_required) {
       badges.push(`<span class="badge badge-muted">Нужна проверка</span>`);
     }
     if (countryLabel)
@@ -519,12 +522,14 @@
       `</div>` +
       `</div>` +
       `<div class="detail-badges">${badges.join("")}</div>` +
-      `<p class="classification-path">${escapeHtml(sub.label)} → ${escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
+      `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
       (ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
         : "") +
-      (ch.region_review_required && ch.region_candidates?.length
+      (ch.region_review_required &&
+      ch.geography_review_required &&
+      ch.region_candidates?.length
         ? `<p class="detail-desc">Кандидаты региона: ${ch.region_candidates.map((x) => `${escapeHtml(x.region)} (${Math.round(x.confidence * 100)}%)`).join(" · ")}</p>`
         : "") +
       `<details class="topic-edit"><summary>Исправить тему</summary><label for="topic-correction">Тема канала</label><select id="topic-correction"><option value="">Автоопределение / данные каталога</option>${SUB_CATEGORIES.map((t) => `<option value="${t.id}" ${window.Topics.hasLocal(ch.username) && ch.subcategory === t.id ? "selected" : ""}>${escapeHtml(t.label)}</option>`).join("")}</select><button id="save-topic">Сохранить в этом браузере</button><p id="topic-save-status" role="status"></p></details>` +

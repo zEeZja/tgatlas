@@ -1,3 +1,4 @@
+<!-- See FRONTEND.md for the current atlas and incremental polling commands. -->
 # TG Atlas — карта Telegram-каналов
 
 Классификация: категория (спорт, политика, новости и другие) → географический охват → регион. Неизвестная география отделена от международного охвата.

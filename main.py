@@ -11,6 +11,13 @@ import sys
 
 
 
+def positive_int(value):
+    number=int(value)
+    if number < 1:
+        raise argparse.ArgumentTypeError('значение должно быть больше нуля')
+    return number
+
+
 def setup_logging(verbose: bool) -> None:
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
@@ -32,7 +39,7 @@ def cmd_init_db(args) -> int:
 
 def cmd_scrape(args) -> int:
     from src import pipeline
-    pipeline.run(channels_filter=args.channel)
+    pipeline.run(channels_filter=args.channel, workers=args.workers, full_history=args.full_history, max_pages=args.pages)
     return 0
 
 
@@ -323,6 +330,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser("scrape", help="собрать HTML-публичных страниц каналов, уже внесённых в БД")
     sp.add_argument("--channel", "-c", action="append", metavar="USERNAME")
+    sp.add_argument('--workers', type=int, choices=range(1,9), help='число сетевых загрузчиков (1–8)')
+    sp.add_argument('--pages', type=positive_int, help='лимит страниц на канал (по умолчанию MAX_PAGES)')
+    sp.add_argument('--full-history', action='store_true', help='читать историю без остановки на уже сохранённых постах, в пределах лимита страниц')
     sp.set_defaults(func=cmd_scrape)
 
     sp = sub.add_parser("stats", help="статистика каналов и публикаций")

@@ -396,3 +396,13 @@ def all_aliases():
     for alias, region in USERNAME_HINTS.items():
         result.append((alias, region))
     return result
+
+# Explicit short-city inflections: keep token boundaries (Чита ≠ читает, Луга ≠ Луганск).
+for _region, _forms in {
+    'Пермский край':['перми'], 'Тверская область':['твери'],
+    'Тульская область':['тулы','туле','тулу'], 'Омская область':['омска','омске'],
+    'Курская область':['курска','курске'], 'Республика Башкортостан':['уфы','уфе'],
+    'Забайкальский край':['читы','чите'], 'Орловская область':['орла','орле'],
+    'Псковская область':['пскова','пскове'],
+}.items():
+    REGION_ALIASES[_region].extend(_forms)

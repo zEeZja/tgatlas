@@ -1633,3 +1633,18 @@ select:focus-visible {
     right: 20px;
   }
 }
+/* Keep interface controls on a separate layer above the geographic Canvas. */
+.map-wrap canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.map-title,
+.map-summary,
+.group-control,
+.map-controls,
+.map-hint,
+.relief-toggle,
+.legend {
+  z-index: 2;
+}

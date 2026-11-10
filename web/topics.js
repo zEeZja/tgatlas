@@ -82,6 +82,42 @@
       review_required: winner === "other" || ambiguous,
     };
   }
+  const titleRules = Object.entries(taxonomy.region_aliases || {}).flatMap(
+    ([region, aliases]) =>
+      aliases.map((a) => [region, normalize(a).split(" ")]),
+  );
+  const titleCache = new Map();
+  function inferTitleRegion(name) {
+    if (titleCache.has(name)) return titleCache.get(name);
+    const words = normalize(name).split(" "),
+      hits = [];
+    for (const [region, parts] of titleRules)
+      for (let start = 0; start <= words.length - parts.length; start++) {
+        if (
+          parts.every(
+            (b, i) =>
+              words[start + i] === b ||
+              (b.length >= 5 && words[start + i].startsWith(b)),
+          )
+        )
+          hits.push({
+            region,
+            start,
+            end: start + parts.length,
+            length: parts.reduce((n, p) => n + p.length, 0),
+          });
+      }
+    const kept = hits.filter(
+      (h) =>
+        !hits.some(
+          (k) => k.length > h.length && k.start <= h.start && k.end >= h.end,
+        ),
+    );
+    const regions = [...new Set(kept.map((h) => h.region))];
+    const result = regions.length === 1 ? regions[0] : null;
+    titleCache.set(name, result);
+    return result;
+  }
   function geography(channel) {
     const key = String(channel.username || "")
       .replace(/^@/, "")
@@ -117,6 +153,13 @@
     )
       regions = [channel.region.trim()];
     if (channel.region_review_required) regions = [];
+    const federal =
+      channel.channel_type === "federal" ||
+      taxonomy.federal_channels.some((x) => x.toLowerCase() === key);
+    if (!regions.length && !override && !federal && !channel.geographic_scope) {
+      const inferred = inferTitleRegion(channel.name || "");
+      if (inferred) regions = [inferred];
+    }
     let scope;
     if (["global", "country", "unknown"].includes(channel.geographic_scope)) {
       scope = channel.geographic_scope;

@@ -65,6 +65,10 @@ const server = http.createServer((req, res) => {
       "false",
     );
     await page.locator("#relief-toggle").click();
+    assert.equal(
+      await page.locator(".chip").filter({ hasText: "Один регион" }).count(),
+      0,
+    );
     assert.equal(await page.locator(".result").count(), 200);
     await page.locator(".load-more").click();
     assert.equal(await page.locator(".result").count(), 400);
@@ -80,9 +84,9 @@ const server = http.createServer((req, res) => {
     await page.keyboard.press("Escape");
     await page.locator("#clear").click();
     await page.locator("#region").selectOption("Москва");
-    assert.equal(await page.locator("#count").textContent(), "163");
+    assert.equal(await page.locator("#count").textContent(), "165");
     await page.locator("#group-by").selectOption("region");
-    assert.equal(await page.locator("#count").textContent(), "163");
+    assert.equal(await page.locator("#count").textContent(), "165");
     assert(
       (await page.locator("#group-caption").innerText()).includes(
         "По регионам",

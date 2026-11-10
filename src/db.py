@@ -181,23 +181,23 @@ def insert_posts(conn, posts: Iterable[Post]) -> int:
     if not posts:
         return 0
 
-    inserted = 0
+    from psycopg2.extras import execute_values
+    rows = [(p.channel_id, p.tg_message_id, p.url, p.text, p.title, p.posted_at, p.views) for p in posts]
+    if not rows:
+        return 0
     with _cursor(conn) as cur:
-        for p in posts:
-            cur.execute(
-                """
-                INSERT INTO posts
-                    (channel_id, tg_message_id, url, text, title, posted_at, views)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT (channel_id, tg_message_id) DO NOTHING
-                RETURNING id
-                """,
-                (p.channel_id, p.tg_message_id, p.url, p.text,
-                 p.title, p.posted_at, p.views),
-            )
-            if cur.fetchone() is not None:
-                inserted += 1
-    return inserted
+        result = execute_values(cur, """
+            INSERT INTO posts (channel_id, tg_message_id, url, text, title, posted_at, views)
+            VALUES %s ON CONFLICT (channel_id, tg_message_id) DO NOTHING RETURNING id
+        """, rows, page_size=500, fetch=True)
+    return len(result)
+
+
+def get_post_watermarks(conn) -> dict:
+    with _cursor(conn) as cur:
+        cur.execute("SELECT channel_id, MAX(tg_message_id) AS last_id FROM posts GROUP BY channel_id")
+        return {r['channel_id']: r['last_id'] for r in cur.fetchall()}
+
 
 def mark_parsed(conn, channel_id: int) -> None:
     """Отметить время последнего успешного обхода канала."""
@@ -547,3 +547,24 @@ def import_candidates(conn, usernames: Iterable[str] = None,
             )
         imported += 1
     return imported
+
+
+def get_scrape_checkpoints(conn) -> dict:
+    with _cursor(conn) as cur:
+        cur.execute("""CREATE TABLE IF NOT EXISTS scrape_checkpoints (
+            channel_id BIGINT PRIMARY KEY REFERENCES channels(id) ON DELETE CASCADE,
+            before_id BIGINT NOT NULL, target_id BIGINT NOT NULL)""")
+        cur.execute('SELECT channel_id, before_id, target_id FROM scrape_checkpoints')
+        return {r['channel_id']:(r['before_id'],r['target_id']) for r in cur.fetchall()}
+
+
+def save_scrape_checkpoint(conn, channel_id, checkpoint):
+    if checkpoint is False:
+        return
+    with _cursor(conn) as cur:
+        if checkpoint is None:
+            cur.execute('DELETE FROM scrape_checkpoints WHERE channel_id=%s',(channel_id,))
+        else:
+            cur.execute("""INSERT INTO scrape_checkpoints(channel_id,before_id,target_id)
+                VALUES (%s,%s,%s) ON CONFLICT(channel_id) DO UPDATE
+                SET before_id=EXCLUDED.before_id,target_id=EXCLUDED.target_id""",(channel_id,*checkpoint))
