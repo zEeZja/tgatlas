@@ -89,7 +89,7 @@ const server = http.createServer((req, res) => {
     assert.equal(await page.locator("#count").textContent(), "0");
     await page.locator("#fit-map").click();
     await page.locator(".reset-btn").click();
-    await page.locator("#category").selectOption("knowledge");
+    await page.locator("#category").selectOption("tech");
     assert(Number(await page.locator("#count").textContent()) > 0);
     await page.locator(".reset-btn").click();
     await page.locator("#sort").selectOption("name");
@@ -99,7 +99,7 @@ const server = http.createServer((req, res) => {
       [...names].sort((a, b) => a.localeCompare(b, "ru")),
     );
     await page.locator("#sort").selectOption("popular");
-    await page.locator(".chip").filter({ hasText: "Политика" }).click();
+    await page.locator("#category").selectOption("politics");
     assert(Number(await page.locator("#count").textContent()) > 0);
     await page.locator(".result").first().click();
     assert((await page.locator("#detail").innerText()).includes("Политика"));
@@ -214,6 +214,77 @@ const server = http.createServer((req, res) => {
     );
     assert(!requests.some((r) => r.includes("geo-map")));
     // Opt-in: managed Chromium may prohibit file:// navigation by administrator policy.
+    // Category first, then coverage and contextual regions. Unknown is not global.
+    const hierarchyRows = [
+      {
+        id: "p1",
+        username: "p1",
+        name: "Политика Москвы",
+        subcategory: "politics",
+        region: "Москва",
+        country: "RU",
+      },
+      {
+        id: "p2",
+        username: "p2",
+        name: "Политика регионов",
+        subcategory: "politics",
+        regions: ["Москва", "Татарстан"],
+        country: "RU",
+      },
+      {
+        id: "p3",
+        username: "p3",
+        name: "Политика мира",
+        subcategory: "politics",
+        geographic_scope: "global",
+      },
+      {
+        id: "p4",
+        username: "p4",
+        name: "Политика",
+        subcategory: "politics",
+        country: "RU",
+      },
+      {
+        id: "s1",
+        username: "s1",
+        name: "Спорт",
+        subcategory: "sport",
+        region: "Омск",
+        country: "RU",
+      },
+    ].map((c) => ({ ...c, url: "https://t.me/" + c.username }));
+    await page.unroute("**/api/channels");
+    await page.route("**/api/channels", (route) =>
+      route.fulfill({ json: { channels: hierarchyRows } }),
+    );
+    await page.reload();
+    await page.waitForFunction(
+      () => document.querySelector("#count").textContent === "5",
+    );
+    await page.locator("#category").selectOption("politics");
+    assert.equal(await page.locator("#count").textContent(), "4");
+    assert(!(await page.locator("#region").textContent()).includes("Омск"));
+    await page
+      .locator(".chip")
+      .filter({ hasText: "Несколько регионов" })
+      .click();
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page.locator("#region").selectOption("Татарстан");
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page
+      .locator(".chip")
+      .filter({ hasText: "География не уточнена" })
+      .click();
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page
+      .locator(".chip")
+      .filter({ hasText: "Международный охват" })
+      .click();
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page.locator(".reset-btn").click();
+    assert.equal(await page.locator("#count").textContent(), "5");
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));

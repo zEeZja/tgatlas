@@ -43,6 +43,7 @@
     sort: "popular",
     group: "topic",
     category: "",
+    geoScope: "",
     query: "",
     subcategory: "",
     region: "",
@@ -131,6 +132,7 @@
     state.query = "";
     state.subcategory = "";
     state.category = "";
+    state.geoScope = "";
     document.getElementById("category").value = "";
     state.region = "";
     state.country = "";
@@ -138,6 +140,7 @@
     el.region.value = "";
     el.country.value = "";
     el.clear.hidden = true;
+    renderRegions();
     renderChips();
     refresh();
     map.fit();
@@ -145,15 +148,21 @@
   el.chips.parentElement.appendChild(resetBtn);
 
   const categoryEl = document.getElementById("category");
-  for (const section of window.Topics.taxonomy.sections) {
+  for (const section of SUB_CATEGORIES) {
     const option = document.createElement("option");
     option.value = section.id;
-    option.textContent = section.label;
+    option.textContent =
+      section.label +
+      " · " +
+      state.channels.filter((c) => c.subcategory === section.id).length;
     categoryEl.appendChild(option);
   }
   categoryEl.onchange = () => {
     state.category = categoryEl.value;
     state.subcategory = "";
+    state.geoScope = "";
+    state.region = "";
+    renderRegions();
     renderChips();
     refresh();
     map.fitVisible();
@@ -192,64 +201,62 @@
   });
   el.country.addEventListener("change", () => {
     state.country = el.country.value;
+    renderRegions();
+    renderChips();
     refresh();
     map.fitVisible();
   });
 
   refresh();
 
+  function categoryChannels() {
+    return state.channels.filter(
+      (c) =>
+        (!state.category || c.primary_category === state.category) &&
+        (!state.country || c.geography_country === state.country),
+    );
+  }
   function renderChips() {
-    el.chips.innerHTML = "";
-    const counts = new Map();
-    for (const ch of state.channels) {
-      const key = ch.subcategory || "other";
-      counts.set(key, (counts.get(key) || 0) + 1);
-    }
-    const allBtn = document.createElement("button");
-    allBtn.className =
-      "chip" + (state.subcategory === "" ? " chip-active" : "");
-    allBtn.textContent = "Все темы";
-    allBtn.setAttribute("aria-pressed", String(state.subcategory === ""));
-    allBtn.addEventListener("click", () => {
-      state.subcategory = "";
-      renderChips();
-      refresh();
-      map.fitVisible();
-    });
-    el.chips.appendChild(allBtn);
-
-    for (const cat of SUB_CATEGORIES) {
-      const n = counts.get(cat.id) || 0;
-      if (state.category && cat.section !== state.category) continue;
-      if (n === 0 && cat.id !== "politics" && state.subcategory !== cat.id)
-        continue;
-      const active = state.subcategory === cat.id;
-      const btn = document.createElement("button");
-      btn.className = "chip" + (active ? " chip-active" : "");
-      btn.setAttribute("aria-pressed", String(active));
-      if (active) {
-        btn.style.background = cat.color;
-        btn.style.borderColor = cat.color;
-        btn.style.color = "#172b1d";
-      }
-      btn.innerHTML =
-        `<span class="chip-dot" style="background:${cat.color}"></span>` +
-        `${escapeHtml(cat.label)}<span class="chip-count">${n}</span>`;
-      btn.addEventListener("click", () => {
-        state.subcategory = active ? "" : cat.id;
+    el.chips.replaceChildren();
+    const rows = categoryChannels();
+    for (const scope of [
+      { id: "", label: "Любая география" },
+      ...window.Topics.taxonomy.geography_scopes,
+    ]) {
+      const count = rows.filter(
+        (c) => !scope.id || c.geography_scope === scope.id,
+      ).length;
+      const button = document.createElement("button");
+      button.className =
+        "chip" + (state.geoScope === scope.id ? " chip-active" : "");
+      button.setAttribute("aria-pressed", String(state.geoScope === scope.id));
+      button.textContent = scope.label + " · " + count;
+      button.disabled = count === 0 && scope.id !== "";
+      button.onclick = () => {
+        state.geoScope = scope.id;
+        state.region = "";
+        renderRegions();
         renderChips();
         refresh();
         map.fitVisible();
-      });
-      el.chips.appendChild(btn);
+      };
+      el.chips.appendChild(button);
     }
   }
 
   function renderRegions() {
     const regions = [
-      ...new Set(state.channels.map((c) => c.region).filter(Boolean)),
+      ...new Set(
+        categoryChannels()
+          .filter(
+            (c) => !state.geoScope || c.geography_scope === state.geoScope,
+          )
+          .flatMap((c) => c.geography_regions),
+      ),
     ].sort((a, b) => a.localeCompare(b, "ru"));
 
+    el.region.innerHTML = '<option value="">Все регионы</option>';
+    if (!regions.includes(state.region)) state.region = "";
     if (regions.length === 0) {
       el.regionBlock.hidden = true;
       return;
@@ -262,11 +269,12 @@
       opt.textContent = r;
       el.region.appendChild(opt);
     }
+    el.region.value = state.region;
   }
 
   function renderCountries() {
     const present = new Set(
-      state.channels.map((c) => c.country).filter(Boolean),
+      state.channels.map((c) => c.geography_country).filter(Boolean),
     );
     el.country.innerHTML = '<option value="">Все страны</option>';
     for (const code of [...present].sort((a, b) =>
@@ -283,14 +291,18 @@
   function refresh() {
     let list = state.channels;
     if (state.category)
-      list = list.filter((c) => c.topic_category === state.category);
+      list = list.filter((c) => c.primary_category === state.category);
+    if (state.geoScope)
+      list = list.filter((c) => c.geography_scope === state.geoScope);
     if (state.subcategory) {
       list = list.filter(
         (c) => (c.subcategory || "other") === state.subcategory,
       );
     }
-    if (state.region) list = list.filter((c) => c.region === state.region);
-    if (state.country) list = list.filter((c) => c.country === state.country);
+    if (state.region)
+      list = list.filter((c) => c.geography_regions.includes(state.region));
+    if (state.country)
+      list = list.filter((c) => c.geography_country === state.country);
 
     if (state.query.trim()) {
       list = window.Search.searchChannels(list, state.query);
@@ -309,6 +321,14 @@
     map.setVisibleIds(new Set(list.map((c) => c.id)));
     renderList();
     renderLegend();
+    for (const option of categoryEl.options) {
+      if (option.value)
+        option.textContent =
+          SUB_MAP[option.value].label +
+          " · " +
+          state.channels.filter((c) => c.primary_category === option.value)
+            .length;
+    }
     el.count.textContent = list.length;
     statsBar.innerHTML = `<span><b>${state.channels.length}</b> каналов · <b>${new Set(state.channels.map((c) => c.subcategory)).size}</b> тем · <b>${state.channels.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>`;
     const visibleIds = new Set(list.map((c) => c.id));
@@ -319,6 +339,7 @@
     const hasFilter =
       state.query ||
       state.category ||
+      state.geoScope ||
       state.subcategory ||
       state.region ||
       state.country;
@@ -350,8 +371,10 @@
       const subs = formatSubs(ch.subscribers);
       const meta = [(SUB_MAP[ch.subcategory] || SUB_MAP.other).label];
       if (ch.channel_type === "federal") meta.push("федеральный");
-      else if (ch.region) meta.push(ch.region);
-      else if (ch.country) meta.push(COUNTRY_LABELS[ch.country] || ch.country);
+      else if (ch.geography_regions.length)
+        meta.push(ch.geography_regions.join(", "));
+      else if (ch.country)
+        meta.push(COUNTRY_LABELS[ch.geography_country] || ch.geography_country);
       if (subs) meta.push(subs);
 
       btn.innerHTML =
@@ -439,19 +462,31 @@
     const sub = SUB_MAP[ch.subcategory] || SUB_MAP.other;
     const color = colorOf(ch);
     const subs = formatSubs(ch.subscribers);
-    const countryLabel = COUNTRY_LABELS[ch.country] || ch.country || "";
+    const countryLabel =
+      COUNTRY_LABELS[ch.geography_country] || ch.geography_country || "";
     const initial = (ch.name || "?").slice(0, 1).toUpperCase();
 
+    const scopeLabel =
+      window.Topics.taxonomy.geography_scopes.find(
+        (g) => g.id === ch.geography_scope,
+      )?.label || "География не уточнена";
     const badges = [
-      `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(CATEGORY_LABELS[ch.topic_category] || ch.topic_category || "Канал")} → ${escapeHtml(sub.label)}</span>`,
+      `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(sub.label)}</span>`,
     ];
-    if (ch.channel_type === "federal") {
+    badges.push(
+      `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,
+    );
+    if (ch.geography_regions.length > 1) {
+      badges.push(
+        `<span class="badge badge-muted">${escapeHtml(ch.geography_regions.join(", "))}</span>`,
+      );
+    } else if (ch.channel_type === "federal") {
       badges.push(
         `<span class="badge" style="background:#a0b5a825;color:#bdcec2">Федеральный</span>`,
       );
-    } else if (ch.region) {
+    } else if (ch.geography_regions.length === 1) {
       badges.push(
-        `<span class="badge badge-muted">${escapeHtml(ch.region)}</span>`,
+        `<span class="badge badge-muted">${escapeHtml(ch.geography_regions[0])}</span>`,
       );
     } else {
       badges.push(`<span class="badge badge-muted">Регион не определён</span>`);
@@ -478,6 +513,7 @@
       `</div>` +
       `</div>` +
       `<div class="detail-badges">${badges.join("")}</div>` +
+      `<p class="classification-path">${escapeHtml(sub.label)} → ${escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
       (ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
@@ -499,6 +535,7 @@
         );
         layout = window.Layout.buildClusterLayout(state.channels, state.group);
         map.setLayout(layout);
+        renderRegions();
         renderChips();
         refresh();
         if (state.visible.some((c) => c.id === ch.id)) {

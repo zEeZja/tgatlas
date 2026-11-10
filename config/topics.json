@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "sections": [
     {
       "id": "society",
@@ -474,5 +474,27 @@
     "it": "tech",
     "entertainment": "entertainment"
   },
-  "overrides": {}
+  "overrides": {},
+  "geography_scopes": [
+    {
+      "id": "region",
+      "label": "Один регион"
+    },
+    {
+      "id": "multi_region",
+      "label": "Несколько регионов"
+    },
+    {
+      "id": "country",
+      "label": "Вся страна"
+    },
+    {
+      "id": "global",
+      "label": "Международный охват"
+    },
+    {
+      "id": "unknown",
+      "label": "География не уточнена"
+    }
+  ]
 }

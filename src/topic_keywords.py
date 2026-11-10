@@ -11,6 +11,7 @@ import re
 import unicodedata
 from functools import lru_cache
 from pathlib import Path
+from .geography import resolve_geography
 
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = json.loads((ROOT / 'config/topics.json').read_text(encoding='utf-8'))
@@ -94,7 +95,7 @@ def resolve_topic(channel: dict, overrides: dict | None = None) -> dict:
         topic, source = canonical(channel.get('category')), 'fallback'
     else:
         topic, source = 'other', 'unknown'
-    return dict(subcategory=topic, topic_category=TOPICS[topic]['section'],
+    return dict(**resolve_geography(channel), primary_category=topic, subcategory=topic, topic_category=TOPICS[topic]['section'],
                 topic_source=source, topic_version=TAXONOMY['version'],
                 topic_score=inferred['score'] if source == 'heuristic' else None,
                 topic_evidence=inferred['evidence'] if source == 'heuristic' else [],
