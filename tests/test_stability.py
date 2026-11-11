@@ -33,7 +33,7 @@ class StabilityTests(unittest.TestCase):
             if os.name != "nt":
                 self.assertEqual(target.stat().st_mode & 0o777, 0o640)
 
-    def test_batch_classification_reads_three_rule_files_once(self):
+    def test_batch_classification_reads_four_rule_files_once(self):
         row = dict(
             username="test",
             name="Новости науки",
@@ -56,6 +56,7 @@ class StabilityTests(unittest.TestCase):
             sorted(reads),
             sorted(
                 [
+                    "classification_labels.json",
                     "topic_overrides.json",
                     "geography_overrides.json",
                     "federal_channels.json",

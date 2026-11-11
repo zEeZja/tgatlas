@@ -39,3 +39,7 @@ reports/*.json
 # PostgreSQL backups stay outside the repository
 *.dump
 *.backup
+
+# Local learned artifacts and proposed predictions
+models/*
+!models/README.md

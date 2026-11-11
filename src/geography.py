@@ -2,7 +2,7 @@
 
 import json
 from pathlib import Path
-from .title_region import infer_title_region, infer_foreign_title
+from .title_region import profile_geography
 
 
 def resolve_geography(
@@ -15,6 +15,17 @@ def resolve_geography(
         overrides = (
             json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
         )
+        labels_path = (
+            Path(__file__).resolve().parent.parent / "config/classification_labels.json"
+        )
+        labels = json.loads(labels_path.read_text(encoding="utf-8"))["channels"]
+        overrides = {
+            **overrides,
+            **{
+                u: {k: v[k] for k in ("scope", "regions", "country")}
+                for u, v in labels.items()
+            },
+        }
     key = str(channel.get("username") or "").lstrip("@").lower()
     override = overrides.get(key)
     if override:
@@ -59,20 +70,17 @@ def resolve_geography(
         }
     federal = federal or key in federal_channels
     foreign = None
+    source = "manual" if override else "stored" if regions else "none"
+    if federal and not override and not channel.get("geographic_scope"):
+        regions = []
+        source = "federal"
     if (
         not regions
         and not override
         and not federal
         and not channel.get("geographic_scope")
     ):
-        inferred = infer_title_region(channel.get("name") or "")
-        candidate_foreign = infer_foreign_title(channel.get("name") or "")
-        if inferred and not candidate_foreign:
-            regions = [inferred]
-        elif candidate_foreign and not inferred:
-            foreign = candidate_foreign
-            if foreign["scope"] == "region":
-                regions = [foreign["label"]]
+        regions, foreign, source = profile_geography(channel)
     explicit = channel.get("geographic_scope")
     if explicit in ("global", "country", "unknown"):
         scope, regions = explicit, []
@@ -96,4 +104,5 @@ def resolve_geography(
         geography_regions=regions,
         geography_country=country,
         geography_review_required=scope == "unknown",
+        geography_source=source,
     )

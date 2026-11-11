@@ -25,5 +25,36 @@
       "узбекистан",
       "uzbekistan"
     ]
+  },
+  {
+    "label": "Белград",
+    "country": "RS",
+    "scope": "region",
+    "aliases": [
+      "белград",
+      "belgrade",
+      "beograd"
+    ]
+  },
+  {
+    "label": "Бали",
+    "country": "ID",
+    "scope": "region",
+    "aliases": [
+      "бали",
+      "bali"
+    ]
+  },
+  {
+    "label": "Россия",
+    "country": "RU",
+    "scope": "country",
+    "aliases": [
+      "россия",
+      "россии",
+      "россий",
+      "russia",
+      "russian"
+    ]
   }
 ]

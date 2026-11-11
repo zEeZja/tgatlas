@@ -20,6 +20,19 @@ def render():
     data["geography_overrides"] = json.loads(
         (ROOT / "config/geography_overrides.json").read_text(encoding="utf-8")
     )
+    labels = json.loads(
+        (ROOT / "config/classification_labels.json").read_text(encoding="utf-8")
+    )["channels"]
+    data["overrides"].update({u: v["topic"] for u, v in labels.items()})
+    data["geography_overrides"].update(
+        {
+            u: {k: v[k] for k in ("scope", "regions", "country")}
+            for u, v in labels.items()
+        }
+    )
+    data["tag_overrides"] = {
+        u: v.get("secondary_topics", []) for u, v in labels.items()
+    }
     data["foreign_geography"] = json.loads(
         (ROOT / "config/foreign_geography.json").read_text(encoding="utf-8")
     )
