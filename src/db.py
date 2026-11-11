@@ -51,14 +51,11 @@ def _cursor(conn):
         cur.close()
 
 
-def init_schema(conn) -> None:
-    """Создать таблицы и индексы из db/schema.sql."""
-    schema_path = config.ROOT / "db" / "schema.sql"
-    with open(schema_path, "r", encoding="utf-8") as f:
-        sql = f.read()
-    with _cursor(conn) as cur:
-        cur.execute(sql)
-    conn.commit()
+def init_schema(conn) -> list[str]:
+    """Apply versioned migrations atomically; safe for pre-migration catalogues."""
+    from .migrations import apply_migrations
+
+    return apply_migrations(conn)
 
 
 # ─── Запись (без commit — вызывающий оборачивает в transaction) ────────
@@ -676,9 +673,6 @@ def import_candidates(
 
 def get_scrape_checkpoints(conn) -> dict:
     with _cursor(conn) as cur:
-        cur.execute("""CREATE TABLE IF NOT EXISTS scrape_checkpoints (
-            channel_id BIGINT PRIMARY KEY REFERENCES channels(id) ON DELETE CASCADE,
-            before_id BIGINT NOT NULL, target_id BIGINT NOT NULL)""")
         cur.execute("SELECT channel_id, before_id, target_id FROM scrape_checkpoints")
         return {
             r["channel_id"]: (r["before_id"], r["target_id"]) for r in cur.fetchall()

@@ -37,6 +37,7 @@ PG = {
     "user": os.getenv("PG_USER", "postgres"),
     "password": os.getenv("PG_PASSWORD", ""),
     "dbname": os.getenv("PG_DATABASE", "tg_parser"),
+    "connect_timeout": _number("PG_CONNECT_TIMEOUT", 5),
 }
 
 REQUEST_TIMEOUT = _number("REQUEST_TIMEOUT", 20)
@@ -96,3 +97,6 @@ if REQUEST_TIMEOUT <= 0:
     raise ValueError("REQUEST_TIMEOUT должен быть больше нуля")
 if DELAY_MIN < 0 or DELAY_MAX < DELAY_MIN:
     raise ValueError("Ожидается 0 <= DELAY_MIN <= DELAY_MAX")
+
+if PG["connect_timeout"] < 1:
+    raise ValueError("PG_CONNECT_TIMEOUT должен быть больше нуля")

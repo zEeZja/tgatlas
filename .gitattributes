@@ -1,0 +1,3 @@
+# Keep migration source/checksums and dependency snapshots stable across platforms.
+db/migrations/*.sql text eol=lf
+requirements/locked-*.txt text eol=lf

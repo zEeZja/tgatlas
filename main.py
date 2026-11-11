@@ -30,9 +30,27 @@ def cmd_init_db(args) -> int:
 
     conn = db.connect()
     try:
-        db.init_schema(conn)
-        print("✓ Схема создана/обновлена")
+        applied = db.init_schema(conn)
+        print(
+            "✓ Миграции применены: "
+            + (", ".join(applied) if applied else "схема актуальна")
+        )
         return 0
+    finally:
+        conn.close()
+
+
+def cmd_db_status(args) -> int:
+    from src import db
+    from src.migrations import migration_status
+
+    conn = db.connect()
+    try:
+        status = migration_status(conn)
+        print("Версия БД:", status["current"] or "нет истории миграций")
+        print("Версия приложения:", status["latest"])
+        print("Ожидают применения:", ", ".join(status["pending"]) or "нет")
+        return 1 if status["pending"] else 0
     finally:
         conn.close()
 
@@ -402,6 +420,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser("init-db", help="создать/обновить схему PostgreSQL")
     sp.set_defaults(func=cmd_init_db)
+
+    sp = sub.add_parser(
+        "db-status", help="проверить историю и ожидающие миграции без изменения БД"
+    )
+    sp.set_defaults(func=cmd_db_status)
 
     sp = sub.add_parser(
         "scrape", help="собрать HTML-публичных страниц каналов, уже внесённых в БД"
