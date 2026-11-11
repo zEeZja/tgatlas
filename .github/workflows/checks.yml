@@ -2,8 +2,13 @@ name: Stability checks
 
 on:
   push:
+    branches: [frontend/atlas-redesign]
   pull_request:
   workflow_dispatch:
+
+concurrency:
+  group: stability-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -81,6 +86,14 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - name: Use the runner browser
+        run: |
+          browser_path="$(command -v google-chrome || command -v chromium || true)"
+          if [ -z "$browser_path" ]; then
+            echo "This job requires Chrome or Chromium in the runner image." >&2
+            exit 1
+          fi
+          "$browser_path" --version
+          echo "CHROMIUM_PATH=$browser_path" >> "$GITHUB_ENV"
       - run: npm run test:layout
       - run: npm run test:frontend
