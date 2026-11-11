@@ -27,7 +27,7 @@ Windows PowerShell — каждую строку запускайте отдел
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+python -m pip install --require-hashes -r requirements/locked-base.txt
 Copy-Item .env.example .env
 ```
 
@@ -36,7 +36,7 @@ Linux/macOS:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install --require-hashes -r requirements/locked-base.txt
 cp .env.example .env
 ```
 
@@ -46,7 +46,15 @@ cp .env.example .env
 python main.py init-db
 ```
 
-Команда применяет идемпотентную схему из `db/schema.sql`. Перед обновлением существующей рабочей базы сделайте резервную копию, например `pg_dump -U postgres -Fc tg_parser -f atlas-backup.dump`.
+Команда применяет версионированные SQL-миграции из `db/migrations/` и сохраняет их контрольные суммы в `schema_migrations`. Существующий каталог без истории миграций обновляется на месте. Повторный запуск ничего не применяет. `db/schema.sql` сохранён как совместимый снимок структуры, но не заменяет миграции.
+
+Перед обновлением существующей рабочей базы сделайте резервную копию, например `pg_dump -U postgres -Fc tg_parser -f atlas-backup.dump`. Проверка состояния без записи:
+
+```bash
+python main.py db-status
+```
+
+Код `0` означает актуальную историю, `1` — ожидающие миграции или ошибку. Проверка доступности таблиц дополнительно выполняется через `/api/ready`. [Обновление, перенос и восстановление базы](docs/DATABASE.md).
 
 ## Актуальная карта без Telethon и без новостей
 
@@ -122,11 +130,11 @@ python main.py audit-classification
 ## Необязательный HTTP API
 
 ```bash
-python -m pip install -r requirements-api.txt
+python -m pip install --require-hashes -r requirements/locked-api.txt
 python -m uvicorn api:app --host 127.0.0.1 --port 8000
 ```
 
-В `web/api.js` установите `CONFIG.mode: 'http'` и откройте **http://localhost:8000**. Пустой `httpBase` означает тот же сервер. `/api/channels` читает БД и классифицирует данные при запросе; экспорт не требуется. `/api/health` проверяет работоспособность процесса, **не доступность PostgreSQL**. OpenAPI доступен на `/docs`.
+В `web/api.js` установите `CONFIG.mode: 'http'` и откройте **http://localhost:8000**. Пустой `httpBase` означает тот же сервер. `/api/channels` читает БД и классифицирует данные при запросе; экспорт не требуется. `/api/health` проверяет работоспособность процесса, **не доступность PostgreSQL**. `/api/ready` возвращает `200` только при доступной БД, актуальной истории миграций и наличии рабочих таблиц/колонок; иначе `503`. Проверки не применяют миграции автоматически. Время подключения ограничено `PG_CONNECT_TIMEOUT` (по умолчанию 5 секунд), SQL-проверок готовности — 3 секундами на запрос. OpenAPI доступен на `/docs`.
 
 ## Структура
 
@@ -136,7 +144,9 @@ src/                сбор, PostgreSQL, классификация, экспо
 config/             исходный каталог и правила
 web/                статический интерфейс и Canvas
 web/data/           сгенерированные каталоги (не коммитятся)
-db/schema.sql       таблицы, индексы и обновления схемы
+db/migrations/      неизменяемые версионированные SQL-миграции
+db/schema.sql       совместимый снимок структуры
+requirements/       проверенные версии зависимостей с хешами
 scripts/            синхронизация правил браузера
 tests/              Python, геометрия и браузерные сценарии
 docs/architecture/  схемы Mermaid и готовые SVG
@@ -147,7 +157,7 @@ reports/            локальные CSV для ручной проверки
 ## Проверки для разработчика
 
 ```bash
-python -m pip install -r requirements-dev.txt
+python -m pip install --require-hashes -r requirements/locked-dev.txt
 python -m unittest discover -s tests
 python -m ruff check .
 npm ci
@@ -156,6 +166,6 @@ npm run test:layout
 npm run test:frontend
 ```
 
-Python-тесты не запрашивают Telegram и не требуют рабочей БД; интеграция API проверяется с подменённым подключением. При установленных только базовых зависимостях необязательный API-тест пропускается. Для Linux с системным Chromium можно указать `CHROMIUM_PATH=/usr/bin/chromium`. Браузерные тесты изолируют демо от вашей локальной выгрузки. Node.js **20+** рекомендуется для инструментов проверки.
+Обычный прогон не запрашивает Telegram: тесты PostgreSQL без `ATLAS_TEST_DSN` пропускаются. Обязательный интеграционный прогон `python scripts/run_postgres_tests.py` требует явно указанную временную базу и не допускает пропуски. Он проверяет реальные SQL-транзакции, миграции, идентичность, дедупликацию, курсоры и API. Подробные команды — в [инструкции по БД](docs/DATABASE.md). В GitHub Actions настроены PostgreSQL 16/17, Python 3.10/3.12 и отдельные браузерные проверки. При установленных только базовых зависимостях необязательный модульный API-тест пропускается. Для Linux с системным Chromium можно указать `CHROMIUM_PATH=/usr/bin/chromium`. Браузерные тесты изолируют демо от вашей локальной выгрузки. Node.js **20+** рекомендуется для инструментов проверки.
 
 Границы выполненного аудита, исправления и дальнейший согласуемый план — в [AUDIT.md](docs/AUDIT.md) и [ROADMAP.md](docs/ROADMAP.md).

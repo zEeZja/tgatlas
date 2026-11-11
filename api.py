@@ -4,6 +4,9 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import JSONResponse
+import psycopg2
+from src.migrations import check_schema_ready, MigrationError
 
 from src import db
 from src.exporter import channel_rows
@@ -21,6 +24,27 @@ app = FastAPI(
 @app.get("/api/health")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/api/ready", responses={503: {"description": "Database or schema not ready"}})
+def ready():
+    conn = None
+    try:
+        conn = db.connect()
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT set_config('statement_timeout', '3000', true)")
+        status = check_schema_ready(conn)
+        return {
+            "status": "ready",
+            "database": "ok",
+            "schema_version": status["current"],
+        }
+    except (psycopg2.Error, MigrationError):
+        # Never put connection details or SQL errors into a public health response.
+        return JSONResponse(status_code=503, content={"status": "not_ready"})
+    finally:
+        if conn is not None:
+            conn.close()
 
 
 @app.get("/api/channels")

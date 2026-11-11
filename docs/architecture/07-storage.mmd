@@ -43,3 +43,10 @@ erDiagram
         string source_name
         string source_ref
     }
+
+    schema_migrations {
+        string version PK
+        string name
+        string checksum
+        datetime applied_at
+    }
