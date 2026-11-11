@@ -1,0 +1,30 @@
+flowchart TB
+    START["scrape --workers 4 --pages 3"] --> STATE["Прочитать активные каналы, MAX ID поста и курсор разрыва"]
+    STATE --> HEAD["HTTP-пул: получить первую страницу t.me/s/username"]
+    HEAD --> MODE{"--full-history?"}
+    MODE -->|"да"| HISTORY["Читать страницы до лимита; включая уже известные ID"]
+    MODE -->|"нет"| NEW["Отобрать ID больше текущего порога"]
+    NEW --> REACHED{"Достигнут сохранённый ID или конец?"}
+    REACHED -->|"нет"| BUDGET{"Остался бюджет страниц?"}
+    BUDGET -->|"да"| OLDER["Запросить более старую страницу: before=oldest ID"]
+    OLDER --> NEW
+    BUDGET -->|"нет"| GAP["При повторном опросе сохранить before_id и target_id разрыва"]
+    REACHED -->|"да"| RESUME{"Есть ранее недочитанный разрыв?"}
+    RESUME -->|"да, бюджет есть"| CURSOR["Продолжить с сохранённого before_id и старого target_id"]
+    CURSOR --> NEW
+    RESUME -->|"да, бюджет исчерпан"| KEEP["Сохранить курсор до следующего опроса"]
+    RESUME -->|"нет"| CLEAR["Разрыв закрыт: удалить курсор"]
+    HISTORY --> PRESERVE["Прежний инкрементальный курсор не менять"]
+    GAP --> WRITE["Основной поток: одна транзакция на канал"]
+    KEEP --> WRITE
+    CLEAR --> WRITE
+    PRESERVE --> WRITE
+    WRITE --> INSERT["Метаданные + пакет постов с дедупликацией + курсор + last_parsed_at"]
+    INSERT -->|"успех"| COMMIT["COMMIT"]
+    INSERT -->|"ошибка"| ROLLBACK["ROLLBACK: посты и курсор откатить вместе"]
+    classDef data fill:#e5edf8,stroke:#6981a0,color:#1b304e
+    classDef check fill:#fff4d9,stroke:#b49a55,color:#463b1d
+    classDef warn fill:#fce9e5,stroke:#ad756c,color:#5a2b24
+    class STATE,GAP,KEEP data
+    class MODE,REACHED,BUDGET,RESUME check
+    class ROLLBACK warn

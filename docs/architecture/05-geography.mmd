@@ -1,0 +1,24 @@
+flowchart TB
+    INPUT["Поля канала + geography_overrides.json"] --> BASE["Применить ручное правило; прочитать regions / region"]
+    BASE --> REVIEW{"Старый регион помечен для проверки?"}
+    REVIEW -->|"да, без ручного исправления"| DISCARD["Не считать старый регион подтверждённым"]
+    REVIEW -->|"нет / ручное исправление"| KEEP["Сохранить принятые регионы"]
+    DISCARD --> RECOVER
+    KEEP --> RECOVER{"Нет принятых регионов, ручного охвата и федерального статуса?"}
+    RECOVER -->|"да"| TITLE["Найти места в названии: российские алиасы и зарубежный справочник"]
+    TITLE --> ONE{"Место однозначно?"}
+    ONE -->|"да"| PLACE["Восстановить регион или страну"]
+    ONE -->|"нет"| NO["Не назначать случайное место"]
+    RECOVER -->|"нет"| SCOPE
+    PLACE --> SCOPE{"Определить охват"}
+    NO --> SCOPE
+    SCOPE -->|"явно задан"| EXPLICIT["Международный / вся страна / неизвестный"]
+    SCOPE -->|"несколько принятых регионов"| MULTI["Несколько регионов"]
+    SCOPE -->|"один принятый регион"| REGION["Регион; выбирается напрямую в интерфейсе"]
+    SCOPE -->|"федеральный канал и известна страна"| COUNTRY["Вся страна"]
+    SCOPE -->|"остальное"| UNKNOWN["География не уточнена"]
+    classDef data fill:#e5edf8,stroke:#6981a0,color:#1b304e
+    classDef check fill:#fff4d9,stroke:#b49a55,color:#463b1d
+    classDef warn fill:#fce9e5,stroke:#ad756c,color:#5a2b24
+    class REVIEW,RECOVER,ONE,SCOPE check
+    class UNKNOWN,NO warn

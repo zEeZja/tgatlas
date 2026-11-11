@@ -1,0 +1,23 @@
+flowchart TB
+    CFG["config/channels.json"] -->|"явный импорт --from-config"| CH[("channels: рабочий каталог")]
+    SRC["Внешние каталоги, файлы, подписки"] --> CAN[("channel_candidates")]
+    CAN --> VAL["Проверка доступности и порога аудитории"]
+    VAL -->|"candidate-import --apply"| CH
+    CH --> META["refresh-metadata: только публичный профиль"]
+    META -->|"название, описание, подписчики"| CH
+    CH --> SCRAPE["scrape: публикации и метаданные"]
+    SCRAPE --> CH
+    SCRAPE --> POSTS[("posts + scrape_checkpoints")]
+    CH --> EXPORT["export / GET api/channels"]
+    RULES["Правила тем и географии"] --> EXPORT
+    EXPORT --> DATA["JSON/JS-выгрузка или HTTP-ответ"]
+    DATA --> BROWSER["Браузер: уточнение классификации и локальные исправления"]
+    RULES -->|"sync_topics.py → taxonomy.js"| BROWSER
+    BROWSER --> MAP["Кластеры → Canvas → поиск, фильтры, карточки"]
+    DATA --> AUDIT["audit-classification → CSV спорных случаев"]
+    RULES --> AUDIT
+    classDef data fill:#e5edf8,stroke:#6981a0,color:#1b304e
+    classDef check fill:#fff4d9,stroke:#b49a55,color:#463b1d
+    classDef warn fill:#fce9e5,stroke:#ad756c,color:#5a2b24
+    class CH,CAN,POSTS,DATA data
+    class VAL check

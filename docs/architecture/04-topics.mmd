@@ -1,0 +1,28 @@
+flowchart TB
+    INPUT["Название, username, описание и исходные рубрики"] --> LOCAL{"Браузер: есть локальная тема?"}
+    LOCAL -->|"да"| L["Выбранная пользователем тема"]
+    LOCAL -->|"нет / Python"| MANUAL{"Для канала задано правило владельца?"}
+    MANUAL -->|"да"| M["Правило владельца каталога"]
+    MANUAL -->|"нет"| DECLARED{"Есть специализированная исходная тема?"}
+    DECLARED -->|"да"| D["Сохранить эту тему"]
+    DECLARED -->|"нет"| SCORE["Ключевые слова: название ×4, username ×3, описание ×2"]
+    SCORE --> QUALIFY["Не более 3 совпадений на поле; Новости ×0.5; отбор по порогу"]
+    QUALIFY --> FOUND{"Есть подходящий кандидат?"}
+    FOUND -->|"да"| H["Лучшая тема + признаки + возможная отметка проверки"]
+    FOUND -->|"нет"| CITY{"Город + местный формат / приём новостей?"}
+    CITY -->|"да"| N["Новости: контекстное правило; голое название города требует проверки"]
+    CITY -->|"нет"| FALLBACK{"Есть пригодная исходная общая рубрика?"}
+    FALLBACK -->|"да"| F["Общая рубрика каталога"]
+    FALLBACK -->|"нет"| U["Не определено + нужна проверка"]
+    L --> RESULT["primary_category, subcategory, источник, признаки, кандидаты"]
+    M --> RESULT
+    D --> RESULT
+    H --> RESULT
+    N --> RESULT
+    F --> RESULT
+    U --> RESULT
+    classDef data fill:#e5edf8,stroke:#6981a0,color:#1b304e
+    classDef check fill:#fff4d9,stroke:#b49a55,color:#463b1d
+    classDef warn fill:#fce9e5,stroke:#ad756c,color:#5a2b24
+    class LOCAL,MANUAL,DECLARED,FOUND,CITY,FALLBACK check
+    class U warn

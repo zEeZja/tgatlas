@@ -1,0 +1,45 @@
+erDiagram
+    channels ||--o{ posts : "публикации"
+    channels ||--o| scrape_checkpoints : "курсор недочитанного участка"
+    channels ||--o{ channel_sources : "источники рабочего канала"
+    channels o|--o{ channel_candidates : "imported_channel_id"
+    channel_candidates ||--o{ channel_candidate_sources : "источники кандидата"
+    channels {
+        int id PK
+        string username UK
+        bigint telegram_id UK "когда известен"
+        string description
+        int subscribers
+        string subcategory "исходная рубрика"
+        string region "сохранённая география"
+        datetime last_meta_at
+        datetime last_parsed_at
+    }
+    posts {
+        bigint id PK
+        int channel_id FK
+        bigint tg_message_id "уникален вместе с channel_id"
+        string text
+        datetime posted_at
+    }
+    scrape_checkpoints {
+        bigint channel_id PK,FK
+        bigint before_id
+        bigint target_id
+    }
+    channel_candidates {
+        string username PK
+        string status "pending / validated / imported / rejected"
+        int imported_channel_id FK "может отсутствовать"
+    }
+    channel_candidate_sources {
+        string username FK
+        string source_name
+        string source_ref
+    }
+    channel_sources {
+        int id PK
+        int channel_id FK
+        string source_name
+        string source_ref
+    }

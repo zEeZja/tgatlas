@@ -1,0 +1,33 @@
+sequenceDiagram
+    actor U as Пользователь
+    participant CLI as Python CLI
+    participant T as Публичный Telegram
+    participant DB as PostgreSQL
+    participant F as Выгрузка и правила
+    participant B as Браузер
+    U->>CLI: refresh-metadata --workers 2
+    CLI->>DB: Прочитать активные каналы
+    loop Каждый выбранный канал, с общей частотой запросов
+        CLI->>T: GET t.me/username
+        T-->>CLI: HTML профиля
+        alt Название и подписчики получены
+            CLI->>DB: Обновить метаданные и last_meta_at
+        else Ошибка / неподходящая страница
+            CLI-->>U: Записать ошибку, прежние данные сохранить
+        end
+    end
+    U->>CLI: scripts/sync_topics.py
+    CLI->>F: Сгенерировать taxonomy.js из правил
+    U->>CLI: main.py export
+    CLI->>DB: Прочитать рабочие метаданные
+    CLI->>CLI: Определить тему и охват
+    CLI->>F: channels.json и channels.js
+    U->>B: Открыть карту / Ctrl+Shift+R
+    B->>F: Прочитать данные и taxonomy.js
+    B->>B: Уточнить темы и географию, применить локальные исправления
+    B-->>U: Карта с обновлёнными карточками
+    opt Нужен разбор спорных случаев
+        U->>CLI: audit-classification
+        CLI->>F: Прочитать channels.json, сформировать CSV
+        CLI-->>U: reports/classification-review.csv
+    end

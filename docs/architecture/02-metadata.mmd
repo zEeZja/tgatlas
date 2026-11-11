@@ -1,0 +1,26 @@
+flowchart TB
+    START["refresh-metadata --workers 2"] --> IMPORT{"Указан --from-config?"}
+    IMPORT -->|"да"| SEED["Импорт выбранных записей конфигурации"]
+    IMPORT -->|"нет"| SELECT["Активные каналы PostgreSQL; фильтр --channel"]
+    SEED --> SELECT
+    SELECT --> POOL["Ограниченная очередь: 1–8 HTTP-загрузчиков"]
+    POOL --> GATE["Общий ограничитель частоты"]
+    GATE --> GET["GET https://t.me/username"]
+    GET --> RATE{"Ответ 429?"}
+    RATE -->|"да"| WAIT["Общая пауза Retry-After"]
+    WAIT --> GATE
+    RATE -->|"нет"| PARSE["Разбор шапки: название, описание, подписчики"]
+    PARSE --> VALID{"Есть название и счётчик подписчиков?"}
+    VALID -->|"нет / ошибка запроса"| FAIL["Старые данные сохранены; ошибка в отчёте"]
+    VALID -->|"да"| TX["Основной поток: транзакция update_channel_meta"]
+    TX --> OK["channels + last_meta_at обновлены"]
+    TX -->|"ошибка SQL"| ROLLBACK["Откат; старые данные сохранены"]
+    OK --> NEXT["Следующий канал / итоговые счётчики"]
+    FAIL --> NEXT
+    ROLLBACK --> NEXT
+    NEXT -.->|"остались записи"| POOL
+    classDef data fill:#e5edf8,stroke:#6981a0,color:#1b304e
+    classDef check fill:#fff4d9,stroke:#b49a55,color:#463b1d
+    classDef warn fill:#fce9e5,stroke:#ad756c,color:#5a2b24
+    class IMPORT,RATE,VALID check
+    class FAIL,ROLLBACK warn
