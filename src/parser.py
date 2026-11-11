@@ -23,6 +23,7 @@ log = logging.getLogger(__name__)
 _TITLE_MAX_LEN = 300
 _CYRILLIC_SUFFIX = {"К": "K", "М": "M", "Б": "B"}
 
+
 def parse_views(raw: Optional[str]) -> Optional[int]:
     """Разобрать число с суффиксом: '12.3K' → 12300, '1,2М' → 1200000, '1 218 400' → 1218400."""
     if not raw:
@@ -34,7 +35,7 @@ def parse_views(raw: Optional[str]) -> Optional[int]:
 
     num_str = m.group(1).replace(",", ".")
     suffix = ""
-    for ch in s[m.end():]:
+    for ch in s[m.end() :]:
         if ch.isalpha():
             suffix = ch.upper()
             break
@@ -47,6 +48,7 @@ def parse_views(raw: Optional[str]) -> Optional[int]:
     except (ValueError, KeyError):
         return None
 
+
 def _node_to_text(node) -> Optional[str]:
     """Извлечь текст, сохранив переносы от <br>."""
     if node is None:
@@ -58,6 +60,7 @@ def _node_to_text(node) -> Optional[str]:
     text = text.strip()
     return text or None
 
+
 def _extract_title(text: Optional[str]) -> Optional[str]:
     """Эвристика: первая непустая строка — как заголовок новости."""
     if not text:
@@ -68,6 +71,7 @@ def _extract_title(text: Optional[str]) -> Optional[str]:
             return line[:_TITLE_MAX_LEN]
     return None
 
+
 def _parse_datetime(raw: Optional[str]) -> Optional[datetime]:
     if not raw:
         return None
@@ -76,6 +80,7 @@ def _parse_datetime(raw: Optional[str]) -> Optional[datetime]:
     except ValueError:
         return None
 
+
 def _select_first(soup, *selectors):
     """Вернуть первый найденный элемент по списку селекторов."""
     for sel in selectors:
@@ -83,6 +88,7 @@ def _select_first(soup, *selectors):
         if node is not None:
             return node
     return None
+
 
 def parse_channel_meta(html: str) -> dict:
     """Извлечь из шапки канала: описание и число подписчиков.
@@ -112,19 +118,16 @@ def parse_channel_meta(html: str) -> dict:
         result["description"] = _node_to_text(desc_node)
 
     counter_nodes = soup.select(
-        "div.tgme_channel_info_counter, "
-        "div[class*='channel_info_counter']"
+        "div.tgme_channel_info_counter, div[class*='channel_info_counter']"
     )
     if not counter_nodes:
         log.debug("Не найдено ни одного tgme_channel_info_counter")
     for counter in counter_nodes:
-        type_node = (
-            counter.select_one(".counter_type")
-            or counter.select_one("[class*='counter_type']")
+        type_node = counter.select_one(".counter_type") or counter.select_one(
+            "[class*='counter_type']"
         )
-        value_node = (
-            counter.select_one(".counter_value")
-            or counter.select_one("[class*='counter_value']")
+        value_node = counter.select_one(".counter_value") or counter.select_one(
+            "[class*='counter_value']"
         )
         if not type_node or not value_node:
             continue
@@ -132,19 +135,28 @@ def parse_channel_meta(html: str) -> dict:
         if "subscriber" in counter_type or "подписчик" in counter_type:
             raw_count = value_node.get_text(" ", strip=True)
             parsed_count = parse_count(raw_count)
-            result["subscribers"] = parsed_count if parsed_count is not None else parse_views(raw_count)
+            result["subscribers"] = (
+                parsed_count if parsed_count is not None else parse_views(raw_count)
+            )
             break
 
     # Public profile contains metadata without loading the /s/ publication feed.
-    extra = soup.select_one('.tgme_page_extra')
-    if extra and result['subscribers'] is None:
-        text = extra.get_text(' ', strip=True)
-        match = re.search(r'([\d\s.,\u00a0]+[kKmMКкМм]?)\s*(?:subscribers|подписчик\w*)', text, re.IGNORECASE)
+    extra = soup.select_one(".tgme_page_extra")
+    if extra and result["subscribers"] is None:
+        text = extra.get_text(" ", strip=True)
+        match = re.search(
+            r"([\d\s.,\u00a0]+[kKmMКкМм]?)\s*(?:subscribers|подписчик\w*)",
+            text,
+            re.IGNORECASE,
+        )
         if match:
-            result['subscribers'] = parse_count(match.group(1).strip())
-            if result['name'] and not desc_node:
-                result['description'] = ''  # Successful empty profile clears an old description.
+            result["subscribers"] = parse_count(match.group(1).strip())
+            if result["name"] and not desc_node:
+                result["description"] = (
+                    ""  # Successful empty profile clears an old description.
+                )
     return result
+
 
 def parse_channel_page(html: str, username: str, channel_id: int) -> List[Post]:
     """Разобрать HTML страницы t.me/s/<username> в список Post."""
@@ -159,6 +171,8 @@ def parse_channel_page(html: str, username: str, channel_id: int) -> List[Post]:
         try:
             _, msg_id_str = data_post.split("/", 1)
             tg_message_id = int(msg_id_str)
+            if tg_message_id <= 0:
+                continue
         except (ValueError, IndexError):
             continue
 

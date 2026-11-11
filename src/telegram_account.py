@@ -25,7 +25,9 @@ def _make_proxy():
     if not config.TG_PROXY_HOST and not config.TG_PROXY_PORT:
         return None
     if not config.TG_PROXY_HOST or not config.TG_PROXY_PORT:
-        raise ValueError("Для Telegram-прокси нужно указать и TG_PROXY_HOST, и TG_PROXY_PORT")
+        raise ValueError(
+            "Для Telegram-прокси нужно указать и TG_PROXY_HOST, и TG_PROXY_PORT"
+        )
     if not 1 <= config.TG_PROXY_PORT <= 65535:
         raise ValueError("TG_PROXY_PORT должен быть от 1 до 65535")
     if config.TG_PROXY_TYPE not in {"socks5", "http"}:
@@ -102,12 +104,15 @@ def authorize() -> None:
         client.start()
         me = client.get_me()
         if not me:
-            raise RuntimeError("Telegram не вернул профиль авторизованного пользователя")
+            raise RuntimeError(
+                "Telegram не вернул профиль авторизованного пользователя"
+            )
         if config.TG_EXPECTED_USER_ID:
             _verify_expected_account_id(me.id)
         log.info(
             "Подключён аккаунт: id=%s, username=@%s",
-            me.id, me.username or "без username",
+            me.id,
+            me.username or "без username",
         )
         log.info(
             "Убедись, что это именно резервный аккаунт. Сессия хранится локально: "
@@ -163,10 +168,19 @@ def _preview_path(filename: str) -> Path:
 
 
 def _write_candidate_preview(path: Path, rows: list[dict], extra_fields=()) -> None:
-    fieldnames = list(dict.fromkeys([
-        "username", "telegram_id", "name", "subscribers", "category",
-        "region_hint", *extra_fields,
-    ]))
+    fieldnames = list(
+        dict.fromkeys(
+            [
+                "username",
+                "telegram_id",
+                "name",
+                "subscribers",
+                "category",
+                "region_hint",
+                *extra_fields,
+            ]
+        )
+    )
     with path.open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
@@ -218,7 +232,8 @@ def import_subscriptions(
         client.disconnect()
 
     preview_name = (
-        "telegram_subscriptions_preview.csv" if offset == 0
+        "telegram_subscriptions_preview.csv"
+        if offset == 0
         else f"telegram_subscriptions_preview_{offset}_{offset + limit}.csv"
     )
     preview_path = _preview_path(preview_name)
@@ -226,29 +241,40 @@ def import_subscriptions(
 
     if apply and candidates:
         from . import db
+
         conn = db.connect()
         try:
             with db.transaction(conn):
                 for candidate in candidates:
                     db.upsert_candidate(
-                        conn, candidate,
+                        conn,
+                        candidate,
                         source_name="telegram_subscriptions",
-                        source_ref=str(candidate.get("telegram_id") or candidate["username"]),
+                        source_ref=str(
+                            candidate.get("telegram_id") or candidate["username"]
+                        ),
                         source_url="https://web.telegram.org/",
                         status="validated",
                     )
         finally:
             conn.close()
 
-    log.info("Диалогов просмотрено: %d; окно публичных каналов: %d–%d",
-             scanned, offset, offset + len(candidates))
+    log.info(
+        "Диалогов просмотрено: %d; окно публичных каналов: %d–%d",
+        scanned,
+        offset,
+        offset + len(candidates),
+    )
     log.info(
         "Публичных каналов-кандидатов: %d; broadcast-каналов без username пропущено: %d",
-        len(candidates), skipped_without_username,
+        len(candidates),
+        skipped_without_username,
     )
     log.info("Предпросмотр: %s", preview_path)
     if apply:
-        log.info("Кандидаты добавлены в PostgreSQL; они ещё не включены в рабочую карту.")
+        log.info(
+            "Кандидаты добавлены в PostgreSQL; они ещё не включены в рабочую карту."
+        )
     else:
         log.info("Только предпросмотр. Для записи повторите команду с --apply.")
     return len(candidates)
@@ -262,6 +288,7 @@ def _build_recommendations_request(channel=None):
     """
     try:
         from telethon.tl.functions.channels import GetChannelRecommendationsRequest
+
         return GetChannelRecommendationsRequest(channel=channel)
     except ImportError:
         try:
@@ -342,10 +369,20 @@ def discover_recommendations(
         username = normalize_username(seed)
         if username and username not in clean_seeds:
             clean_seeds.append(username)
-    if sum(bool(x) for x in (from_subscriptions, global_recommendations, bool(clean_seeds))) != 1:
-        raise ValueError("Выберите один режим: --seed, --from-subscriptions или --global")
+    if (
+        sum(
+            bool(x)
+            for x in (from_subscriptions, global_recommendations, bool(clean_seeds))
+        )
+        != 1
+    ):
+        raise ValueError(
+            "Выберите один режим: --seed, --from-subscriptions или --global"
+        )
     if clean_seeds and len(clean_seeds) > max_seeds:
-        raise ValueError(f"Передано {len(clean_seeds)} seed-каналов, максимум {max_seeds}")
+        raise ValueError(
+            f"Передано {len(clean_seeds)} seed-каналов, максимум {max_seeds}"
+        )
 
     client = _connect_authorized()
     collected: list[dict] = []
@@ -359,6 +396,7 @@ def discover_recommendations(
             targets = [(seed, seed) for seed in clean_seeds]
         elif from_subscriptions:
             from telethon.tl.types import Channel as TelegramChannel
+
             seen = set()
             for dialog in client.iter_dialogs(limit=None):
                 entity = dialog.entity
@@ -372,7 +410,9 @@ def discover_recommendations(
                 if len(targets) >= max_seeds:
                     break
             if not targets:
-                log.warning("В подписках аккаунта не найдено публичных broadcast-каналов")
+                log.warning(
+                    "В подписках аккаунта не найдено публичных broadcast-каналов"
+                )
                 return 0
         else:
             targets = [("__global__", None)]
@@ -382,10 +422,11 @@ def discover_recommendations(
                 input_channel = _input_channel(client, seed) if seed else None
                 request = _build_recommendations_request(input_channel)
                 response = client(request)
-                chats = getattr(response, "chats", None) or []
                 count = getattr(response, "count", None)
                 if count is not None:
-                    returned_total = count if returned_total is None else max(returned_total, count)
+                    returned_total = (
+                        count if returned_total is None else max(returned_total, count)
+                    )
                 rows = _extract_recommendation_candidates(response)
                 for row in rows:
                     if seed and row["username"] == seed:
@@ -397,7 +438,10 @@ def discover_recommendations(
                 request_count += 1
                 log.info(
                     "[%d/%d] seed=%s — публичных рекомендаций: %d",
-                    index, len(targets), seed or "global", len(rows),
+                    index,
+                    len(targets),
+                    seed or "global",
+                    len(rows),
                 )
                 if len(collected) >= limit:
                     break
@@ -411,7 +455,9 @@ def discover_recommendations(
             except Exception as exc:
                 # Ошибка одного seed не скрывает результаты остальных; ошибки
                 # доступа к seed обычно означают, что аккаунт в канал не вступал.
-                log.warning("seed=%s — рекомендации не получены: %s", seed or "global", exc)
+                log.warning(
+                    "seed=%s — рекомендации не получены: %s", seed or "global", exc
+                )
 
             if index < len(targets):
                 time.sleep(config.TG_RECOMMENDATION_DELAY)
@@ -421,37 +467,50 @@ def discover_recommendations(
     # Внутри одного ответа Telegram могут повторяться те же каналы для разных
     # seed. Сохраняем source_ref для каждого seed, чтобы не терять происхождение.
     preview_path = _preview_path("telegram_recommendations_preview.csv")
-    _write_candidate_preview(preview_path, collected, extra_fields=("recommended_from",))
+    _write_candidate_preview(
+        preview_path, collected, extra_fields=("recommended_from",)
+    )
 
     if apply and collected:
         from . import db
+
         conn = db.connect()
         try:
             with db.transaction(conn):
                 for row in collected:
                     seed = row.get("recommended_from") or "global"
                     db.upsert_candidate(
-                        conn, row,
+                        conn,
+                        row,
                         source_name="telegram_recommendations",
                         source_ref=seed,
-                        source_url=(f"https://t.me/{seed}" if seed != "global_account_recommendations"
-                                    else "https://web.telegram.org/"),
+                        source_url=(
+                            f"https://t.me/{seed}"
+                            if seed != "global_account_recommendations"
+                            else "https://web.telegram.org/"
+                        ),
                         status="validated",
                     )
         finally:
             conn.close()
 
-    log.info("MTProto recommendations: запросов выполнено %d, каналов-кандидатов %d",
-             request_count, len(collected))
+    log.info(
+        "MTProto recommendations: запросов выполнено %d, каналов-кандидатов %d",
+        request_count,
+        len(collected),
+    )
     if returned_total is not None and returned_total > len(collected):
         log.info(
             "Telegram сообщил count=%d, но в этом ответе доступно %d; у обычных аккаунтов "
             "Telegram может возвращать сокращённый набор без пагинации.",
-            returned_total, len(collected),
+            returned_total,
+            len(collected),
         )
     log.info("Предпросмотр: %s", preview_path)
     if apply:
-        log.info("Кандидаты добавлены в PostgreSQL; импортировать в channels можно отдельно.")
+        log.info(
+            "Кандидаты добавлены в PostgreSQL; импортировать в channels можно отдельно."
+        )
     else:
         log.info("Только предпросмотр. Для записи повторите команду с --apply.")
     return len(collected)

@@ -1,6 +1,6 @@
 flowchart TB
     START["refresh-metadata --workers 2"] --> IMPORT{"Указан --from-config?"}
-    IMPORT -->|"да"| SEED["Импорт выбранных записей конфигурации"]
+    IMPORT -->|"да"| SEED["Добавить отсутствующие выбранные username"]
     IMPORT -->|"нет"| SELECT["Активные каналы PostgreSQL; фильтр --channel"]
     SEED --> SELECT
     SELECT --> POOL["Ограниченная очередь: 1–8 HTTP-загрузчиков"]
@@ -15,7 +15,7 @@ flowchart TB
     VALID -->|"да"| TX["Основной поток: транзакция update_channel_meta"]
     TX --> OK["channels + last_meta_at обновлены"]
     TX -->|"ошибка SQL"| ROLLBACK["Откат; старые данные сохранены"]
-    OK --> NEXT["Следующий канал / итоговые счётчики"]
+    OK --> NEXT["Следующий канал; код 1 при ошибках"]
     FAIL --> NEXT
     ROLLBACK --> NEXT
     NEXT -.->|"остались записи"| POOL

@@ -25,9 +25,11 @@ from .metrics import parse_count
 
 log = logging.getLogger(__name__)
 
+
 def connect():
     """Открыть соединение с PostgreSQL."""
     return psycopg2.connect(**config.PG)
+
 
 @contextmanager
 def transaction(conn):
@@ -39,6 +41,7 @@ def transaction(conn):
         conn.rollback()
         raise
 
+
 @contextmanager
 def _cursor(conn):
     cur = conn.cursor(cursor_factory=RealDictCursor)
@@ -46,6 +49,7 @@ def _cursor(conn):
         yield cur
     finally:
         cur.close()
+
 
 def init_schema(conn) -> None:
     """Создать таблицы и индексы из db/schema.sql."""
@@ -56,7 +60,9 @@ def init_schema(conn) -> None:
         cur.execute(sql)
     conn.commit()
 
+
 # ─── Запись (без commit — вызывающий оборачивает в transaction) ────────
+
 
 def upsert_channel(conn, ch: Channel) -> int:
     """Вставить или обновить канал, предпочитая устойчивый Telegram ID."""
@@ -101,9 +107,18 @@ def upsert_channel(conn, ch: Channel) -> int:
                      WHERE id = %s
                     RETURNING id
                     """,
-                    (username, ch.name, ch.category, ch.country, ch.subcategory,
-                     ch.region_hint, ch.source, ch.description, ch.subscribers,
-                     by_telegram_id["id"]),
+                    (
+                        username,
+                        ch.name,
+                        ch.category,
+                        ch.country,
+                        ch.subcategory,
+                        ch.region_hint,
+                        ch.source,
+                        ch.description,
+                        ch.subscribers,
+                        by_telegram_id["id"],
+                    ),
                 )
                 channel_id = cur.fetchone()["id"]
 
@@ -130,9 +145,18 @@ def upsert_channel(conn, ch: Channel) -> int:
                     OR channels.telegram_id = EXCLUDED.telegram_id
                 RETURNING id
                 """,
-                (username, ch.name, ch.category, ch.country, ch.subcategory,
-                 ch.region_hint, ch.source, ch.telegram_id, ch.description,
-                 ch.subscribers),
+                (
+                    username,
+                    ch.name,
+                    ch.category,
+                    ch.country,
+                    ch.subcategory,
+                    ch.region_hint,
+                    ch.source,
+                    ch.telegram_id,
+                    ch.description,
+                    ch.subscribers,
+                ),
             )
             row = cur.fetchone()
             if row is None:
@@ -154,11 +178,15 @@ def upsert_channel(conn, ch: Channel) -> int:
             )
     return channel_id
 
-def update_channel_meta(conn, channel_id: int,
-                        description: str = None,
-                        subscribers: int = None,
-                        name: str = None,
-                        telegram_id: int = None) -> None:
+
+def update_channel_meta(
+    conn,
+    channel_id: int,
+    description: str = None,
+    subscribers: int = None,
+    name: str = None,
+    telegram_id: int = None,
+) -> None:
     """Обновить только известные метаданные, не затирая неполными ответами."""
     with _cursor(conn) as cur:
         cur.execute(
@@ -175,6 +203,7 @@ def update_channel_meta(conn, channel_id: int,
             (name, description, subscribers, telegram_id, channel_id),
         )
 
+
 def insert_posts(conn, posts: Iterable[Post]) -> int:
     """Вставить посты. Вернуть количество реально новых (не дублей)."""
     posts = list(posts)
@@ -182,21 +211,38 @@ def insert_posts(conn, posts: Iterable[Post]) -> int:
         return 0
 
     from psycopg2.extras import execute_values
-    rows = [(p.channel_id, p.tg_message_id, p.url, p.text, p.title, p.posted_at, p.views) for p in posts]
-    if not rows:
-        return 0
+
+    rows = [
+        (p.channel_id, p.tg_message_id, p.url, p.text, p.title, p.posted_at, p.views)
+        for p in posts
+    ]
     with _cursor(conn) as cur:
-        result = execute_values(cur, """
+        result = execute_values(
+            cur,
+            """
             INSERT INTO posts (channel_id, tg_message_id, url, text, title, posted_at, views)
             VALUES %s ON CONFLICT (channel_id, tg_message_id) DO NOTHING RETURNING id
-        """, rows, page_size=500, fetch=True)
+        """,
+            rows,
+            page_size=500,
+            fetch=True,
+        )
     return len(result)
 
 
-def get_post_watermarks(conn) -> dict:
+def get_post_watermarks(conn, channel_ids=None) -> dict:
+    if channel_ids is not None and not channel_ids:
+        return {}
     with _cursor(conn) as cur:
-        cur.execute("SELECT channel_id, MAX(tg_message_id) AS last_id FROM posts GROUP BY channel_id")
-        return {r['channel_id']: r['last_id'] for r in cur.fetchall()}
+        query = "SELECT channel_id, MAX(tg_message_id) AS last_id FROM posts"
+        if channel_ids is None:
+            cur.execute(query + " GROUP BY channel_id")
+        else:
+            cur.execute(
+                query + " WHERE channel_id = ANY(%s) GROUP BY channel_id",
+                (list(channel_ids),),
+            )
+        return {r["channel_id"]: r["last_id"] for r in cur.fetchall()}
 
 
 def mark_parsed(conn, channel_id: int) -> None:
@@ -207,7 +253,16 @@ def mark_parsed(conn, channel_id: int) -> None:
             (channel_id,),
         )
 
+
 # ─── Чтение (без commit) ───────────────────────────────────────────────
+
+
+def get_known_usernames(conn):
+    """Include inactive rows: catalogue sync must not overwrite or reactivate them."""
+    with _cursor(conn) as cur:
+        cur.execute("SELECT username FROM channels")
+        return {row["username"].lower() for row in cur.fetchall()}
+
 
 def get_active_channels(conn) -> List[dict]:
     with _cursor(conn) as cur:
@@ -220,6 +275,7 @@ def get_active_channels(conn) -> List[dict]:
             """
         )
         return list(cur.fetchall())
+
 
 def get_channels_with_meta(conn) -> List[dict]:
     with _cursor(conn) as cur:
@@ -241,6 +297,7 @@ def get_channels_with_meta(conn) -> List[dict]:
             """
         )
         return list(cur.fetchall())
+
 
 def stats(conn) -> dict:
     with _cursor(conn) as cur:
@@ -275,9 +332,14 @@ def stats(conn) -> dict:
 # ─── Единый каталог кандидатов и история источников ────────────────────
 
 
-def upsert_candidate(conn, candidate: dict, source_name: str,
-                     source_ref: str = "", source_url: str = None,
-                     status: str = "pending") -> bool:
+def upsert_candidate(
+    conn,
+    candidate: dict,
+    source_name: str,
+    source_ref: str = "",
+    source_url: str = None,
+    status: str = "pending",
+) -> bool:
     """Добавить/обновить кандидата и записать отдельный источник.
 
     Кандидат с известной аудиторией ниже config.MIN_CHANNEL_SUBSCRIBERS сразу
@@ -291,12 +353,15 @@ def upsert_candidate(conn, candidate: dict, source_name: str,
     if status not in {"pending", "validated"}:
         raise ValueError("Новый кандидат может иметь статус pending или validated")
 
-    raw = {key: value for key, value in dict(candidate).items()
-           if value not in (None, "")}
+    raw = {
+        key: value for key, value in dict(candidate).items() if value not in (None, "")
+    }
     name = candidate.get("name") or candidate.get("title") or None
     subscribers = parse_count(candidate.get("subscribers"))
     candidate_status, validation_note = normalize_candidate_state(
-        status, subscribers, config.MIN_CHANNEL_SUBSCRIBERS,
+        status,
+        subscribers,
+        config.MIN_CHANNEL_SUBSCRIBERS,
     )
     telegram_id = candidate.get("telegram_id")
     try:
@@ -342,12 +407,22 @@ def upsert_candidate(conn, candidate: dict, source_name: str,
                 last_seen_at = NOW(), updated_at = NOW()
             RETURNING (xmax = 0) AS inserted, imported_channel_id
             """,
-            (username, telegram_id, name, candidate.get("category"),
-             candidate.get("subcategory"), candidate.get("country"),
-             candidate.get("region_hint") or candidate.get("region"),
-             candidate.get("description"), subscribers, candidate_status,
-             validation_note, Json(raw), config.MIN_CHANNEL_SUBSCRIBERS,
-             config.MIN_CHANNEL_SUBSCRIBERS),
+            (
+                username,
+                telegram_id,
+                name,
+                candidate.get("category"),
+                candidate.get("subcategory"),
+                candidate.get("country"),
+                candidate.get("region_hint") or candidate.get("region"),
+                candidate.get("description"),
+                subscribers,
+                candidate_status,
+                validation_note,
+                Json(raw),
+                config.MIN_CHANNEL_SUBSCRIBERS,
+                config.MIN_CHANNEL_SUBSCRIBERS,
+            ),
         )
         candidate_row = cur.fetchone()
         inserted = bool(candidate_row["inserted"])
@@ -366,8 +441,9 @@ def upsert_candidate(conn, candidate: dict, source_name: str,
         )
         # Новые низкие показатели не должны портить уже импортированную запись.
         safe_subscribers = (
-            subscribers if subscribers is not None
-            and subscribers >= config.MIN_CHANNEL_SUBSCRIBERS else None
+            subscribers
+            if subscribers is not None and subscribers >= config.MIN_CHANNEL_SUBSCRIBERS
+            else None
         )
         if imported_channel_id is not None:
             cur.execute(
@@ -392,12 +468,19 @@ def upsert_candidate(conn, candidate: dict, source_name: str,
                        updated_at = NOW()
                  WHERE target.id = %s
                 """,
-                (telegram_id, telegram_id, telegram_id, name,
-                 candidate.get("category"), candidate.get("country"),
-                 candidate.get("subcategory"),
-                 candidate.get("region_hint") or candidate.get("region"),
-                 candidate.get("description"), safe_subscribers,
-                 imported_channel_id),
+                (
+                    telegram_id,
+                    telegram_id,
+                    telegram_id,
+                    name,
+                    candidate.get("category"),
+                    candidate.get("country"),
+                    candidate.get("subcategory"),
+                    candidate.get("region_hint") or candidate.get("region"),
+                    candidate.get("description"),
+                    safe_subscribers,
+                    imported_channel_id,
+                ),
             )
             cur.execute(
                 """
@@ -409,8 +492,13 @@ def upsert_candidate(conn, candidate: dict, source_name: str,
                               source_url = COALESCE(EXCLUDED.source_url, channel_sources.source_url),
                               raw_data = channel_sources.raw_data || EXCLUDED.raw_data
                 """,
-                (imported_channel_id, source_name, str(source_ref or ""),
-                 source_url, Json(raw)),
+                (
+                    imported_channel_id,
+                    source_name,
+                    str(source_ref or ""),
+                    source_url,
+                    Json(raw),
+                ),
             )
     return inserted
 
@@ -442,22 +530,34 @@ def candidate_stats(conn) -> dict:
             "SELECT status, COUNT(*) AS count FROM channel_candidates GROUP BY status"
         )
         rows = cur.fetchall()
-        cur.execute("SELECT COUNT(DISTINCT username) AS count FROM channel_candidate_sources")
+        cur.execute(
+            "SELECT COUNT(DISTINCT username) AS count FROM channel_candidate_sources"
+        )
         source_linked = cur.fetchone()["count"]
     result = {row["status"]: row["count"] for row in rows}
     result["source_linked"] = source_linked
-    result["total"] = sum(result.get(k, 0) for k in ("pending", "validated", "imported", "rejected"))
+    result["total"] = sum(
+        result.get(k, 0) for k in ("pending", "validated", "imported", "rejected")
+    )
     return result
 
 
-def update_candidate_validation(conn, username: str, *, status: str,
-                                name: str = None, description: str = None,
-                                subscribers: int = None,
-                                validation_note: str = None) -> None:
+def update_candidate_validation(
+    conn,
+    username: str,
+    *,
+    status: str,
+    name: str = None,
+    description: str = None,
+    subscribers: int = None,
+    validation_note: str = None,
+) -> None:
     from .audience import normalize_candidate_state
 
     normalized_status, policy_note = normalize_candidate_state(
-        status, subscribers, config.MIN_CHANNEL_SUBSCRIBERS,
+        status,
+        subscribers,
+        config.MIN_CHANNEL_SUBSCRIBERS,
     )
     note = validation_note or policy_note
     with _cursor(conn) as cur:
@@ -473,20 +573,35 @@ def update_candidate_validation(conn, username: str, *, status: str,
                    updated_at = NOW()
              WHERE username = %s
             """,
-            (normalized_status, name, description, subscribers, note,
-             normalized_status, username),
+            (
+                normalized_status,
+                name,
+                description,
+                subscribers,
+                note,
+                normalized_status,
+                username,
+            ),
         )
 
 
-def import_candidates(conn, usernames: Iterable[str] = None,
-                      limit: int = None, include_pending: bool = False,
-                      min_subscribers: int = None) -> int:
+def import_candidates(
+    conn,
+    usernames: Iterable[str] = None,
+    limit: int = None,
+    include_pending: bool = False,
+    min_subscribers: int = None,
+) -> int:
     """Импортировать кандидатов только при известной аудитории >= порога.
 
     --include-pending разрешает пропустить проверку страницы, но не обходит
     обязательный фильтр минимального числа подписчиков.
     """
-    minimum = config.MIN_CHANNEL_SUBSCRIBERS if min_subscribers is None else int(min_subscribers)
+    minimum = (
+        config.MIN_CHANNEL_SUBSCRIBERS
+        if min_subscribers is None
+        else int(min_subscribers)
+    )
     if minimum < 0:
         raise ValueError("min_subscribers не может быть отрицательным")
     wanted = [normalize_username(u) for u in usernames] if usernames else None
@@ -500,7 +615,8 @@ def import_candidates(conn, usernames: Iterable[str] = None,
                  WHERE username = ANY(%s) AND status = ANY(%s)
                    AND subscribers IS NOT NULL AND subscribers >= %s
                  ORDER BY username
-                """, (wanted, list(statuses), minimum),
+                """,
+                (wanted, list(statuses), minimum),
             )
         else:
             cur.execute(
@@ -510,19 +626,26 @@ def import_candidates(conn, usernames: Iterable[str] = None,
                    AND subscribers IS NOT NULL AND subscribers >= %s
                  ORDER BY last_seen_at DESC, username
                  LIMIT %s
-                """, (list(statuses), minimum, limit or 1000000),
+                """,
+                (list(statuses), minimum, limit or 1000000),
             )
         rows = list(cur.fetchall())
 
     imported = 0
     for row in rows:
         from .models import Channel
+
         channel = Channel(
-            username=row["username"], name=row["name"], category=row["category"],
-            country=row["country"], subcategory=row["subcategory"],
-            region_hint=row["region_hint"], source="candidate_import",
+            username=row["username"],
+            name=row["name"],
+            category=row["category"],
+            country=row["country"],
+            subcategory=row["subcategory"],
+            region_hint=row["region_hint"],
+            source="candidate_import",
             telegram_id=row["telegram_id"],
-            description=row["description"], subscribers=row["subscribers"],
+            description=row["description"],
+            subscribers=row["subscribers"],
         )
         channel_id = upsert_channel(conn, channel)
         with _cursor(conn) as cur:
@@ -534,7 +657,8 @@ def import_candidates(conn, usernames: Iterable[str] = None,
                   FROM channel_candidate_sources WHERE username = %s
                 ON CONFLICT (channel_id, source_name, source_ref)
                 DO UPDATE SET last_seen_at = NOW(), raw_data = channel_sources.raw_data || EXCLUDED.raw_data
-                """, (channel_id, row["username"]),
+                """,
+                (channel_id, row["username"]),
             )
             cur.execute(
                 """
@@ -543,7 +667,8 @@ def import_candidates(conn, usernames: Iterable[str] = None,
                        imported_channel_id = %s, validation_note = NULL,
                        updated_at = NOW()
                  WHERE username = %s
-                """, (channel_id, row["username"]),
+                """,
+                (channel_id, row["username"]),
             )
         imported += 1
     return imported
@@ -554,8 +679,10 @@ def get_scrape_checkpoints(conn) -> dict:
         cur.execute("""CREATE TABLE IF NOT EXISTS scrape_checkpoints (
             channel_id BIGINT PRIMARY KEY REFERENCES channels(id) ON DELETE CASCADE,
             before_id BIGINT NOT NULL, target_id BIGINT NOT NULL)""")
-        cur.execute('SELECT channel_id, before_id, target_id FROM scrape_checkpoints')
-        return {r['channel_id']:(r['before_id'],r['target_id']) for r in cur.fetchall()}
+        cur.execute("SELECT channel_id, before_id, target_id FROM scrape_checkpoints")
+        return {
+            r["channel_id"]: (r["before_id"], r["target_id"]) for r in cur.fetchall()
+        }
 
 
 def save_scrape_checkpoint(conn, channel_id, checkpoint):
@@ -563,8 +690,13 @@ def save_scrape_checkpoint(conn, channel_id, checkpoint):
         return
     with _cursor(conn) as cur:
         if checkpoint is None:
-            cur.execute('DELETE FROM scrape_checkpoints WHERE channel_id=%s',(channel_id,))
+            cur.execute(
+                "DELETE FROM scrape_checkpoints WHERE channel_id=%s", (channel_id,)
+            )
         else:
-            cur.execute("""INSERT INTO scrape_checkpoints(channel_id,before_id,target_id)
+            cur.execute(
+                """INSERT INTO scrape_checkpoints(channel_id,before_id,target_id)
                 VALUES (%s,%s,%s) ON CONFLICT(channel_id) DO UPDATE
-                SET before_id=EXCLUDED.before_id,target_id=EXCLUDED.target_id""",(channel_id,*checkpoint))
+                SET before_id=EXCLUDED.before_id,target_id=EXCLUDED.target_id""",
+                (channel_id, *checkpoint),
+            )

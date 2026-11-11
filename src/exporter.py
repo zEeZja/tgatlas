@@ -5,11 +5,13 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .topic_keywords import resolve_topic
+from .file_io import atomic_write_text
+from .topic_keywords import resolve_topic, load_classification_rules
 
 log = logging.getLogger(__name__)
 
-def _channel_to_row(ch: dict) -> dict:
+
+def _channel_to_row(ch: dict, **rules) -> dict:
     username = ch["username"]
     last_parsed = ch.get("last_parsed_at")
     row = {
@@ -40,12 +42,18 @@ def _channel_to_row(ch: dict) -> dict:
     for key in ("regions", "geographic_scope"):
         if key in ch:
             row[key] = ch[key]
-    row.update(resolve_topic(row))
+    row.update(resolve_topic(row, **rules))
     return row
+
+
+def channel_rows(channels):
+    rules = load_classification_rules()
+    return [_channel_to_row(ch, **rules) for ch in channels]
+
 
 def export_channels(conn, db_module) -> int:
     channels = db_module.get_channels_with_meta(conn)
-    rows = [_channel_to_row(ch) for ch in channels]
+    rows = channel_rows(channels)
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -56,16 +64,11 @@ def export_channels(conn, db_module) -> int:
     web_data = Path(__file__).resolve().parent.parent / "web" / "data"
     web_data.mkdir(parents=True, exist_ok=True)
 
-    json_path = web_data / "channels.json"
-    json_path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
-    js_path = web_data / "channels.js"
-    js_path.write_text(
-        "window.TG_DATA = " + json.dumps(payload, ensure_ascii=False) + ";\n",
-        encoding="utf-8",
+    payload_json = json.dumps(payload, ensure_ascii=False, indent=2)
+    # Both snapshots are complete files; either is independently consumable.
+    atomic_write_text(web_data / "channels.json", payload_json)
+    atomic_write_text(
+        web_data / "channels.js", "window.TG_DATA = " + payload_json + ";\n"
     )
 
     log.info("Экспортировано каналов: %d", len(rows))

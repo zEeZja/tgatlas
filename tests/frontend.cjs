@@ -55,6 +55,10 @@ const server = http.createServer((req, res) => {
       requests = [];
     page.on("pageerror", (e) => errors.push(e.message));
     page.on("request", (r) => requests.push(r.url()));
+    // Demo coverage must be independent of locally generated user exports.
+    await page.route("**/data/channels.json", (route) =>
+      route.fulfill({ status: 404 }),
+    );
     await page.goto(url);
     await page.waitForFunction(
       () => document.querySelector("#count").textContent === "779",
@@ -270,6 +274,13 @@ const server = http.createServer((req, res) => {
         "Московская область",
       ),
     );
+    // The API cannot inject arbitrary schemes through a catalogue URL.
+    await page.evaluate(() => {
+      document.querySelectorAll("#detail a").forEach((a) => {
+        if (!a.href.startsWith("https://t.me/"))
+          throw Error("Unexpected channel link");
+      });
+    });
     // Opt-in: managed Chromium may prohibit file:// navigation by administrator policy.
     // Category first, then coverage and contextual regions. Unknown is not global.
     const hierarchyRows = [
@@ -351,6 +362,42 @@ const server = http.createServer((req, res) => {
       );
       await filePage.close();
     }
+    // A JSON-only live export takes priority over demo, including its audience.
+    const live = await browser.newPage();
+    const liveRequests = [];
+    live.on("request", (r) => liveRequests.push(r.url()));
+    await live.route("**/data/channels.json", (route) =>
+      route.fulfill({
+        json: {
+          _sample: false,
+          channels: [{ ...channel, url: "javascript:alert(1)" }],
+        },
+      }),
+    );
+    await live.goto(url);
+    await live.waitForFunction(
+      () => document.querySelector("#count").textContent === "1",
+    );
+    assert(!liveRequests.some((u) => u.endsWith("/demo.js")));
+    assert(!(await live.locator("#banner").isVisible()));
+    await live.locator(".result").click();
+    assert.equal(
+      await live.locator(".detail-open").getAttribute("href"),
+      "https://t.me/api",
+    );
+    for (const response of [
+      { status: 500, body: "failed" },
+      { status: 200, contentType: "application/json", body: "{}" },
+    ]) {
+      await live.unroute("**/data/channels.json");
+      await live.route("**/data/channels.json", (route) =>
+        route.fulfill(response),
+      );
+      await live.reload();
+      await live.locator(".app-message").waitFor();
+      assert(!liveRequests.some((u) => u.endsWith("/demo.js")));
+    }
+    await live.close();
     assert.deepEqual(errors, []);
     console.log(
       "PASS: demo, all-channel map, search, category/topic/region filters, grouping, sort, pagination, empty state, local correction persistence/reset, canvas click, mobile, API without geography; no JS errors.",

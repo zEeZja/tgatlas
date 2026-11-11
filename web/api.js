@@ -1,51 +1,51 @@
-/**
- * Слой абстракции над данными.
- *
- * Сейчас mode = 'static': данные читаются из web/data/channels.js
- * (генерируется командой `python main.py export`) или, если страница
- * открыта через HTTP, — из web/data/channels.json.
- *
- * Когда появится FastAPI — меняется ОДНА константа:
- *   mode: 'http',
- *   httpBase: 'http://localhost:8000'
- * Остальной код (карта, поиск, фильтры) не трогается.
- */
+/* Static JS/JSON exports or the optional FastAPI endpoint. Demo loads only on absence. */
 (function () {
-  const CONFIG = {
-    mode: 'static',                       // 'static' | 'http'
-    httpBase: 'http://localhost:8000',    // используется при mode = 'http'
-    httpPath: '/api/channels',            // ожидаемый эндпоинт
-  };
-
-  async function getChannels() {
-    if (CONFIG.mode === 'http') {
-      const url = CONFIG.httpBase + CONFIG.httpPath;
-      const r = await fetch(url);
-      if (!r.ok) throw new Error(`HTTP ${r.status} при запросе ${url}`);
-      const data = await r.json();
-      if (Array.isArray(data)) return data;
-      if (Array.isArray(data.channels)) return data.channels;
-      throw new Error('Неожиданный формат ответа API');
-    }
-
-    // static: сначала встроенные данные (работает из file://)
-    if (window.TG_DATA && Array.isArray(window.TG_DATA.channels)) {
-      return window.TG_DATA.channels;
-    }
-
-    // static: fallback — fetch, работает только при открытии через http
-    try {
-      const r = await fetch('./data/channels.json');
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      const data = await r.json();
-      return data.channels ?? [];
-    } catch (e) {
-      throw new Error(
-        'Данные не загружены. Запустите `python main.py export` в папке проекта, ' +
-        'затем обновите страницу.'
-      );
-    }
+  const CONFIG = { mode: "static", httpBase: "", httpPath: "/api/channels" };
+  function unpack(data) {
+    const rows = Array.isArray(data) ? data : data?.channels;
+    if (!Array.isArray(rows)) throw new Error("Ожидается массив channels");
+    if (
+      rows.some(
+        (ch) =>
+          !ch ||
+          typeof ch !== "object" ||
+          typeof ch.username !== "string" ||
+          !ch.username ||
+          typeof ch.name !== "string",
+      )
+    )
+      throw new Error("Повреждён формат записи канала");
+    return rows;
   }
-
+  async function demo() {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "./demo.js";
+      script.onload = resolve;
+      script.onerror = () =>
+        reject(new Error("Данные и демонстрационный каталог не найдены"));
+      document.head.appendChild(script);
+    });
+    return unpack(window.TG_DATA);
+  }
+  async function getChannels() {
+    if (CONFIG.mode === "http") {
+      const url = CONFIG.httpBase.replace(/\/$/, "") + CONFIG.httpPath;
+      const response = await fetch(url);
+      if (!response.ok)
+        throw new Error(`HTTP ${response.status} при запросе ${url}`);
+      return unpack(await response.json());
+    }
+    if (window.TG_DATA !== undefined) return unpack(window.TG_DATA);
+    if (location.protocol === "file:") return demo();
+    const response = await fetch("./data/channels.json");
+    if (response.status === 404) return demo();
+    if (!response.ok)
+      throw new Error(`HTTP ${response.status} при загрузке channels.json`);
+    const data = await response.json();
+    const rows = unpack(data);
+    window.TG_DATA = Array.isArray(data) ? { channels: rows } : data;
+    return rows;
+  }
   window.Api = { getChannels, CONFIG };
 })();

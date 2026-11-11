@@ -9,7 +9,7 @@ import logging
 import time
 from typing import Optional
 
-from . import db, config
+from . import db
 from .telegram_account import _connect_authorized, _input_channel
 
 log = logging.getLogger(__name__)
@@ -19,7 +19,9 @@ DELAY_SECONDS = 1.5
 
 def run(limit: Optional[int] = None, channel: Optional[str] = None) -> int:
     if channel and limit is not None:
-        raise ValueError("Используйте либо --channel, либо --limit, но не оба параметра")
+        raise ValueError(
+            "Используйте либо --channel, либо --limit, но не оба параметра"
+        )
     if not channel and not limit:
         raise ValueError("Укажите --channel USERNAME либо ограниченный --limit N")
     if limit is not None and (limit < 1 or limit > MAX_BATCH):
@@ -63,7 +65,11 @@ def run(limit: Optional[int] = None, channel: Optional[str] = None) -> int:
                 result = client(GetFullChannelRequest(channel=input_channel))
                 full = result.full_chat
                 channel_entity = next(
-                    (item for item in result.chats if getattr(item, "broadcast", False)),
+                    (
+                        item
+                        for item in result.chats
+                        if getattr(item, "broadcast", False)
+                    ),
                     None,
                 )
                 about = (getattr(full, "about", None) or "").strip() or None
@@ -72,7 +78,8 @@ def run(limit: Optional[int] = None, channel: Optional[str] = None) -> int:
                 telegram_id = getattr(channel_entity, "id", None)
                 with db.transaction(conn):
                     db.update_channel_meta(
-                        conn, channel_id,
+                        conn,
+                        channel_id,
                         name=name,
                         description=about,
                         subscribers=subscribers,
@@ -82,13 +89,16 @@ def run(limit: Optional[int] = None, channel: Optional[str] = None) -> int:
                 log.info(
                     "%s — подписчиков: %s; описание: %s",
                     prefix,
-                    f"{subscribers:,}".replace(",", " ") if subscribers is not None else "—",
+                    f"{subscribers:,}".replace(",", " ")
+                    if subscribers is not None
+                    else "—",
                     f"{len(about)} симв." if about else "—",
                 )
             except FloodWaitError as exc:
                 log.error(
                     "%s — Telegram запросил FloodWait на %s сек.; останавливаю пакет",
-                    prefix, getattr(exc, "seconds", "неизвестно"),
+                    prefix,
+                    getattr(exc, "seconds", "неизвестно"),
                 )
                 break
             except Exception as exc:

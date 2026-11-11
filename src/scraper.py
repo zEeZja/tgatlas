@@ -12,6 +12,7 @@ import logging
 import random
 import time
 import threading
+import re
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from typing import Optional
@@ -24,7 +25,8 @@ log = logging.getLogger(__name__)
 
 # 4 попытки: 1 основная + 3 повтора. Для 429/5xx и сетевых ошибок.
 MAX_ATTEMPTS = 4
-MAX_BACKOFF = 30.0        # потолок своей задержки, сек
+MAX_BACKOFF = 30.0  # потолок своей задержки, сек
+
 
 class ScrapeError(Exception):
     """Ошибка страницы Telegram с признаком окончательной недоступности."""
@@ -33,12 +35,17 @@ class ScrapeError(Exception):
         super().__init__(message)
         self.permanent = permanent
 
+
 _local = threading.local()
+
+
 class RequestGate:
     """Wait before dispatch; a 429 postpones every worker, including queued ones."""
+
     def __init__(self):
         self.lock = threading.Lock()
         self.next_at = 0.0
+
     def wait(self):
         while True:
             with self.lock:
@@ -48,23 +55,37 @@ class RequestGate:
                     self.next_at = now + config.SCRAPE_REQUEST_INTERVAL
                     return
             time.sleep(delay)
+
     def pause(self, seconds):
         with self.lock:
             self.next_at = max(self.next_at, time.monotonic() + seconds)
 
+
 _gate = RequestGate()
+
+
 def _get_session():
-    if not hasattr(_local, 'session'):
+    if not hasattr(_local, "session"):
         _local.session = requests.Session()
-        _local.session.headers.update({'User-Agent':config.USER_AGENT,'Accept-Language':'ru,en;q=0.8','Accept':'text/html,application/xhtml+xml'})
+        _local.session.headers.update(
+            {
+                "User-Agent": config.USER_AGENT,
+                "Accept-Language": "ru,en;q=0.8",
+                "Accept": "text/html,application/xhtml+xml",
+            }
+        )
     return _local.session
+
 
 def _retry_after(value):
     value = value.strip()
     if value.isdigit():
         return float(value)
     try:
-        return max(0., (parsedate_to_datetime(value) - datetime.now(timezone.utc)).total_seconds())
+        return max(
+            0.0,
+            (parsedate_to_datetime(value) - datetime.now(timezone.utc)).total_seconds(),
+        )
     except (ValueError, TypeError, OverflowError):
         return None
 
@@ -75,16 +96,29 @@ def _backoff(attempt: int) -> float:
     attempt=0 → U(0, 1), attempt=1 → U(0, 2), attempt=2 → U(0, 4)…
     capped at MAX_BACKOFF. Формула из AWS Architecture Blog.
     """
-    ceiling = min(MAX_BACKOFF, 2.0 ** attempt)
+    ceiling = min(MAX_BACKOFF, 2.0**attempt)
     return random.uniform(0, ceiling)
 
-def fetch_channel_html(username: str, before: Optional[int] = None, *, profile: bool = False) -> str:
+
+def fetch_channel_html(
+    username: str, before: Optional[int] = None, *, profile: bool = False
+) -> str:
     """Скачать HTML страницы канала.
 
     before — id поста, старше которого тянем страницу (пагинация t.me/s/).
     Бросает ScrapeError для «безнадёжных» случаев (404/403, 429 после
     исчерпания попыток).
     """
+    if not isinstance(username, str) or not re.fullmatch(
+        r"[A-Za-z][A-Za-z0-9_]{0,31}", username
+    ):
+        raise ValueError("Некорректный username для публичного запроса")
+    if before is not None and (
+        not isinstance(before, int) or isinstance(before, bool) or before <= 0
+    ):
+        raise ValueError("before должен быть положительным ID публикации")
+    if profile and before is not None:
+        raise ValueError("Публичный профиль не поддерживает пагинацию")
     url = f"https://t.me/{username}" if profile else f"https://t.me/s/{username}"
     params = {"before": before} if before else None
 
@@ -103,13 +137,15 @@ def fetch_channel_html(username: str, before: Optional[int] = None, *, profile: 
         # 429 — уважаем Retry-After, если он есть
         if r.status_code == 429:
             if attempt == MAX_ATTEMPTS - 1:
-                _gate.pause(_retry_after(r.headers.get("Retry-After", "")) or 30.)
+                _gate.pause(_retry_after(r.headers.get("Retry-After", "")) or 30.0)
                 raise ScrapeError(
                     f"429 Too Many Requests: {username} (попыток: {MAX_ATTEMPTS})",
                     permanent=False,
                 )
             retry_after = _retry_after(r.headers.get("Retry-After", ""))
-            delay = retry_after if retry_after is not None else max(1., _backoff(attempt))
+            delay = (
+                retry_after if retry_after is not None else max(1.0, _backoff(attempt))
+            )
             _gate.pause(delay)
             log.warning("429: общая пауза %.1fс", delay)
             continue
