@@ -14,6 +14,7 @@ from functools import lru_cache
 from pathlib import Path
 from .geography import resolve_geography
 from .title_region import local_news_evidence
+from .classification_text import informative_description
 
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = json.loads((ROOT / "config/topics.json").read_text(encoding="utf-8"))
@@ -39,7 +40,11 @@ def _matches(keyword: str, text: str, field: str) -> bool:
         return f" {pattern} " in f" {text} "
     # Short terms must be whole tokens: art/party/car/eth should not match arbitrary words.
     for token in text.split():
-        if keyword == "авто" and token.startswith("автомат"):
+        if keyword == "авто" and token.startswith(
+            ("автомат", "автор", "автоном", "автопортрет")
+        ):
+            continue
+        if keyword == "искусств" and token.startswith("искусствен"):
             continue
         if keyword == "новост" and token.startswith("новостро"):
             continue
@@ -52,8 +57,10 @@ def _matches(keyword: str, text: str, field: str) -> bool:
             field == "username"
             and len(pattern) >= 5
             and pattern.isascii()
-            and pattern in token
+            and token.endswith(pattern)
         ):
+            if pattern == "sport" and token.endswith(("transport", "passport")):
+                continue
             return True
     return False
 
@@ -64,9 +71,10 @@ def classify_topic(
     fields = [
         ("name", _normalize(name), 4),
         ("username", _normalize(username), 3),
-        ("description", _normalize(description), 2),
+        ("description", _normalize(informative_description(description)), 2),
     ]
     ranked = []
+    strong_description = set()
     for topic in TAXONOMY["topics"]:
         score = 0
         evidence = []
@@ -76,6 +84,11 @@ def classify_topic(
             if matches:
                 score += weight * min(len(matches), 3)
                 evidence.extend(f"{field}:{k}" for k in matches[:3])
+        if any(
+            _matches(k, fields[-1][1], "description")
+            for k in topic.get("strong_description_keywords", [])
+        ):
+            strong_description.add(topic["id"])
         if topic["id"] == "general":
             score *= 0.5  # "news" in a political/scientific channel is a format, not its subject.
         if score:
@@ -84,7 +97,12 @@ def classify_topic(
     qualified = [
         r
         for r in ranked
-        if r["score"] >= (min(threshold, 2) if r["id"] == "general" else threshold)
+        if r["score"]
+        >= (
+            min(threshold, 2)
+            if r["id"] == "general" or r["id"] in strong_description
+            else threshold
+        )
     ]
     best = (
         qualified[0]
@@ -109,6 +127,13 @@ def classify_topic(
         score=best["score"],
         evidence=best["evidence"],
         candidates=candidates,
+        tags=[
+            r["id"]
+            for r in qualified
+            if r["id"] != winner
+            and r["id"] != "general"
+            and r["score"] >= max(3, best["score"] * 0.6)
+        ][:3],
         review_required=winner == "other"
         or ambiguous
         or bool(contextual and "требует проверки" in contextual),
@@ -121,9 +146,20 @@ def load_classification_rules():
     def read(name):
         return json.loads((ROOT / "config" / name).read_text(encoding="utf-8"))
 
+    labels = read("classification_labels.json")["channels"]
     return dict(
-        overrides=read("topic_overrides.json"),
-        geography_overrides=read("geography_overrides.json"),
+        overrides={
+            **read("topic_overrides.json"),
+            **{u: v["topic"] for u, v in labels.items()},
+        },
+        geography_overrides={
+            **read("geography_overrides.json"),
+            **{
+                u: {k: v[k] for k in ("scope", "regions", "country")}
+                for u, v in labels.items()
+            },
+        },
+        tag_overrides={u: v.get("secondary_topics", []) for u, v in labels.items()},
         federal_channels=frozenset(
             x.lower() for x in read("federal_channels.json")["channels"]
         ),
@@ -136,11 +172,21 @@ def resolve_topic(
     *,
     geography_overrides=None,
     federal_channels=None,
+    tag_overrides=None,
 ) -> dict:
     if overrides is None:
-        path = ROOT / "config/topic_overrides.json"
-        overrides = (
-            json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+        loaded = load_classification_rules()
+        overrides = loaded["overrides"]
+        geography_overrides = (
+            loaded["geography_overrides"]
+            if geography_overrides is None
+            else geography_overrides
+        )
+        federal_channels = (
+            loaded["federal_channels"] if federal_channels is None else federal_channels
+        )
+        tag_overrides = (
+            loaded["tag_overrides"] if tag_overrides is None else tag_overrides
         )
     username = str(channel.get("username") or "").lstrip("@").lower()
     override = overrides.get(username)
@@ -167,6 +213,11 @@ def resolve_topic(
         topic, source = canonical(channel.get("category")), "fallback"
     else:
         topic, source = "other", "unknown"
+    extra_tags = [
+        x
+        for x in ((tag_overrides or {}).get(username, inferred["tags"]))
+        if x != topic and x != "other"
+    ]
     return dict(
         **resolve_geography(
             channel, geography_overrides, federal_channels=federal_channels
@@ -179,6 +230,9 @@ def resolve_topic(
         topic_score=inferred["score"] if source == "heuristic" else None,
         topic_evidence=inferred["evidence"] if source == "heuristic" else [],
         topic_candidates=inferred["candidates"],
+        topic_tags=[topic] + extra_tags,
+        secondary_topics=extra_tags,
         topic_review_required=topic == "other"
+        or source == "fallback"
         or (source == "heuristic" and inferred["review_required"]),
     )

@@ -6,6 +6,8 @@
   );
   const COUNTRY_LABELS = {
     PT: "Португалия",
+    RS: "Сербия",
+    ID: "Индонезия",
     UZ: "Узбекистан",
     RU: "Россия",
     UA: "Украина",
@@ -487,6 +489,13 @@
     const badges = [
       `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(sub.label)}</span>`,
     ];
+    for (const tag of ch.secondary_topics || []) {
+      const label = SUB_MAP[tag]?.label;
+      if (label)
+        badges.push(
+          `<span class="badge badge-muted" title="Дополнительная тема">${escapeHtml(label)}</span>`,
+        );
+    }
     if (ch.geography_scope !== "region")
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,

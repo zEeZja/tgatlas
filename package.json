@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "test:layout": "node tests/layout.cjs && node tests/map.cjs",
-    "test:frontend": "node tests/frontend.cjs"
+    "test:frontend": "node tests/frontend.cjs",
+    "test:review": "node tests/review.cjs"
   },
   "devDependencies": {
     "playwright": "1.65.0"

@@ -1,0 +1,769 @@
+{
+  "source_generated_at": "2026-11-05T13:45:04.577589+00:00",
+  "source_sha256": "ba935caa644cbc0bfec2e115f53815007f629a96aab10c024b255757bf9bed14",
+  "baseline_commit": "91fafc9",
+  "raw_rows": 1042,
+  "unique_usernames": 971,
+  "before": {
+    "topic_unknown": 15,
+    "topic_fallback": 411,
+    "geography": {
+      "region": 772,
+      "unknown": 254,
+      "country": 16
+    }
+  },
+  "after": {
+    "topic_unknown": 1,
+    "topic_fallback": 203,
+    "geography": {
+      "region": 787,
+      "unknown": 229,
+      "country": 26
+    }
+  },
+  "owner_confirmed_labels": 0,
+  "accuracy_measured": false,
+  "changes": [
+    {
+      "username": "balifm_afisha",
+      "name": "Афиша мероприятий на Бали",
+      "old_topic": "culture",
+      "new_topic": "culture",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Бали"
+      ]
+    },
+    {
+      "username": "belgorodc400",
+      "name": "Белгород С-400🚀🇷🇺",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Белгородская область"
+      ],
+      "new_regions": [
+        "Белгородская область"
+      ]
+    },
+    {
+      "username": "chemproms",
+      "name": "Химпром",
+      "old_topic": "general",
+      "new_topic": "industry",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "ciocdo24",
+      "name": "я-ИТ-ы. Без спама",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "coala_russia",
+      "name": "Coala",
+      "old_topic": "general",
+      "new_topic": "industry",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "Coala_russia",
+      "name": "Coala",
+      "old_topic": "general",
+      "new_topic": "industry",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "enter_media",
+      "name": "Enter",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Республика Татарстан"
+      ]
+    },
+    {
+      "username": "eventskmv",
+      "name": "Events KMV | Афиша мероприятий КМВ",
+      "old_topic": "culture",
+      "new_topic": "culture",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Ставропольский край"
+      ]
+    },
+    {
+      "username": "gurnalisty_rossii",
+      "name": "🇷🇺ЖУРНАЛИСТЫ РОССИИ🇷🇺",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "hakinc",
+      "name": "Хакасский инсайдер",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Хакасия"
+      ],
+      "new_regions": [
+        "Республика Хакасия"
+      ]
+    },
+    {
+      "username": "ilinskoe_news",
+      "name": "Ильинское. Новости",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Московская область"
+      ]
+    },
+    {
+      "username": "infotimeco",
+      "name": "Новости России",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "it_boooks",
+      "name": "Программирование | книги",
+      "old_topic": "culture",
+      "new_topic": "tech",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "itsmycity",
+      "name": "It's My City",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Свердловская область"
+      ],
+      "new_regions": [
+        "Свердловская область"
+      ]
+    },
+    {
+      "username": "izhevsk_chp18",
+      "name": "Ижевск ЧПН",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Удмуртская Республика"
+      ],
+      "new_regions": [
+        "Удмуртская Республика"
+      ]
+    },
+    {
+      "username": "killerfeat",
+      "name": "Киллер-фича",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "korifeyhab",
+      "name": "Корифей Хабаров",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Хабаровский край"
+      ],
+      "new_regions": [
+        "Хабаровский край"
+      ]
+    },
+    {
+      "username": "kuraifutlar",
+      "name": "Футляр для курая - КушТау #Куштаубудетжить",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Республика Башкортостан"
+      ]
+    },
+    {
+      "username": "kvadratnymaster",
+      "name": "Квадратный Мэтр",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Москва"
+      ]
+    },
+    {
+      "username": "mash_batash",
+      "name": "Mash Batash",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Республика Башкортостан"
+      ]
+    },
+    {
+      "username": "morvestirussia",
+      "name": "Морские вести России",
+      "old_topic": "other",
+      "new_topic": "auto",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "nekaspersky",
+      "name": "НеКасперский",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "NeKaspersky",
+      "name": "НеКасперский",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "neprofashion",
+      "name": "The Crown 👑",
+      "old_topic": "culture",
+      "new_topic": "culture",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Московская область"
+      ]
+    },
+    {
+      "username": "nerzhavey",
+      "name": "Нержавейка",
+      "old_topic": "general",
+      "new_topic": "industry",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "nn_sobaka_ru",
+      "name": "НН.Собака.ru",
+      "old_topic": "general",
+      "new_topic": "culture",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "novostirossii_24",
+      "name": "Новости России",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "obrech",
+      "name": "Очки Бречалова",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Удмуртская Республика"
+      ],
+      "new_regions": [
+        "Удмуртская Республика"
+      ]
+    },
+    {
+      "username": "penzalive58",
+      "name": "Пенза Новости Live",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Пензенская область"
+      ]
+    },
+    {
+      "username": "politkurai",
+      "name": "ПолитКурай",
+      "old_topic": "politics",
+      "new_topic": "politics",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Республика Башкортостан"
+      ]
+    },
+    {
+      "username": "PolitKurai",
+      "name": "ПолитКурай",
+      "old_topic": "politics",
+      "new_topic": "politics",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Республика Башкортостан"
+      ]
+    },
+    {
+      "username": "privetpoidem",
+      "name": "Привет, не хочешь сходить?",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Москва"
+      ]
+    },
+    {
+      "username": "pro100ipo",
+      "name": "Просто про IPO Pre IPO",
+      "old_topic": "general",
+      "new_topic": "business",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "pro100IPO",
+      "name": "Просто про IPO Pre IPO",
+      "old_topic": "general",
+      "new_topic": "business",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "prorostori",
+      "name": "Oriflame события",
+      "old_topic": "other",
+      "new_topic": "business",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "rationalanswer",
+      "name": "RationalAnswer | Павел Комаровский",
+      "old_topic": "general",
+      "new_topic": "business",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "RationalAnswer",
+      "name": "RationalAnswer | Павел Комаровский",
+      "old_topic": "general",
+      "new_topic": "business",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "ros_new",
+      "name": "Новости России",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "rossia_novosty8",
+      "name": "РОССИЯ СЕГОДНЯ",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "rotondamedia",
+      "name": "Ротонда",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Санкт-Петербург"
+      ]
+    },
+    {
+      "username": "rus_poli",
+      "name": "Политика России",
+      "old_topic": "politics",
+      "new_topic": "politics",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "rvkazakov",
+      "name": "РОМАН КАЗАКОВ",
+      "old_topic": "general",
+      "new_topic": "tech",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Красноярский край"
+      ],
+      "new_regions": [
+        "Красноярский край"
+      ]
+    },
+    {
+      "username": "saratov2",
+      "name": "Саратов Life",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Саратовская область"
+      ],
+      "new_regions": [
+        "Саратовская область"
+      ]
+    },
+    {
+      "username": "shaltaybabay",
+      "name": "Шалтай-Бабай",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Волгоградская область"
+      ],
+      "new_regions": [
+        "Волгоградская область"
+      ]
+    },
+    {
+      "username": "ShaltayBabay",
+      "name": "Шалтай-Бабай",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Волгоградская область"
+      ],
+      "new_regions": [
+        "Волгоградская область"
+      ]
+    },
+    {
+      "username": "simferopol_vkurse",
+      "name": "Симферополь в курсе",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Крым"
+      ],
+      "new_regions": [
+        "Республика Крым"
+      ]
+    },
+    {
+      "username": "sobaka_ru",
+      "name": "Собака.ru",
+      "old_topic": "general",
+      "new_topic": "culture",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Санкт-Петербург"
+      ],
+      "new_regions": [
+        "Санкт-Петербург"
+      ]
+    },
+    {
+      "username": "sochi_txt",
+      "name": "Сочи.txt",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Краснодарский край"
+      ],
+      "new_regions": [
+        "Краснодарский край"
+      ]
+    },
+    {
+      "username": "sochigorod1",
+      "name": "Сочи ❂ Sochi | СВО | Черноморье",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Краснодарский край"
+      ],
+      "new_regions": [
+        "Краснодарский край"
+      ]
+    },
+    {
+      "username": "stepdozor",
+      "name": "Степной Дозор",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Бурятия"
+      ],
+      "new_regions": [
+        "Республика Бурятия"
+      ]
+    },
+    {
+      "username": "StepDozor",
+      "name": "Степной Дозор",
+      "old_topic": "general",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Бурятия"
+      ],
+      "new_regions": [
+        "Республика Бурятия"
+      ]
+    },
+    {
+      "username": "tulazest",
+      "name": "Тула Жесть",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Тульская область"
+      ],
+      "new_regions": [
+        "Тульская область"
+      ]
+    },
+    {
+      "username": "turizm_rossiya",
+      "name": "Туризм по городам России",
+      "old_topic": "travel",
+      "new_topic": "travel",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "turizmnarodniy",
+      "name": "Туризм России * Отдыхай в Рф",
+      "old_topic": "travel",
+      "new_topic": "travel",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "tyumen_only",
+      "name": "Тюмень",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Тюменская область"
+      ],
+      "new_regions": [
+        "Тюменская область"
+      ]
+    },
+    {
+      "username": "veronika_dieta",
+      "name": "НУТРИЦИОЛОГ ВЕРОНИКА ГУСАКОВА VERONIKA_DIET",
+      "old_topic": "other",
+      "new_topic": "health",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "vgudok",
+      "name": "Vgudok",
+      "old_topic": "general",
+      "new_topic": "auto",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "Vgudok",
+      "name": "Vgudok",
+      "old_topic": "general",
+      "new_topic": "auto",
+      "old_scope": "unknown",
+      "new_scope": "unknown",
+      "old_regions": [],
+      "new_regions": []
+    },
+    {
+      "username": "vstrechi_v_belgrade",
+      "name": "Канал \"Встречи в Белграде\" (Афиша мероприятий)",
+      "old_topic": "culture",
+      "new_topic": "culture",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Белград"
+      ]
+    },
+    {
+      "username": "who_the_best",
+      "name": "Подслушано на Патриках",
+      "old_topic": "general",
+      "new_topic": "general",
+      "old_scope": "unknown",
+      "new_scope": "region",
+      "old_regions": [],
+      "new_regions": [
+        "Москва"
+      ]
+    },
+    {
+      "username": "yakutsk_vecherniy",
+      "name": "Якутск Вечерний",
+      "old_topic": "other",
+      "new_topic": "politics",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Саха"
+      ],
+      "new_regions": [
+        "Республика Саха"
+      ]
+    },
+    {
+      "username": "ykt_obo_vsem",
+      "name": "Якутск обо всём",
+      "old_topic": "other",
+      "new_topic": "general",
+      "old_scope": "region",
+      "new_scope": "region",
+      "old_regions": [
+        "Республика Саха"
+      ],
+      "new_regions": [
+        "Республика Саха"
+      ]
+    },
+    {
+      "username": "yoprom",
+      "name": "ё-Пром | Промышленные инновации России",
+      "old_topic": "industry",
+      "new_topic": "industry",
+      "old_scope": "unknown",
+      "new_scope": "country",
+      "old_regions": [],
+      "new_regions": []
+    }
+  ]
+}
