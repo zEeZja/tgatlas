@@ -1,5 +1,5 @@
 flowchart TB
-    CFG["config/channels.json"] -->|"явный импорт --from-config"| CH[("channels: рабочий каталог")]
+    CFG["config/channels.json"] -->|"первое добавление: --from-config / scrape"| CH[("channels: рабочий каталог")]
     SRC["Внешние каталоги, файлы, подписки"] --> CAN[("channel_candidates")]
     CAN --> VAL["Проверка доступности и порога аудитории"]
     VAL -->|"candidate-import --apply"| CH

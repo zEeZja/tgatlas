@@ -302,9 +302,12 @@
       ctx.scale(v.scale, v.scale);
 
       const visibleCounts = new Map();
+      const activeClouds = new Set();
       for (const n of nodes) {
-        if (!this.visibleIds || this.visibleIds.has(n.id))
+        if (!this.visibleIds || this.visibleIds.has(n.id)) {
           visibleCounts.set(n.cluster, (visibleCounts.get(n.cluster) || 0) + 1);
+          activeClouds.add(n.neighbourhood);
+        }
       }
       // Topographic neighbourhood contours replace all category containers.
       const labels = [];
@@ -335,12 +338,7 @@
       };
       for (const cloud of this.layout.clouds || []) {
         if (!this.showRelief) continue;
-        const members = nodes.filter(
-          (n) =>
-            n.neighbourhood === cloud.id &&
-            (!this.visibleIds || this.visibleIds.has(n.id)),
-        );
-        if (!members.length) continue;
+        if (!activeClouds.has(cloud.id)) continue;
         if (
           cloud.x + cloud.radius < worldLeft ||
           cloud.x - cloud.radius > worldRight ||
@@ -404,14 +402,7 @@
       }
       if (v.scale > 0.65)
         for (const cloud of this.layout.clouds || []) {
-          if (
-            !nodes.some(
-              (n) =>
-                n.neighbourhood === cloud.id &&
-                (!this.visibleIds || this.visibleIds.has(n.id)),
-            )
-          )
-            continue;
+          if (!activeClouds.has(cloud.id)) continue;
           label(cloud.label, cloud.x, cloud.labelY, "#94afa0", 10);
         }
       for (const n of nodes) {

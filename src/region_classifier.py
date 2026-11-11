@@ -47,19 +47,47 @@ def _alias_match(tokens: list[str], alias: str) -> tuple[bool, int, int, int, in
     if not parts or len(parts) > len(tokens):
         return False, 0, 0, -1, -1
     for start in range(len(tokens) - len(parts) + 1):
-        window = tokens[start:start + len(parts)]
+        window = tokens[start : start + len(parts)]
         if all(_part_matches(token, part) for token, part in zip(window, parts)):
             return True, sum(map(len, parts)), len(parts), start, start + len(parts)
     return False, 0, 0, -1, -1
 
 
 _GEO_CONTEXT = {
-    "новости", "новостной", "канал", "жителей", "жители", "житель",
-    "город", "города", "городе", "район", "района", "районе",
-    "области", "края", "республики", "администрации", "события",
-    "местные", "местного", "регион", "регионе", "присылайте",
-    "прислать", "подписывайтесь", "весь", "главный", "наш", "нашего",
-    "место", "месте", "происшествия", "афиша", "жизнь", "онлайн",
+    "новости",
+    "новостной",
+    "канал",
+    "жителей",
+    "жители",
+    "житель",
+    "город",
+    "города",
+    "городе",
+    "район",
+    "района",
+    "районе",
+    "области",
+    "края",
+    "республики",
+    "администрации",
+    "события",
+    "местные",
+    "местного",
+    "регион",
+    "регионе",
+    "присылайте",
+    "прислать",
+    "подписывайтесь",
+    "весь",
+    "главный",
+    "наш",
+    "нашего",
+    "место",
+    "месте",
+    "происшествия",
+    "афиша",
+    "жизнь",
+    "онлайн",
 }
 
 
@@ -77,7 +105,6 @@ def _field_matches(value: str | None, field: str) -> dict[str, tuple[float, str]
         "description": (0.54, 0.84),
     }
     base, cap = weights[field]
-    normalized = " ".join(tokens)
     hits: list[tuple[str, float, str, int, int]] = []
 
     for region, aliases in REGION_ALIASES.items():
@@ -85,11 +112,13 @@ def _field_matches(value: str | None, field: str) -> dict[str, tuple[float, str]
             matched, length, words, start, end = _alias_match(tokens, alias)
             if not matched:
                 continue
-            score = min(cap, base + min(length, 20) * 0.009 + (0.035 if words > 1 else 0))
+            score = min(
+                cap, base + min(length, 20) * 0.009 + (0.035 if words > 1 else 0)
+            )
             evidence = f"{field}:{alias}"
 
             if field == "description":
-                nearby = tokens[max(0, start - 3):min(len(tokens), end + 3)]
+                nearby = tokens[max(0, start - 3) : min(len(tokens), end + 3)]
                 if any(token in _GEO_CONTEXT for token in nearby):
                     score = min(cap, score + 0.22)
                     evidence += " (географический контекст)"
@@ -112,7 +141,8 @@ def _field_matches(value: str | None, field: str) -> dict[str, tuple[float, str]
         contained = any(
             other[0] != region
             and (other[4] - other[3]) > (end - start)
-            and other[3] <= start and other[4] >= end
+            and other[3] <= start
+            and other[4] >= end
             for other in hits
         )
         if not contained:
@@ -159,7 +189,8 @@ class RegionResult:
 def _load_federal_set(federal_channels: Iterable[str] | None) -> set[str]:
     return {
         normalize_text(username).replace(" ", "").lstrip("@")
-        for username in (federal_channels or ()) if username
+        for username in (federal_channels or ())
+        if username
     }
 
 
@@ -173,7 +204,9 @@ def classify_channel(
     """Классифицировать канал с сохранением альтернативных кандидатов."""
     clean_username = normalize_text(username).replace(" ", "").lstrip("@")
     if clean_username in _load_federal_set(federal_channels):
-        return RegionResult(None, "federal", 1.0, "whitelist", "Канал находится в федеральном whitelist")
+        return RegionResult(
+            None, "federal", 1.0, "whitelist", "Канал находится в федеральном whitelist"
+        )
 
     scores: dict[str, tuple[float, str]] = {}
     for field, value in (
@@ -190,18 +223,29 @@ def classify_channel(
                 scores[region] = (score, current[1] + ";" + evidence)
 
     if not scores:
-        return RegionResult(None, "unknown", 0.0, "none", "Не найдено региональных признаков")
+        return RegionResult(
+            None, "unknown", 0.0, "none", "Не найдено региональных признаков"
+        )
 
     # Если в самом названии одновременно фигурируют два разных региона
     # с близкими оценками, подсказка каталога не должна «перебить» конфликт.
     name_scores = _field_matches(name, "name")
     name_ranked = sorted(name_scores.items(), key=lambda item: (-item[1][0], item[0]))
-    if len(name_ranked) > 1 and name_ranked[0][1][0] - name_ranked[1][1][0] < AMBIGUITY_MARGIN:
-        candidates = tuple((region, round(score, 3)) for region, (score, _) in name_ranked[:5])
+    if (
+        len(name_ranked) > 1
+        and name_ranked[0][1][0] - name_ranked[1][1][0] < AMBIGUITY_MARGIN
+    ):
+        candidates = tuple(
+            (region, round(score, 3)) for region, (score, _) in name_ranked[:5]
+        )
         top_region, (top_score, top_evidence) = name_ranked[0]
         return RegionResult(
-            None, "unknown", round(top_score, 3), top_evidence,
-            "В названии канала явно упомянуты разные регионы", candidates,
+            None,
+            "unknown",
+            round(top_score, 3),
+            top_evidence,
+            "В названии канала явно упомянуты разные регионы",
+            candidates,
         )
 
     ranked = sorted(scores.items(), key=lambda item: (-item[1][0], item[0]))
@@ -211,23 +255,36 @@ def classify_channel(
 
     if best_score < MIN_CONFIDENCE:
         return RegionResult(
-            None, "unknown", round(best_score, 3), evidence,
-            "Слабое совпадение; нужна ручная проверка", candidates,
+            None,
+            "unknown",
+            round(best_score, 3),
+            evidence,
+            "Слабое совпадение; нужна ручная проверка",
+            candidates,
         )
     if second_score and best_score - second_score < AMBIGUITY_MARGIN:
         return RegionResult(
-            None, "unknown", round(best_score, 3), evidence,
-            "Обнаружено несколько близких региональных кандидатов", candidates,
+            None,
+            "unknown",
+            round(best_score, 3),
+            evidence,
+            "Обнаружено несколько близких региональных кандидатов",
+            candidates,
         )
 
     return RegionResult(
-        best_region, "regional", round(best_score, 3), evidence,
-        "Определён по региональным признакам", candidates,
+        best_region,
+        "regional",
+        round(best_score, 3),
+        evidence,
+        "Определён по региональным признакам",
+        candidates,
     )
 
 
 def classify_many(
-    channels: Iterable[dict], federal_channels: Iterable[str] | None = None,
+    channels: Iterable[dict],
+    federal_channels: Iterable[str] | None = None,
 ) -> list[dict]:
     """Классифицировать список словарей (удобно для тестов и отчётов)."""
     result = []
@@ -239,16 +296,18 @@ def classify_many(
             region_hint=channel.get("region_hint", channel.get("region")),
             federal_channels=federal_channels,
         )
-        result.append({
-            **channel,
-            "region": classification.region,
-            "channel_type": classification.channel_type,
-            "region_confidence": classification.confidence,
-            "region_source": classification.source,
-            "region_reason": classification.reason,
-            "region_candidates": [
-                {"region": region, "confidence": confidence}
-                for region, confidence in classification.candidates
-            ],
-        })
+        result.append(
+            {
+                **channel,
+                "region": classification.region,
+                "channel_type": classification.channel_type,
+                "region_confidence": classification.confidence,
+                "region_source": classification.source,
+                "region_reason": classification.reason,
+                "region_candidates": [
+                    {"region": region, "confidence": confidence}
+                    for region, confidence in classification.candidates
+                ],
+            }
+        )
     return result

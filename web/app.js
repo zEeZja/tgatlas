@@ -64,7 +64,11 @@
   }
   state.channels = channels;
 
-  if (window.TG_DATA && window.TG_DATA._sample) {
+  if (
+    window.Api.CONFIG.mode === "static" &&
+    window.TG_DATA &&
+    window.TG_DATA._sample
+  ) {
     el.banner.hidden = false;
     el.banner.innerHTML =
       "Демо · каналы из конфигурации проекта. Аудитория и актуальность не проверены.";
@@ -520,7 +524,7 @@
       `<span class="detail-avatar" style="background:${color}">${escapeHtml(initial)}</span>` +
       `<div>` +
       `<h2>${escapeHtml(ch.name)}</h2>` +
-      `<a class="detail-user" href="${escapeAttr(ch.url)}" target="_blank" rel="noreferrer noopener">@${escapeHtml(ch.username)}</a>` +
+      `<a class="detail-user" href="${escapeAttr(telegramUrl(ch.username))}" target="_blank" rel="noreferrer noopener">@${escapeHtml(ch.username)}</a>` +
       `</div>` +
       `</div>` +
       `<div class="detail-badges">${badges.join("")}</div>` +
@@ -535,7 +539,7 @@
         ? `<p class="detail-desc">Кандидаты региона: ${ch.region_candidates.map((x) => `${escapeHtml(x.region)} (${Math.round(x.confidence * 100)}%)`).join(" · ")}</p>`
         : "") +
       `<details class="topic-edit"><summary>Исправить тему</summary><label for="topic-correction">Тема канала</label><select id="topic-correction"><option value="">Автоопределение / данные каталога</option>${SUB_CATEGORIES.map((t) => `<option value="${t.id}" ${window.Topics.hasLocal(ch.username) && ch.subcategory === t.id ? "selected" : ""}>${escapeHtml(t.label)}</option>`).join("")}</select><button id="save-topic">Сохранить в этом браузере</button><p id="topic-save-status" role="status"></p></details>` +
-      `<a class="detail-open" href="${escapeAttr(ch.url)}" target="_blank" rel="noreferrer noopener">Открыть в Telegram →</a>`;
+      `<a class="detail-open" href="${escapeAttr(telegramUrl(ch.username))}" target="_blank" rel="noreferrer noopener">Открыть в Telegram →</a>`;
 
     el.detail.querySelector("#save-topic").onclick = () => {
       try {
@@ -618,6 +622,12 @@
       return (v / 1_000_000).toFixed(1).replace(".0", "") + "M";
     if (v >= 1_000) return (v / 1_000).toFixed(1).replace(".0", "") + "K";
     return String(v);
+  }
+
+  function telegramUrl(username) {
+    return /^[a-z][a-z0-9_]{0,31}$/i.test(username || "")
+      ? "https://t.me/" + encodeURIComponent(username)
+      : "#";
   }
 
   function escapeHtml(s) {
