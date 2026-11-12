@@ -96,14 +96,14 @@ CASES = [
         username="cyber_test",
         name="НеКасперский",
         description="IT и кибербез.\nPR: @NeKasper",
-        topic="tech",
+        topic="cybersecurity",
         regions=[],
     ),
     dict(
         username="health_test",
         name="Нутрициолог Вероника",
         description="Помогаю со здоровьем и питанием.",
-        topic="health",
+        topic="nutrition",
         regions=[],
     ),
     dict(

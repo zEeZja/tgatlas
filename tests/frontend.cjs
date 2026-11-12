@@ -88,9 +88,9 @@ const server = http.createServer((req, res) => {
     await page.keyboard.press("Escape");
     await page.locator("#clear").click();
     await page.locator("#region").selectOption("Москва");
-    assert.equal(await page.locator("#count").textContent(), "167");
+    assert.equal(await page.locator("#count").textContent(), "168");
     await page.locator("#group-by").selectOption("region");
-    assert.equal(await page.locator("#count").textContent(), "167");
+    assert.equal(await page.locator("#count").textContent(), "168");
     assert(
       (await page.locator("#group-caption").innerText()).includes(
         "По регионам",
@@ -139,7 +139,9 @@ const server = http.createServer((req, res) => {
     await page.locator("#topic-correction").selectOption("");
     await page.locator("#save-topic").click();
     assert(
-      (await page.locator(".detail-badges").innerText()).includes("Новости"),
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Общая повестка",
+      ),
     );
     await page.keyboard.press("Escape");
     await page.locator("#zoom-in").click();
@@ -259,7 +261,9 @@ const server = http.createServer((req, res) => {
     );
     await page.locator(".result").first().click();
     assert(
-      (await page.locator(".detail-badges").innerText()).includes("Новости"),
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Общая повестка",
+      ),
     );
     assert(
       (await page.locator(".detail-badges").innerText()).includes(
@@ -343,16 +347,67 @@ const server = http.createServer((req, res) => {
     assert.equal(await page.locator("#count").textContent(), "1");
     await page
       .locator(".chip")
-      .filter({ hasText: "География не уточнена" })
+      .filter({ hasText: "Недостаточно данных о географии" })
       .click();
     assert.equal(await page.locator("#count").textContent(), "1");
     await page
       .locator(".chip")
-      .filter({ hasText: "Международный охват" })
+      .filter({ hasText: "Международная повестка" })
       .click();
     assert.equal(await page.locator("#count").textContent(), "1");
     await page.locator(".reset-btn").click();
     assert.equal(await page.locator("#count").textContent(), "5");
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    // V2: parent groups, exact subtopics, independent formats, optional tags.
+    const v2Rows = [
+      {
+        id: "v21",
+        username: "v21",
+        name: "Программирование Python",
+        description: "Программирование",
+        country: "RU",
+      },
+      { id: "v22", username: "v22", name: "Новости кибербезопасности" },
+      { id: "v23", username: "v23", name: "Программирование и криптовалюты" },
+      { id: "v24", username: "v24", name: "Личные финансы" },
+    ].map((c) => ({ ...c, url: "https://t.me/" + c.username }));
+    await page.unroute("**/api/channels");
+    await page.route("**/api/channels", (route) =>
+      route.fulfill({ json: { channels: v2Rows } }),
+    );
+    await page.reload();
+    await page.waitForFunction(
+      () => document.querySelector("#count").textContent === "4",
+    );
+    await page.locator("#category").selectOption("group:technology");
+    assert.equal(await page.locator("#count").textContent(), "2");
+    await page.locator("#include-secondary").check();
+    assert.equal(await page.locator("#count").textContent(), "3");
+    await page.locator("#publication-format").selectOption("news");
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page.locator(".result").click();
+    assert(
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Кибербезопасность",
+      ),
+    );
+    await page.keyboard.press("Escape");
+    await page.locator(".reset-btn").click();
+    await page.locator("#category").selectOption("programming");
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page
+      .locator(".chip")
+      .filter({ hasText: "Без территориальной привязки" })
+      .click();
+    assert.equal(await page.locator("#count").textContent(), "1");
+    await page.locator(".result").click();
+    assert(
+      !(await page.locator(".detail-badges").innerText()).includes(
+        "Регион не определён",
+      ),
+    );
+    await page.keyboard.press("Escape");
+    await page.locator(".reset-btn").click();
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));

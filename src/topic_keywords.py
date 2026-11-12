@@ -19,6 +19,7 @@ from .classification_text import informative_description
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = json.loads((ROOT / "config/topics.json").read_text(encoding="utf-8"))
 TOPICS = {t["id"]: t for t in TAXONOMY["topics"]}
+GROUPS = {g["id"]: g for g in TAXONOMY["groups"]}
 TOPIC_LABELS = {key: t["label"] for key, t in TOPICS.items()}
 TOPIC_KEYWORDS = {key: t["keywords"] for key, t in TOPICS.items()}
 
@@ -34,12 +35,17 @@ def canonical(value: str | None) -> str:
     return TAXONOMY["aliases"].get(key, key)
 
 
+@lru_cache(maxsize=4096)
+def _word_tokens(text: str) -> tuple[str, ...]:
+    return tuple(text.split())
+
+
 def _matches(keyword: str, text: str, field: str) -> bool:
     pattern = _normalize(keyword)
     if " " in pattern:
         return f" {pattern} " in f" {text} "
     # Short terms must be whole tokens: art/party/car/eth should not match arbitrary words.
-    for token in text.split():
+    for token in _word_tokens(text):
         if keyword == "авто" and token.startswith(
             ("автомат", "автор", "автоном", "автопортрет")
         ):
@@ -104,6 +110,11 @@ def classify_topic(
             else threshold
         )
     ]
+    qualified = [
+        r
+        for r in qualified
+        if not any(r["id"] in TOPICS[c["id"]].get("refines", []) for c in qualified)
+    ]
     best = (
         qualified[0]
         if qualified
@@ -118,9 +129,9 @@ def classify_topic(
         best = dict(id="general", score=3, evidence=[contextual])
     candidates = [dict(id=t["id"], score=t["score"]) for t in ranked[:3]]
     ambiguous = (
-        len(ranked) > 1
-        and ranked[1]["id"] != "general"
-        and best["score"] - ranked[1]["score"] < 2
+        len(qualified) > 1
+        and qualified[1]["id"] != "general"
+        and best["score"] - qualified[1]["score"] < 2
     )
     return dict(
         subcategory=winner,
@@ -159,6 +170,15 @@ def load_classification_rules():
                 for u, v in labels.items()
             },
         },
+        review_metadata={
+            u: v["reviewed_profile"]
+            for u, v in labels.items()
+            if "reviewed_profile" in v
+        },
+        format_overrides={u: v["formats"] for u, v in labels.items() if "formats" in v},
+        group_overrides={
+            u: v.get("group", TOPICS[v["topic"]]["group"]) for u, v in labels.items()
+        },
         tag_overrides={u: v.get("secondary_topics", []) for u, v in labels.items()},
         federal_channels=frozenset(
             x.lower() for x in read("federal_channels.json")["channels"]
@@ -173,6 +193,9 @@ def resolve_topic(
     geography_overrides=None,
     federal_channels=None,
     tag_overrides=None,
+    group_overrides=None,
+    format_overrides=None,
+    review_metadata=None,
 ) -> dict:
     if overrides is None:
         loaded = load_classification_rules()
@@ -184,6 +207,15 @@ def resolve_topic(
         )
         federal_channels = (
             loaded["federal_channels"] if federal_channels is None else federal_channels
+        )
+        review_metadata = (
+            loaded["review_metadata"] if review_metadata is None else review_metadata
+        )
+        format_overrides = (
+            loaded["format_overrides"] if format_overrides is None else format_overrides
+        )
+        group_overrides = (
+            loaded["group_overrides"] if group_overrides is None else group_overrides
         )
         tag_overrides = (
             loaded["tag_overrides"] if tag_overrides is None else tag_overrides
@@ -201,7 +233,13 @@ def resolve_topic(
     if override is not None:
         topic, source = canonical(override), "manual"
     elif declared in TOPICS and declared not in ("general", "other"):
-        topic, source = declared, "declared"
+        if (
+            declared in TOPICS[inferred["subcategory"]].get("refines", [])
+            and inferred["score"] >= 2
+        ):
+            topic, source = inferred["subcategory"], "heuristic"
+        else:
+            topic, source = declared, "declared"
     elif inferred["subcategory"] != "other":
         topic, source = inferred["subcategory"], "heuristic"
     elif declared == "general" or canonical(channel.get("category")) == "general":
@@ -218,10 +256,50 @@ def resolve_topic(
         for x in ((tag_overrides or {}).get(username, inferred["tags"]))
         if x != topic and x != "other"
     ]
+    group = (group_overrides or {}).get(username, TOPICS[topic]["group"])
+    formats = []
+    format_evidence = []
+    for fmt in TAXONOMY["formats"]:
+        for field, text in [
+            ("name", _normalize(channel.get("name"))),
+            (
+                "description",
+                _normalize(informative_description(channel.get("description"))),
+            ),
+        ]:
+            found = [k for k in fmt["keywords"] if _matches(k, text, field)]
+            if found:
+                formats.append(fmt["id"])
+                format_evidence.append(field + ":" + found[0])
+                break
+    if username in (format_overrides or {}):
+        formats = format_overrides[username]
+        format_evidence = ["manual"]
+    reviewed = (review_metadata or {}).get(username)
+    stale = bool(
+        reviewed
+        and (
+            reviewed.get("name") != (channel.get("name") or "")
+            or reviewed.get("description")
+            != informative_description(channel.get("description"))
+        )
+    )
     return dict(
         **resolve_geography(
             channel, geography_overrides, federal_channels=federal_channels
         ),
+        classification_review_stale=stale,
+        classification_version=2,
+        topic_group=group,
+        topic_group_label=GROUPS[group]["label"],
+        topic_path=[group, topic] if topic != "other" else [group],
+        topic_granularity="topic"
+        if topic != "other"
+        else "group"
+        if group != "other_group"
+        else "unknown",
+        publication_formats=formats,
+        format_evidence=format_evidence,
         primary_category=topic,
         subcategory=topic,
         topic_category=TOPICS[topic]["section"],
@@ -232,7 +310,8 @@ def resolve_topic(
         topic_candidates=inferred["candidates"],
         topic_tags=[topic] + extra_tags,
         secondary_topics=extra_tags,
-        topic_review_required=topic == "other"
+        topic_review_required=stale
+        or topic == "other"
         or source == "fallback"
         or (source == "heuristic" and inferred["review_required"]),
     )

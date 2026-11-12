@@ -3,6 +3,7 @@
   "use strict";
   const taxonomy = window.TG_TAXONOMY;
   const byId = Object.fromEntries(taxonomy.topics.map((t) => [t.id, t]));
+  const groups = Object.fromEntries(taxonomy.groups.map((g) => [g.id, g]));
   const storageKey = "tg-atlas.topic-overrides.v2";
   let local = {};
   try {
@@ -43,10 +44,18 @@
       .toLowerCase();
     return taxonomy.aliases[key] || key;
   }
+  const keywordPatterns = new Map();
+  const tokenCache = new Map();
   function matches(keyword, text, field) {
-    const pattern = normalize(keyword);
+    if (!keywordPatterns.has(keyword))
+      keywordPatterns.set(keyword, normalize(keyword));
+    const pattern = keywordPatterns.get(keyword);
     if (pattern.includes(" ")) return ` ${text} `.includes(` ${pattern} `);
-    return text.split(" ").some((token) => {
+    if (!tokenCache.has(text)) {
+      if (tokenCache.size >= 4096) tokenCache.clear();
+      tokenCache.set(text, text.split(" "));
+    }
+    return tokenCache.get(text).some((token) => {
       if (
         keyword === "авто" &&
         ["автомат", "автор", "автоном", "автопортрет"].some((x) =>
@@ -99,12 +108,15 @@
     ranked.sort(
       (a, b) => b.score - a.score || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
     );
-    const qualified = ranked.filter(
+    let qualified = ranked.filter(
       (r) =>
         r.score >=
         (r.id === "general" || strongDescription.has(r.id)
           ? Math.min(threshold, 2)
           : threshold),
+    );
+    qualified = qualified.filter(
+      (r) => !qualified.some((c) => (byId[c.id].refines || []).includes(r.id)),
     );
     let best = qualified[0] ||
       ranked[0] || { id: "other", score: 0, evidence: [] };
@@ -116,9 +128,9 @@
       best = { id: "general", score: 3, evidence: [contextual] };
     }
     const ambiguous =
-      ranked.length > 1 &&
-      ranked[1].id !== "general" &&
-      best.score - ranked[1].score < 2;
+      qualified.length > 1 &&
+      qualified[1].id !== "general" &&
+      best.score - qualified[1].score < 2;
     return {
       subcategory: winner,
       score: best.score,
@@ -318,10 +330,100 @@
       return "name:название города (требует проверки темы)";
     return null;
   }
+  const placeCatalogue = taxonomy.geo_places.places;
+  const placeContext = new Set([
+    "новости",
+    "новостей",
+    "жизни",
+    "жизнь",
+    "город",
+    "города",
+    "городе",
+    "жителей",
+    "жители",
+    "медиа",
+    "события",
+    "сообщество",
+    "канал",
+    "афиша",
+  ]);
+  const placeBio = new Set([
+    "родился",
+    "родилась",
+    "родом",
+    "учился",
+    "училась",
+    "окончил",
+    "окончила",
+    "живу",
+    "переехал",
+    "переехала",
+    "проживаю",
+  ]);
+  const placeRules = placeCatalogue.flatMap((place) =>
+    place.aliases.map((alias) => ({
+      place,
+      parts: normalize(alias).split(" "),
+    })),
+  );
+  function resolvePlaces(text, hint = "", contextual = false) {
+    const words = normalize(text).split(" "),
+      hits = [];
+    for (const { place, parts } of placeRules) {
+      for (let start = 0; start <= words.length - parts.length; start++) {
+        const end = start + parts.length;
+        if (!parts.every((p, i) => words[start + i] === p)) continue;
+        const nearby = words.slice(
+          Math.max(0, start - 4),
+          Math.min(words.length, end + 4),
+        );
+        if (
+          contextual &&
+          (!nearby.some((w) => placeContext.has(w)) ||
+            nearby.some((w) => placeBio.has(w)))
+        )
+          continue;
+        hits.push({ place, start, end });
+      }
+    }
+    let found = placeCatalogue.filter((p) =>
+      hits.some(
+        (h) =>
+          h.place.id === p.id &&
+          !hits.some(
+            (k) =>
+              k.end - k.start > h.end - h.start &&
+              k.start <= h.start &&
+              k.end >= h.end,
+          ),
+      ),
+    );
+    if (new Set(found.map((p) => p.region)).size > 1) {
+      const context = normalize(text + " " + hint);
+      const selected = found.filter((p) =>
+        context.includes(normalize(p.region)),
+      );
+      if (new Set(selected.map((p) => p.region)).size === 1) found = selected;
+      else return [found, true];
+    }
+    return [found, false];
+  }
   function profileGeography(channel) {
     const name = channel.name || "",
       title = findTitleRegions(name),
       foreign = inferForeignTitle(name);
+    const [places, ambiguous] = resolvePlaces(name, channel.region_hint || "");
+    if (ambiguous) return [[], null, "conflict"];
+    if (places.length) {
+      if (foreign && foreign.country !== "RU") return [[], null, "conflict"];
+      return [[...new Set(places.map((p) => p.region))].sort(), null, "name"];
+    }
+    if (
+      normalize(name)
+        .split(" ")
+        .some((w) => ["проспект", "улица", "шоссе", "переулок"].includes(w))
+    )
+      return [[], null, "conflict"];
     if (title.length || foreign) {
       if (
         title.length === 1 &&
@@ -336,6 +438,18 @@
         ];
       return [[], null, "conflict"];
     }
+    const [descPlaces, descAmbiguous] = resolvePlaces(
+      informativeDescription(channel.description),
+      channel.region_hint || "",
+      true,
+    );
+    if (descAmbiguous) return [[], null, "conflict"];
+    if (descPlaces.length)
+      return [
+        [...new Set(descPlaces.map((p) => p.region))].sort(),
+        null,
+        "description",
+      ];
     const description = findTitleRegions(
         informativeDescription(channel.description),
         true,
@@ -359,9 +473,14 @@
     const override = taxonomy.geography_overrides?.[key];
     if (override) {
       if (
-        !["region", "multi_region", "country", "global", "unknown"].includes(
-          override.scope,
-        )
+        ![
+          "region",
+          "multi_region",
+          "country",
+          "global",
+          "unknown",
+          "nonlocal",
+        ].includes(override.scope)
       )
         throw new Error("Неизвестный географический охват");
       channel = {
@@ -398,20 +517,83 @@
     }
     if (!regions.length && !override && !federal && !channel.geographic_scope)
       [regions, foreign, source] = profileGeography(channel);
+    const cleaned = informativeDescription(channel.description);
+    if (source === "none" && !regions.length && !override) {
+      const f = inferForeignTitle(cleaned),
+        words = normalize(cleaned);
+      if (
+        f &&
+        f.scope === "country" &&
+        [
+          "налог",
+          "законодатель",
+          "экономик",
+          "рынок",
+          "рынке",
+          "политик",
+          "туризм",
+          "путешеств",
+        ].some((x) => words.includes(x))
+      ) {
+        foreign = f;
+        source = "description";
+      } else if (
+        !findTitleRegions(cleaned).length &&
+        taxonomy.nonlocal_evidence.some((p) =>
+          (" " + words + " ").includes(" " + normalize(p) + " "),
+        )
+      )
+        source = "nonlocal_evidence";
+    }
     let scope;
-    if (["global", "country", "unknown"].includes(channel.geographic_scope)) {
+    if (
+      ["global", "country", "unknown", "nonlocal"].includes(
+        channel.geographic_scope,
+      )
+    ) {
       scope = channel.geographic_scope;
       regions = [];
-    } else if (foreign?.scope === "country") scope = "country";
+    } else if (source === "nonlocal_evidence") scope = "nonlocal";
+    else if (foreign?.scope === "country") scope = "country";
     else if (regions.length > 1) scope = "multi_region";
     else if (regions.length) scope = "region";
     else if (federal) scope = "country";
     else scope = "unknown";
-    const country = String(foreign?.country || channel.country || "")
+    let country = String(foreign?.country || channel.country || "")
       .trim()
       .toUpperCase();
     if (scope === "country" && !country) scope = "unknown";
+    if (scope === "nonlocal") country = "";
+    let [places, ambiguous] = resolvePlaces(
+      channel.name || "",
+      channel.region_hint || "",
+    );
+    if (!places.length)
+      [places, ambiguous] = resolvePlaces(
+        cleaned,
+        channel.region_hint || "",
+        true,
+      );
     return {
+      geography_relevance:
+        scope === "nonlocal"
+          ? "nonterritorial"
+          : scope === "unknown"
+            ? "undetermined"
+            : "territorial",
+      geography_places: places
+        .filter((p) => regions.includes(p.region) && !ambiguous)
+        .map((p) => ({
+          id: p.id,
+          label: p.label,
+          region: p.region,
+          country: p.country,
+          kind: p.kind,
+        })),
+      geography_candidates: ambiguous
+        ? [...new Set(places.map((p) => p.region))].sort()
+        : [],
+      geography_evidence: source !== "none" ? [source] : [],
       geography_scope: scope,
       geography_regions: regions,
       geography_country: country,
@@ -436,8 +618,16 @@
       topic = taxonomy.overrides[username];
       source = "manual";
     } else if (byId[declared] && !["general", "other"].includes(declared)) {
-      topic = declared;
-      source = "declared";
+      if (
+        (byId[inferred.subcategory].refines || []).includes(declared) &&
+        inferred.score >= 2
+      ) {
+        topic = inferred.subcategory;
+        source = "heuristic";
+      } else {
+        topic = declared;
+        source = "declared";
+      }
     } else if (inferred.subcategory !== "other") {
       topic = inferred.subcategory;
       source = "heuristic";
@@ -460,10 +650,51 @@
     const extraTags = (
       taxonomy.tag_overrides?.[username] || inferred.tags
     ).filter((x) => x !== topic && x !== "other");
+    const group =
+      source === "local"
+        ? byId[topic].group
+        : taxonomy.group_overrides?.[username] || byId[topic].group;
+    let formats = [],
+      formatEvidence = [];
+    for (const fmt of taxonomy.formats)
+      for (const [field, text] of [
+        ["name", normalize(channel.name)],
+        ["description", normalize(informativeDescription(channel.description))],
+      ]) {
+        const found = fmt.keywords.filter((k) => matches(k, text, field));
+        if (found.length) {
+          formats.push(fmt.id);
+          formatEvidence.push(field + ":" + found[0]);
+          break;
+        }
+      }
+    if (Object.hasOwn(taxonomy.format_overrides || {}, username)) {
+      formats = taxonomy.format_overrides[username];
+      formatEvidence = ["manual"];
+    }
+    const reviewed = taxonomy.review_metadata?.[username];
+    const stale = !!(
+      reviewed &&
+      (reviewed.name !== (channel.name || "") ||
+        reviewed.description !== informativeDescription(channel.description))
+    );
     return {
       ...channel,
       original_subcategory: original ?? null,
       ...geography(channel),
+      classification_review_stale: stale,
+      classification_version: 2,
+      topic_group: group,
+      topic_group_label: groups[group].label,
+      topic_path: topic !== "other" ? [group, topic] : [group],
+      topic_granularity:
+        topic !== "other"
+          ? "topic"
+          : group !== "other_group"
+            ? "group"
+            : "unknown",
+      publication_formats: formats,
+      format_evidence: formatEvidence,
       primary_category: topic,
       subcategory: topic,
       topic_category: byId[topic].section,
@@ -475,6 +706,7 @@
       topic_tags: [topic, ...extraTags],
       secondary_topics: extraTags,
       topic_review_required:
+        stale ||
         topic === "other" ||
         source === "fallback" ||
         (source === "heuristic" && inferred.review_required),
@@ -493,6 +725,7 @@
   window.Topics = {
     taxonomy,
     byId,
+    groupsById: groups,
     classify,
     geography,
     enrich,

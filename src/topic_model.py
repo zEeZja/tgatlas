@@ -14,7 +14,7 @@ from .classification_review import (
     load_channels,
 )
 from .file_io import atomic_write_text
-from .topic_keywords import TOPICS
+from .topic_keywords import TOPICS, TAXONOMY
 
 
 def _dependencies():
@@ -76,6 +76,8 @@ def train(review_path, output_path, threshold=0.8):
     classifier.fit(features, [r["expected_topic"] for r in train_rows])
     artifact = dict(
         format="atlas-topic-linear-v1",
+        taxonomy_version=TAXONOMY["version"],
+        classification_version=2,
         active=False,
         created_at=datetime.now(timezone.utc).isoformat(),
         threshold=threshold,
@@ -104,6 +106,9 @@ def train(review_path, output_path, threshold=0.8):
     model_predictions = [
         {
             **base,
+            "topic_group": TOPICS[
+                suggestion["suggested_topic"] if suggestion["accepted"] else "other"
+            ]["group"],
             "subcategory": suggestion["suggested_topic"]
             if suggestion["accepted"]
             else "other",
@@ -146,6 +151,10 @@ def predict(model, rows):
         or model.get("format") != "atlas-topic-linear-v1"
     ):
         raise ValueError("Неизвестный формат модели")
+    if model.get("taxonomy_version") != TAXONOMY["version"]:
+        raise ValueError(
+            "Версия таксономии модели устарела; переобучите и проверьте её на текущей разметке"
+        )
     classes = model.get("classes", [])
     vocabulary = model.get("vocabulary", {})
     if (

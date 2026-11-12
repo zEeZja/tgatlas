@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 def main():
     from src import classification_review as review
+    from src.scraper import ScrapeError
 
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -47,6 +48,22 @@ def main():
     suggest.add_argument("--model", required=True)
     suggest.add_argument("--input", default="web/data/channels.json")
     suggest.add_argument("--output", default="reports/model-suggestions.json")
+    samples = commands.add_parser(
+        "sample-posts",
+        help="ограниченная HTTP-выборка сообщений в отдельный кеш без изменения БД",
+    )
+    samples.add_argument("--channel", required=True)
+    samples.add_argument("--cache-dir", default="reports/classification-samples")
+    samples.add_argument("--pages", type=int, choices=range(1, 4), default=2)
+    samples.add_argument("--limit", type=int, choices=range(3, 21), default=12)
+    samples.add_argument("--refresh", action="store_true")
+    compare = commands.add_parser(
+        "compare-posts",
+        help="оценить предложения из кеша на подтверждённом test; ничего не применять",
+    )
+    compare.add_argument("--review", required=True)
+    compare.add_argument("--cache-dir", default="reports/classification-samples")
+    compare.add_argument("--output")
     args = parser.parse_args()
     try:
         if args.command == "prepare":
@@ -67,13 +84,47 @@ def main():
             from src.topic_model import train
 
             result = train(args.review, args.output, args.threshold)
+        elif args.command == "sample-posts":
+            from src.classification_samples import sample_channel, evidence
+
+            sample = sample_channel(
+                args.channel,
+                args.cache_dir,
+                args.pages,
+                args.limit,
+                refresh=args.refresh,
+            )
+            result = {
+                k: sample[k]
+                for k in (
+                    "username",
+                    "fetched_at",
+                    "pages_requested",
+                    "distinct_dates",
+                    "low_diversity",
+                    "cache_hit",
+                )
+            }
+            result["evidence"] = evidence(sample)
+        elif args.command == "compare-posts":
+            from src.classification_samples import compare
+
+            result = compare(args.review, args.cache_dir)
+            if args.output:
+                from src.file_io import atomic_write_text
+
+                if Path(args.output).resolve() == Path(args.review).resolve():
+                    raise ValueError("Отчёт не должен заменять разметку")
+                atomic_write_text(
+                    args.output, json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+                )
         else:
             from src.topic_model import suggest
 
             result = suggest(args.model, args.input, args.output)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
-    except (ValueError, OSError, ImportError) as exc:
+    except (ValueError, OSError, ImportError, ScrapeError) as exc:
         print(str(exc), file=sys.stderr)
         return 1
 

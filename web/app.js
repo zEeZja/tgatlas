@@ -1,6 +1,7 @@
 (async function () {
   const SUB_CATEGORIES = window.Topics.taxonomy.topics;
   const SUB_MAP = window.Topics.byId;
+  const GROUP_MAP = window.Topics.groupsById;
   const CATEGORY_LABELS = Object.fromEntries(
     window.Topics.taxonomy.sections.map((s) => [s.id, s.label]),
   );
@@ -47,6 +48,8 @@
     sort: "popular",
     group: "topic",
     category: "",
+    publicationFormat: "",
+    includeSecondary: false,
     geoScope: "",
     query: "",
     subcategory: "",
@@ -77,7 +80,10 @@
   }
 
   function colorOf(ch) {
-    return (SUB_MAP[ch.subcategory] || SUB_MAP.other).color;
+    return (
+      GROUP_MAP[ch.topic_group]?.color ||
+      (SUB_MAP[ch.subcategory] || SUB_MAP.other).color
+    );
   }
   let layout = window.Layout.buildClusterLayout(channels, state.group);
   const channelsById = new Map(channels.map((ch) => [ch.id, ch]));
@@ -145,6 +151,10 @@
   resetBtn.hidden = true;
   resetBtn.addEventListener("click", () => {
     state.query = "";
+    state.publicationFormat = "";
+    state.includeSecondary = false;
+    document.getElementById("publication-format").value = "";
+    document.getElementById("include-secondary").checked = false;
     state.subcategory = "";
     state.category = "";
     state.geoScope = "";
@@ -163,14 +173,78 @@
   el.chips.parentElement.appendChild(resetBtn);
 
   const categoryEl = document.getElementById("category");
-  for (const section of SUB_CATEGORIES) {
+  for (const group of window.Topics.taxonomy.groups) {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = group.label;
+    const all = document.createElement("option");
+    all.value = "group:" + group.id;
+    all.textContent = group.label + " · все темы";
+    optgroup.appendChild(all);
+    for (const topic of SUB_CATEGORIES.filter((t) => t.group === group.id)) {
+      const option = document.createElement("option");
+      option.value = topic.id;
+      option.textContent = topic.label;
+      optgroup.appendChild(option);
+    }
+    categoryEl.appendChild(optgroup);
+  }
+  const formatLabel = document.createElement("label");
+  formatLabel.textContent = "Формат публикаций";
+  formatLabel.htmlFor = "publication-format";
+  const formatSelect = document.createElement("select");
+  formatSelect.id = "publication-format";
+  for (const fmt of [
+    { id: "", label: "Любой формат" },
+    ...window.Topics.taxonomy.formats,
+  ]) {
     const option = document.createElement("option");
-    option.value = section.id;
-    option.textContent =
-      section.label +
-      " · " +
-      state.channels.filter((c) => c.subcategory === section.id).length;
-    categoryEl.appendChild(option);
+    option.value = fmt.id;
+    option.textContent = fmt.label;
+    formatSelect.appendChild(option);
+  }
+  categoryEl.parentElement.append(formatLabel, formatSelect);
+  const secondaryLabel = document.createElement("label");
+  secondaryLabel.style.display = "flex";
+  secondaryLabel.style.alignItems = "center";
+  secondaryLabel.style.gap = "8px";
+  const secondaryInput = document.createElement("input");
+  secondaryInput.type = "checkbox";
+  secondaryInput.id = "include-secondary";
+  secondaryInput.style.width = "auto";
+  secondaryLabel.append(
+    secondaryInput,
+    document.createTextNode("Учитывать дополнительные темы"),
+  );
+  categoryEl.parentElement.append(secondaryLabel);
+  formatSelect.onchange = () => {
+    state.publicationFormat = formatSelect.value;
+    state.region = "";
+    renderRegions();
+    renderChips();
+    refresh();
+    map.fitVisible();
+  };
+  secondaryInput.onchange = () => {
+    state.includeSecondary = secondaryInput.checked;
+    state.region = "";
+    renderRegions();
+    renderChips();
+    refresh();
+  };
+  function matchesCategory(ch, value) {
+    if (!value) return true;
+    if (value.startsWith("group:"))
+      return (
+        ch.topic_group === value.slice(6) ||
+        (state.includeSecondary &&
+          (ch.secondary_topics || []).some(
+            (t) => SUB_MAP[t]?.group === value.slice(6),
+          ))
+      );
+    return (
+      ch.primary_category === value ||
+      (state.includeSecondary && (ch.secondary_topics || []).includes(value))
+    );
   }
   categoryEl.onchange = () => {
     state.category = categoryEl.value;
@@ -227,7 +301,9 @@
   function categoryChannels() {
     return state.channels.filter(
       (c) =>
-        (!state.category || c.primary_category === state.category) &&
+        matchesCategory(c, state.category) &&
+        (!state.publicationFormat ||
+          c.publication_formats.includes(state.publicationFormat)) &&
         (!state.country || c.geography_country === state.country),
     );
   }
@@ -308,7 +384,11 @@
   function refresh() {
     let list = state.channels;
     if (state.category)
-      list = list.filter((c) => c.primary_category === state.category);
+      list = list.filter((c) => matchesCategory(c, state.category));
+    if (state.publicationFormat)
+      list = list.filter((c) =>
+        c.publication_formats.includes(state.publicationFormat),
+      );
     if (state.geoScope)
       list = list.filter((c) => c.geography_scope === state.geoScope);
     if (state.subcategory) {
@@ -338,14 +418,16 @@
     map.setVisibleIds(new Set(list.map((c) => c.id)));
     renderList();
     renderLegend();
-    for (const option of categoryEl.options) {
-      if (option.value)
+    for (const option of categoryEl.options)
+      if (option.value) {
+        const label = option.value.startsWith("group:")
+          ? GROUP_MAP[option.value.slice(6)].label + " · все темы"
+          : SUB_MAP[option.value].label;
         option.textContent =
-          SUB_MAP[option.value].label +
+          label +
           " · " +
-          state.channels.filter((c) => c.primary_category === option.value)
-            .length;
-    }
+          state.channels.filter((c) => matchesCategory(c, option.value)).length;
+      }
     el.count.textContent = list.length;
     statsBar.innerHTML = `<span><b>${state.channels.length}</b> каналов · <b>${new Set(state.channels.map((c) => c.subcategory)).size}</b> тем · <b>${state.channels.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>`;
     const visibleIds = new Set(list.map((c) => c.id));
@@ -356,6 +438,8 @@
     const hasFilter =
       state.query ||
       state.category ||
+      state.publicationFormat ||
+      state.includeSecondary ||
       state.geoScope ||
       state.subcategory ||
       state.region ||
@@ -433,7 +517,7 @@
     for (const ch of state.visible) {
       const key =
         state.group === "topic"
-          ? ch.subcategory
+          ? "group:" + ch.topic_group
           : window.Layout.geographyGroup(ch);
       counts.set(key, (counts.get(key) || 0) + 1);
     }
@@ -475,7 +559,10 @@
       return;
     }
 
-    const sub = SUB_MAP[ch.subcategory] || SUB_MAP.other;
+    const sub =
+      ch.subcategory === "other" && ch.topic_group !== "other_group"
+        ? GROUP_MAP[ch.topic_group]
+        : SUB_MAP[ch.subcategory] || SUB_MAP.other;
     const color = colorOf(ch);
     const subs = formatSubs(ch.subscribers);
     const countryLabel =
@@ -496,6 +583,15 @@
           `<span class="badge badge-muted" title="Дополнительная тема">${escapeHtml(label)}</span>`,
         );
     }
+    for (const fmt of ch.publication_formats || []) {
+      const label = window.Topics.taxonomy.formats.find(
+        (f) => f.id === fmt,
+      )?.label;
+      if (label)
+        badges.push(
+          `<span class="badge badge-muted">${escapeHtml(label)}</span>`,
+        );
+    }
     if (ch.geography_scope !== "region")
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,
@@ -512,8 +608,10 @@
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(ch.geography_regions[0])}</span>`,
       );
-    } else {
-      badges.push(`<span class="badge badge-muted">Регион не определён</span>`);
+    } else if (ch.geography_scope === "unknown") {
+      badges.push(
+        `<span class="badge badge-muted">Территория не уточнена</span>`,
+      );
     }
     if (ch.region_review_required && ch.geography_review_required) {
       badges.push(`<span class="badge badge-muted">Нужна проверка</span>`);
@@ -539,6 +637,7 @@
       `<div class="detail-badges">${badges.join("")}</div>` +
       `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
+      (ch.classification_review_stale?'<p class="topic-explanation">Профиль изменился после проверки владельцем. Сохранённая метка требует повторной проверки.</p>':'') +
       (ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
         : "") +

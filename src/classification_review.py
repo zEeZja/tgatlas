@@ -11,10 +11,16 @@ import re
 
 from .classification_text import informative_description
 from .file_io import atomic_write_text
-from .topic_keywords import TOPICS, load_classification_rules, resolve_topic
+from .topic_keywords import (
+    TOPICS,
+    GROUPS,
+    TAXONOMY,
+    load_classification_rules,
+    resolve_topic,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
-SCOPES = {"region", "multi_region", "country", "global", "unknown"}
+SCOPES = {"region", "multi_region", "country", "global", "unknown", "nonlocal"}
 FIELDS = [
     "username",
     "name",
@@ -36,6 +42,29 @@ FIELDS = [
     "reviewed",
     "note",
 ]
+
+LEGACY_FIELDS = list(FIELDS)
+FIELDS += [
+    "review_schema_version",
+    "taxonomy_version",
+    "expected_group",
+    "expected_formats",
+    "review_reason",
+    "proposed_topic",
+]
+
+
+def upgrade_record(row):
+    row = dict(row)
+    row["review_schema_version"] = row.get("review_schema_version") or "1"
+    row["taxonomy_version"] = row.get("taxonomy_version") or "5"
+    row["expected_group"] = (
+        row.get("expected_group")
+        or TOPICS.get(row.get("expected_topic"), TOPICS["other"])["group"]
+    )
+    for key in ("expected_formats", "review_reason", "proposed_topic"):
+        row[key] = row.get(key) or ""
+    return row
 
 
 def feature_text(row):
@@ -159,6 +188,14 @@ def prepare(input_path, output_path, size=200, seed=42):
         )
         for key in ("topic", "secondary_topics", "scope", "regions", "country"):
             record["expected_" + key] = record["suggested_" + key]
+        record.update(
+            review_schema_version="2",
+            taxonomy_version=str(TAXONOMY["version"]),
+            expected_group=result["topic_group"],
+            expected_formats=",".join(result["publication_formats"]),
+            review_reason="",
+            proposed_topic="",
+        )
         records.append(record)
     records.sort(key=lambda r: r["username"])
     write_review(output_path, records)
@@ -183,15 +220,19 @@ def _list(value, delimiter=","):
 def read_review(path, *, confirmed_only=True):
     with Path(path).open(encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream, delimiter=";")
-        if not set(FIELDS).issubset(reader.fieldnames or []):
+        if not set(LEGACY_FIELDS).issubset(reader.fieldnames or []):
             raise ValueError("Файл разметки не соответствует шаблону prepare")
         rows = list(reader)
-    if any(None in row or any(row.get(key) is None for key in FIELDS) for row in rows):
+    if any(
+        None in row or any(row.get(key) is None for key in LEGACY_FIELDS)
+        for row in rows
+    ):
         raise ValueError("Повреждена строка CSV; используйте экспорт из формы проверки")
     confirmed = []
     seen = set()
     groups = {}
-    for row in rows:
+    for raw_row in rows:
+        row = upgrade_record(raw_row)
         if row.get("reviewed", "").strip().lower() not in ("yes", "да", "true", "1"):
             if confirmed_only:
                 continue
@@ -217,6 +258,23 @@ def read_review(path, *, confirmed_only=True):
             or row["split"] not in ("train", "test")
         ):
             raise ValueError(f"Недопустимая метка или split: {username}")
+        if row["expected_group"] not in GROUPS:
+            raise ValueError(f"Неизвестная крупная группа: {username}")
+        if (
+            row["expected_topic"] != "other"
+            and row["expected_group"] != TOPICS[row["expected_topic"]]["group"]
+        ):
+            raise ValueError(f"Группа не соответствует подтеме: {username}")
+        if any(
+            f not in {x["id"] for x in TAXONOMY["formats"]}
+            for f in _list(row["expected_formats"])
+        ):
+            raise ValueError(f"Неизвестный формат: {username}")
+        if (
+            int(row["review_schema_version"]) not in (1, 2)
+            or not 1 <= int(row["taxonomy_version"]) <= TAXONOMY["version"]
+        ):
+            raise ValueError("Не поддерживается версия формы или таксономии")
         tags = _list(row["expected_secondary_topics"])
         regions = _list(row["expected_regions"], "|")
         if any(
@@ -230,7 +288,7 @@ def read_review(path, *, confirmed_only=True):
         if (
             (scope == "region" and len(regions) != 1)
             or (scope == "multi_region" and len(regions) < 2)
-            or (scope in ("country", "global", "unknown") and regions)
+            or (scope in ("country", "global", "unknown", "nonlocal") and regions)
             or (scope == "country" and not country)
         ):
             raise ValueError(f"Охват не соответствует регионам/стране: {username}")
@@ -239,7 +297,7 @@ def read_review(path, *, confirmed_only=True):
             raise ValueError("Одинаковые тексты попали в train и test; исправьте split")
         groups[gid] = row["split"]
         row["group_id"] = gid
-        row["expected_country"] = country
+        row["expected_country"] = "" if scope == "nonlocal" else country
         row["expected_regions"] = "|".join(regions)
         row["expected_secondary_topics"] = ",".join(tags)
         confirmed.append(row)
@@ -251,6 +309,7 @@ def metrics(rows, predictions):
         raise ValueError("Нет подтверждённых примеров для оценки")
     if len(rows) != len(predictions):
         raise ValueError("Число прогнозов не совпадает с числом примеров")
+    group_correct = 0
     topic_correct = topic_accepted = topic_accepted_correct = geo_correct = (
         geo_accepted
     ) = geo_accepted_correct = 0
@@ -258,6 +317,11 @@ def metrics(rows, predictions):
     counts = Counter()
     tag_tp = tag_fp = tag_fn = 0
     for row, pred in zip(rows, predictions):
+        expected_group = (
+            row.get("expected_group") or TOPICS[row["expected_topic"]]["group"]
+        )
+        actual_group = pred.get("topic_group") or TOPICS[pred["subcategory"]]["group"]
+        group_correct += expected_group == actual_group
         truth = row["expected_topic"]
         guess = pred["subcategory"]
         counts[truth] += 1
@@ -301,6 +365,7 @@ def metrics(rows, predictions):
     n = len(rows)
     return dict(
         examples=n,
+        topic_group_accuracy=group_correct / n,
         topic_accuracy=topic_correct / n,
         topic_coverage=topic_accepted / n,
         topic_selective_precision=topic_accepted_correct / topic_accepted
@@ -363,18 +428,32 @@ def apply_review(review_path, apply=False, labels_path=None):
     for row in rows:
         entries[row["username"]] = dict(
             topic=row["expected_topic"],
+            group=row["expected_group"],
+            review_schema_version=int(row["review_schema_version"]),
+            taxonomy_version=int(row["taxonomy_version"]),
             secondary_topics=_list(row["expected_secondary_topics"]),
             scope=row["expected_scope"],
             regions=_list(row["expected_regions"], "|"),
             country=row["expected_country"],
             reviewed=True,
+            review_reason=row["review_reason"],
+            proposed_topic=row["proposed_topic"],
+            note=row["note"],
+            reviewed_profile=dict(
+                name=row["name"],
+                description=informative_description(row["description"]),
+            ),
+            reviewed_at=datetime.now(timezone.utc).isoformat(),
         )
+        if int(row["review_schema_version"]) >= 2:
+            entries[row["username"]]["formats"] = _list(row["expected_formats"])
     if apply:
         atomic_write_text(
             path,
             json.dumps(
                 dict(
-                    version=1,
+                    version=2,
+                    taxonomy_version=TAXONOMY["version"],
                     channels=entries,
                     updated_at=datetime.now(timezone.utc).isoformat(),
                 ),

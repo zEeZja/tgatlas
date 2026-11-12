@@ -19,6 +19,6 @@ class AuditTests(unittest.TestCase):
             self.assertEqual(counts['geography_unknown'],1)
             self.assertEqual(source.read_bytes(),original)
             with report.open(encoding='utf-8-sig') as f:items=list(csv.DictReader(f,delimiter=';'))
-            self.assertEqual(items[0]['new_topic'],'Новости')
+            self.assertEqual(items[0]['new_topic'],'Общая повестка')
             self.assertEqual(items[0]['new_regions'],'Мурманская область')
             with self.assertRaises(ValueError):run(source,source)

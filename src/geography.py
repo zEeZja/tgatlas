@@ -2,7 +2,16 @@
 
 import json
 from pathlib import Path
-from .title_region import profile_geography
+from .title_region import profile_geography, find_title_regions, infer_foreign_title
+from .classification_text import informative_description
+from .region_classifier import normalize_text
+from .places import resolve_places
+
+POLICY = json.loads(
+    (Path(__file__).resolve().parent.parent / "config/topics.json").read_text(
+        encoding="utf-8"
+    )
+)
 
 
 def resolve_geography(
@@ -35,6 +44,7 @@ def resolve_geography(
             "country",
             "global",
             "unknown",
+            "nonlocal",
         ):
             raise ValueError(f"Invalid geography override for {key}")
         channel = {
@@ -81,9 +91,39 @@ def resolve_geography(
         and not channel.get("geographic_scope")
     ):
         regions, foreign, source = profile_geography(channel)
+    cleaned = informative_description(channel.get("description"))
+    if source == "none" and not regions and not override:
+        foreign_desc = infer_foreign_title(cleaned)
+        words = normalize_text(cleaned)
+        if (
+            foreign_desc
+            and foreign_desc["scope"] == "country"
+            and any(
+                x in words
+                for x in (
+                    "налог",
+                    "законодатель",
+                    "экономик",
+                    "рынок",
+                    "рынке",
+                    "политик",
+                    "туризм",
+                    "путешеств",
+                )
+            )
+        ):
+            foreign = foreign_desc
+            source = "description"
+        elif not find_title_regions(cleaned) and any(
+            " " + normalize_text(phrase) + " " in " " + words + " "
+            for phrase in POLICY["nonlocal_evidence"]
+        ):
+            source = "nonlocal_evidence"
     explicit = channel.get("geographic_scope")
-    if explicit in ("global", "country", "unknown"):
+    if explicit in ("global", "country", "unknown", "nonlocal"):
         scope, regions = explicit, []
+    elif source == "nonlocal_evidence":
+        scope = "nonlocal"
     elif foreign and foreign["scope"] == "country":
         scope = "country"
     elif len(regions) > 1:
@@ -99,7 +139,28 @@ def resolve_geography(
         country = foreign["country"]
     if scope == "country" and not country:
         scope = "unknown"
+    if scope == "nonlocal":
+        country = ""
+    places, ambiguous = resolve_places(
+        channel.get("name") or "", channel.get("region_hint") or ""
+    )
+    if not places:
+        places, ambiguous = resolve_places(
+            cleaned, channel.get("region_hint") or "", True
+        )
     return dict(
+        geography_relevance="nonterritorial"
+        if scope == "nonlocal"
+        else "undetermined"
+        if scope == "unknown"
+        else "territorial",
+        geography_places=[
+            {k: p[k] for k in ("id", "label", "region", "country", "kind")}
+            for p in places
+            if p["region"] in regions and not ambiguous
+        ],
+        geography_candidates=sorted({p["region"] for p in places}) if ambiguous else [],
+        geography_evidence=[source] if source != "none" else [],
         geography_scope=scope,
         geography_regions=regions,
         geography_country=country,

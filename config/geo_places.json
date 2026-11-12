@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "source": "Curated initial catalogue; expand with reviewed places. Not a complete gazetteer.",
+  "places": [
+    {
+      "id": "ru:penza",
+      "label": "Пенза",
+      "kind": "city",
+      "region": "Пензенская область",
+      "country": "RU",
+      "aliases": [
+        "пенза",
+        "пензе",
+        "пензы"
+      ]
+    },
+    {
+      "id": "ru:kazan",
+      "label": "Казань",
+      "kind": "city",
+      "region": "Республика Татарстан",
+      "country": "RU",
+      "aliases": [
+        "казань",
+        "казани",
+        "казанью"
+      ]
+    },
+    {
+      "id": "ru:khimki",
+      "label": "Химки",
+      "kind": "city",
+      "region": "Московская область",
+      "country": "RU",
+      "aliases": [
+        "химки",
+        "химках",
+        "химок",
+        "khimki"
+      ]
+    },
+    {
+      "id": "ru:nn",
+      "label": "Нижний Новгород",
+      "kind": "city",
+      "region": "Нижегородская область",
+      "country": "RU",
+      "aliases": [
+        "нижний новгород",
+        "нижнем новгороде",
+        "нижнего новгорода"
+      ]
+    },
+    {
+      "id": "ru:moscow",
+      "label": "Москва",
+      "kind": "city",
+      "region": "Москва",
+      "country": "RU",
+      "aliases": [
+        "москва",
+        "москве",
+        "москвы"
+      ]
+    },
+    {
+      "id": "ru:spb",
+      "label": "Санкт-Петербург",
+      "kind": "city",
+      "region": "Санкт-Петербург",
+      "country": "RU",
+      "aliases": [
+        "санкт петербург",
+        "петербург",
+        "петербурге",
+        "спб"
+      ]
+    },
+    {
+      "id": "ru:kirov",
+      "label": "Киров",
+      "kind": "city",
+      "region": "Кировская область",
+      "country": "RU",
+      "aliases": [
+        "киров",
+        "кирове",
+        "кирова"
+      ]
+    },
+    {
+      "id": "ru:kirovsk:51",
+      "label": "Кировск",
+      "kind": "city",
+      "region": "Мурманская область",
+      "country": "RU",
+      "aliases": [
+        "кировск",
+        "кировске",
+        "кировска"
+      ]
+    },
+    {
+      "id": "ru:kirovsk:47",
+      "label": "Кировск",
+      "kind": "city",
+      "region": "Ленинградская область",
+      "country": "RU",
+      "aliases": [
+        "кировск",
+        "кировске",
+        "кировска"
+      ]
+    },
+    {
+      "id": "ru:sovetsk:39",
+      "label": "Советск",
+      "kind": "city",
+      "region": "Калининградская область",
+      "country": "RU",
+      "aliases": [
+        "советск",
+        "советске",
+        "советска"
+      ]
+    },
+    {
+      "id": "ru:sovetsk:43",
+      "label": "Советск",
+      "kind": "city",
+      "region": "Кировская область",
+      "country": "RU",
+      "aliases": [
+        "советск",
+        "советске",
+        "советска"
+      ]
+    },
+    {
+      "id": "ru:sovetsk:71",
+      "label": "Советск",
+      "kind": "city",
+      "region": "Тульская область",
+      "country": "RU",
+      "aliases": [
+        "советск",
+        "советске",
+        "советска"
+      ]
+    },
+    {
+      "id": "ru:blagoveshchensk:28",
+      "label": "Благовещенск",
+      "kind": "city",
+      "region": "Амурская область",
+      "country": "RU",
+      "aliases": [
+        "благовещенск",
+        "благовещенске"
+      ]
+    },
+    {
+      "id": "ru:blagoveshchensk:02",
+      "label": "Благовещенск",
+      "kind": "city",
+      "region": "Республика Башкортостан",
+      "country": "RU",
+      "aliases": [
+        "благовещенск",
+        "благовещенске"
+      ]
+    },
+    {
+      "id": "ru:reutov",
+      "label": "Реутов",
+      "kind": "city",
+      "region": "Московская область",
+      "country": "RU",
+      "aliases": [
+        "реутов",
+        "реутове"
+      ]
+    },
+    {
+      "id": "ru:ivanteevka",
+      "label": "Ивантеевка",
+      "kind": "city",
+      "region": "Московская область",
+      "country": "RU",
+      "aliases": [
+        "ивантеевка",
+        "ивантеевке"
+      ]
+    },
+    {
+      "id": "ru:novomoskovsk",
+      "label": "Новомосковск",
+      "kind": "city",
+      "region": "Тульская область",
+      "country": "RU",
+      "aliases": [
+        "новомосковск",
+        "новомосковске"
+      ]
+    },
+    {
+      "id": "ru:obninsk",
+      "label": "Обнинск",
+      "kind": "city",
+      "region": "Калужская область",
+      "country": "RU",
+      "aliases": [
+        "обнинск",
+        "обнинске"
+      ]
+    },
+    {
+      "id": "ru:berdsk",
+      "label": "Бердск",
+      "kind": "city",
+      "region": "Новосибирская область",
+      "country": "RU",
+      "aliases": [
+        "бердск",
+        "бердске"
+      ]
+    },
+    {
+      "id": "ru:arma",
+      "label": "Армавир",
+      "kind": "city",
+      "region": "Краснодарский край",
+      "country": "RU",
+      "aliases": [
+        "армавир",
+        "армавире"
+      ]
+    },
+    {
+      "id": "ru:apatity",
+      "label": "Апатиты",
+      "kind": "city",
+      "region": "Мурманская область",
+      "country": "RU",
+      "aliases": [
+        "апатиты",
+        "апатитах"
+      ]
+    },
+    {
+      "id": "ru:severodvinsk",
+      "label": "Северодвинск",
+      "kind": "city",
+      "region": "Архангельская область",
+      "country": "RU",
+      "aliases": [
+        "северодвинск",
+        "северодвинске"
+      ]
+    },
+    {
+      "id": "ru:novocheboksarsk",
+      "label": "Новочебоксарск",
+      "kind": "city",
+      "region": "Чувашская Республика",
+      "country": "RU",
+      "aliases": [
+        "новочебоксарск",
+        "новочебоксарске"
+      ]
+    },
+    {
+      "id": "ru:nizhnekamsk",
+      "label": "Нижнекамск",
+      "kind": "city",
+      "region": "Республика Татарстан",
+      "country": "RU",
+      "aliases": [
+        "нижнекамск",
+        "нижнекамске"
+      ]
+    },
+    {
+      "id": "ru:capital:0",
+      "label": "Архангельск",
+      "region": "Архангельская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "архангельск",
+        "архангельска",
+        "архангельске"
+      ]
+    },
+    {
+      "id": "ru:capital:1",
+      "label": "Астрахань",
+      "region": "Астраханская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "астрахань",
+        "астрахани"
+      ]
+    },
+    {
+      "id": "ru:capital:2",
+      "label": "Барнаул",
+      "region": "Алтайский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "барнаул",
+        "барнаула",
+        "барнауле"
+      ]
+    },
+    {
+      "id": "ru:capital:3",
+      "label": "Белгород",
+      "region": "Белгородская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "белгород",
+        "белгорода",
+        "белгороде"
+      ]
+    },
+    {
+      "id": "ru:capital:4",
+      "label": "Биробиджан",
+      "region": "Еврейская автономная область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "биробиджан",
+        "биробиджана",
+        "биробиджане"
+      ]
+    },
+    {
+      "id": "ru:capital:5",
+      "label": "Брянск",
+      "region": "Брянская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "брянск",
+        "брянска",
+        "брянске"
+      ]
+    },
+    {
+      "id": "ru:capital:6",
+      "label": "Владивосток",
+      "region": "Приморский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "владивосток",
+        "владивостока",
+        "владивостоке"
+      ]
+    },
+    {
+      "id": "ru:capital:7",
+      "label": "Владикавказ",
+      "region": "Республика Северная Осетия",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "владикавказ",
+        "владикавказа",
+        "владикавказе"
+      ]
+    },
+    {
+      "id": "ru:capital:8",
+      "label": "Владимир",
+      "region": "Владимирская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "владимир",
+        "владимира",
+        "владимире"
+      ]
+    },
+    {
+      "id": "ru:capital:9",
+      "label": "Волгоград",
+      "region": "Волгоградская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "волгоград",
+        "волгограда",
+        "волгограде"
+      ]
+    },
+    {
+      "id": "ru:capital:10",
+      "label": "Вологда",
+      "region": "Вологодская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "вологда",
+        "вологды",
+        "вологде",
+        "вологду"
+      ]
+    },
+    {
+      "id": "ru:capital:11",
+      "label": "Воронеж",
+      "region": "Воронежская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "воронеж",
+        "воронежа",
+        "воронеже"
+      ]
+    },
+    {
+      "id": "ru:capital:12",
+      "label": "Горно-Алтайск",
+      "region": "Республика Алтай",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "горно-алтайск"
+      ]
+    },
+    {
+      "id": "ru:capital:13",
+      "label": "Грозный",
+      "region": "Чеченская Республика",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "грозный"
+      ]
+    },
+    {
+      "id": "ru:capital:14",
+      "label": "Екатеринбург",
+      "region": "Свердловская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "екатеринбург",
+        "екатеринбурга",
+        "екатеринбурге"
+      ]
+    },
+    {
+      "id": "ru:capital:15",
+      "label": "Иваново",
+      "region": "Ивановская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "иваново"
+      ]
+    },
+    {
+      "id": "ru:capital:16",
+      "label": "Ижевск",
+      "region": "Удмуртская Республика",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ижевск",
+        "ижевска",
+        "ижевске"
+      ]
+    },
+    {
+      "id": "ru:capital:17",
+      "label": "Иркутск",
+      "region": "Иркутская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "иркутск",
+        "иркутска",
+        "иркутске"
+      ]
+    },
+    {
+      "id": "ru:capital:18",
+      "label": "Йошкар-Ола",
+      "region": "Республика Марий Эл",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "йошкар-ола"
+      ]
+    },
+    {
+      "id": "ru:capital:19",
+      "label": "Калининград",
+      "region": "Калининградская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "калининград",
+        "калининграда",
+        "калининграде"
+      ]
+    },
+    {
+      "id": "ru:capital:20",
+      "label": "Калуга",
+      "region": "Калужская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "калуга",
+        "калуги",
+        "калуге",
+        "калугу"
+      ]
+    },
+    {
+      "id": "ru:capital:21",
+      "label": "Кемерово",
+      "region": "Кемеровская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "кемерово"
+      ]
+    },
+    {
+      "id": "ru:capital:22",
+      "label": "Кострома",
+      "region": "Костромская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "кострома",
+        "костромы",
+        "костроме",
+        "кострому"
+      ]
+    },
+    {
+      "id": "ru:capital:23",
+      "label": "Краснодар",
+      "region": "Краснодарский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "краснодар",
+        "краснодара",
+        "краснодаре"
+      ]
+    },
+    {
+      "id": "ru:capital:24",
+      "label": "Красноярск",
+      "region": "Красноярский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "красноярск",
+        "красноярска",
+        "красноярске"
+      ]
+    },
+    {
+      "id": "ru:capital:25",
+      "label": "Курган",
+      "region": "Курганская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "курган",
+        "кургана",
+        "кургане"
+      ]
+    },
+    {
+      "id": "ru:capital:26",
+      "label": "Курск",
+      "region": "Курская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "курск",
+        "курска",
+        "курске"
+      ]
+    },
+    {
+      "id": "ru:capital:27",
+      "label": "Кызыл",
+      "region": "Республика Тыва",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "кызыл",
+        "кызыла",
+        "кызыле"
+      ]
+    },
+    {
+      "id": "ru:capital:28",
+      "label": "Липецк",
+      "region": "Липецкая область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "липецк",
+        "липецка",
+        "липецке"
+      ]
+    },
+    {
+      "id": "ru:capital:29",
+      "label": "Магадан",
+      "region": "Магаданская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "магадан",
+        "магадана",
+        "магадане"
+      ]
+    },
+    {
+      "id": "ru:capital:30",
+      "label": "Майкоп",
+      "region": "Республика Адыгея",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "майкоп",
+        "майкопа",
+        "майкопе"
+      ]
+    },
+    {
+      "id": "ru:capital:31",
+      "label": "Махачкала",
+      "region": "Республика Дагестан",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "махачкала",
+        "махачкалы",
+        "махачкале",
+        "махачкалу"
+      ]
+    },
+    {
+      "id": "ru:capital:32",
+      "label": "Мурманск",
+      "region": "Мурманская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "мурманск",
+        "мурманска",
+        "мурманске"
+      ]
+    },
+    {
+      "id": "ru:capital:33",
+      "label": "Нальчик",
+      "region": "Кабардино-Балкарская Республика",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "нальчик",
+        "нальчика",
+        "нальчике"
+      ]
+    },
+    {
+      "id": "ru:capital:34",
+      "label": "Нарьян-Мар",
+      "region": "Ненецкий автономный округ",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "нарьян-мар"
+      ]
+    },
+    {
+      "id": "ru:capital:35",
+      "label": "Новосибирск",
+      "region": "Новосибирская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "новосибирск",
+        "новосибирска",
+        "новосибирске"
+      ]
+    },
+    {
+      "id": "ru:capital:36",
+      "label": "Омск",
+      "region": "Омская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "омск",
+        "омска",
+        "омске"
+      ]
+    },
+    {
+      "id": "ru:capital:37",
+      "label": "Оренбург",
+      "region": "Оренбургская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "оренбург",
+        "оренбурга",
+        "оренбурге"
+      ]
+    },
+    {
+      "id": "ru:capital:38",
+      "label": "Орёл",
+      "region": "Орловская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "орел",
+        "орела",
+        "ореле"
+      ]
+    },
+    {
+      "id": "ru:capital:39",
+      "label": "Пермь",
+      "region": "Пермский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "пермь",
+        "перми"
+      ]
+    },
+    {
+      "id": "ru:capital:40",
+      "label": "Петрозаводск",
+      "region": "Республика Карелия",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "петрозаводск",
+        "петрозаводска",
+        "петрозаводске"
+      ]
+    },
+    {
+      "id": "ru:capital:41",
+      "label": "Петропавловск-Камчатский",
+      "region": "Камчатский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "петропавловск-камчатский"
+      ]
+    },
+    {
+      "id": "ru:capital:42",
+      "label": "Псков",
+      "region": "Псковская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "псков",
+        "пскова",
+        "пскове"
+      ]
+    },
+    {
+      "id": "ru:capital:43",
+      "label": "Ростов-на-Дону",
+      "region": "Ростовская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ростов-на-дону"
+      ]
+    },
+    {
+      "id": "ru:capital:44",
+      "label": "Рязань",
+      "region": "Рязанская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "рязань",
+        "рязани"
+      ]
+    },
+    {
+      "id": "ru:capital:45",
+      "label": "Салехард",
+      "region": "Ямало-Ненецкий автономный округ",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "салехард",
+        "салехарда",
+        "салехарде"
+      ]
+    },
+    {
+      "id": "ru:capital:46",
+      "label": "Самара",
+      "region": "Самарская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "самара",
+        "самары",
+        "самаре",
+        "самару"
+      ]
+    },
+    {
+      "id": "ru:capital:47",
+      "label": "Саранск",
+      "region": "Республика Мордовия",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "саранск",
+        "саранска",
+        "саранске"
+      ]
+    },
+    {
+      "id": "ru:capital:48",
+      "label": "Саратов",
+      "region": "Саратовская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "саратов",
+        "саратова",
+        "саратове"
+      ]
+    },
+    {
+      "id": "ru:capital:49",
+      "label": "Смоленск",
+      "region": "Смоленская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "смоленск",
+        "смоленска",
+        "смоленске"
+      ]
+    },
+    {
+      "id": "ru:capital:50",
+      "label": "Ставрополь",
+      "region": "Ставропольский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ставрополь",
+        "ставрополи"
+      ]
+    },
+    {
+      "id": "ru:capital:51",
+      "label": "Сыктывкар",
+      "region": "Республика Коми",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "сыктывкар",
+        "сыктывкара",
+        "сыктывкаре"
+      ]
+    },
+    {
+      "id": "ru:capital:52",
+      "label": "Тамбов",
+      "region": "Тамбовская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "тамбов",
+        "тамбова",
+        "тамбове"
+      ]
+    },
+    {
+      "id": "ru:capital:53",
+      "label": "Тверь",
+      "region": "Тверская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "тверь",
+        "твери"
+      ]
+    },
+    {
+      "id": "ru:capital:54",
+      "label": "Томск",
+      "region": "Томская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "томск",
+        "томска",
+        "томске"
+      ]
+    },
+    {
+      "id": "ru:capital:55",
+      "label": "Тула",
+      "region": "Тульская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "тула",
+        "тулы",
+        "туле",
+        "тулу"
+      ]
+    },
+    {
+      "id": "ru:capital:56",
+      "label": "Тюмень",
+      "region": "Тюменская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "тюмень",
+        "тюмени"
+      ]
+    },
+    {
+      "id": "ru:capital:57",
+      "label": "Улан-Удэ",
+      "region": "Республика Бурятия",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "улан-удэ"
+      ]
+    },
+    {
+      "id": "ru:capital:58",
+      "label": "Ульяновск",
+      "region": "Ульяновская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ульяновск",
+        "ульяновска",
+        "ульяновске"
+      ]
+    },
+    {
+      "id": "ru:capital:59",
+      "label": "Уфа",
+      "region": "Республика Башкортостан",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "уфа",
+        "уфы",
+        "уфе",
+        "уфу"
+      ]
+    },
+    {
+      "id": "ru:capital:60",
+      "label": "Хабаровск",
+      "region": "Хабаровский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "хабаровск",
+        "хабаровска",
+        "хабаровске"
+      ]
+    },
+    {
+      "id": "ru:capital:61",
+      "label": "Ханты-Мансийск",
+      "region": "Ханты-Мансийский автономный округ",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ханты-мансийск"
+      ]
+    },
+    {
+      "id": "ru:capital:62",
+      "label": "Чебоксары",
+      "region": "Чувашская Республика",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "чебоксары"
+      ]
+    },
+    {
+      "id": "ru:capital:63",
+      "label": "Челябинск",
+      "region": "Челябинская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "челябинск",
+        "челябинска",
+        "челябинске"
+      ]
+    },
+    {
+      "id": "ru:capital:64",
+      "label": "Черкесск",
+      "region": "Карачаево-Черкесская Республика",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "черкесск",
+        "черкесска",
+        "черкесске"
+      ]
+    },
+    {
+      "id": "ru:capital:65",
+      "label": "Чита",
+      "region": "Забайкальский край",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "чита",
+        "читы",
+        "чите",
+        "читу"
+      ]
+    },
+    {
+      "id": "ru:capital:66",
+      "label": "Элиста",
+      "region": "Республика Калмыкия",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "элиста",
+        "элисты",
+        "элисте",
+        "элисту"
+      ]
+    },
+    {
+      "id": "ru:capital:67",
+      "label": "Якутск",
+      "region": "Республика Саха",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "якутск",
+        "якутска",
+        "якутске"
+      ]
+    },
+    {
+      "id": "ru:capital:68",
+      "label": "Ярославль",
+      "region": "Ярославская область",
+      "country": "RU",
+      "kind": "city",
+      "aliases": [
+        "ярославль",
+        "ярославли"
+      ]
+    }
+  ]
+}

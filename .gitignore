@@ -43,3 +43,6 @@ reports/*.json
 # Local learned artifacts and proposed predictions
 models/*
 !models/README.md
+
+# Read-only classification post sample cache
+reports/classification-samples/

@@ -24,7 +24,7 @@
   },
   {
     "name": "Финансы и инвестиции",
-    "expected": "business"
+    "expected": "investing"
   },
   {
     "name": "Биткоин и блокчейн",
@@ -32,7 +32,7 @@
   },
   {
     "name": "Новости программирования",
-    "expected": "tech"
+    "expected": "programming"
   },
   {
     "name": "Самарские новостройки",
@@ -44,7 +44,7 @@
   },
   {
     "name": "Английский для начинающих",
-    "expected": "education"
+    "expected": "languages"
   },
   {
     "name": "Путешествия и туризм",
@@ -52,7 +52,7 @@
   },
   {
     "name": "Кино и сериалы",
-    "expected": "culture"
+    "expected": "cinema"
   },
   {
     "name": "Мемы и юмор",
