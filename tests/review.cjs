@@ -75,6 +75,7 @@ const server = http.createServer((req, res) => {
         expected_regions: "",
         expected_country: "RU",
       });
+      legacy[1].expected_topic = "other";
       localStorage.setItem(storageKey, JSON.stringify(legacy));
     });
     await page.reload();
@@ -83,6 +84,10 @@ const server = http.createServer((req, res) => {
     );
     assert.equal(await page.locator("#topic").inputValue(), "business");
     assert.equal(await page.locator("#scope").inputValue(), "country");
+    assert.equal(
+      await page.evaluate(() => rows[1].expected_group),
+      "other_group",
+    );
     const legacyFile = path.join(dir, "legacy.csv");
     execFileSync(
       process.env.PYTHON || "python3",

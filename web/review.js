@@ -33,7 +33,7 @@ function adopt(target, saved) {
   target.expected_group =
     target.expected_topic !== "other"
       ? byTopic[target.expected_topic].group
-      : target.expected_group || "other_group";
+      : saved.expected_group || "other_group";
 }
 try {
   const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
