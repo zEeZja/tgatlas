@@ -28,7 +28,9 @@
       return (
         "Вся страна · " + (ch.geography_country || ch.country || "не уточнена")
       );
-    if (ch.geography_scope === "global") return "Международный охват";
+    if (ch.geography_scope === "global") return "Международная повестка";
+    if (ch.geography_scope === "nonlocal")
+      return "Без территориальной привязки";
     if (ch.geography_scope) return "География не уточнена";
     return ch.region || "Без региона";
   }
@@ -215,8 +217,12 @@
   function buildClusterLayout(channels, mode = "topic") {
     const groups = new Map();
     for (const ch of channels) {
-      const t = window.Topics.byId[ch.subcategory] || window.Topics.byId.other;
-      const id = mode === "region" ? geo(ch) : t.id;
+      const t =
+        window.Topics.groupsById?.[ch.topic_group] ||
+        window.Topics.byId[ch.subcategory] ||
+        window.Topics.byId.other;
+      const id =
+        mode === "region" ? geo(ch) : ch.topic_group ? "group:" + t.id : t.id;
       if (!groups.has(id))
         groups.set(id, {
           id,

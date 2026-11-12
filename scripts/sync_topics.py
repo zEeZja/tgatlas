@@ -30,6 +30,21 @@ def render():
             for u, v in labels.items()
         }
     )
+    data["review_metadata"] = {
+        u: v["reviewed_profile"] for u, v in labels.items() if "reviewed_profile" in v
+    }
+    data["format_overrides"] = {
+        u: v["formats"] for u, v in labels.items() if "formats" in v
+    }
+    data["group_overrides"] = {
+        u: v.get(
+            "group", next(t["group"] for t in data["topics"] if t["id"] == v["topic"])
+        )
+        for u, v in labels.items()
+    }
+    data["geo_places"] = json.loads(
+        (ROOT / "config/geo_places.json").read_text(encoding="utf-8")
+    )
     data["tag_overrides"] = {
         u: v.get("secondary_topics", []) for u, v in labels.items()
     }

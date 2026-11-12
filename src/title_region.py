@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 from .classification_text import informative_description
+from .places import resolve_places
 from .region_aliases import REGION_ALIASES
 from .region_classifier import normalize_text
 
@@ -119,6 +120,19 @@ def infer_foreign_title(name):
 def profile_geography(channel):
     """Return a region only with unambiguous evidence, never from ad contacts."""
     name = channel.get("name") or ""
+    places, ambiguous = resolve_places(name, channel.get("region_hint") or "")
+    if ambiguous:
+        return [], None, "conflict"
+    if places:
+        f = infer_foreign_title(name)
+        if f and f["country"] != "RU":
+            return [], None, "conflict"
+        return sorted({p["region"] for p in places}), None, "name"
+    if any(
+        w in normalize_text(name).split()
+        for w in ("проспект", "улица", "шоссе", "переулок")
+    ):
+        return [], None, "conflict"
     title = find_title_regions(name)
     foreign = infer_foreign_title(name)
     if title or foreign:
@@ -135,6 +149,11 @@ def profile_geography(channel):
             )
         return [], None, "conflict"
     desc = informative_description(channel.get("description"))
+    places, ambiguous = resolve_places(desc, channel.get("region_hint") or "", True)
+    if ambiguous:
+        return [], None, "conflict"
+    if places:
+        return sorted({p["region"] for p in places}), None, "description"
     description = find_title_regions(desc, True)
     hint = find_title_regions(channel.get("region_hint") or "")
     if len(description) > 1 or (description and hint and set(description) != set(hint)):
