@@ -27,7 +27,7 @@
       "id": "general",
       "label": "Общая повестка",
       "section": "society",
-      "color": "#8aafa3",
+      "color": "#81b5a2",
       "keywords": [
         "новост",
         "news",
@@ -54,7 +54,7 @@
       "id": "politics",
       "label": "Политика",
       "section": "society",
-      "color": "#df9cba",
+      "color": "#db8eaf",
       "keywords": [
         "полит",
         "politic",
@@ -609,7 +609,7 @@
       "label": "Инвестиции",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#d2cf87",
       "keywords": [
         "инвестиц",
         "фондовый рынок",
@@ -633,7 +633,7 @@
       "label": "Личные финансы",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#edcfaa",
       "keywords": [
         "личные финансы",
         "личных финансах",
@@ -656,7 +656,7 @@
       "label": "Финансово-банковская сфера",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#c7a45e",
       "keywords": [
         "банковск",
         "банков",
@@ -678,7 +678,7 @@
       "label": "Налоги и бухгалтерия",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#b5b07b",
       "keywords": [
         "налоги",
         "налогооблож",
@@ -701,7 +701,7 @@
       "label": "Макроэкономика",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#e3d795",
       "keywords": [
         "макроэконом",
         "инфляц",
@@ -721,7 +721,7 @@
       "label": "Предпринимательство",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#e6c994",
       "keywords": [
         "предпринимат",
         "предпринимательств",
@@ -743,7 +743,7 @@
       "label": "Управление и продукт",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#b6a06b",
       "keywords": [
         "управление команд",
         "управление продукт",
@@ -766,7 +766,7 @@
       "label": "Продажи и торговля",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#d5b789",
       "keywords": [
         "продаж",
         "ритейл",
@@ -789,7 +789,7 @@
       "label": "HR и найм",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#e3d2ae",
       "keywords": [
         "рекрут",
         "подбор персонала",
@@ -811,7 +811,7 @@
       "label": "Кибербезопасность",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#6ea4be",
       "keywords": [
         "кибербез",
         "информационная безопасность",
@@ -834,7 +834,7 @@
       "label": "Разработка ПО",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#85c6b7",
       "keywords": [
         "программист",
         "программирован",
@@ -860,7 +860,7 @@
       "label": "Гаджеты и устройства",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#a5c9dd",
       "keywords": [
         "гаджет",
         "смартфон",
@@ -882,7 +882,7 @@
       "label": "Телеком и связь",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#70c1c9",
       "keywords": [
         "телеком",
         "операторы связи",
@@ -903,7 +903,7 @@
       "label": "Космос",
       "section": "other",
       "group": "knowledge_group",
-      "color": "#93b6d4",
+      "color": "#858fca",
       "keywords": [
         "космос",
         "космическ",
@@ -925,7 +925,7 @@
       "label": "Языки",
       "section": "other",
       "group": "knowledge_group",
-      "color": "#93b6d4",
+      "color": "#bacde5",
       "keywords": [
         "английск",
         "english",
@@ -948,7 +948,7 @@
       "label": "Семья и дети",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#d99eb3",
       "keywords": [
         "родительств",
         "воспитани",
@@ -970,7 +970,7 @@
       "label": "Еда и рецепты",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#e5b5a0",
       "keywords": [
         "рецепт",
         "кулинари",
@@ -991,7 +991,7 @@
       "label": "Красота и уход",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#c797bd",
       "keywords": [
         "косметик",
         "макияж",
@@ -1012,7 +1012,7 @@
       "label": "Животные",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#bda3b5",
       "keywords": [
         "питомц",
         "ветеринар",
@@ -1032,7 +1032,7 @@
       "label": "Дом и сад",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#e4c3c8",
       "keywords": [
         "садовод",
         "огород",
@@ -1053,7 +1053,7 @@
       "label": "Психология",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#a8cda7",
       "keywords": [
         "психолог",
         "психотерап",
@@ -1074,7 +1074,7 @@
       "label": "Питание и диетология",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#c4d5a0",
       "keywords": [
         "нутрициол",
         "диетолог",
@@ -1096,7 +1096,7 @@
       "label": "Фитнес и тренировки",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#79b79c",
       "keywords": [
         "фитнес",
         "fitness",
@@ -1118,7 +1118,7 @@
       "label": "Кино и сериалы",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#ad92c7",
       "keywords": [
         "кино",
         "фильм",
@@ -1140,7 +1140,7 @@
       "label": "Музыка",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#d7a2bf",
       "keywords": [
         "музык",
         "music",
@@ -1162,7 +1162,7 @@
       "label": "Книги и литература",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#b5aed8",
       "keywords": [
         "книги",
         "книг",
@@ -1185,7 +1185,7 @@
       "label": "Дизайн и мода",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#e0bfd5",
       "keywords": [
         "дизайн",
         "мода",
@@ -1208,7 +1208,7 @@
       "label": "Строительство и ремонт",
       "section": "other",
       "group": "property",
-      "color": "#c4b080",
+      "color": "#d7bc8d",
       "keywords": [
         "строительств",
         "строительн",
@@ -1231,7 +1231,7 @@
       "label": "ЖКХ и городское хозяйство",
       "section": "other",
       "group": "property",
-      "color": "#c4b080",
+      "color": "#aaa87a",
       "keywords": [
         "жкх",
         "управляющая компания",
@@ -1251,7 +1251,7 @@
       "label": "Логистика и перевозки",
       "section": "other",
       "group": "transport",
-      "color": "#94b8bb",
+      "color": "#77a8ae",
       "keywords": [
         "логистик",
         "грузоперевоз",
@@ -1277,7 +1277,7 @@
       "label": "Авиация",
       "section": "other",
       "group": "transport",
-      "color": "#94b8bb",
+      "color": "#a9c9db",
       "keywords": [
         "авиаци",
         "авиакомпан",
@@ -1321,7 +1321,7 @@
       "label": "Социальная поддержка",
       "section": "other",
       "group": "society",
-      "color": "#8aafa3",
+      "color": "#a5cbbb",
       "keywords": [
         "социальные выплаты",
         "пособия",
@@ -1337,7 +1337,7 @@
       "definition": "Основной предмет — социальная поддержка. Упоминание в рекламе или единичном сообщении не является достаточным основанием."
     },
     {
-      "id": "credit", "label": "Кредитно-финансовая сфера", "section": "business", "group": "finance", "color": "#d6b274",
+      "id": "credit", "label": "Кредитно-финансовая сфера", "section": "business", "group": "finance", "color": "#d6a278",
       "keywords": ["кредит", "кредитован", "займ", "заем", "микрофинанс", "мфо", "ипотек", "потребительское финансирование"],
       "strong_description_keywords": ["кредитован", "микрофинанс", "кредитно финансовая сфера"],
       "exclude_phrases": ["кредит доверия", "кредиты доверия"],
@@ -1382,7 +1382,7 @@
       "definition": "Добыча и переработка топлива, нефть и газ, уголь, производство и передача электроэнергии. Квитанции, обслуживание дома и местные коммунальные жалобы относятся к ЖКХ."
     },
     {
-      "id": "transport", "label": "Транспорт", "section": "business", "group": "transport", "color": "#94b8bb",
+      "id": "transport", "label": "Транспорт", "section": "business", "group": "transport", "color": "#87b5a6",
       "keywords": ["транспорт", "транспортная отрасль", "транспортной отрасли", "транспортная инфраструктура"],
       "strong_description_keywords": ["транспорт", "транспортная отрасль", "транспортной отрасли", "морской и речной транспорт"],
       "refines": ["auto"],

@@ -55,6 +55,16 @@ const server = http.createServer((req, res) => {
       requests = [];
     page.on("pageerror", (e) => errors.push(e.message));
     page.on("request", (r) => requests.push(r.url()));
+    await page.route("**/map.js", (route) => route.fulfill({
+      contentType: "application/javascript",
+      body: fs.readFileSync(path.join(root, "map.js"), "utf8") + `
+        const originalSetLayout = CanvasMap.prototype.setLayout;
+        CanvasMap.prototype.setLayout = function (layout) {
+          window.__testLayout = layout;
+          return originalSetLayout.call(this, layout);
+        };
+      `,
+    }));
     // Demo coverage must be independent of locally generated user exports.
     await page.route("**/data/channels.js", route => route.fulfill({contentType: "application/javascript", body: "// isolated test: no JS export"}));
     await page.route("**/data/channels.json", (route) =>
@@ -430,6 +440,46 @@ const server = http.createServer((req, res) => {
     await page.locator("#category").selectOption("industry");
     assert.equal(await page.locator("#count").textContent(), "1");
     await page.locator(".reset-btn").click();
+    // Exact-topic colours are used on the first render, after regrouping and edits.
+    const paletteRows = ["banking", "investing", "credit", "social_support", "emergencies"].map(topic => ({
+      id: "palette_" + topic, username: "palette_" + topic,
+      name: "Palette " + topic, subcategory: topic, description: "",
+    }));
+    await page.unroute("**/api/channels");
+    await page.route("**/api/channels", route => route.fulfill({json: {channels: paletteRows}}));
+    await page.reload();
+    await page.waitForFunction(() => document.querySelector("#count").textContent === "5");
+    async function nodeColours() {
+      return page.evaluate(() => Object.fromEntries(window.__testLayout.nodes.map(n => [n.id, n.color])));
+    }
+    const colours = await nodeColours();
+    for (const row of paletteRows) {
+      const expected = await page.evaluate(topic => Topics.byId[topic].color, row.subcategory);
+      assert.equal(colours[row.id], expected);
+    }
+    assert.equal(new Set(Object.values(colours)).size, paletteRows.length);
+    assert.equal(colours.palette_emergencies, "#d29383");
+    await page.locator("#group-by").selectOption("region");
+    assert.deepEqual(await nodeColours(), colours);
+    await page.locator("#group-by").selectOption("topic");
+    assert.deepEqual(await nodeColours(), colours);
+    const bankingRow = page.locator('.result[data-id="palette_banking"]');
+    await bankingRow.click();
+    const bankingColour = await page.evaluate(() => {
+      const probe = document.createElement("span");
+      probe.style.color = Topics.byId.banking.color;
+      return probe.style.color;
+    });
+    assert.equal(await bankingRow.locator(".result-bar").evaluate(el => el.style.color), bankingColour);
+    assert.equal(await page.locator(".detail-avatar").evaluate(el => el.style.backgroundColor), bankingColour);
+    await page.locator(".topic-edit summary").click();
+    await page.locator("#topic-correction").selectOption("investing");
+    await page.locator("#save-topic").click();
+    assert.equal((await nodeColours()).palette_banking, colours.palette_investing);
+    await page.locator("#topic-correction").selectOption("");
+    await page.locator("#save-topic").click();
+    assert.equal((await nodeColours()).palette_banking, colours.palette_banking);
+    await page.keyboard.press("Escape");
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));

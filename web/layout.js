@@ -273,7 +273,7 @@
           y: n.y + c.y + m.y,
           cluster: m.id,
           neighbourhood: m.id + ":" + c.id,
-          color: window.Topics.byId[n.subcategory]?.color || "#83968c",
+          color: window.Topics.colorOf(n),
         }));
         nodes.push(...ns);
         own.push(...ns);

@@ -80,16 +80,9 @@
   }
 
   function colorOf(ch) {
-    return (
-      GROUP_MAP[ch.topic_group]?.color ||
-      (SUB_MAP[ch.subcategory] || SUB_MAP.other).color
-    );
+    return window.Topics.colorOf(ch);
   }
   let layout = window.Layout.buildClusterLayout(channels, state.group);
-  const channelsById = new Map(channels.map((ch) => [ch.id, ch]));
-  for (const node of layout.nodes) {
-    node.color = colorOf(channelsById.get(node.id) || node);
-  }
 
   const map = new window.CanvasMap(el.canvas, el.wrap, {
     onSelect: (id) => selectChannel(id),
@@ -590,7 +583,7 @@
         (g) => g.id === ch.geography_scope,
       )?.label || "География не уточнена";
     const badges = [
-      `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(sub.label)}</span>`,
+      `<span class="badge" style="background:${color}25;color:color-mix(in srgb, ${color}, white 45%)">${escapeHtml(sub.label)}</span>`,
     ];
     for (const tag of ch.secondary_topics || []) {
       const label = SUB_MAP[tag]?.label;

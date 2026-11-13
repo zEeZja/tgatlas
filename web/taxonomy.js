@@ -28,7 +28,7 @@ window.TG_TAXONOMY = {
       "id": "general",
       "label": "Общая повестка",
       "section": "society",
-      "color": "#8aafa3",
+      "color": "#81b5a2",
       "keywords": [
         "новост",
         "news",
@@ -55,7 +55,7 @@ window.TG_TAXONOMY = {
       "id": "politics",
       "label": "Политика",
       "section": "society",
-      "color": "#df9cba",
+      "color": "#db8eaf",
       "keywords": [
         "полит",
         "politic",
@@ -610,7 +610,7 @@ window.TG_TAXONOMY = {
       "label": "Инвестиции",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#d2cf87",
       "keywords": [
         "инвестиц",
         "фондовый рынок",
@@ -634,7 +634,7 @@ window.TG_TAXONOMY = {
       "label": "Личные финансы",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#edcfaa",
       "keywords": [
         "личные финансы",
         "личных финансах",
@@ -657,7 +657,7 @@ window.TG_TAXONOMY = {
       "label": "Финансово-банковская сфера",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#c7a45e",
       "keywords": [
         "банковск",
         "банков",
@@ -679,7 +679,7 @@ window.TG_TAXONOMY = {
       "label": "Налоги и бухгалтерия",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#b5b07b",
       "keywords": [
         "налоги",
         "налогооблож",
@@ -702,7 +702,7 @@ window.TG_TAXONOMY = {
       "label": "Макроэкономика",
       "section": "other",
       "group": "finance",
-      "color": "#dfbf76",
+      "color": "#e3d795",
       "keywords": [
         "макроэконом",
         "инфляц",
@@ -722,7 +722,7 @@ window.TG_TAXONOMY = {
       "label": "Предпринимательство",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#e6c994",
       "keywords": [
         "предпринимат",
         "предпринимательств",
@@ -744,7 +744,7 @@ window.TG_TAXONOMY = {
       "label": "Управление и продукт",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#b6a06b",
       "keywords": [
         "управление команд",
         "управление продукт",
@@ -767,7 +767,7 @@ window.TG_TAXONOMY = {
       "label": "Продажи и торговля",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#d5b789",
       "keywords": [
         "продаж",
         "ритейл",
@@ -790,7 +790,7 @@ window.TG_TAXONOMY = {
       "label": "HR и найм",
       "section": "other",
       "group": "enterprise",
-      "color": "#d8b679",
+      "color": "#e3d2ae",
       "keywords": [
         "рекрут",
         "подбор персонала",
@@ -812,7 +812,7 @@ window.TG_TAXONOMY = {
       "label": "Кибербезопасность",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#6ea4be",
       "keywords": [
         "кибербез",
         "информационная безопасность",
@@ -835,7 +835,7 @@ window.TG_TAXONOMY = {
       "label": "Разработка ПО",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#85c6b7",
       "keywords": [
         "программист",
         "программирован",
@@ -861,7 +861,7 @@ window.TG_TAXONOMY = {
       "label": "Гаджеты и устройства",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#a5c9dd",
       "keywords": [
         "гаджет",
         "смартфон",
@@ -883,7 +883,7 @@ window.TG_TAXONOMY = {
       "label": "Телеком и связь",
       "section": "other",
       "group": "technology",
-      "color": "#81b9cc",
+      "color": "#70c1c9",
       "keywords": [
         "телеком",
         "операторы связи",
@@ -904,7 +904,7 @@ window.TG_TAXONOMY = {
       "label": "Космос",
       "section": "other",
       "group": "knowledge_group",
-      "color": "#93b6d4",
+      "color": "#858fca",
       "keywords": [
         "космос",
         "космическ",
@@ -926,7 +926,7 @@ window.TG_TAXONOMY = {
       "label": "Языки",
       "section": "other",
       "group": "knowledge_group",
-      "color": "#93b6d4",
+      "color": "#bacde5",
       "keywords": [
         "английск",
         "english",
@@ -949,7 +949,7 @@ window.TG_TAXONOMY = {
       "label": "Семья и дети",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#d99eb3",
       "keywords": [
         "родительств",
         "воспитани",
@@ -971,7 +971,7 @@ window.TG_TAXONOMY = {
       "label": "Еда и рецепты",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#e5b5a0",
       "keywords": [
         "рецепт",
         "кулинари",
@@ -992,7 +992,7 @@ window.TG_TAXONOMY = {
       "label": "Красота и уход",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#c797bd",
       "keywords": [
         "косметик",
         "макияж",
@@ -1013,7 +1013,7 @@ window.TG_TAXONOMY = {
       "label": "Животные",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#bda3b5",
       "keywords": [
         "питомц",
         "ветеринар",
@@ -1033,7 +1033,7 @@ window.TG_TAXONOMY = {
       "label": "Дом и сад",
       "section": "other",
       "group": "living",
-      "color": "#d8adba",
+      "color": "#e4c3c8",
       "keywords": [
         "садовод",
         "огород",
@@ -1054,7 +1054,7 @@ window.TG_TAXONOMY = {
       "label": "Психология",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#a8cda7",
       "keywords": [
         "психолог",
         "психотерап",
@@ -1075,7 +1075,7 @@ window.TG_TAXONOMY = {
       "label": "Питание и диетология",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#c4d5a0",
       "keywords": [
         "нутрициол",
         "диетолог",
@@ -1097,7 +1097,7 @@ window.TG_TAXONOMY = {
       "label": "Фитнес и тренировки",
       "section": "other",
       "group": "health_group",
-      "color": "#9bc5a5",
+      "color": "#79b79c",
       "keywords": [
         "фитнес",
         "fitness",
@@ -1119,7 +1119,7 @@ window.TG_TAXONOMY = {
       "label": "Кино и сериалы",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#ad92c7",
       "keywords": [
         "кино",
         "фильм",
@@ -1141,7 +1141,7 @@ window.TG_TAXONOMY = {
       "label": "Музыка",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#d7a2bf",
       "keywords": [
         "музык",
         "music",
@@ -1163,7 +1163,7 @@ window.TG_TAXONOMY = {
       "label": "Книги и литература",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#b5aed8",
       "keywords": [
         "книги",
         "книг",
@@ -1186,7 +1186,7 @@ window.TG_TAXONOMY = {
       "label": "Дизайн и мода",
       "section": "other",
       "group": "culture_group",
-      "color": "#c3a2ca",
+      "color": "#e0bfd5",
       "keywords": [
         "дизайн",
         "мода",
@@ -1209,7 +1209,7 @@ window.TG_TAXONOMY = {
       "label": "Строительство и ремонт",
       "section": "other",
       "group": "property",
-      "color": "#c4b080",
+      "color": "#d7bc8d",
       "keywords": [
         "строительств",
         "строительн",
@@ -1232,7 +1232,7 @@ window.TG_TAXONOMY = {
       "label": "ЖКХ и городское хозяйство",
       "section": "other",
       "group": "property",
-      "color": "#c4b080",
+      "color": "#aaa87a",
       "keywords": [
         "жкх",
         "управляющая компания",
@@ -1252,7 +1252,7 @@ window.TG_TAXONOMY = {
       "label": "Логистика и перевозки",
       "section": "other",
       "group": "transport",
-      "color": "#94b8bb",
+      "color": "#77a8ae",
       "keywords": [
         "логистик",
         "грузоперевоз",
@@ -1281,7 +1281,7 @@ window.TG_TAXONOMY = {
       "label": "Авиация",
       "section": "other",
       "group": "transport",
-      "color": "#94b8bb",
+      "color": "#a9c9db",
       "keywords": [
         "авиаци",
         "авиакомпан",
@@ -1328,7 +1328,7 @@ window.TG_TAXONOMY = {
       "label": "Социальная поддержка",
       "section": "other",
       "group": "society",
-      "color": "#8aafa3",
+      "color": "#a5cbbb",
       "keywords": [
         "социальные выплаты",
         "пособия",
@@ -1348,7 +1348,7 @@ window.TG_TAXONOMY = {
       "label": "Кредитно-финансовая сфера",
       "section": "business",
       "group": "finance",
-      "color": "#d6b274",
+      "color": "#d6a278",
       "keywords": [
         "кредит",
         "кредитован",
@@ -1573,7 +1573,7 @@ window.TG_TAXONOMY = {
       "label": "Транспорт",
       "section": "business",
       "group": "transport",
-      "color": "#94b8bb",
+      "color": "#87b5a6",
       "keywords": [
         "транспорт",
         "транспортная отрасль",

@@ -36,6 +36,7 @@ function validate(layout) {
   );
   const tiles = new Map(layout.clusters.map((c) => [c.id, c]));
   for (const n of layout.nodes) {
+    assert.equal(n.color, Topics.colorOf(n), "Node colour must match its exact topic in both modes");
     const t = tiles.get(n.cluster);
     assert(n.x - n.radius >= t.x && n.x + n.radius <= t.x + t.width);
     assert(n.y - n.radius >= t.y && n.y + n.radius <= t.y + t.height);
@@ -90,6 +91,18 @@ assert.equal(empty.nodes.length, 0);
 assert(Number.isFinite(empty.width));
 const one = Layout.buildClusterLayout([channels[0]]);
 assert.equal(one.nodes.length, 1);
+for (const group of Topics.taxonomy.groups) {
+  const topics = Topics.taxonomy.topics.filter(t => t.group === group.id);
+  for (const topic of topics) assert.match(topic.color, /^#[0-9a-f]{6}$/i);
+  if (topics.length > 1) {
+    assert.equal(new Set(topics.map(t => t.color.toLowerCase())).size, topics.length, `Subtopics of ${group.id} must have different colours`);
+    assert(topics.every(t => t.color.toLowerCase() !== group.color.toLowerCase()), `Subtopics of ${group.id} must differ from their parent colour`);
+  }
+}
+assert.equal(Topics.byId.emergencies.color, "#d29383", "Preserve the existing emergency accent");
+assert.equal(Topics.colorOf({subcategory: "other", topic_group: "finance"}), Topics.groupsById.finance.color);
+assert.equal(Topics.colorOf({subcategory: "other"}), Topics.byId.other.color);
+assert.equal(Topics.colorOf({subcategory: "missing", topic_group: "missing"}), Topics.byId.other.color);
 console.log(
-  "PASS: 2,200 nodes, dense Moscow, both grouping modes, no overlaps, deterministic order, empty and single catalogues.",
+  "PASS: 2,200 nodes, both grouping modes, no overlaps, deterministic order, distinct subtopic colours and safe group fallback.",
 );

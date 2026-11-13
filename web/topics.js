@@ -4,6 +4,12 @@
   const taxonomy = window.TG_TAXONOMY;
   const byId = Object.fromEntries(taxonomy.topics.map((t) => [t.id, t]));
   const groups = Object.fromEntries(taxonomy.groups.map((g) => [g.id, g]));
+  function colorOf(channel) {
+    const topic = byId[channel?.subcategory];
+    // A confirmed broad group without an exact topic keeps its group colour.
+    if (topic && topic.id !== "other") return topic.color;
+    return groups[channel?.topic_group]?.color || topic?.color || byId.other.color;
+  }
   const storageKey = "tg-atlas.topic-overrides.v2";
   let local = {};
   try {
@@ -747,6 +753,7 @@
     taxonomy,
     byId,
     groupsById: groups,
+    colorOf,
     classify,
     geography,
     enrich,
