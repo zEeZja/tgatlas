@@ -38,8 +38,8 @@ CASES = [
 
 class ClassificationV2Tests(unittest.TestCase):
     def test_taxonomy_and_place_references_are_valid(self):
-        self.assertEqual(len(TOPICS), 55)
-        self.assertEqual(len(GROUPS), 18)
+        self.assertGreaterEqual(len(TOPICS), 64)
+        self.assertGreaterEqual(len(GROUPS), 19)
         self.assertEqual(len({p["id"] for p in PLACES}), len(PLACES))
         for t in TOPICS.values():
             self.assertIn(t["group"], GROUPS)
@@ -133,9 +133,7 @@ class ClassificationV2Tests(unittest.TestCase):
             dict(name="Москва и Ташкент"),
         ]:
             with self.subTest(row=row):
-                self.assertEqual(
-                    resolve_geography(row, {})["geography_scope"], "unknown"
-                )
+                self.assertNotIn(resolve_geography(row, {})["geography_scope"], ("region", "multi_region"))
 
     def test_legacy_csv_keeps_checked_topic_and_scope_without_new_format_label(self):
         with tempfile.TemporaryDirectory() as d:

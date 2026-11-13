@@ -148,7 +148,7 @@ def evidence(sample):
         except ValueError:
             pass
         result = classify_topic(description=text)
-        if result["subcategory"] != "other":
+        if result["subcategory"] != "other" and not result["review_required"]:
             votes[result["subcategory"]] += 1
         for region in find_title_regions(text, True):
             mentions[region] += 1
@@ -170,10 +170,56 @@ def evidence(sample):
     )
 
 
+def sample_from_database(username, conn, cache_dir="reports/classification-samples", limit=12, days=30):
+    """Read a bounded local sample; never modify posts, watermarks or session settings."""
+    username = str(username).strip().lstrip("@").lower()
+    if not re.fullmatch(r"[a-z][a-z0-9_]{0,31}", username) or not 3 <= limit <= 20 or not 1 <= days <= 90:
+        raise ValueError("Нужен username, 3–20 постов и период 1–90 дней")
+    with conn.cursor() as cur:
+        cur.execute("""SELECT p.tg_message_id, p.text, p.posted_at, p.url
+            FROM posts p JOIN channels c ON c.id = p.channel_id
+            WHERE lower(c.username) = %s AND p.posted_at >= NOW() - %s * INTERVAL '1 day'
+            ORDER BY p.posted_at DESC, p.tg_message_id DESC LIMIT 500""", (username, days))
+        rows = cur.fetchall()
+    buckets, seen = {}, set()
+    excluded_ads = duplicates = 0
+    for message_id, text, date, url in rows:
+        text = (text or "").strip()
+        if len(text) < 40:
+            continue
+        if AD.search(text):
+            excluded_ads += 1
+            continue
+        fingerprint = hashlib.sha256(re.sub(r"\s+", " ", text).casefold().encode()).hexdigest()
+        if fingerprint in seen:
+            duplicates += 1
+            continue
+        seen.add(fingerprint)
+        buckets.setdefault(date.date().isoformat(), []).append(dict(
+            message_id=message_id, text=text[:4000], truncated=len(text) > 4000,
+            date=date.isoformat(), url=url, text_hash=fingerprint))
+    if not buckets:
+        raise ValueError("В БД нет пригодных постов за выбранный период. Для отдельного HTTP-сбора явно укажите --source http.")
+    # Evenly sample available dates, not only the latest high-volume event.
+    chosen = []
+    while len(chosen) < limit and any(buckets.values()):
+        for bucket in buckets.values():
+            if bucket and len(chosen) < limit:
+                chosen.append(bucket.pop(0))
+    dates = {p["date"][:10] for p in chosen}
+    result = dict(version=2, purpose="classification_only", source="database", username=username,
+                  fetched_at=datetime.now(timezone.utc).isoformat(), lookback_days=days,
+                  post_limit=limit, rows_examined=len(rows), posts=chosen,
+                  distinct_dates=len(dates), low_diversity=len(dates) < 2,
+                  excluded_ads=excluded_ads, duplicate_texts=duplicates, cache_hit=False)
+    atomic_write_text(Path(cache_dir) / f"{username}.json", json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    return result
+
+
 def compare(review_path, cache_dir):
     from .classification_review import read_review, automatic_prediction, metrics
 
-    rows = [r for r in read_review(review_path) if r["split"] == "test"]
+    rows = [r for r in read_review(review_path, dimension="topic") if r["split"] == "test"]
     if not rows:
         raise ValueError("Для сравнения нужны подтверждённые test-строки")
     baseline = [automatic_prediction(r) for r in rows]
@@ -207,5 +253,6 @@ def compare(review_path, cache_dir):
         metadata_with_post_suggestions=metrics(rows, alternative),
         changed_suggestions=used,
         details=details,
+        warning="Это предложения действующих правил по постам, не обученная смысловая модель. Упоминания территорий не применяются к географии канала.",
         applied=0,
     )

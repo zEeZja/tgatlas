@@ -78,7 +78,13 @@ def cmd_refresh_metadata(args):
     from src import public_metadata
 
     result = public_metadata.run(
-        channels=args.channel, workers=args.workers, from_config=args.from_config
+        channels=args.channel,
+        workers=args.workers,
+        from_config=args.from_config,
+        max_age_hours=args.max_age_hours,
+        retry_after_hours=args.retry_after_hours,
+        limit=args.limit,
+        force=args.force,
     )
     return 1 if result["failed"] or not result["total"] else 0
 
@@ -460,6 +466,24 @@ def build_parser() -> argparse.ArgumentParser:
         "--from-config",
         action="store_true",
         help="импортировать каталог config/channels.json перед обновлением",
+    )
+    sp.add_argument(
+        "--max-age-hours",
+        type=float,
+        default=24,
+        help="обновлять метаданные не моложе N часов",
+    )
+    sp.add_argument(
+        "--retry-after-hours",
+        type=float,
+        default=1,
+        help="пауза после неудачной попытки, часов",
+    )
+    sp.add_argument("--limit", type=positive_int, help="максимум профилей в партии")
+    sp.add_argument(
+        "--force",
+        action="store_true",
+        help="игнорировать свежесть и паузу ошибок, но не ограничитель запросов",
     )
     sp.set_defaults(func=cmd_refresh_metadata)
 

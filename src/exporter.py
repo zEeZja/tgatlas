@@ -36,6 +36,13 @@ def _channel_to_row(ch: dict, **rules) -> dict:
         "subscribers": ch["subscribers"],
         "url": f"https://t.me/{username}",
         "last_parsed_at": last_parsed.isoformat() if last_parsed else None,
+        "last_meta_at": ch["last_meta_at"].isoformat()
+        if ch.get("last_meta_at")
+        else None,
+        "last_meta_attempt_at": ch["last_meta_attempt_at"].isoformat()
+        if ch.get("last_meta_attempt_at")
+        else None,
+        "last_meta_error": ch.get("last_meta_error"),
     }
 
     row["original_subcategory"] = ch.get("subcategory")
@@ -47,6 +54,13 @@ def _channel_to_row(ch: dict, **rules) -> dict:
 
 
 def channel_rows(channels):
+    channels = list(channels)
+    seen = set()
+    for channel in channels:
+        username = str(channel.get("username") or "").strip().lstrip("@").casefold()
+        if not username or username in seen:
+            raise ValueError("Пустой или повторный username в каталоге: " + username)
+        seen.add(username)
     rules = load_classification_rules()
     return [_channel_to_row(ch, **rules) for ch in channels]
 

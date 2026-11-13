@@ -23,11 +23,11 @@ def render():
     labels = json.loads(
         (ROOT / "config/classification_labels.json").read_text(encoding="utf-8")
     )["channels"]
-    data["overrides"].update({u: v["topic"] for u, v in labels.items()})
+    data["overrides"].update({u: v["topic"] for u, v in labels.items() if "topic" in v})
     data["geography_overrides"].update(
         {
             u: {k: v[k] for k in ("scope", "regions", "country")}
-            for u, v in labels.items()
+            for u, v in labels.items() if all(k in v for k in ("scope", "regions", "country"))
         }
     )
     data["review_metadata"] = {
@@ -40,20 +40,20 @@ def render():
         u: v.get(
             "group", next(t["group"] for t in data["topics"] if t["id"] == v["topic"])
         )
-        for u, v in labels.items()
+        for u, v in labels.items() if "topic" in v
     }
     data["geo_places"] = json.loads(
         (ROOT / "config/geo_places.json").read_text(encoding="utf-8")
     )
     data["tag_overrides"] = {
-        u: v.get("secondary_topics", []) for u, v in labels.items()
+        u: v.get("secondary_topics", []) for u, v in labels.items() if "topic" in v
     }
     data["foreign_geography"] = json.loads(
         (ROOT / "config/foreign_geography.json").read_text(encoding="utf-8")
     )
     data["region_aliases"] = REGION_ALIASES
     data["region_centers"] = {
-        name: list(project_lcc(*coords)) for name, coords in FEDERAL_SUBJECTS.items()
+        name: [round(v, 12) for v in project_lcc(*coords)] for name, coords in FEDERAL_SUBJECTS.items()
     }
     data["federal_channels"] = json.loads(
         (ROOT / "config/federal_channels.json").read_text(encoding="utf-8")

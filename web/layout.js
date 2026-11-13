@@ -23,14 +23,16 @@
     };
   }
   function geo(ch) {
+    // Explicit nonterritorial coverage must not inherit a legacy stored region.
+    if (ch.geography_scope === "nonlocal")
+      return "Без территориальной привязки";
+    if (ch.geography_scope === "unknown") return "География не уточнена";
     if (ch.geography_regions?.length) return ch.geography_regions.join(" · ");
     if (ch.geography_scope === "country")
       return (
         "Вся страна · " + (ch.geography_country || ch.country || "не уточнена")
       );
     if (ch.geography_scope === "global") return "Международная повестка";
-    if (ch.geography_scope === "nonlocal")
-      return "Без территориальной привязки";
     if (ch.geography_scope) return "География не уточнена";
     return ch.region || "Без региона";
   }

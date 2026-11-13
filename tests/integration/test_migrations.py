@@ -50,7 +50,7 @@ class MigrationTests(PostgresCase):
         return channel_id
 
     def test_empty_install_and_repeated_migration_preserve_records(self):
-        self.assertEqual(db.init_schema(self.conn), ["0001", "0002"])
+        self.assertEqual(db.init_schema(self.conn), ["0001", "0002", "0003", "0004"])
         channel_id = self.seed()
         with db.transaction(self.conn):
             db.save_scrape_checkpoint(self.conn, channel_id, (99, 7))
@@ -69,12 +69,18 @@ class MigrationTests(PostgresCase):
         )
         self.conn.commit()
         channel_id = self.seed()
-        before = self.snapshot()
+        original_columns = self.snapshot_columns()
+        before = self.snapshot(original_columns)
         self.assertEqual(
-            migrations.migration_status(self.conn)["pending"], ["0001", "0002"]
+            migrations.migration_status(self.conn)["pending"],
+            ["0001", "0002", "0003", "0004"],
         )
         db.init_schema(self.conn)
-        self.assertEqual(self.snapshot(), before)
+        self.assertEqual(self.snapshot(original_columns), before)
+        self.assertEqual(
+            self.query("SELECT last_meta_attempt_at,last_meta_error FROM channels"),
+            [(None, None)],
+        )
         self.assertEqual(
             self.query("SELECT id FROM channels WHERE telegram_id=123456"),
             [(channel_id,)],
@@ -103,7 +109,7 @@ class MigrationTests(PostgresCase):
                 (target / source.name).write_text(
                     source.read_text(encoding="utf-8"), encoding="utf-8"
                 )
-            (target / "0003_failure.sql").write_text(
+            (target / "0005_failure.sql").write_text(
                 "CREATE TABLE must_not_survive (id INT); INSERT INTO missing_table VALUES (1);",
                 encoding="utf-8",
             )
@@ -114,7 +120,7 @@ class MigrationTests(PostgresCase):
         )
         self.assertEqual(
             self.query("SELECT version FROM schema_migrations ORDER BY version"),
-            [("0001",), ("0002",)],
+            [("0001",), ("0002",), ("0003",), ("0004",)],
         )
         self.assertEqual(self.snapshot(), before)
 
@@ -169,8 +175,10 @@ class MigrationTests(PostgresCase):
         connections = [self.connect(), self.connect()]
         with ThreadPoolExecutor(max_workers=2) as pool:
             results = list(pool.map(migrations.apply_migrations, connections))
-        self.assertEqual(sorted(results, key=len), [[], ["0001", "0002"]])
-        self.assertEqual(self.query("SELECT COUNT(*) FROM schema_migrations"), [(2,)])
+        self.assertEqual(
+            sorted(results, key=len), [[], ["0001", "0002", "0003", "0004"]]
+        )
+        self.assertEqual(self.query("SELECT COUNT(*) FROM schema_migrations"), [(4,)])
 
     def test_snapshot_and_migrations_produce_equivalent_application_schema(self):
         db.init_schema(self.conn)

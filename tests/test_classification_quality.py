@@ -28,7 +28,7 @@ CASES = [
         username="transport_test",
         name="Морские вести России",
         description="Профессиональное СМИ о морском и речном транспорте.",
-        topic="auto",
+        topic="transport",
         regions=[],
     ),
     dict(
@@ -89,7 +89,7 @@ CASES = [
         username="coala_test",
         name="Coala",
         description="Все новости угольной отрасли: добыча, перевалка, экология.",
-        topic="industry",
+        topic="energy",
         regions=[],
     ),
     dict(

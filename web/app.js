@@ -137,9 +137,13 @@
 
   const statsBar = document.createElement("div");
   statsBar.className = "stats-bar";
-  const topicCount = new Set(channels.map((c) => c.subcategory)).size;
-  const reviewCount = channels.filter((c) => c.topic_review_required).length;
-  statsBar.innerHTML = `<span><b>${channels.length}</b> каналов · <b>${topicCount}</b> тем · <b>${reviewCount}</b> для проверки темы</span>`;
+  function renderStats() {
+    const rows = state.channels;
+    const freshness = window.Freshness.counts(rows);
+    statsBar.innerHTML = `<span><b>${rows.length}</b> каналов · <b>${new Set(rows.map((c) => c.subcategory)).size}</b> тем · <b>${rows.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>` +
+      `<span class="freshness-summary" title="Свежесть названия, описания и аудитории, не дата экспорта">Данные: ${freshness.fresh} свежих · ${freshness.stale} старше 24 ч · ${freshness.unknown} без проверки</span>`;
+  }
+  renderStats();
   el.chips.parentElement.insertBefore(
     statsBar,
     el.chips.parentElement.firstChild,
@@ -173,7 +177,11 @@
   el.chips.parentElement.appendChild(resetBtn);
 
   const categoryEl = document.getElementById("category");
-  for (const group of window.Topics.taxonomy.groups) {
+  const priority = window.Topics.taxonomy.priority_groups || [];
+  for (const group of [...window.Topics.taxonomy.groups].sort((a, b) => {
+    const rank = id => priority.includes(id) ? priority.indexOf(id) : priority.length;
+    return rank(a.id) - rank(b.id);
+  })) {
     const optgroup = document.createElement("optgroup");
     optgroup.label = group.label;
     const all = document.createElement("option");
@@ -243,6 +251,7 @@
       );
     return (
       ch.primary_category === value ||
+      (ch.broader_topics || []).includes(value) ||
       (state.includeSecondary && (ch.secondary_topics || []).includes(value))
     );
   }
@@ -310,6 +319,13 @@
   function renderChips() {
     el.chips.replaceChildren();
     const rows = categoryChannels();
+    if (rows.length && rows.every(c => c.geography_scope === "nonlocal")) {
+      const note = document.createElement("p");
+      note.className = "muted small geo-not-applicable";
+      note.textContent = "Для этой тематической подборки география не применяется. Каналы не относятся к неопределённому региону.";
+      el.chips.appendChild(note);
+      return;
+    }
     for (const scope of [
       { id: "", label: "Любая география" },
       ...window.Topics.taxonomy.geography_scopes.filter(
@@ -429,7 +445,7 @@
           state.channels.filter((c) => matchesCategory(c, option.value)).length;
       }
     el.count.textContent = list.length;
-    statsBar.innerHTML = `<span><b>${state.channels.length}</b> каналов · <b>${new Set(state.channels.map((c) => c.subcategory)).size}</b> тем · <b>${state.channels.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>`;
+    renderStats();
     const visibleIds = new Set(list.map((c) => c.id));
     const mapped = layout.nodes.filter((n) => visibleIds.has(n.id)).length;
     document.getElementById("map-summary").innerHTML =
@@ -635,8 +651,10 @@
       `</div>` +
       `</div>` +
       `<div class="detail-badges">${badges.join("")}</div>` +
+      metadataFreshness(ch) +
       `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
+      `<p class="geography-explanation">${escapeHtml(ch.geography_explanation || "")}</p>` +
       (ch.classification_review_stale?'<p class="topic-explanation">Профиль изменился после проверки владельцем. Сохранённая метка требует повторной проверки.</p>':'') +
       (ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
@@ -680,6 +698,16 @@
     });
   }
 
+  function metadataFreshness(ch) {
+    const status = window.Freshness.status(ch);
+    const labels = { fresh: "Данные проверены за последние 24 часа", stale: "Данные старше 24 часов", unknown: "Нет достоверной даты проверки данных" };
+    const checked = status === "unknown" ? null : window.Freshness.date(ch.last_meta_at);
+    const attempted = window.Freshness.date(ch.last_meta_attempt_at);
+    return `<div class="metadata-freshness" data-status="${status}"><b>${labels[status]}</b>` +
+      (checked === null ? "" : `<p>Последняя успешная проверка: ${escapeHtml(new Date(checked).toLocaleString("ru-RU"))}</p>`) +
+      (ch.last_meta_error ? `<p class="metadata-error">Последняя попытка${attempted === null ? "" : " " + escapeHtml(new Date(attempted).toLocaleString("ru-RU"))}: ${escapeHtml(window.Freshness.errorLabel(ch.last_meta_error))}. Прежние данные сохранены.</p>` : "") + "</div>";
+  }
+
   function topicExplanation(ch) {
     const labels = {
       local: "Выбрано вами в этом браузере",
@@ -697,6 +725,7 @@
       .slice(0, 2);
     return (
       `<div class="topic-explanation"><b>${escapeHtml(labels[ch.topic_source] || "Тема каталога")}</b>` +
+      (ch.broader_topics?.length ? `<p>Более широкая тема: ${escapeHtml(ch.broader_topics.map(t => SUB_MAP[t]?.label || t).join(" → "))}</p>` : "") +
       (matches.length
         ? `<p>Признаки: ${escapeHtml([...new Set(matches)].join(", "))}</p>`
         : "") +

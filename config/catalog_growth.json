@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "description": "Priority sectors first. Search/category labels are discovery hints, not verified classification.",
+  "target": 3000,
+  "priority_topics": ["credit", "banking", "government", "industry", "defense_industry", "space_industry", "aircraft_manufacturing", "energy", "transport", "air_transport", "aviation", "logistics"],
+  "adjacent_topics": ["business", "investing", "personal_finance", "economics", "taxes"],
+  "queries": [
+    "кредит", "банк", "министерство", "промышленность", "ВПК", "Роскосмос", "авиастро", "ТЭК", "транспорт", "авиаперевоз",
+    "ипотека", "банковский", "правительство", "металлург", "гособоронзаказ", "космическ", "самолетостро", "нефтегаз", "логистика", "аэропорт",
+    "микрофинанс", "финансов", "госвласть", "машиностро", "оборонная", "спутник", "вертолет", "энергетик", "РЖД", "авиакомпан",
+    "заем", "Центробанк", "Минфин", "Минпромторг", "Ростех", "Росатом", "Роснефть", "Газпром", "Лукойл", "Минтранс",
+    "займ", "лизинг", "ФНС", "федеральная служба", "ОАК", "Роскосмос", "нефть", "электроэнерг", "судоход", "авиация",
+    "платеж", "страхован", "государствен", "производство", "оборонно", "ракетостро", "двигателестро", "уголь", "железнодорож", "гражданская авиация",
+    "банки", "финансы", "госуслуги", "завод", "военно промышлен", "космонавтик", "самолет", "газовая", "морской транспорт", "авиатранспорт"
+  ],
+  "query_pages": 4,
+  "catalogues": [
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/finance", "pages": 1, "phase": "priority"},
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/business", "pages": 1, "phase": "priority"},
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/economics", "pages": 1, "phase": "priority"},
+    {"source": "tgramsearch", "url": "https://tgramsearch.com/categories/ekonomika", "pages": 100, "phase": "priority"},
+    {"source": "tgramsearch", "url": "https://tgramsearch.com/categories/biznes-i-finansy", "pages": 100, "phase": "priority"},
+    {"source": "tgramsearch", "url": "https://tgramsearch.com/categories/yurisprudenciya", "pages": 10, "phase": "other"},
+    {"source": "tgramsearch", "url": "https://tgramsearch.com/categories/nauka-i-tehnologii", "pages": 20, "phase": "other"},
+    {"source": "tgramsearch", "url": "https://tgramsearch.com/categories/obrazovanie", "pages": 15, "phase": "other"}
+  ],
+  "official_pages": [
+    "https://cbr.ru/contacts/", "https://government.ru/", "https://minfin.gov.ru/", "https://minpromtorg.gov.ru/",
+    "https://www.nalog.gov.ru/", "https://fas.gov.ru/", "https://mintrans.gov.ru/", "https://favt.gov.ru/",
+    "https://www.roscosmos.ru/", "https://rostec.ru/", "https://www.uacrussia.ru/", "https://www.rosatom.ru/",
+    "https://www.gazprom.ru/", "https://www.rosneft.ru/", "https://lukoil.ru/", "https://company.rzd.ru/"
+  ]
+}

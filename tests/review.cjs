@@ -39,6 +39,9 @@ const server = http.createServer((req, res) => {
     await page.reload();
     assert(await page.locator("#reviewed").isChecked());
     assert.equal(await page.locator("#topic").inputValue(), "gaming");
+    await page.locator("#use-suggestion").click();
+    assert.equal(await page.locator("#topic").inputValue(), "gaming");
+    assert(await page.locator("#reviewed").isChecked());
     const [download] = await Promise.all([
       page.waitForEvent("download"),
       page.locator("#download").click(),
@@ -126,6 +129,7 @@ with open(sys.argv[1],'w',encoding='utf-8-sig',newline='') as f:
     assert(await page.locator("#country").isDisabled());
     await page.locator("#reason").selectOption("missing_topic");
     await page.locator("#proposed-topic").fill("Маркетплейсы");
+    await page.locator("#reviewed").check();
     const [v2Download] = await Promise.all([
       page.waitForEvent("download"),
       page.locator("#download").click(),
@@ -149,8 +153,20 @@ with open(sys.argv[1],'w',encoding='utf-8-sig',newline='') as f:
     assert.equal(v2[0].expected_formats, "analysis");
     assert.equal(v2[0].expected_scope, "nonlocal");
     assert.equal(v2[0].proposed_topic, "Маркетплейсы");
-    assert.equal(v2[0].review_schema_version, "2");
+    assert.equal(v2[0].review_schema_version, "3");
+    assert.equal(v2[0].topic_reviewed, "yes");
+    assert.equal(v2[0].geography_reviewed, "yes");
     assert.equal(v2[1].review_schema_version, "1");
+    // A bad geography must not discard a confirmed topic or invent a country.
+    await page.locator("#scope").selectOption("country");
+    await page.locator("#geography-reviewed").click();
+    assert(!(await page.locator("#geography-reviewed").isChecked()));
+    assert(await page.locator("#topic-reviewed").isChecked());
+    assert.equal(await page.locator("#country").inputValue(), "");
+    assert((await page.locator("#validation").innerText()).includes("Подтверждение не принято"));
+    await page.locator("#choose-nonlocal").click();
+    await page.locator("#geography-reviewed").check();
+    assert(await page.locator("#reviewed").isChecked());
     await page.locator("#next-unreviewed").click();
     assert(!(await page.locator("#reviewed").isChecked()));
     await page.setViewportSize({ width: 390, height: 844 });

@@ -35,6 +35,7 @@ playwright-report/
 .ruff_cache/
 reports/*.csv
 reports/*.json
+reports/catalog-growth/
 
 # PostgreSQL backups stay outside the repository
 *.dump

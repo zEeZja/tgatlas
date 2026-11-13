@@ -1,5 +1,6 @@
--- Схема БД парсера Telegram-каналов.
--- Идемпотентна: можно запускать многократно через `python main.py init-db`.
+-- Совместимый снимок актуальной схемы для новой пустой БД.
+-- Обновление существующей БД выполняйте через python main.py init-db:
+-- версионированные миграции сохраняют историю и архивируют старые дубли.
 
 CREATE TABLE IF NOT EXISTS channels (
     id              SERIAL PRIMARY KEY,
@@ -134,3 +135,24 @@ CREATE TABLE IF NOT EXISTS scrape_checkpoints (
     before_id BIGINT NOT NULL,
     target_id BIGINT NOT NULL
 );
+
+-- Снимок ограничений/колонок миграций 0003 и 0004. Сами миграции неизменяемы.
+CREATE TABLE IF NOT EXISTS channel_merge_archive (
+    id BIGSERIAL PRIMARY KEY,
+    canonical_username TEXT NOT NULL,
+    kept_channel_id INTEGER NOT NULL,
+    archived_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    records JSONB NOT NULL
+);
+
+DO $$ BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conrelid = 'channels'::regclass
+                   AND conname = 'channels_username_lowercase') THEN
+        ALTER TABLE channels ADD CONSTRAINT channels_username_lowercase CHECK (username = lower(username));
+    END IF;
+END $$;
+CREATE UNIQUE INDEX IF NOT EXISTS idx_channels_username_lower ON channels(lower(username));
+ALTER TABLE channels ADD COLUMN IF NOT EXISTS last_meta_attempt_at TIMESTAMPTZ;
+ALTER TABLE channels ADD COLUMN IF NOT EXISTS last_meta_error TEXT;
+CREATE INDEX IF NOT EXISTS idx_channels_metadata_due ON channels(last_meta_at NULLS FIRST)
+    WHERE is_active = TRUE;
