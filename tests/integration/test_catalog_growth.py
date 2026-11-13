@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 import tempfile
+import threading
 from unittest.mock import Mock, patch
 
 from src import catalog_growth as growth, db
@@ -160,7 +161,7 @@ class GrowthResumeTests(PostgresCase):
             json.dumps(self.plan, ensure_ascii=False), encoding="utf-8"
         )
 
-    def run_growth(self, **kwargs):
+    def run_growth(self, *, target=10, workers=1, **kwargs):
         with (
             patch.object(growth.db, "connect", side_effect=self.connect),
             patch.object(growth, "PublicHTMLClient", return_value=self.client),
@@ -169,8 +170,8 @@ class GrowthResumeTests(PostgresCase):
         ):
             return growth.run(
                 apply=True,
-                target=10,
-                workers=1,
+                target=target,
+                workers=workers,
                 plan_path=self.plan_path,
                 state_path=self.state_path,
                 **kwargs,
@@ -196,6 +197,60 @@ class GrowthResumeTests(PostgresCase):
         second = self.run_growth()
         self.assertEqual(second["total_imported"], 2)
         self.assertEqual(self.query("SELECT count(*) FROM channels"), [(2,)])
+
+    def test_inflight_profiles_cannot_exceed_exact_target_and_can_resume(self):
+        self.client.get.return_value = cards_html(
+            "first_bank_channel",
+            "second_bank_channel",
+            "third_bank_channel",
+            "fourth_bank_channel",
+        )
+        barrier = threading.Barrier(4)
+
+        def concurrent_profile(username, *, profile=True):
+            barrier.wait(timeout=10)
+            return profile_html(username)
+
+        with (
+            patch.object(growth.db, "connect", side_effect=self.connect),
+            patch.object(growth, "PublicHTMLClient", return_value=self.client),
+            patch.object(growth.exporter, "export_channels", return_value=0),
+            patch.object(
+                growth, "fetch_channel_html", side_effect=concurrent_profile
+            ) as fetch,
+        ):
+            first = growth.run(
+                apply=True,
+                target=1,
+                workers=4,
+                plan_path=self.plan_path,
+                state_path=self.state_path,
+            )
+        self.assertEqual(fetch.call_count, 4)
+        self.assertEqual(first["status"], "target_reached")
+        self.assertEqual(self.query("SELECT count(*) FROM channels"), [(1,)])
+        self.assertEqual(
+            self.query(
+                "SELECT status,count(*) FROM channel_candidates GROUP BY status ORDER BY status"
+            ),
+            [("imported", 1), ("validated", 3)],
+        )
+        old_row = self.query("SELECT * FROM channels")[0]
+        resumed = self.run_growth(target=4, workers=4)
+        self.assertEqual(resumed["current_count"], 4)
+        self.assertEqual(resumed["total_imported"], 4)
+        self.assertEqual(
+            self.query("SELECT * FROM channels WHERE id=%s", (old_row[0],)), [old_row]
+        )
+
+    def test_restarting_at_reached_target_does_not_fetch_profiles(self):
+        self.run_growth(target=1)
+        calls = self.client.get.call_count
+        result = self.run_growth(target=1)
+        self.assertEqual(result["status"], "target_reached")
+        self.assertEqual(result["current_count"], 1)
+        self.assertEqual(result["this_run"], {})
+        self.assertEqual(self.client.get.call_count, calls)
 
     def test_plan_mismatch_does_not_overwrite_checkpoint(self):
         self.run_growth()

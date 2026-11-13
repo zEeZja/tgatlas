@@ -1,5 +1,5 @@
 window.TG_DATA = {
-  "generated_at": "2026-11-13T13:03:16.525051+00:00",
+  "generated_at": "2026-11-13T13:25:13.961738+00:00",
   "_sample": false,
   "channels": [
     {
@@ -242,6 +242,87 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "defense_industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "academy_fns",
+      "telegram_id": null,
+      "username": "academy_fns",
+      "name": "Академия ФНС ЛАБ",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "📢 Официальный канал Академии лидерства и администрирования бизнес-процессов ФНС России\n\n• 400 программ повышения квалификации\n• 46000 слушателей в год\n• 2 кампуса в Санкт-Петербурге и Нижнем Новгороде\n\nОф. сайт: https://fnslab.ru",
+      "subscribers": 6232,
+      "url": "https://t.me/academy_fns",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:58.798232+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -644,6 +725,256 @@ window.TG_DATA = {
         {
           "id": "world",
           "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aeroflot",
+      "telegram_id": null,
+      "username": "aeroflot",
+      "name": "Аэрофлот",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Неофициальный канал с новостями авиакомпании Аэрофлот.\nКупить рекламу: https://telega.in/c/aeroflot\nРКН: https://gosuslugi.ru/snet/67b2e8ff2ed5ff6ad7e0b881\n\nPerfluence",
+      "subscribers": 17233,
+      "url": "https://t.me/aeroflot",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:42.154361+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aeroflot_official",
+      "telegram_id": null,
+      "username": "aeroflot_official",
+      "name": "АЭРОФЛОТ ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «Аэрофлот». \nСайт: https://clck.ru/3QKKwP\n\nРегистрация в перечне РКН: https://knd.gov.ru/license?id=67654417506f96772845fd8b&registryType=bloggersPermission\n\nBoost: https://t.me/boost/aeroflot_official",
+      "subscribers": 525339,
+      "url": "https://t.me/aeroflot_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:27.290794+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aeroflot_pr",
+      "telegram_id": null,
+      "username": "aeroflot_pr",
+      "name": "По SUти ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал пресс-службы Аэрофлота. Актуальные новости и комментарии авиакомпании.\n\nДля связи www.aeroflot.ru/ru-ru/about/contact/press 📩\n\nРегистрация в РКН: https://knd.gov.ru/license?id=676e53c096de59064d4e4250&registryType=bloggersPermission",
+      "subscribers": 50671,
+      "url": "https://t.me/aeroflot_pr",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:32.572491+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
         }
       ],
       "topic_tags": [
@@ -1821,6 +2152,256 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "air_if_999",
+      "telegram_id": null,
+      "username": "air_if_999",
+      "name": "AIR-IF|Инвестиции в бизнес займов под залог недвижимости.Доходность инвестора от 30-72% в год. Риск потери денежных средств-О",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инвестиционная платформа для тех, кто осознанно относится к своим капиталам и хочет зарабатывать до 72% год. Можете заявку оставить :  https://t.me/AIRIF_chatbot\n\nЖалобы,предложения: @ekaterina_AIR_IF",
+      "subscribers": 1104,
+      "url": "https://t.me/air_if_999",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:21.245345+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 12
+        },
+        {
+          "id": "investing",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "investing",
+        "credit",
+        "realestate"
+      ],
+      "secondary_topics": [
+        "credit",
+        "realestate"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "airarabia_b2b_uzb",
+      "telegram_id": null,
+      "username": "airarabia_b2b_uzb",
+      "name": "Air Arabia Agents Uzbekistan",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании AirArabia в Узбекистане.\n\n +998 99 927 29 99",
+      "subscribers": 1289,
+      "url": "https://t.me/airarabia_b2b_uzb",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:25.965499+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "airarabiaofficial",
+      "telegram_id": null,
+      "username": "airarabiaofficial",
+      "name": "Air Arabia ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании Air Arabia.\n\nБудьте в курсе свежих новостей и специальных предложений, узнавайте о запуске новых направлений и находите идеи для будущих путешествий.✨",
+      "subscribers": 13751,
+      "url": "https://t.me/airarabiaofficial",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:32.036467+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "airastanaofficial",
       "telegram_id": null,
       "username": "airastanaofficial",
@@ -2056,6 +2637,84 @@ window.TG_DATA = {
         },
         {
           "id": "world",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "airsamarkandairlines",
+      "telegram_id": null,
+      "username": "airsamarkandairlines",
+      "name": "Air Samarkand",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграм-канал авиакомпании Air Samarkand\nairsamarkand.com",
+      "subscribers": 1849,
+      "url": "https://t.me/airsamarkandairlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:22.723554+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
           "score": 2
         }
       ],
@@ -2491,6 +3150,86 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aktivcntr",
+      "telegram_id": null,
+      "username": "aktivcntr",
+      "name": "Прямые инвестиции",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Актив Центр \n\nС 2021 года. Продали 250 бизнесов на сумму свыше 2,5 млрд. рублей и привлекли 1,5 млрд. рублей частных займов в бизнесы.\n\nРассказываем, как инвестировать в бизнес - https://t.me/aktivcntr/513\n\nПо вопросам инвестирования @aktiv_team_bot",
+      "subscribers": 3271,
+      "url": "https://t.me/aktivcntr",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:55.896130+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "investing",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "investing"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -3141,6 +3880,87 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "alipay_group",
+      "telegram_id": null,
+      "username": "alipay_group",
+      "name": "Alipay-Group",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "💱Канал для быстрого и выгодного перевода в Китай (Alipay, WeChat). Помощь с оплатой поставщикам.🇨🇳 \n📲 Связь: @Cerega52155\n•Работаем без дропов, без дробления платежей и разовых банковских карт. 🎇",
+      "subscribers": 5798,
+      "url": "https://t.me/alipay_group",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:15.895769+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банковск",
+        "description:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "banking",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "banking"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "allnews47",
       "telegram_id": null,
       "username": "allnews47",
@@ -3222,6 +4042,163 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "almasssyan",
+      "telegram_id": null,
+      "username": "almasssyan",
+      "name": "Авто из Китая | Almasssyan",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🚘  Автомобили и Электромобили\n🇨🇳  из Китая\n✈️ Логистика\n💰 Таможня\n🇷🇺🇧🇾🇰🇿🇰🇬🇹🇯🇺🇿🇦🇲🇬🇪🇦🇿🇺🇦🇦🇪🇲🇩🇪🇺Логистика во все страны\n\n📞 +7-909-919-64-60 Алмас (WhatsApp)\n📞 +7-777-8-555-333 менеджер Хоргос\nYouTube: https://youtube.com/@almasssyan",
+      "subscribers": 8985,
+      "url": "https://t.me/almasssyan",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:10.190321+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 10
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "alrosaaero",
+      "telegram_id": null,
+      "username": "alrosaaero",
+      "name": "Авиакомпания АЛРОСА",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Авиакомпания АЛРОСА\n\nНаш сайт https://aero.alrosa.ru/\n\nНаш колл-центр 8 (800) 500 50 95\nс 03:00 до 21:00, время московское\n\nБыстрый доступ ко всем ссылкам и сервисам: https://taplink.cc/aero.alrosa.ru",
+      "subscribers": 3078,
+      "url": "https://t.me/alrosaaero",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:08.363925+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "altag_22",
@@ -4127,6 +5104,86 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "anna_finance_advanced",
+      "telegram_id": null,
+      "username": "anna_finance_advanced",
+      "name": "Громова больше чем про деньги",
+      "category": "other",
+      "subcategory": "personal_finance",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Здесь гасят долги и копят капитал\n\nАнна Громова – финансовый консультант, инвестор, аккредитованный блогер в Центробанке, спикер РБК\n\n🏆лучший ресурс про личные финансы и инвестиции 2024\n\nДля связи: support@annafinance.ru",
+      "subscribers": 25550,
+      "url": "https://t.me/anna_finance_advanced",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:40.812685+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "personal_finance"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "personal_finance",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:личные финансы"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 13
+        },
+        {
+          "id": "investing",
+          "score": 2
+        },
+        {
+          "id": "personal_finance",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "personal_finance"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "annablyushke",
@@ -5396,6 +6453,82 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "artsportedukz",
+      "telegram_id": null,
+      "username": "artsportedukz",
+      "name": "artsport.kz",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Платформа подушевого нормативного финансирования государственного спортивного и творческого заказов\n\nТехническая поддержка: support@artsport.kz\nCall-центр: +7 (727) 258 88 55",
+      "subscribers": 15908,
+      "url": "https://t.me/artsportedukz",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:24:11.750126+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "sport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "asaul_n",
       "telegram_id": null,
       "username": "asaul_n",
@@ -5467,6 +6600,93 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "asianovosti",
+      "telegram_id": null,
+      "username": "asianovosti",
+      "name": "ASIA NEWS",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости  и полезная информация для мигрантов.\n\n• Займы для граждан СНГ в России - http://asiacredit.ru/\n• Оформить кредит: 8-800-555-73-73\n• Задать вопрос : @AsiaCreditOnline",
+      "subscribers": 1191,
+      "url": "https://t.me/asianovosti",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:16.823125+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:кредит",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 4.0
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -5799,6 +7019,171 @@ window.TG_DATA = {
         },
         {
           "id": "taxes",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "auroraairlines",
+      "telegram_id": null,
+      "username": "auroraairlines",
+      "name": "Авиакомпания «Аврора» ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный telegram-канал АО «Авиакомпания «Аврора» www.flyaurora.ru 8-800-250-49-88\n\nНаш бот @aurora_book_bot\n\nРегистрация в перечне РКН: https://gosuslugi.ru/snet/67ac2fb72189cb207b426666",
+      "subscribers": 15169,
+      "url": "https://t.me/auroraairlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:46.529009+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aurum707",
+      "telegram_id": null,
+      "username": "aurum707",
+      "name": "Деньги к деньгам",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инвестиции в #Сбербанк, #Лукойл, #Газпром и другие акции с точки зрения фундаментального и технического анализа\nКанал по обучению \"Шпаргалка инвестора\" 👉 https://t.me/aurum505\nЧАТ 👉https://t.me/aurum606\n\nПо всем вопросам писать сюда\n@aurum808",
+      "subscribers": 2762,
+      "url": "https://t.me/aurum707",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:09:50.424631+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "education"
+      ],
+      "format_evidence": [
+        "description:обучени"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:деньги",
+        "description:инвест",
+        "description:акции"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "education",
+          "score": 2
+        },
+        {
+          "id": "investing",
           "score": 2
         }
       ],
@@ -6237,6 +7622,569 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "aviaru_news",
+      "telegram_id": null,
+      "username": "aviaru_news",
+      "name": "AVIA.RU - Гражданская авиация",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал портала AVIARU Network www.aviaru.net\n\nАвиационные новости и аналитика.\n\nЧитай другие наши каналы:\n✈️🚀🛰🪂 новости ВКС, ПВО, КОСМОСА @aviaru_mil\n\nПолетели c AviaPages.ru! 🛫🏖 @aviaru_travel \n\n🇬🇧Russian Aviation @ruaviation_com",
+      "subscribers": 5888,
+      "url": "https://t.me/aviaru_news",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:53.893397+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:гражданская авиация"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "air_transport",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.5
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aviation21",
+      "telegram_id": null,
+      "username": "aviation21",
+      "name": "Авиация21.ру",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Гражданская и боевая авиация, вертолеты и беспилотники. Открыт 7 апреля 2020 года.",
+      "subscribers": 1778,
+      "url": "https://t.me/aviation21",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:03.879397+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиаци",
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aviationfromdamir",
+      "telegram_id": null,
+      "username": "aviationfromdamir",
+      "name": "Авиация от Дамира",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Страница ВКонтакте: https://vk.com/yusupov_damir",
+      "subscribers": 3569,
+      "url": "https://t.me/aviationfromdamir",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:52.865865+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aviationmode",
+      "telegram_id": null,
+      "username": "aviationmode",
+      "name": "FlightMode",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Мы собираем для вас самые актуальные и интересные новости и факты. Авиация для нас - не только профессия, но и любимое дело! \n\nПо всем вопросам пишите в бота @skymoments_aviamode_bot или info.flightmode@gmail.com",
+      "subscribers": 17782,
+      "url": "https://t.me/aviationmode",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:50.105743+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "aviationtech",
+      "telegram_id": null,
+      "username": "aviationtech",
+      "name": "Авиация, как это работает❓ 🛫",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Познавательный канал про авиацию и системы самолёта, что и как работает!\nАвтор: @sieg_ykrop",
+      "subscribers": 1119,
+      "url": "https://t.me/aviationtech",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:08.569522+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:авиаци",
+        "description:авиаци",
+        "description:самолет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 8
+        },
+        {
+          "id": "career",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "aviation",
+        "career"
+      ],
+      "secondary_topics": [
+        "career"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "aviatsiya",
+      "telegram_id": null,
+      "username": "aviatsiya",
+      "name": "✈️ Гражданская авиация",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Мы рассказываем о гражданской авиации, стюардессах, пилотах. Много фотографий и историй связанных с авиацией. Присоединяемся!",
+      "subscribers": 6341,
+      "url": "https://t.me/aviatsiya",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:59.457489+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:гражданская авиация"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 8
+        },
+        {
+          "id": "air_transport",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "avm74bc",
+      "telegram_id": null,
+      "username": "avm74bc",
+      "name": "Сам себе энергетик",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Самая качественная аналитика об электроэнергетике⚡️🔋🌍",
+      "subscribers": 5744,
+      "url": "https://t.me/avm74bc",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:57.862772+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:аналитик"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "avmazur",
       "telegram_id": null,
       "username": "avmazur",
@@ -6569,6 +8517,91 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "avtoyslyga",
+      "telegram_id": null,
+      "username": "avtoyslyga",
+      "name": "Pampadu.ru - Новостной канал ✔",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "💡Сервис заработка на оформлении страхования ОСАГО, Ипотеки, Каско\nhttps://bit.ly/4aCgxlp\n\n🫰 Свежая партнерка с моментальными выплатами: банковские продукты, HR, E-commerce, Travel \n\nРКН № 5013889352\n\n💬 @SPampaduBot",
+      "subscribers": 14728,
+      "url": "https://t.me/avtoyslyga",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:01.041008+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "name:новост"
+      ],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банковск",
+        "description:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "banking",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "banking"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "azimuthairlines",
       "telegram_id": null,
       "username": "azimuthairlines",
@@ -6656,6 +8689,93 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "aziuzginov",
+      "telegram_id": null,
+      "username": "aziuzginov",
+      "name": "💸 Хозяин Денег Зюзгинов",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🏆 Лучший информационный ресурс по инвестициям 2023 года по версии Private Money Awards\n🔹Авторский канал о том, как инвестировать РАДОСТНО\n🔸Крипта, фонда, недвижимость, займы\n🔹Основал «Клуб Инвесторов»\n\nРеклама, предложения, сотрудничество: @ziuzginov",
+      "subscribers": 2569,
+      "url": "https://t.me/aziuzginov",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:58.090427+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "opinion",
+        "community"
+      ],
+      "format_evidence": [
+        "description:авторский",
+        "description:клуб"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:инвест",
+        "description:money"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 2
+        },
+        {
+          "id": "crypto",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "azize_store1",
       "telegram_id": null,
       "username": "azize_store1",
@@ -6727,6 +8847,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "azurair_ru",
+      "telegram_id": null,
+      "username": "azurair_ru",
+      "name": "AZUR air ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании AZUR air ✈️\n\nЦифровой ассистент @AZURairRU_bot",
+      "subscribers": 11054,
+      "url": "https://t.me/azurair_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:48.755017+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -7263,6 +9461,98 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "baibolru",
+      "telegram_id": null,
+      "username": "baibolru",
+      "name": "МКК Байбол | Займы для своих",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Помощь и займы гражданам 🇺🇿Узбекистана. 🇹🇯Таджикистана, 🇰🇬 Кыргызстана и \n🇷🇺России. На патент, строительство, обучение, автомобиль и др. Уроки финансовой грамотности. Юридическая поддержка. Займ онлайн https://clck.ru/38q8QJ",
+      "subscribers": 6118,
+      "url": "https://t.me/baibolru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:42.214334+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "education"
+      ],
+      "format_evidence": [
+        "description:уроки"
+      ],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 6
+        },
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit",
+        "auto",
+        "education"
+      ],
+      "secondary_topics": [
+        "auto",
+        "education"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "baidildinovoil",
       "telegram_id": null,
       "username": "baidildinovoil",
@@ -7340,6 +9630,88 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "baikal_service_official",
+      "telegram_id": null,
+      "username": "baikal_service_official",
+      "name": "Байкал Сервис",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Байкал Сервис — логистическая компания, где вы найдете полный спектр услуг в сфере логистики: авиаперевозки, автомобильные грузоперевозки, складское обслуживание и многое другое.\n\nОформить перевозку: https://clck.ru/3WEb4y \n\nЕще больше пользы — в закрепе!",
+      "subscribers": 4006,
+      "url": "https://t.me/baikal_service_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:47.280522+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаперевоз"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "air_transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -8803,6 +11175,164 @@ window.TG_DATA = {
         {
           "id": "business",
           "score": 14
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bankrotstvo_live",
+      "telegram_id": null,
+      "username": "bankrotstvo_live",
+      "name": "Банкротство | Команда Ивана Юшкина",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🤝Работаем с людьми, а не просто с долгами.\nРазбираемся с кредитами законными методами.\n⚖️ Защищаем ваши интересы в суде.\nС 2020 г. 800+ завершённых дел.\nОтзывы 👉 https://t.me/otzivu_konsensus\nОГРНИП - 326965800273171\nИНН - 6670 0919 3509\n+79222052060",
+      "subscribers": 2293,
+      "url": "https://t.me/bankrotstvo_live",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:36.461200+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:банк",
+        "description:кредит"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "credit",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bankrotsvonina",
+      "telegram_id": null,
+      "username": "bankrotsvonina",
+      "name": "Банкротство I Выкуп долга I Реструктуризация с Ниной Кузнецовой 👩🏼‍⚖️",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Помогу избавиться от долгов и начать грамотно управлять финансами ⚖️\n\n📩 https://t.me/m/__r_UF4OMjAy\n\nЧат поддержки заемщиков: https://t.me/+BbnzE5m5mE1jMWFi\n\n👱‍♀️ИП Кузнецова ИНН 4509013653",
+      "subscribers": 3398,
+      "url": "https://t.me/bankrotsvonina",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:35.281110+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:банк",
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 2
         }
       ],
       "topic_tags": [
@@ -10323,6 +12853,84 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "belavia_official",
+      "telegram_id": null,
+      "username": "belavia_official",
+      "name": "BELAVIA - Belarusian Airlines",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Приветствуем! Официальный канал авиакомпании «Белавиа»",
+      "subscribers": 59031,
+      "url": "https://t.me/belavia_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:35.548423+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "belaya_kaska",
       "telegram_id": null,
       "username": "belaya_kaska",
@@ -10389,6 +12997,94 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "belenergo",
+      "telegram_id": null,
+      "username": "belenergo",
+      "name": "Belenergo",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Государственное производственное объединение электроэнергетики «Белэнерго». Новости белорусской энергетики и интересные факты. Оперативная и полезная информация о работе энергосистемы.",
+      "subscribers": 4072,
+      "url": "https://t.me/belenergo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:25.949122+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:электроэнергет",
+        "description:энергетик",
+        "description:энергосистем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "belgorod_smi",
@@ -11009,6 +13705,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "bflelvira",
+      "telegram_id": null,
+      "username": "bflelvira",
+      "name": "Эльвира Юламанова | Списание долгов | БАНКРОТСТВО",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Рассказываю как ЗАКОННО списать долги, кредиты, кредитки, займы.\n920 выигранных дел 👩‍⚖️, \nсписали >1,3 млрд. рублей 💵\nИП Юламанова Эльвира Булатовна\nИНН 025800258280\n📞 8-987-241-89-68\n450076, Республика Башкортостан, \nг. Уфа, ул. Красина, д.21. 408 оф.",
+      "subscribers": 4428,
+      "url": "https://t.me/bflelvira",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:49.592703+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:кредит",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "bibirevo_news24",
       "telegram_id": null,
       "username": "bibirevo_news24",
@@ -11181,6 +13956,484 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "biglogist",
+      "telegram_id": null,
+      "username": "biglogist",
+      "name": "Большая логистика",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Все, о чем:\n\n🚛Не говорят на большой дороге А331\n\n🚢О чем не вздыхают  волны на deepsea и СМП\n\n🚂Что не принято обсуждать на ЖД линиях Транссиба  \n\n✈️И о чем запрещено думать в небе над Пулково.\n\nПо всем вопросам @BellaMambetova\n@Shurashershurovna\n========",
+      "subscribers": 5421,
+      "url": "https://t.me/biglogist",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:23.186863+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bigpowernews",
+      "telegram_id": null,
+      "username": "bigpowernews",
+      "name": "BigpowerNews",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал ИА BigpowerNews (bigpowernews.ru).\nНовости электроэнергетики. Анализ рынков электроэнергии.\nРеклама, новостные обзоры: sales.service@bigpowernews.ru\nПредложить статью: editor@bigpowernews.ru",
+      "subscribers": 7193,
+      "url": "https://t.me/bigpowernews",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:46.729051+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bilety_dv",
+      "telegram_id": null,
+      "username": "bilety_dv",
+      "name": "БИЛЕТЫ: Дальний Восток | Владивосток, Хабаровск, Благовещенск и др.",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "✈️ Дешёвые авиабилеты и туры. Распродажи авиакомпаний. Скидки и акции.\n\n📍Владивосток, Хабаровск, Сахалин и др.\n\n❌ НЕ агентство! Мы не продаем билеты и туры!\n\nПо всем вопросам: @bilety_team. Реклама: @bilety_manager\n\nМах: https://max.ru/bilety_dv",
+      "subscribers": 10770,
+      "url": "https://t.me/bilety_dv",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:50.981603+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bilety_ug",
+      "telegram_id": null,
+      "username": "bilety_ug",
+      "name": "БИЛЕТЫ: Юг и Кавказ | Сочи, МинВоды, Краснодар, Геленджик, Ставрополь",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "По всем вопросам: @bilety_team. Реклама: @bilety_manager\n\n✈️ Дешёвые авиабилеты и туры. Распродажи авиакомпаний. Скидки и акции.\n\n📍Краснодар, Сочи, МинВоды и ЮФО. \n\n❌ НЕ агентство! Мы не продаем билеты и туры! Заявление РКН № 6855374167",
+      "subscribers": 9614,
+      "url": "https://t.me/bilety_ug",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:50.570175+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "bilety_ural",
+      "telegram_id": null,
+      "username": "bilety_ural",
+      "name": "БИЛЕТЫ: Урал | Екатеринбург, Пермь, Тюмень, Челябинск",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Дешёвые авиабилеты и туры. \nРаспродажи авиакомпаний. \nСкидки и акции.\nНичего не продаём! \n\nПо всем вопросам: @bilety_team\nРеклама: @bilety_manager\n\nМах: https://max.ru/bilety_ural\n\nРКН: https://vk.cc/cMkOxp",
+      "subscribers": 22598,
+      "url": "https://t.me/bilety_ural",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:54.753947+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "birjaja",
+      "telegram_id": null,
+      "username": "birjaja",
+      "name": "Биржа | Реклама | Каналы",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ЦЕНА РАЗМЕЩЕНИЯ ПОСТА 4500Р, ПОСТ БЕЗ УДАЛЕНИЯ!\n\nПоможем вам купить и продать рекламу, каналы, расскажем о вас платежеспособной аудитории в телеграм!\n\nЦЕНА РАЗМЕЩЕНИЯ ПОСТА 4500Р, ПОСТ БЕЗ УДАЛЕНИЯ! По вопросам \n@marinaRekLama",
+      "subscribers": 20701,
+      "url": "https://t.me/birjaja",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:20.857441+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:бирж"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "bistrodengi_official",
@@ -12643,6 +15896,83 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "borisgeoenergetic",
+      "telegram_id": null,
+      "username": "borisgeoenergetic",
+      "name": "Борис Марцинкевич",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Главный редактор аналитического издания об энергетике, полезных ископаемых и промышленности «Геоэнергетика ИНФО»\n@geonrgru",
+      "subscribers": 17622,
+      "url": "https://t.me/borisgeoenergetic",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:21.654697+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:промышлен",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "boulevard_ring",
       "telegram_id": null,
       "username": "boulevard_ring",
@@ -13356,6 +16686,78 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "budgetniki_2021",
+      "telegram_id": null,
+      "username": "budgetniki_2021",
+      "name": "Госфинансы",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграм-канал группы Госфинансы для бухгалтера государственного учреждения, а также органов власти.\n\nРегистрация РКН: https://gosuslugi.ru/snet/6790c43558ab2221b0c977bd\n\nЧат https://t.me/budgetniki_2021_chat\nРеклама @polarightt",
+      "subscribers": 16131,
+      "url": "https://t.me/budgetniki_2021",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:24:10.735196+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:бухгалтер"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "buisness_ideal",
       "telegram_id": null,
       "username": "buisness_ideal",
@@ -13970,6 +17372,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "business59perm",
+      "telegram_id": null,
+      "username": "business59perm",
+      "name": "Мой бизнес | Пермский край",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Все меры поддержки бизнеса в одном месте 🎯\n\nСвежая информация про: \n\n— гранты и субсидии \n— меры #господдержки \n— льготные займы и поручительства  \n— успешный пермский бизнес \n\nОфициальный канал Центра «Мой бизнес» Пермского края https://msppk.ru/",
+      "subscribers": 6144,
+      "url": "https://t.me/business59perm",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:48.816760+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 9,
+      "topic_evidence": [
+        "name:бизнес",
+        "username:business",
+        "description:бизнес"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 9
+        },
+        {
+          "id": "credit",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "businessshake",
       "telegram_id": null,
       "username": "businessshake",
@@ -14136,6 +17620,88 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "buychange_official",
+      "telegram_id": null,
+      "username": "buychange_official",
+      "name": "ОБМЕНИК ALIPAY ЮАНЬ/CNY/Рубль/USDT Оплата инвойсов и выкуп товаров из Китая /Логистика/BUYCHANGE969",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Работаем 24/7.\nПисать в ТОЛЬКО:\n@BUYCHANGE969\nУ НАС НЕ ПРЕДСТАВИТЕЛЕЙ ИЛИ МЕНЕДЖЕРОВ.\nОСТРЕГАЙТЕСЬ МОШЕЙНИКОВ.",
+      "subscribers": 3042,
+      "url": "https://t.me/buychange_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:51.506253+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -14797,6 +18363,90 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "cashclever",
+      "telegram_id": null,
+      "username": "cashclever",
+      "name": "Kredly – займы",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Добро пожаловать в Kredly! Здесь ты найдешь горячие промокоды на займы, узнаешь много нового о финансах и сможешь почитать отзывы о МФО!  🚀 Подписывайся и будь в курсе!\n\nВеб-займ Лайм-займ Срочно деньги MoneyMan Займер Турбозайм МигКредит ВебБанкир",
+      "subscribers": 1562,
+      "url": "https://t.me/cashclever",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:11.921320+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ",
+        "description:мфо"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "cashruss",
       "telegram_id": null,
       "username": "cashruss",
@@ -14873,6 +18523,165 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "catfromwallstreet",
+      "telegram_id": null,
+      "username": "catfromwallstreet",
+      "name": "Кот с Уолл Стрит",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал профессионального трейдера о трейдинге и инвестициях. FOREX, USDRUB/EURRUB, нефть, металлы, амер. акции, фондовые индексы, биткойн. Никогда не ошибаюсь в видении рынка. Почему это так - читайте в первых постах. По ВП и рекламе @AlexanderCFWS",
+      "subscribers": 1395,
+      "url": "https://t.me/catfromwallstreet",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:16.044559+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:инвест",
+        "description:акции"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "cclexperts",
+      "telegram_id": null,
+      "username": "cclexperts",
+      "name": "Горизонты Демина ❍",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Экспертно о моделировании цепочек поставок, оптимизации логистики и складов. 280+ проектов с 1997 года: X5 Group, «Магнит», Danone, «Балтика», «Технониколь», НЛМК, ЛУКОЙЛ и др.\n\nАвтор — Василий Демин, исп.директор КСЛ, доктор технических наук",
+      "subscribers": 2419,
+      "url": "https://t.me/cclexperts",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:44.185848+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "culture",
+          "score": 2
+        },
+        {
+          "id": "design_fashion",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -15118,6 +18927,249 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "centraltrans_logistics",
+      "telegram_id": null,
+      "username": "centraltrans_logistics",
+      "name": "Central Trans | Логистика🚛",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал ООО ЦЕНТРАЛ ТРАНС",
+      "subscribers": 4688,
+      "url": "https://t.me/centraltrans_logistics",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:38.798424+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "centrobank_rossii",
+      "telegram_id": null,
+      "username": "centrobank_rossii",
+      "name": "Центробанк России 🇷🇺 Банк России",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости с телеграмм канала - Центральный банк Российской Федерации. Новости экономики страны. https://t.me/centralbank_russia  , Центробанк России Банк России",
+      "subscribers": 4759,
+      "url": "https://t.me/centrobank_rossii",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:42.221579+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "country",
+      "geography_regions": [],
+      "geography_country": "RU",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:банк",
+        "description:экономик",
+        "description:банк"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "centrumair",
+      "telegram_id": null,
+      "username": "centrumair",
+      "name": "Авиакомпания Centrum Air",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🌎 Вы — в центре путешествий!\n✈️ Официальный аккаунт авиакомпании Centrum Air\n🎫 Купить авиабилет: https://centrum-air.com\n\n⁉️ Центр поддержки на связи 24/7: +998 55 518 88 88\n\n\"Centrum Air Press\" https://t.me/centrumair_speaking",
+      "subscribers": 19630,
+      "url": "https://t.me/centrumair",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:37.787750+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -15983,6 +20035,92 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "chinalogist_ru",
+      "telegram_id": null,
+      "username": "chinalogist_ru",
+      "name": "Chinalogist — все о ВЭД с Китаем",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🚚 Новости логистики и таможни Китая и России�\n� Как снизить издержки и избежать рисков при поставках\n📅 Актуальные изменения ставок, законов и сроков\n\n👉 Наш сайт https://chinalogist.ru/\n\n#логистика #Китай #доставка",
+      "subscribers": 3940,
+      "url": "https://t.me/chinalogist_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:50.400985+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -17976,6 +22114,95 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ckadr_rzd",
+      "telegram_id": null,
+      "username": "ckadr_rzd",
+      "name": "РЖД | Первый кадровый",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "▫️Корпоративные новости от блока управления персоналом РЖД\n▫️Анонсы мероприятий и полезные материалы \n▫️Передовые практики и тенденции в сфере развития человеческого капитала\n\ngosuslugi.ru/snet/67aa5aeb962afd032d80babb",
+      "subscribers": 22179,
+      "url": "https://t.me/ckadr_rzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:26.186584+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "events"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:мероприят"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "closeloans",
       "telegram_id": null,
       "username": "closeloans",
@@ -18141,6 +22368,170 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "coalslow",
+      "telegram_id": null,
+      "username": "coalslow",
+      "name": "Coal slow (Уголь в квадрате)",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Чёрные мысли угольщика.\n\nДля связи: @antracit09\n\n#уголь #логистика #добыча #порты #РЖД #экспорт",
+      "subscribers": 1545,
+      "url": "https://t.me/coalslow",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:00.811529+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:логистик",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "coin22t",
+      "telegram_id": null,
+      "username": "coin22t",
+      "name": "COIN 22 | Код Денег",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Я Влад, владелец проектов «COIN22» и «Код Денег».\n\n🌎 Разбираю то, что реально двигает рынки: Инвестиции Bitcoin, Криптовалюта, Акции, Нефть, Золото, Экономика и Геополитика.\n\n🔥 Зарабатывай с: @coin22_pro\n💰 Сотрудничество: @ad_coin22",
+      "subscribers": 41020,
+      "url": "https://t.me/coin22t",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:43.173483+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:экономик",
+        "description:инвест",
+        "description:акции"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "crypto",
+          "score": 4
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business",
+        "crypto"
+      ],
+      "secondary_topics": [
+        "crypto"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "collegekolomna_professionalitet",
       "telegram_id": null,
       "username": "collegekolomna_professionalitet",
@@ -18208,6 +22599,171 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "commoditiez",
+      "telegram_id": null,
+      "username": "commoditiez",
+      "name": "Коммодитиз",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Почему взлетела/упала цена на золото, нефть, газ, - и как на этом инвестору заработать? Коммодитиз оперативно показывает и обьясняет реакцию цен биржевых товаров на текущие события и новости; комментарии и прогнозы аналитиков\n\nСотрудничество 👉 @Traderica",
+      "subscribers": 1683,
+      "url": "https://t.me/commoditiez",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:24.446983+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:инвест",
+        "description:бирж"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "company_pravoe_delo",
+      "telegram_id": null,
+      "username": "company_pravoe_delo",
+      "name": "ЮК Правое дело | Помощь заемщикам | Банкротство физ лиц | Списание долгов",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "✅ С 2016 года профессионально работаем в сфере банкротства физических лиц и снижения ежемесячных платежей.\n\nООО \"ЮК\"Правое дело\"\"\nИНН 6164108501\n​г. Ростов-на-Дону, ул. \nСоциалистическая, д. 74, офис 310, Бизнес-центр \"Купеческий двор\"\n+7 863 309 00 63i",
+      "subscribers": 2923,
+      "url": "https://t.me/company_pravoe_delo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:37.511475+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:заем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -19571,6 +24127,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "dasgloballogistik",
+      "telegram_id": null,
+      "username": "dasgloballogistik",
+      "name": "Логистика с DAS GLOBAL LOGISTIK",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🇷🇺Надежный партнёр в России | dasglobal.ru\n✈️15 лет успешной работы на мировом рынке\n🚢 Перевезли более 150.000 грузов\n🌎 24/7 по всему миру\n👉 Логистика и таможня",
+      "subscribers": 5600,
+      "url": "https://t.me/dasgloballogistik",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:31.689040+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "datahub_fcbk",
       "telegram_id": null,
       "username": "datahub_fcbk",
@@ -19800,6 +24435,79 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "ddluuxx_trading",
+      "telegram_id": null,
+      "username": "ddluuxx_trading",
+      "name": "DluxTrading",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал по трейдингу на Мосбирже(Срочный рынок-фьючерсы,акции)\nТоргуем с 2011 года:нефть,газ,золото, валютные пары,фьючерсы на акции\n\nCвязь с трейдером: @Pavel_Dlux\n\nАдмин: @dlux_trading \n\nОтзывы: https://t.me/+DqwNBPui49E5NGRi\n\nt.me/ddluuxx_trading",
+      "subscribers": 42541,
+      "url": "https://t.me/ddluuxx_trading",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:46.393571+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:акции",
+        "description:валют"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -20372,6 +25080,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "dengi_v_dolgk",
+      "telegram_id": null,
+      "username": "dengi_v_dolgk",
+      "name": "Кредиты Займы Микрозаймы",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 1170,
+      "url": "https://t.me/dengi_v_dolgk",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:20.127635+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -21348,6 +26135,238 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "dnepr_kurort_novosti",
+      "telegram_id": null,
+      "username": "dnepr_kurort_novosti",
+      "name": "Каникулы в Ялте. Новости. Санатории ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ПодКЛЮЧайтесь к нашим мероприятиям!\n\nРесепшн 1000 (внутр)\nМедцентр ресепшн 1005 (внутр)\n\nСайт: https://каникулы-в-ялте.рф/\nВКонтакте: https://vk.com/yalta_dnepr\n\nНомер реестровой записи С912025000269",
+      "subscribers": 2394,
+      "url": "https://t.me/dnepr_kurort_novosti",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:08.917616+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "events"
+      ],
+      "format_evidence": [
+        "name:новост",
+        "description:мероприят"
+      ],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "dnepr_sanatoriy",
+      "telegram_id": null,
+      "username": "dnepr_sanatoriy",
+      "name": "Каникулы в Ялте | Санатории ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ФБЛПУ \"Санаторий \"Днепр\" ФНС России\" \n\nПереКЛЮЧайся на здоровый отдых!\n\nСайт: https://каникулы-в-ялте.рф/\n\nКонтакты:\n8 (800) 506 00 21 \n8 (978) 599 84 99\n\nПочта: putevkidnepr@yandex.ru\n\nНомер реестровой записи С912025000269",
+      "subscribers": 2032,
+      "url": "https://t.me/dnepr_sanatoriy",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:07.837168+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "health",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "dobrofns",
+      "telegram_id": null,
+      "username": "dobrofns",
+      "name": "ДОБРОВОЛЬЦЫ ФНС",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Рассказываем о добровольчестве в ФНС. Главное правило -  уважать друг друга, анонимные комментарии будут удаляться\n\nПредложения для размещения пишите по кнопке слева внизу\n\nhttps://knd.gov.ru/license?id=673496dd8d02d67736c8ec3b&registryType=bloggersP",
+      "subscribers": 8598,
+      "url": "https://t.me/dobrofns",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:50.560587+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "document_tk",
       "telegram_id": null,
       "username": "document_tk",
@@ -21885,6 +26904,82 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "dor_trans48",
+      "telegram_id": null,
+      "username": "dor_trans48",
+      "name": "Минтранс48",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный аккаунт Министерства транспорта и дорожного хозяйства  Липецкой области",
+      "subscribers": 1341,
+      "url": "https://t.me/dor_trans48",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:00.824436+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -22781,6 +27876,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "dtla_ru",
+      "telegram_id": null,
+      "username": "dtla_ru",
+      "name": "Цифровой транспорт",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Ассоциация «Цифровой транспорт и логистика»\n\nКонтакт для связи: @dtla_connectbot\nРекламу не размещаем.\n\nМы рассказываем о будущем транспорта и логистики. Просто о сложном. Просто о цифровом.\n\nСайт: https://www.dtla.ru",
+      "subscribers": 8621,
+      "url": "https://t.me/dtla_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:12.204735+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 8
+        },
+        {
+          "id": "transport",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "dtp_spb78",
       "telegram_id": null,
       "username": "dtp_spb78",
@@ -22882,6 +28059,166 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "dubaidohajob",
+      "telegram_id": null,
+      "username": "dubaidohajob",
+      "name": "Dubai.Doha.Job",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Трудоустройство по рабочей визе в Дубае и Дохе: гостиничный бизнес и сфера услуг, авиакомпании Emirates Airline и Qatar Airways\nGlobal-Vision.ru",
+      "subscribers": 6209,
+      "url": "https://t.me/dubaidohajob",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:04.819417+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "duma_gov_ru",
+      "telegram_id": null,
+      "username": "duma_gov_ru",
+      "name": "Государственная Дума ✔",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Государственной Думы.\n\nНовости, фото и видео о деятельности ГД.\n\nРегистрация в перечне владельцев страниц в соцсетях: https://clck.ru/3EjiTi",
+      "subscribers": 110754,
+      "url": "https://t.me/duma_gov_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:20:33.225838+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+      "geography_relevance": "undetermined",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [],
+      "geography_scope": "unknown",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": true,
+      "geography_source": "none",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:наименование органа власти"
+      ],
+      "topic_candidates": [
+        {
+          "id": "government",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "durak_gaeer",
       "telegram_id": null,
       "username": "durak_gaeer",
@@ -22961,6 +28298,92 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "durvishop",
+      "telegram_id": null,
+      "username": "durvishop",
+      "name": "дурви",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Реклама на 24ч/72ч - 2500/4000\nПисать по покупке - @durviadmin\nПродажа по полной предоплате\nВ этом канале я продаю свой гардероб.\nТовар возврату не подлежит\nЯ не несу ответственность за товары категории #едет и #подзаказ\nлогистика за счёт покупателя",
+      "subscribers": 6538,
+      "url": "https://t.me/durvishop",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:15.483040+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "offers"
+      ],
+      "format_evidence": [
+        "description:товары"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        },
+        {
+          "id": "sales",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "dvizhpronedvizh",
       "telegram_id": null,
       "username": "dvizhpronedvizh",
@@ -23029,6 +28452,96 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "realestate"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "east_pay",
+      "telegram_id": null,
+      "username": "east_pay",
+      "name": "EAST PAY | Экономика | Финансы | Бизнес",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "EAST PAY — финансовая логистика. Новости о SWIFT, международных оплатах и ВЭД.\nЛицензии 4 стран.\n5 лет на рынке.\n250k+ закрытых сделок.\n\nМенеджер: @east_pay_world\nСайт: https://east-pay.pro\n\nКанал с рыночной аналитикой: @dp_eastpay",
+      "subscribers": 4864,
+      "url": "https://t.me/east_pay",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:35.011151+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 16,
+      "topic_evidence": [
+        "name:бизнес",
+        "name:экономик",
+        "name:финанс",
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 16
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -23177,6 +28690,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "ecologia_i_energetika",
+      "telegram_id": null,
+      "username": "ecologia_i_energetika",
+      "name": "Экология | Энергетика | ESG",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Альтернативная энергетика, солнечная энергетика, возобновляемая энергетика, экология и устойчивое развитие - ESG. \nПо всем вопросам: @eae_call_bot\n\nРКН: clck.ru/3QqsUp",
+      "subscribers": 57703,
+      "url": "https://t.me/ecologia_i_energetika",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:12.430529+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "energy"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -24935,6 +30527,251 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "energeticum",
+      "telegram_id": null,
+      "username": "energeticum",
+      "name": "ЭнергетикУм",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новые способы применения энергии и интересное из мира энергетики.\n\nРКН 8376026295\n\nВК: https://vk.com/energeticum\nДзен: https://dzen.ru/energeticum\nПикабу: https://pikabu.ru/@EnergeticUm\nVC: https://vc.ru/id3599812\nDTF: https://dtf.ru/id1722759\n\nДля связи",
+      "subscribers": 10217,
+      "url": "https://t.me/energeticum",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:33.657383+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "energetika_cheloveka",
+      "telegram_id": null,
+      "username": "energetika_cheloveka",
+      "name": "Энергетика человека | Артор Азаров",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Потоковая картина мира, энергетика человека, видение, карма, эгрегоры и Род.\n\nОбучаю работе со своей энергетикой для улучшения жизни\nhttps://artor.blog/potok\n\nДля связи @AmiKurator",
+      "subscribers": 2909,
+      "url": "https://t.me/energetika_cheloveka",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:31.953766+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "energolegal_ru",
+      "telegram_id": null,
+      "username": "energolegal_ru",
+      "name": "Правовые аспекты энергетики",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Юридические исследования и правовая поддержка в энергетике.\n\nНаш портал: energolegal.ru\nСвязь: info@energolegal.ru\n\nРеклама в ТГ-канале: https://telega.in/c/energolegal_ru",
+      "subscribers": 4427,
+      "url": "https://t.me/energolegal_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:02.260766+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:исследован"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "law",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "energopolee",
       "telegram_id": null,
       "username": "energopolee",
@@ -25087,6 +30924,166 @@ window.TG_DATA = {
         {
           "id": "general",
           "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "energy_lounge",
+      "telegram_id": null,
+      "username": "energy_lounge",
+      "name": "Энергетическая гостиная",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Авторский канал неравнодушных к проблемам электроэнергетики\n\nЗеркало в МАХ: https://max.ru/join/XKCRyIi09l8szb5j3ZMtEbTFxRfqItWYMdXzKFpL_Go\n\nЧат «ЭГ»\nt.me/+YCaxmTnRTxA1YjJi\n\nt.me/addstickers/Energy_lounge1 \nt.me/addstickers/Energy_lounge2",
+      "subscribers": 8996,
+      "url": "https://t.me/energy_lounge",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:36.811868+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "opinion"
+      ],
+      "format_evidence": [
+        "description:авторский"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "energyezo_web",
+      "telegram_id": null,
+      "username": "energyezo_web",
+      "name": "Энергетика | Эзотерика | Нумерология",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Говорит космос, показывают цифры\n\nМенеджер канала : @nikadormanager",
+      "subscribers": 9799,
+      "url": "https://t.me/energyezo_web",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:39.103440+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 4
+        },
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "science",
+          "score": 2
         }
       ],
       "topic_tags": [
@@ -25619,6 +31616,170 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "era_com",
+      "telegram_id": null,
+      "username": "era_com",
+      "name": "ERA | международные платежи для бизнеса",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Сопровождаем международные сделки с повышенными требованиями к комплаенсу и структуре расчетов.\n\nРаботаем для:\n— международного бизнеса\n— сложных категории ВЭД\n— нестандартных сделок\n\nСреди клиентов: импортеры, экспортеры и финансовые организации.",
+      "subscribers": 3297,
+      "url": "https://t.me/era_com",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:33.591283+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:бизнес",
+        "description:бизнес",
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 10
+        },
+        {
+          "id": "world",
+          "score": 6
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business",
+        "world"
+      ],
+      "secondary_topics": [
+        "world"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "ermachkausa",
+      "telegram_id": null,
+      "username": "ermachkausa",
+      "name": "ErmachkaUSA Аутлет Байер США",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Бренды из Америки, Покупки в США. Outlet USA. \nВ наличие в России и на заказ из США 🇺🇸 \nСобственная логистика 📦  наш инст ermachka.buyer",
+      "subscribers": 2830,
+      "url": "https://t.me/ermachkausa",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:54.780837+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "erzrf",
       "telegram_id": null,
       "username": "erzrf",
@@ -25696,6 +31857,92 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "realestate"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "espanolconveronica",
+      "telegram_id": null,
+      "username": "espanolconveronica",
+      "name": "espanika 🇪🇸✈️",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "¡hola! 🫶🏻 меня зовут Вероника. я – стюардесса авиакомпании emirates, а еще – репетитор по испанскому языку и между рейсами провожу уроки <3\n\nуроки/курсы: https://espanolconveronica.tilda.ws\n\nзапись на уроки/реклама/сотрудничество @veronicalanica",
+      "subscribers": 4951,
+      "url": "https://t.me/espanolconveronica",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:11.669737+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "education"
+      ],
+      "format_evidence": [
+        "description:уроки"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "education",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -26266,6 +32513,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "exchange1654",
+      "telegram_id": null,
+      "username": "exchange1654",
+      "name": "1654.exchange",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Обмен & финансовая логистика: \nhttps://1654.exchange\n\nПеремещение капитала в ЕС:\nhttps://1654.finance\n\n• Обмен криптовалюты\n• Банковские переводы SWIFT/SEPA\n• Международные переводы наличных \n• Отправка CNY в Китай \n\n+88809327135/@ex1654",
+      "subscribers": 2841,
+      "url": "https://t.me/exchange1654",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:36.858819+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банковск",
+        "description:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "banking",
+          "score": 4
+        },
+        {
+          "id": "auto",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "banking"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "expert275",
       "telegram_id": null,
       "username": "expert275",
@@ -26340,6 +32668,95 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "defense_industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "expertved",
+      "telegram_id": null,
+      "username": "expertved",
+      "name": "ExpertVED - таможня , импорт , логистика [SCAM]",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости таможни, аналитика ВЭД, таможенное оформление, логистика. Оперативно, достоверно, подробно.\n\nПредложения:\nПо рекламе —  @Vsevolod54",
+      "subscribers": 5024,
+      "url": "https://t.me/expertved",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:28.362118+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -26508,6 +32925,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "exponenta_energy",
+      "telegram_id": null,
+      "username": "exponenta_energy",
+      "name": "Экспонента Электроэнергетика",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал лаборатории цифрового моделирования в электроэнергетике ЦИТМ «Экспонента».\n\nСайт лаборатории: energy.exponenta.ru\nVK: vk.com/exponenta_energy\nMAX: max.ru/id7725318474_biz2\n\nСайт Engee: start.engee.com",
+      "subscribers": 1433,
+      "url": "https://t.me/exponenta_energy",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:13.170618+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:электроэнергет",
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "culture",
+          "score": 2
+        },
+        {
+          "id": "design_fashion",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "exportv",
       "telegram_id": null,
       "username": "exportv",
@@ -26589,6 +33089,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "express_kreditnyi2",
+      "telegram_id": null,
+      "username": "express_kreditnyi2",
+      "name": "Взять Займ Срочно",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 9922,
+      "url": "https://t.me/express_kreditnyi2",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:34.990139+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -26753,6 +33331,240 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "fasrussia",
+      "telegram_id": null,
+      "username": "fasrussia",
+      "name": "ФАС России | FAS Russia ✔",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "official_website"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал ФАС России (fas.gov.ru). Благодарим за активную ссылку на канал при цитировании материалов.\n\nРегистрация в перечне РКН: https://clck.ru/3GDgta",
+      "subscribers": 33595,
+      "url": "https://t.me/fasrussia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:21:55.010494+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "country",
+      "geography_regions": [],
+      "geography_country": "RU",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:наименование органа власти"
+      ],
+      "topic_candidates": [
+        {
+          "id": "government",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "fastbill_pay",
+      "telegram_id": null,
+      "username": "fastbill_pay",
+      "name": "FastBill | Международные платежи, бизнес-счета и банковские карты",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Полноценный международный банкинг для бизнеса из России.\n✅ Счета и карты с персональными реквизитами\n✅ Оплата и приём международных инвойсов\n✅ SWIFT, SEPA / IBAN и локал переводы\n\n💬 Забронируйте консультацию:\nplanerka.app/fastbill-payment/introduction",
+      "subscribers": 7081,
+      "url": "https://t.me/fastbill_pay",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:01.625598+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:банковск",
+        "name:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 12
+        },
+        {
+          "id": "banking",
+          "score": 8
+        },
+        {
+          "id": "world",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "banking",
+        "world"
+      ],
+      "secondary_topics": [
+        "world"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "fastliontradecompany",
+      "telegram_id": null,
+      "username": "fastliontradecompany",
+      "name": "FAST LION ⚜️Trade Company ⚜️",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "НАШИ КОНТАКТЫ:\n✅ЗАКАЗ: t.me/chernomorovroman\n📦FAST LION ЛОГИСТИКА https://t.me/FASTLIONLOGISTICS\n📹YOUTUBE: youtube.com/@fastlion2017\n☑️Vkontakte: vk.com/id95477499\n‼️СКИДКИ：https://t.me/FASTLIONSALES",
+      "subscribers": 4920,
+      "url": "https://t.me/fastliontradecompany",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:30.545762+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -28118,6 +34930,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "finberde",
+      "telegram_id": null,
+      "username": "finberde",
+      "name": "О жизни и финансах в Германии | Finber.de",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🇩🇪Актуальные новости и практическая информация для интеграции \n👨‍💼 Валерий Мелех — создатель FINBER, эксперт по страхованию и финансам\n🔗 Подробнее на сайте: finber.de\n💬 Присоединяйтесь к чату! @finber_fragen\n🤖 Вопросы? @finberbot @finber_support",
+      "subscribers": 4359,
+      "url": "https://t.me/finberde",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:34.018414+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:финанс",
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "findir_pro",
       "telegram_id": null,
       "username": "findir_pro",
@@ -28193,6 +35086,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "findozor_ru",
+      "telegram_id": null,
+      "username": "findozor_ru",
+      "name": "Финдозор",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал сообщества Финдозор на тему займов, кредитов и долгов.",
+      "subscribers": 1307,
+      "url": "https://t.me/findozor_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:15.766712+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:кредит",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -28512,6 +35484,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "fintechexchange1",
+      "telegram_id": null,
+      "username": "fintechexchange1",
+      "name": "ФинТех|Обмен валют",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Приложение: @finobmenapp\nЗаказ и обмен: @Fintech_Operator\nОтзывы: @FintechReview\nСайт: https://fintech-obmen.com/\n\nУслуги:\n💵 Обмен валют\n🛡 Покупка/Продажа USDT опт.\n📄 Оплата инвойсов 0,4-1,5%\n🌎 Перестановки\n💳 Карты для международных платежей",
+      "subscribers": 26333,
+      "url": "https://t.me/fintechexchange1",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:19.893440+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:валют",
+        "description:валют"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "sales",
+          "score": 2
+        },
+        {
+          "id": "world",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "fintexno",
       "telegram_id": null,
       "username": "fintexno",
@@ -28586,6 +35639,88 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "finuslugiforagents",
+      "telegram_id": null,
+      "username": "finuslugiforagents",
+      "name": "Финуслуги для агентов",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Зарегистрируйтесь онлайн и зарабатывайте на продаже страховых и финансовых услуг, не выходя из дома: https://agents.finuslugi.ru\n\n@fin_agents - админ\n\nОСАГО • ипотечное страхование • вклады • кредиты • реферальная программа",
+      "subscribers": 2884,
+      "url": "https://t.me/finuslugiforagents",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:47.832256+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:финанс",
+        "description:кредит",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 2
+        },
+        {
+          "id": "sales",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "finvestnyk",
       "telegram_id": null,
       "username": "finvestnyk",
@@ -28658,6 +35793,78 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "finzozhexpert",
+      "telegram_id": null,
+      "username": "finzozhexpert",
+      "name": "Мои финансы",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "👩🏻‍🎓 Канал проекта НИФИ Минфина России \"Моифинансы.рф\"\nПочта для связи adminfg@nifi.ru\nАккаунт ВК: @moifinancy\nРегистрация в перечне РКН: https://https://gosuslugi.ru/snet/67a5ba1601234b69883a4c96\n\n#F9XOS",
+      "subscribers": 15912,
+      "url": "https://t.me/finzozhexpert",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:46.452020+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -28979,6 +36186,166 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "fly_korea",
+      "telegram_id": null,
+      "username": "fly_korea",
+      "name": "FLY TEAM 🇰🇷",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "✈️🇰🇷FLY TEAM\nОфициально аккредитованная туристическая компания по оформлению и подаче документов в посольство республики Корея.\n\nОфициальный агент авиакомпаний :\nASIANA AIRLINES\nUZBEKISTAN AIRWAYS \nT'WAY AIR\n\n☎️ +99890-176-0186\n@flyteamagency",
+      "subscribers": 1370,
+      "url": "https://t.me/fly_korea",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:19.372994+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "flyredwings",
+      "telegram_id": null,
+      "username": "flyredwings",
+      "name": "Авиакомпания Red Wings ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "С нами ближе! \n\nКонтактный центр (горячая линия Ред Вингс), купить билеты 24/7: \n+7 (495) 212-12-51\n\nЧат-бот в МАКС: https://max.ru/flyredwings  \n\nОфициальный сайт: https://flyredwings.com",
+      "subscribers": 20260,
+      "url": "https://t.me/flyredwings",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:36.677702+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 4
+        },
+        {
+          "id": "aviation",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "flystw",
       "telegram_id": null,
       "username": "flystw",
@@ -29147,6 +36514,258 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "fns_minfin",
+      "telegram_id": null,
+      "username": "fns_minfin",
+      "name": "ФНС МинФин Инфо",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "❗️Информация из оф.источников МинФина и ФНС России❗️\n\n- Новости ФНС.\n- Новости МинФина.\n- Курсы всех валют от ЦБ.\n- Пояснения.\n- Разбор спорных ситуаций.\n\n💬 - @sos_ch_bot\n\nРеклама \nhttps://amo.si/K/NJ6MP1/NI7XQ7",
+      "subscribers": 3309,
+      "url": "https://t.me/fns_minfin",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:52.498713+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:разбор"
+      ],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "fnsrfinfo",
+      "telegram_id": null,
+      "username": "fnsrfinfo",
+      "name": "Федеральная Налоговая Служба России",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости и публикации с официального сайта Федеральной налоговой службы России.",
+      "subscribers": 2240,
+      "url": "https://t.me/fnsrfinfo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:32.090896+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:налог",
+        "description:налог"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "fnsru",
+      "telegram_id": null,
+      "username": "fnsru",
+      "name": "Новости ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Неофициальный канал с новостями Федеральной налоговой службы\n\nКупить рекламу: https://telega.in/c/fnsru",
+      "subscribers": 7251,
+      "url": "https://t.me/fnsru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:53.222845+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "name:новост"
+      ],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 3.0
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -29579,6 +37198,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "fpcrussia",
+      "telegram_id": null,
+      "username": "fpcrussia",
+      "name": "Вагон скидок",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Самые выгодные предложения на покупку железнодорожных билетов. \nАкции от РЖД Бонус",
+      "subscribers": 417573,
+      "url": "https://t.me/fpcrussia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:11.788263+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:ржд",
+        "description:железнодорож"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "fpibank",
       "telegram_id": null,
       "username": "fpibank",
@@ -29810,6 +37512,78 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "frs_psp",
+      "telegram_id": null,
+      "username": "frs_psp",
+      "name": "FRS | Finance Reliable System",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ВЭД, оплата инвойсов, платежный агент\n\nСсылка на чат ⚡\nhttps://t.me/Frs_group",
+      "subscribers": 4201,
+      "url": "https://t.me/frs_psp",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:21.373668+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:finance"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "fuelsdigest",
       "telegram_id": null,
       "username": "fuelsdigest",
@@ -29962,6 +37736,166 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "garnaviation",
+      "telegram_id": null,
+      "username": "garnaviation",
+      "name": "Гарнаев: авиация и жизнь.",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ГРАЖДАНСКАЯ (и вся иная: военная, экспериментальная — в соответствии с собственной Судьбой) АВИАЦИЯ\n\nЧат обсуждения новостей канала:\n@Civil_Aviation_Public",
+      "subscribers": 1735,
+      "url": "https://t.me/garnaviation",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:58.335526+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиаци",
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "military",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gasandmoney",
+      "telegram_id": null,
+      "username": "gasandmoney",
+      "name": "Gas&Money",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Главное на сегодня про газ и нефть в России и мире.\n🏆Лауреат конкурса «Энергия пера»- 2023\n🥇Победитель конкурса «Текст ВИЭ»: 2022, 2023\n🏅Победитель конкурса «КонТЭКст» - 2024\n \nСвязь с редакцией: @gasandmoney1bot",
+      "subscribers": 9993,
+      "url": "https://t.me/gasandmoney",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:48.206550+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 7,
+      "topic_evidence": [
+        "name:money",
+        "username:money"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 7
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "gasitel",
@@ -30203,6 +38137,322 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "gazprom_invest_official",
+      "telegram_id": null,
+      "username": "gazprom_invest_official",
+      "name": "Газпром инвест",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграм-канал единого технического заказчика по реализации инвестиционных проектов ПАО «Газпром»\n\nwww.invest.gazprom.ru",
+      "subscribers": 4698,
+      "url": "https://t.me/gazprom_invest_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:09:33.875515+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 9,
+      "topic_evidence": [
+        "name:инвест",
+        "username:invest",
+        "description:инвест"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 9
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gazprom_lnvest",
+      "telegram_id": null,
+      "username": "gazprom_lnvest",
+      "name": "Газпром Инвест | Заработок [SCAM]",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграм-канал единого технического заказчика по реализации инвестиционных проектов ПАО «Газпром Инвест»\n\nОфициальный бот: t.me/NewProjekt2023_bot",
+      "subscribers": 1109,
+      "url": "https://t.me/gazprom_lnvest",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:31.139013+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвест",
+        "description:инвест"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gazprombank_leasing",
+      "telegram_id": null,
+      "username": "gazprombank_leasing",
+      "name": "Газпромбанк Лизинг",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Рассказываем, как развивать бизнес при помощи лизингового финансирования. \n\nСвежие новости, тренды и полезная информация из первых рук от одной из ведущих лизинговых компаний России.\n\n📥 Оставить заявку на лизинг: https://gpbl.ru/order/",
+      "subscribers": 1390,
+      "url": "https://t.me/gazprombank_leasing",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:20.205845+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gazpromneft_official",
+      "telegram_id": null,
+      "username": "gazpromneft_official",
+      "name": "Газпром нефть ✔",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Промышленная компания нового поколения. Вместе с партнерами направляем энергию людей и природы на созидание благополучного будущего человека, общества и страны⚡️\n\nВакансии: https://clck.ru/3GMqRP\nМАХ: https://max.ru/gazpromneft\nРКН: https://vk.cc/cVx2Cq",
+      "subscribers": 49050,
+      "url": "https://t.me/gazpromneft_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:09:14.742336+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "offers"
+      ],
+      "format_evidence": [
+        "description:вакансии"
+      ],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:промышлен"
+      ],
+      "topic_candidates": [
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "gdebiotdohnut",
       "telegram_id": null,
       "username": "gdebiotdohnut",
@@ -30273,6 +38523,92 @@ window.TG_DATA = {
         "travel"
       ],
       "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gdpcenter",
+      "telegram_id": null,
+      "username": "gdpcenter",
+      "name": "GDP: логистика лекарственных средств.",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал Сообщества руководителей и специалистов по логистике и качеству SCM Pharm. \n\nwww.scmpharm.ru \n\nПо любым вопросам к Админу  @pal16112",
+      "subscribers": 5965,
+      "url": "https://t.me/gdpcenter",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:18.463529+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "health",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics",
+        "health"
+      ],
+      "secondary_topics": [
+        "health"
+      ],
       "topic_review_required": false
     },
     {
@@ -30432,6 +38768,83 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "geonrgru",
+      "telegram_id": null,
+      "username": "geonrgru",
+      "name": "Геоэнергетика ИНФО",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Крупнейший канал об энергетике, полезных ископаемых и промышленности\n\nОбратная связь @GeoenergyInfo_Bot\nРеклама @KirnossOff\nСотрудничество @radaykin\nПоддержать: Сберб - 2202 2012 9019 8734\n\nРегистрация в РКН: https://goo.su/79fOH",
+      "subscribers": 138986,
+      "url": "https://t.me/geonrgru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:11.031942+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:промышлен",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "geowebinar",
@@ -30658,6 +39071,247 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "defense_industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "giis_elbudget",
+      "telegram_id": null,
+      "username": "giis_elbudget",
+      "name": "ГИИС ЭБ",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал по работе в Государственной интегрированной информационной системе управления общественными финансами «Электронный бюджет» Федерального казначейства #E8FGQ",
+      "subscribers": 12327,
+      "url": "https://t.me/giis_elbudget",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:24:36.398863+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gin_bataisk",
+      "telegram_id": null,
+      "username": "gin_bataisk",
+      "name": "ГИНЕКОЛОГИЯ РЖД БАТАЙСК",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ОТДЕЛЕНИЕ ГДЕ ПОМОГАЮТ!\nhttps://ginekologiya-rostov.ru\n☎️8-928-270-04-99",
+      "subscribers": 1410,
+      "url": "https://t.me/gin_bataisk",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:55.424464+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gipro_ru",
+      "telegram_id": null,
+      "username": "gipro_ru",
+      "name": "GIPRO Проекты энергетики",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Экспертно о развитии электроэнергетики в России: инвестиционные проекты, аналитика, события, интервью.\n\nСотрудничество и пресс-релизы— @Prosekovas\n\nСтикеры: https://t.me/addstickers/DALLEnergy",
+      "subscribers": 1734,
+      "url": "https://t.me/gipro_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:05.830893+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:аналитик"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -31591,6 +40245,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "golimitiess",
+      "telegram_id": null,
+      "username": "golimitiess",
+      "name": "Money Limitless",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Коротко о главном:\n• Денежные переводы и SWIFT\n• Зарубежный банкинг для россиян\n• Релокация капитала\n• Платежные маршруты\n\nРассказываю только о том, чем пользуюсь сам. \n\nРекламы нет. Совсем нет. \n\nСвязь: @merumyantsev",
+      "subscribers": 8872,
+      "url": "https://t.me/golimitiess",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:59.369969+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:money",
+        "description:банк",
+        "description:капитал"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "world",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -33156,6 +41888,241 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "gpb_investments",
+      "telegram_id": null,
+      "username": "gpb_investments",
+      "name": "Газпромбанк Инвестиции ✔",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Сервис для инвестиций для новичков и экспертов. Читайте аналитику, слушайте эфиры и выбирайте, во что инвестировать.\n\n🎙 Эфиры: https://gpbinvestments.mave.digital\n\n⚖️ Дисклеймер: https://gpbin.app/disclaimer\n\n🌐 РКН: https://gpbin.app/rkn_tg",
+      "subscribers": 44519,
+      "url": "https://t.me/gpb_investments",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:09:15.538862+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:аналитик"
+      ],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 9
+        },
+        {
+          "id": "investing",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gpnsofficial",
+      "telegram_id": null,
+      "username": "gpnsofficial",
+      "name": "Газпром нефтехим Салават",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ООО «Газпром нефтехим Салават» — крупнейший нефтехимический комплекс России, расположенный в Республике Башкортостан",
+      "subscribers": 1811,
+      "url": "https://t.me/gpnsofficial",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:06.718264+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:нефтехим",
+        "description:нефтехим"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "grantoscope",
+      "telegram_id": null,
+      "username": "grantoscope",
+      "name": "Гранты и инвестиции | Grantoscope.ru",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Контакт для связи ➡️ @a_pudeyan\n\n✅ О грантах, субсидиях и льготных займах простыми и понятными словами.\n✅ Консультации по привлечению государственного и частного финансирования.\n✅ Проработка инвестиционной траектории и сопровождение проектов.",
+      "subscribers": 1111,
+      "url": "https://t.me/grantoscope",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:17.983805+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "investing",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "great_numbers",
       "telegram_id": null,
       "username": "great_numbers",
@@ -33578,6 +42545,83 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "gtk_invest",
+      "telegram_id": null,
+      "username": "gtk_invest",
+      "name": "Инвестиции",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Все об инвестициях",
+      "subscribers": 1366,
+      "url": "https://t.me/gtk_invest",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:25.230277+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 9
+        },
+        {
+          "id": "investing",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "investing"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -34878,6 +43922,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "how2spain",
+      "telegram_id": null,
+      "username": "how2spain",
+      "name": "🇪🇸 How2Spain • Релокация и Страхование в Испании",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "• Релокация в Испанию для семей и бизнеса - от 5550€\n• Страхование\n\nВНЖ • школы • аренда • налоги • недвижимость • гражданство\n\n📍 Офисы: Валенсия • Мадрид\n⭐️ 5.0 Google | с 2021\n⚖️ Адвокаты и хесторы\n\n💬 @how2spain_hola",
+      "subscribers": 3579,
+      "url": "https://t.me/how2spain",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:38.425060+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:налог"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "education",
+          "score": 2
+        },
+        {
+          "id": "law",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "hranidengi",
       "telegram_id": null,
       "username": "hranidengi",
@@ -35031,6 +44156,164 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "i_love_berezka",
+      "telegram_id": null,
+      "username": "i_love_berezka",
+      "name": "ДОЛ «Берёзка» ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "E-mail: berezkaFNS@yandex.ru\nСайт: https://m.dolberezka.ru\nInstagram: i_love_berezka",
+      "subscribers": 1484,
+      "url": "https://t.me/i_love_berezka",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:14.707300+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "i33store",
+      "telegram_id": null,
+      "username": "i33store",
+      "name": "i33store",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Продажа строго оригинальной продукции! \nВ наличии и под заказ.\n\nМеждународная логистика 🌍\n\nКаталог: @i33storebot скоро\n✍️ @bigsoldoutsoon\n\n📍Москва\n📍Гуанчжоу",
+      "subscribers": 3885,
+      "url": "https://t.me/i33store",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:39.635806+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "offers"
+      ],
+      "format_evidence": [
+        "description:каталог"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        },
+        {
+          "id": "sales",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -35523,6 +44806,91 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "iefnotes",
+      "telegram_id": null,
+      "username": "iefnotes",
+      "name": "IEF notes",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Энергетическая и отраслевая аналитика и комментарии Института энергетики и финансов.\n\nwww.fief.ru\n\nКонтакты:\nТел.: +7 495 787 7451\ne-mail: info@fief.ru",
+      "subscribers": 3714,
+      "url": "https://t.me/iefnotes",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:13.540255+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:аналитик"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "ifinvest",
       "telegram_id": null,
       "username": "ifinvest",
@@ -35599,6 +44967,92 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "iflyltd",
+      "telegram_id": null,
+      "username": "iflyltd",
+      "name": "iFly Airlines",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости, акции и специальные предложения авиакомпании iFly",
+      "subscribers": 3157,
+      "url": "https://t.me/iflyltd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:07.221421+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -35763,6 +45217,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "igor_afonin_bankrotstvo",
+      "telegram_id": null,
+      "username": "igor_afonin_bankrotstvo",
+      "name": "Игорь Афонин Банкротство",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "• Здесь узнаете, что делать, если сложно платить кредиты и займы\n• Освободил от долгов: 3100+ человек \n• Отзывы: @afonin_i_partnery_otzyvy\n• Получить консультацию: @igor_afonin_konsultaciya",
+      "subscribers": 2579,
+      "url": "https://t.me/igor_afonin_bankrotstvo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:00.302886+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:кредит",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -36843,6 +46376,90 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ingosofficial",
+      "telegram_id": null,
+      "username": "ingosofficial",
+      "name": "Ингосстрах ✔",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Финансы и страхование без скуки: новости, тренды, мемы и полезные лайфхаки.\n\nЗарегистрирован в РКН: clck.ru/3GUR6S",
+      "subscribers": 70452,
+      "url": "https://t.me/ingosofficial",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:56.316534+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "entertainment",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "inkazanischa",
       "telegram_id": null,
       "username": "inkazanischa",
@@ -36921,6 +46538,83 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "inssmart",
+      "telegram_id": null,
+      "username": "inssmart",
+      "name": "Инссмарт Страхование",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инссмарт — сервис для заработка на рынке страхования и финансов. Делаем вашу работу быстрой, выгодной и технологичной вот уже 7 лет. \n\nПопробовать: https://clck.ru/36t4gy",
+      "subscribers": 10659,
+      "url": "https://t.me/inssmart",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:05.440565+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "instarding",
@@ -37556,6 +47250,167 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "investlink_io",
+      "telegram_id": null,
+      "username": "investlink_io",
+      "name": "Investlink",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инвестиционная платформа с прямым доступом к брокерскому счету.\n▪️ Надежный лицензированный американский брокер\n▪️ Страхование счетов до $30млн\n▪️ Низкие комиссии\n▪️ Акции и ETF | PRE-IPO\n\n📞: +7 706 4302727",
+      "subscribers": 1245,
+      "url": "https://t.me/investlink_io",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:20:19.707315+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:инвестиц",
+        "description:ipo"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 13
+        },
+        {
+          "id": "investing",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "investment_is_freedom",
+      "telegram_id": null,
+      "username": "investment_is_freedom",
+      "name": "𝓘𝓻𝓲𝓷𝓪 𝓗𝓪𝓻𝓫𝓪𝓽𝓸𝓾𝓼𝓴𝓪𝔂𝓪 💃 🐾 INVESTMENT IS FREEDOM. 🔝TRAIDING NEWS ▪️",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "💸 Об инвестициях и заработке в Интернете. Накопительное страхование для граждан РБ \n💬 О жизни, личностном росте и финансовой грамотности\n✍️ @IrinaGorbatovskaya\n\n🤝 ЧАТ\nhttps://t.me/+WDXmxsa3GQCSpItv \n\n💲МОИ ИНСТРУМЕНТЫ\nhttps://t.me/Irina_startnewproject",
+      "subscribers": 1304,
+      "url": "https://t.me/investment_is_freedom",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:20:17.581956+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 13,
+      "topic_evidence": [
+        "name:invest",
+        "username:invest",
+        "description:финанс",
+        "description:инвест",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 13
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "investoksana",
       "telegram_id": null,
       "username": "investoksana",
@@ -38070,6 +47925,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "iraero_airlines",
+      "telegram_id": null,
+      "username": "iraero_airlines",
+      "name": "Авиакомпания IRAERO",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании IRAERO\n\nГде забота, там и комфорт ✈️",
+      "subscribers": 10495,
+      "url": "https://t.me/iraero_airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:47.624686+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -39558,6 +49492,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ivan_wildlogistic",
+      "telegram_id": null,
+      "username": "ivan_wildlogistic",
+      "name": "«Твоё китайское дело»",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ИВАН КУЗНЕЦОВ | ВНУК КИТАЙЦА🇨🇳 \n\n15 лет с Китаем за руку🤝\n\n✅Здесь как есть: Бизнес, деньги, юмор, логистика \n✅Без сказок и без страха",
+      "subscribers": 4752,
+      "url": "https://t.me/ivan_wildlogistic",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:33.874028+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:деньги"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "entertainment",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "ivanovo_smi",
       "telegram_id": null,
       "username": "ivanovo_smi",
@@ -39737,6 +49752,88 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "ivanvozit",
+      "telegram_id": null,
+      "username": "ivanvozit",
+      "name": "Иван Везёт из Китая",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Иван Везёт — логистика и импорт из Китая 🇨🇳\nРаботаем с контейнерами и оптом: от фабрики до склада.\nОфициальные поставки, понятные расчёты, выгодные условия.\nСвязь и расчёт 👉 @VOZITBOT\nwww.ivanvozit.ru",
+      "subscribers": 3789,
+      "url": "https://t.me/ivanvozit",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:44.057937+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -40841,6 +50938,86 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "joymoneyzaim",
+      "telegram_id": null,
+      "username": "joymoneyzaim",
+      "name": "Joymoney | Займы онлайн",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Сервис срочных онлайн-займов. \nОформите заявку на сайте и получите деньги: https://jmny.ru/tg25\n\n🤑 До 100 000 рублей\n⏰ Быстро, на карту за 5 минут\n👍 Первый заём 0% до 12 дней!",
+      "subscribers": 18823,
+      "url": "https://t.me/joymoneyzaim",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:25.378582+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ",
+        "description:заем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "kakbanki",
       "telegram_id": null,
       "username": "kakbanki",
@@ -41467,6 +51644,159 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "kanikuly_v_anape",
+      "telegram_id": null,
+      "username": "kanikuly_v_anape",
+      "name": "Каникулы в Анапе. Санатории ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ФБЛПУ «Санаторий «Эллада» ФНС России»\n\nСайт: каникулы-в-анапе.рф\n\nКонтакты:\n+7(861 33) 3-35-61\n+7 (918) 223-86-23\ninfo@kanikuly-v-anape.ru\n\nБот бронирования: @Kanikuly_v_anape_bot\n\nУслуги:\nhtbt.ru/to/knvan-tg\n\n✅Номер реестровой записи:\nС232025000202",
+      "subscribers": 3263,
+      "url": "https://t.me/kanikuly_v_anape",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:03.428197+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "kanikuly_v_sochi",
+      "telegram_id": null,
+      "username": "kanikuly_v_sochi",
+      "name": "Каникулы в Сочи. Санатории ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ФБЛПУ \"Санаторий \"Радуга\" ФНС России\" \n\nПереКЛЮЧайся на здоровый отдых!\n\nСайт:kanikuly-v-sochi.ru\n\nСлужба размещения и отдел бронирования:\n+7 (862) 290-72-05\n+7 (918) 009-46-89 \nputevki@sochi-raduga.ru\n\nОтделение медицинских услуг:\n+7 (918) 300-08-92.",
+      "subscribers": 2889,
+      "url": "https://t.me/kanikuly_v_sochi",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:02.330058+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "health",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "taxes",
+        "health"
+      ],
+      "secondary_topics": [
+        "health"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "kapital_auto_trade",
       "telegram_id": null,
       "username": "kapital_auto_trade",
@@ -41707,6 +52037,80 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "kat_chutext",
+      "telegram_id": null,
+      "username": "kat_chutext",
+      "name": "Займёмся текстом!",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 6444,
+      "url": "https://t.me/kat_chutext",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:45.445510+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -44469,6 +54873,179 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "kkoncalt",
+      "telegram_id": null,
+      "username": "kkoncalt",
+      "name": "КредитКонсалт. Инвестиции в займы под залог недвижимости",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инвестиции под залог недвижимости.\nИнвестиции в бизнес. Стать инвестором с доходом от 42% в год, с обеспечением (ликвидная недвижимость) \n\nhttps://t.me/+dANnvb5XcBExMGMy\n\nhttps://max.ru/join/hK1ssfF8TAGxnIpnb69suMq5NCYKgX6gx409eOD\n\n+79585505391 для связи",
+      "subscribers": 1781,
+      "url": "https://t.me/kkoncalt",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:03.605141+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 12
+        },
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "investing",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "credit",
+        "investing",
+        "realestate"
+      ],
+      "secondary_topics": [
+        "investing",
+        "realestate"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "kktcto",
+      "telegram_id": null,
+      "username": "kktcto",
+      "name": "злой цтошник ©",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал злого цтошника о\n- Онлайн-кассы, оператор фискальных данных, ФЗ-54\n- Новости ФНС России, про налоги\n- Маркировка товаров и ЕГАИС\n- Инновации, инсайды\n\n@zloy3d по всем вопросам",
+      "subscribers": 1184,
+      "url": "https://t.me/kktcto",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:17.653918+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:налоги",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "klarisclothes",
       "telegram_id": null,
       "username": "klarisclothes",
@@ -44614,6 +55191,87 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "kmp_club",
+      "telegram_id": null,
+      "username": "kmp_club",
+      "name": "Клуб молодых промышленников",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Клуб – межрегиональный союз, объединяющий промышленников возрастом до 45 лет, собственников и руководителей промышленных предприятий из разных регионов России. Клуб курирует Минпромторг РФ.\n\nСайт: https://www.ms-kmp.ru/\nВК: https://vk.com/kmpclub1",
+      "subscribers": 2212,
+      "url": "https://t.me/kmp_club",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:08:01.485077+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "community"
+      ],
+      "format_evidence": [
+        "name:клуб"
+      ],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:промышлен",
+        "description:промышлен"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "management",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -44956,6 +55614,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "komtaina",
+      "telegram_id": null,
+      "username": "komtaina",
+      "name": "Коммерческая тайна",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Экспертный канал по налогам, праву и финансовой безопасности.\nЗдесь — закрытая информация: критерии блокировок, кейсы проверок, инструкции ФНС и судебные нюансы. Всё, что вы не найдёте в открытом доступе.\nhttps://t.me/ben_center_bot?start=smmtg",
+      "subscribers": 10633,
+      "url": "https://t.me/komtaina",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:52.184719+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:финанс",
+        "description:налог",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "law",
+          "score": 2
+        },
+        {
+          "id": "taxes",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "kondrashovinvest",
       "telegram_id": null,
       "username": "kondrashovinvest",
@@ -45115,6 +55855,88 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "konychevaevgeniya",
+      "telegram_id": null,
+      "username": "konychevaevgeniya",
+      "name": "Давай займемся красотой",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Бизнес-записки женщины-предпринимателя.\n💚Строю самую крупную сеть студий лифтинг-массажа лица IDOL FACE\n💚Тут о бизнесе и не только\n\nЗаписаться на массаж 👉🏻 https://idolface-salon.ru\nСтать частью сети 👉🏻https://idolface-franshiza",
+      "subscribers": 2604,
+      "url": "https://t.me/konychevaevgeniya",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:54.807021+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "entrepreneurship",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -45852,6 +56674,84 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "krasavia_ru",
+      "telegram_id": null,
+      "username": "krasavia_ru",
+      "name": "КрасАвиа",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «КрасАвиа»\n\nБот для ваших фото: t.me/Krasavia_photo_bot\nГруппа ВКонтакте: https://vk.com/krasavia\nМы в МАКС: https://max.ru/krasavia\nЧат-бот в МАКС: https://max.ru/id2465177981_bot\n\nНаш сайт: krasavia.ru",
+      "subscribers": 5579,
+      "url": "https://t.me/krasavia_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:59.645176+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "kraskrai",
@@ -47492,6 +58392,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "kredity_zaimy_ukraina",
+      "telegram_id": null,
+      "username": "kredity_zaimy_ukraina",
+      "name": "КРЕДИТЫ ЗАЙМЫ ОНЛАЙН",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 1295,
+      "url": "https://t.me/kredity_zaimy_ukraina",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:26.745984+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "kreditymjskflflvllgkrjd",
       "telegram_id": null,
       "username": "kreditymjskflflvllgkrjd",
@@ -47854,6 +58833,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "krylyasakhalina",
+      "telegram_id": null,
+      "username": "krylyasakhalina",
+      "name": "Крылья Сахалина",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Авиация без громких лозунгов. От легендарных самолётов до современных беспилотников. Истории, факты, технологии и неудобные вопросы.\n\nВзгляд из кабины, а не из кабинета.\n\nДмитрий Третьяков. О полётах, а не о презентациях.",
+      "subscribers": 7433,
+      "url": "https://t.me/krylyasakhalina",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:46.478663+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:авиаци",
+        "description:самолет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 4
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "krymt",
       "telegram_id": null,
       "username": "krymt",
@@ -48005,6 +59063,92 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "ksmagro",
+      "telegram_id": null,
+      "username": "ksmagro",
+      "name": "Аналитика | KSM",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🌾 Аналитика | KSM — канал о сельском хозяйстве, сырьевых рынках, экономике и логистике\n\n📦Сельское хозяйство • Экономика • Логистика\n\nПо другим вопросам: +7(989)980-03-67\nНаш сайт: https://ksm-agro.com",
+      "subscribers": 5218,
+      "url": "https://t.me/ksmagro",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:24.167554+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "name:аналитик"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -48237,6 +59381,88 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "ku1ibin_pro",
+      "telegram_id": null,
+      "username": "ku1ibin_pro",
+      "name": "КулибинПРО",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Мастерская инженерного творчества (проект «Корпорации роботов»). Обучаем технологиям через практику!\n📍ВДНХ, павильон «Космонавтика и Авиация», пр-кт Мира 119с34\n\n🌐https://kulibinpro.ru\nМАХ: https://max.ru/join/wZmEA6eNq1jIwIu5u3pNsy3w2-JPYytLKwkiNP35PFw",
+      "subscribers": 2247,
+      "url": "https://t.me/ku1ibin_pro",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:56.143971+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "science",
+          "score": 2
+        },
+        {
+          "id": "space",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "kub_mash",
@@ -49826,6 +61052,91 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "law_eva",
+      "telegram_id": null,
+      "username": "law_eva",
+      "name": "Налоговый юрист | Евангелина Столярова",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Налоговый юрист Евангелина Столярова. \n\nУчу бухгалтеров спокойно отвечать на вопросы налоговой. \n\nНалоговые проверки, дробление, самозанятые, НДС\n\nСайт: https://nalog.group/\n\nСвязь: @evangelina_tax",
+      "subscribers": 6279,
+      "url": "https://t.me/law_eva",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:59.014207+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:налоговый",
+        "description:бухгалтер",
+        "description:налоговый"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "law",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "taxes",
+        "law"
+      ],
+      "secondary_topics": [
+        "law"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "lawandfinance",
       "telegram_id": null,
       "username": "lawandfinance",
@@ -49909,6 +61220,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "lawelectric",
+      "telegram_id": null,
+      "username": "lawelectric",
+      "name": "Энергоюристы",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "События в электроэнергетике глазами юристов",
+      "subscribers": 2662,
+      "url": "https://t.me/lawelectric",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:01.430119+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "law",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -50217,6 +61606,85 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "letchik_737",
+      "telegram_id": null,
+      "username": "letchik_737",
+      "name": "ЛЁТЧИК",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "https://telega.in/c/letchik_737 - ваша реклама у нас.\n\nКанал для всех, кого интересует гражданская и военная авиация, самолеты и все, что с ними связано и не только! Если вы не представляете свою жизнь бе\n\n№ 5207845226\n\nOzonId_9329",
+      "subscribers": 8314,
+      "url": "https://t.me/letchik_737",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:45.706623+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:авиаци",
+        "description:самолет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 4
+        },
+        {
+          "id": "military",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "lianozovo_news24",
@@ -50649,6 +62117,82 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "limeloans",
+      "telegram_id": null,
+      "username": "limeloans",
+      "name": "Lime | онлайн-займы от «Лайм-Займ»",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "МФК «Лайм-Займ»\nБыстрое одобрение, индивидуальный подход, прозрачные условия.\n\nПолучить заём ➡️ https://clck.ru/3W6Dho\n\nСкачать приложение: https://clck.ru/3W6DgC\n\nРегистрация в перечне РКН: https://www.gosuslugi.ru/snet/6797788e19290c0f9376a630",
+      "subscribers": 25393,
+      "url": "https://t.me/limeloans",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:19.135967+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ",
+        "description:заем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -51351,6 +62895,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "logconf_rus",
+      "telegram_id": null,
+      "username": "logconf_rus",
+      "name": "Логистика Будущего",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Международная серия конференций Логистика Будущего\n30 городов РФ и СНГ\nИстория успеха 16 лет\nlogconf.ru, logpiknik.ru \nИздатель - Гид Склады РФ и СНГ\nгидсклады.рф\nemail: info@ekbpromo.ru\n@tanyashusha",
+      "subscribers": 2627,
+      "url": "https://t.me/logconf_rus",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:59.189606+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "world",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "logistan",
       "telegram_id": null,
       "username": "logistan",
@@ -51669,6 +63296,84 @@ window.TG_DATA = {
         },
         {
           "id": "transport",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "logistmb",
+      "telegram_id": null,
+      "username": "logistmb",
+      "name": "Логистика — и точка 🌍",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "По вопросам сотрудничества и рекламы пишите @anjee_dee\n\nЮТУБ: https://youtube.com/@belousov_ma\n\nВК ВИДЕО: https://vk.com/academylogistic\n\nИНСТ: https://www.instagram.com/belousov_ma\n\n*Включен Роскомнадзором в перечень персональных № 5090325554",
+      "subscribers": 8719,
+      "url": "https://t.me/logistmb",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:14.567687+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
           "score": 4
         }
       ],
@@ -52263,6 +63968,171 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "made_in_tatarstan",
+      "telegram_id": null,
+      "username": "made_in_tatarstan",
+      "name": "Минпромторг Татарстана",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Министерства промышленности и торговли Республики Татарстан: актуальные новости, интересные видео производств\n\nmadeintatarstan.ru\n\nПредставительства Татарстана в субъектах РФ и за рубежом: https://mpt.tatarstan.ru/predstavitelstva.htm",
+      "subscribers": 2415,
+      "url": "https://t.me/made_in_tatarstan",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:57.071789+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Республика Татарстан"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:промышлен",
+        "description:производств"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "government",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "maestro_2018",
+      "telegram_id": null,
+      "username": "maestro_2018",
+      "name": "Синельников АС",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Управление сложными активами, авиация, сделки и рост стоимости бизнеса.\nО принятии решений под давлением — в работе, шахматах и семье. Основатель PMG Group.\nЛичные сообщения — @maeStro_2020s",
+      "subscribers": 1416,
+      "url": "https://t.me/maestro_2018",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:01.629391+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "mafiaxcity",
       "telegram_id": null,
       "username": "mafiaxcity",
@@ -52349,6 +64219,84 @@ window.TG_DATA = {
       "secondary_topics": [
         "entertainment"
       ],
+      "topic_review_required": false
+    },
+    {
+      "id": "magic_peace",
+      "telegram_id": null,
+      "username": "magic_peace",
+      "name": "Магия | Сила | Энергетика",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Сила внутри тебя\n\nПо вопросам рекламы: @Lebed_manager",
+      "subscribers": 7511,
+      "url": "https://t.me/magic_peace",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:41.886307+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 4
+        },
+        {
+          "id": "industry",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
       "topic_review_required": false
     },
     {
@@ -53793,6 +65741,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "mary_buhtour",
+      "telegram_id": null,
+      "username": "mary_buhtour",
+      "name": "БУХГАЛТЕР ТУРАГЕНТОВ",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Бухгалтер и налоговый юрист Мария Ниянина \n\nДелюсь с турагентами полезной инфой про платежи, управленку, кассы, налоги, счета...\n\n Для связи 👉 \n@Buhtour_bot, @MariyaNiyanina и https://buhtour.ru\nЛюбой мессенджер 89198455111 (только для сообщений)",
+      "subscribers": 6793,
+      "url": "https://t.me/mary_buhtour",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:06.204409+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:бухгалтер",
+        "description:налоги",
+        "description:бухгалтер",
+        "description:налоговый"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 10
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "law",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "mash_batash",
       "telegram_id": null,
       "username": "mash_batash",
@@ -55084,6 +67115,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "mediaekspress",
+      "telegram_id": null,
+      "username": "mediaekspress",
+      "name": "РЖД Медиаэкспресс",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал корпоративного телевидения РЖД ТВ\n\n🌟О железных дорогах и не только – событийно-позитивно-интересно!",
+      "subscribers": 1605,
+      "url": "https://t.me/mediaekspress",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:48.809307+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "medmsk",
       "telegram_id": null,
       "username": "medmsk",
@@ -55998,6 +68112,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "metrclub",
+      "telegram_id": null,
+      "username": "metrclub",
+      "name": "МЕТР клаб // Ипотечный агрегатор",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "💰B2B агрегатор: коми$$ии по ипотеке, кредитам, страхованию, ОСАГО и КАСКО\n🏦 Прямой доступ к партнерам компании @metr_talk\n🆘 Помощь с ипотекой @metr_broker \n\nРегистрация: https://metr.club/registration\n\nСотрудничество: @OlegTVN",
+      "subscribers": 4008,
+      "url": "https://t.me/metrclub",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:33.018113+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:кредит",
+        "description:ипотек"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "realestate",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "mezex_finance",
       "telegram_id": null,
       "username": "mezex_finance",
@@ -56638,6 +68835,390 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "minenergo_by",
+      "telegram_id": null,
+      "username": "minenergo_by",
+      "name": "Минэнерго Беларуси",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Министерства энергетики Республики Беларусь.\nhttps://www.minenergo.gov.by/",
+      "subscribers": 6863,
+      "url": "https://t.me/minenergo_by",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:45.843762+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+      "geography_relevance": "undetermined",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [],
+      "geography_scope": "unknown",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": true,
+      "geography_source": "none",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:министерств"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "government",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "minenergo_official",
+      "telegram_id": null,
+      "username": "minenergo_official",
+      "name": "Минэнерго России ✔",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Министерства энергетики РФ \n\nminenergo.gov.ru",
+      "subscribers": 16731,
+      "url": "https://t.me/minenergo_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:24.629279+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "country",
+      "geography_regions": [],
+      "geography_country": "RU",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:министерств"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "government",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "minfin",
+      "telegram_id": null,
+      "username": "minfin",
+      "name": "Минфин России",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Минфина России\n\n🔹Главные события\n🔹Официальные комментарии\n\nhttps://minfin.gov.ru/ru/",
+      "subscribers": 49404,
+      "url": "https://t.me/minfin",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:49.662519+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "country",
+      "geography_regions": [],
+      "geography_country": "RU",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:наименование органа власти"
+      ],
+      "topic_candidates": [
+        {
+          "id": "government",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "minfin_rd",
+      "telegram_id": null,
+      "username": "minfin_rd",
+      "name": "Минфин Дагестана",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал Министерства финансов Республики Дагестан",
+      "subscribers": 1020,
+      "url": "https://t.me/minfin_rd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:50.431024+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "government",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "minfinkuzbassa",
+      "telegram_id": null,
+      "username": "minfinkuzbassa",
+      "name": "Минфин Кузбасса",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный аккаунт\nМинистерства финансов Кузбасса\nг.Кемерово, пр. Советский, 58\nтел 8(3842)363124",
+      "subscribers": 1433,
+      "url": "https://t.me/minfinkuzbassa",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:51.451381+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "government",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -57614,6 +70195,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "minpromenergozo",
+      "telegram_id": null,
+      "username": "minpromenergozo",
+      "name": "Энергетика Запорожской области",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Министерства  энергетики Запорожской области",
+      "subscribers": 7005,
+      "url": "https://t.me/minpromenergozo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:43.838982+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "government",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "minprospmr",
       "telegram_id": null,
       "username": "minprospmr",
@@ -57990,6 +70654,94 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "mintrans_amur",
+      "telegram_id": null,
+      "username": "mintrans_amur",
+      "name": "Амурский Минтранс",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новости министерства транспорта и дорожного хозяйства Амурской области: дороги, авиация, авто/жд транспорт.",
+      "subscribers": 3406,
+      "url": "https://t.me/mintrans_amur",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:57.873912+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Амурская область"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "mintrans_sakh",
       "telegram_id": null,
       "username": "mintrans_sakh",
@@ -58143,6 +70895,395 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "mintrans51",
+      "telegram_id": null,
+      "username": "mintrans51",
+      "name": "МИНТРАНС МО",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Рассказываем о транспорте и дорогах с любовью 💙",
+      "subscribers": 4345,
+      "url": "https://t.me/mintrans51",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:52.585895+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "mintransao",
+      "telegram_id": null,
+      "username": "mintransao",
+      "name": "Минтранс Архангельской области",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальное сообщество министерства транспорта Архангельской области.\n\nМы расскажем вам о строительстве, реконструкции и ремонте дорог в Архангельской области, о развитии и изменения в транспортной отрасли в регионе.",
+      "subscribers": 4660,
+      "url": "https://t.me/mintransao",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:50.783611+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "community"
+      ],
+      "format_evidence": [
+        "description:сообщество"
+      ],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:транспорт",
+        "description:транспортной отрасли"
+      ],
+      "topic_candidates": [
+        {
+          "id": "transport",
+          "score": 4
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "construction",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "mintransbelarus",
+      "telegram_id": null,
+      "username": "mintransbelarus",
+      "name": "Минтранс Беларуси",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Все самое интересное и важное о транспорте и дорогах Беларуси",
+      "subscribers": 6061,
+      "url": "https://t.me/mintransbelarus",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:52.305787+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "mintransdnr",
+      "telegram_id": null,
+      "username": "mintransdnr",
+      "name": "Минтранс ДНР",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный ТГ-канал Министерства транспорта ДНР. \nАктуально о работе транспорта, восстановлении дорожной инфраструктуры. Мы всегда на связи!\nОфициальный сайт: https://donmintrans.gov-dpr.ru/\nГорячая линия: +7 (949) 331-11-47",
+      "subscribers": 4858,
+      "url": "https://t.me/mintransdnr",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:10:49.791322+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "mintranskbr",
+      "telegram_id": null,
+      "username": "mintranskbr",
+      "name": "Минтранс КБР",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Министерство транспорта и дорожного хозяйства Кабардино-Балкарской Республики",
+      "subscribers": 1103,
+      "url": "https://t.me/mintranskbr",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:08.555404+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -59420,6 +72561,162 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "molodezrzd",
+      "telegram_id": null,
+      "username": "molodezrzd",
+      "name": "Молодёжь РЖД",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Объединяем молодёжь холдинга РЖД\n\nМы в ВКонтакте https://vk.com/molodezrzd\n\nРКН — https://clck.ru/3FWvQG",
+      "subscribers": 13050,
+      "url": "https://t.me/molodezrzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:16.108433+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "community"
+      ],
+      "format_evidence": [
+        "description:объединяем"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "molsovetfnsrf",
+      "telegram_id": null,
+      "username": "molsovetfnsrf",
+      "name": "Молодежный совет ФНС России",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграмм-канал МС ЦА ФНС России\nПрисоединяйтесь к нам! \nБудем вместе менять жизнь к лучшему 🔥\n\nhttps://t.me/nalog_gov_ru\n\n❗️Подписывайтесь на наш канал в MAX\nhttps://max.ru/molsovetfnsrf ❗️",
+      "subscribers": 11557,
+      "url": "https://t.me/molsovetfnsrf",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:47.763476+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "money_ddot",
       "telegram_id": null,
       "username": "money_ddot",
@@ -59487,6 +72784,89 @@ window.TG_DATA = {
         {
           "id": "business",
           "score": 13
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "moneyport",
+      "telegram_id": null,
+      "username": "moneyport",
+      "name": "MoneyPort 🧾 Международные переводы SWIFT & SEPA",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Напишите @mpstart или создайте аккаунт moneyport.co/reg и быстрее, чем скажете «спасибо!», доставим деньги через SWIFT, SEPA и другие способы. С Марко Поло путешествуем по тысячам городов, а секреты платежей раскрываем в рабочих чатах.",
+      "subscribers": 50213,
+      "url": "https://t.me/moneyport",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:18.818003+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 11,
+      "topic_evidence": [
+        "name:money",
+        "username:money",
+        "description:деньги",
+        "description:money"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 11
+        },
+        {
+          "id": "world",
+          "score": 4
+        },
+        {
+          "id": "travel",
+          "score": 2
         }
       ],
       "topic_tags": [
@@ -67415,6 +80795,90 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "nalog_zaporozhye_kherson",
+      "telegram_id": null,
+      "username": "nalog_zaporozhye_kherson",
+      "name": "ФНС России. Новые регионы",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал ФНС России для налогоплательщиков новых регионов",
+      "subscribers": 14521,
+      "url": "https://t.me/nalog_zaporozhye_kherson",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:45.360542+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:фнс",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "government",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes",
+        "government"
+      ],
+      "secondary_topics": [
+        "government"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "nalogiitochka",
       "telegram_id": null,
       "username": "nalogiitochka",
@@ -67482,6 +80946,88 @@ window.TG_DATA = {
         {
           "id": "taxes",
           "score": 4
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "nalogoviymonitoring",
+      "telegram_id": null,
+      "username": "nalogoviymonitoring",
+      "name": "Налоговый мониторинг",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал портала\nНалоговыймониторинг.рф\n\n🔹Коротко о важном в налоговом мониторинге\n🔹Взаимодействие с ФНС в режиме онлайн\n🔹Анонсы мероприятий с налоговым органом",
+      "subscribers": 2282,
+      "url": "https://t.me/nalogoviymonitoring",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:05.642137+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "events"
+      ],
+      "format_evidence": [
+        "description:мероприят"
+      ],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:налоговый",
+        "description:налоговый",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 6
         }
       ],
       "topic_tags": [
@@ -69574,6 +83120,89 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "nesterova_nadejda",
+      "telegram_id": null,
+      "username": "nesterova_nadejda",
+      "name": "НЕСТЕРОВА|НАЛОГИ И БИЗНЕС",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "16 лет помогаю предпринимателям развивать бизнес так, чтобы ФНС не беспокоили\n\n500+компаний сэкономили со мной > 170 млн за 2026\n  \n Вы узнаете как:\n- строить систему в бизнесе \n- привести бухгалтерию в порядок\n- уменьшить налоги\nОбратная связь:@Nesterov",
+      "subscribers": 1209,
+      "url": "https://t.me/nesterova_nadejda",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:11.134834+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:налоги",
+        "description:налоги",
+        "description:бухгалтер",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 14
+        },
+        {
+          "id": "taxes",
+          "score": 10
+        },
+        {
+          "id": "entrepreneurship",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "netip_stav",
       "telegram_id": null,
       "username": "netip_stav",
@@ -69910,6 +83539,91 @@ window.TG_DATA = {
       "topic_candidates": [],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "neweconomyru",
+      "telegram_id": null,
+      "username": "neweconomyru",
+      "name": "Новая экономика",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Узнайте о глобальных трендах, сокращении выбросов и будущем энергетики. Только важная аналитика о новой экономике.\n\n#ESG #УстойчивоеРазвитие #ЗеленаяПовестка\n\nКанал внесен в перечень РКН.",
+      "subscribers": 35047,
+      "url": "https://t.me/neweconomyru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:17.163641+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:аналитик"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:экономик",
+        "description:экономик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -70654,6 +84368,92 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "newsvolonterrzd",
+      "telegram_id": null,
+      "username": "newsvolonterrzd",
+      "name": "Новости волонтеров РЖД",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Здесь вы можете встретить неравнодушных товарищей, узнать как принять участие в масштабных социальных проектах и просто попробовать поделиться своим добром с миром.\n\nМы точно знаем, что это затягивает!",
+      "subscribers": 5048,
+      "url": "https://t.me/newsvolonterrzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:34.428711+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "name:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -72001,6 +85801,162 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "nordstar_airlines",
+      "telegram_id": null,
+      "username": "nordstar_airlines",
+      "name": "NordStar Airlines ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании NordStar\n\nНаша страница ВКонтакте: https://vk.com/nordstar_airlines\n\nНаша страница в Max: https://max.ru/nordstar_airlines\n\nРегистрация в перечне РКН: https://www.gosuslugi.ru/snet/6741d70131a9292acd34a56c\n\n#YXZCO",
+      "subscribers": 18316,
+      "url": "https://t.me/nordstar_airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:39.978695+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "nordwindairlines_official",
+      "telegram_id": null,
+      "username": "nordwindairlines_official",
+      "name": "Nordwind Airlines ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Одна из крупнейших авиакомпаний России по пассажирообороту и маршрутной сети.\n\nТелеграм пресс-службы:\nhttps://t.me/nordwind_news\n\nМы зарегистрированы в Роскомнадзоре:\nhttps://url.nordwind.aero/roskomnadzor-telegram\n\n#XCMWX",
+      "subscribers": 39115,
+      "url": "https://t.me/nordwindairlines_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:41.040997+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "northm",
       "telegram_id": null,
       "username": "northm",
@@ -72226,6 +86182,78 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "novikombank_official",
+      "telegram_id": null,
+      "username": "novikombank_official",
+      "name": "НОВИКОМ",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный Telegram-канал НОВИКОМа (входит в РТ-Финанс Госкорпорации Ростех)\nСайт: https://novikom.ru\nВК: https://vk.com/novikom_official\nMAX: https://max.ru/novikombank_official\n\nРегистрация в РКН https://gosuslugi.ru/snet/67b2ad319047f105ce472abe",
+      "subscribers": 26207,
+      "url": "https://t.me/novikombank_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:08:15.477025+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "novosibgor",
@@ -73174,6 +87202,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "npaed",
+      "telegram_id": null,
+      "username": "npaed",
+      "name": "Записки на рукавах",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Добро пожаловать на канал Виктора Достова (@greygato) и Павла Шуста (@paulsho). Здесь мы обсуждаем новации в технологиях и регулировании финансового сектора, рассуждаем о будущем платежей, финтеха, криптовалют, ИИ.\nПо вопросам сотрудничества @leonovavanna",
+      "subscribers": 2999,
+      "url": "https://t.me/npaed",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:34.607607+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "crypto",
+          "score": 2
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "nplus1",
       "telegram_id": null,
       "username": "nplus1",
@@ -73325,6 +87434,90 @@ window.TG_DATA = {
         {
           "id": "tech",
           "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "npsr_real",
+      "telegram_id": null,
+      "username": "npsr_real",
+      "name": "ЭнергоPROсвет",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Ассоциации «НП Совет рынка».\nНовости и аналитика о российской и мировой электроэнергетике. Факты и актуальные комментарии из первых уст.\n\nВопросы и предложения - на depsmi@np-sr.ru\n\nЗеркало канала в Max: https://www.np-sr.ru/max",
+      "subscribers": 2711,
+      "url": "https://t.me/npsr_real",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:56.914147+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
         }
       ],
       "topic_tags": [
@@ -74934,6 +89127,93 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "ofsla_rus",
+      "telegram_id": null,
+      "username": "ofsla_rus",
+      "name": "ОФ СЛА России (сверхлегкая авиация)",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Общероссийская общественная организация \"Объединенная федерация спорта сверхлегкой авиации России (ОФ СЛА России)\nПредложить новость, стать партнером - @ChepelevaVika\nwww.ofsla.ru",
+      "subscribers": 1313,
+      "url": "https://t.me/ofsla_rus",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:08.556628+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиаци",
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "sport",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "ogomoscow",
       "telegram_id": null,
       "username": "ogomoscow",
@@ -76115,6 +90395,84 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "olga_pikuchet",
+      "telegram_id": null,
+      "username": "olga_pikuchet",
+      "name": "Овчинникова 📚 Налоговый Советник",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Здесь всё о законной оптимизации налогов и взаимодействии с ФНС!\n\n—  Ольга Овчинникова, глава бухгалтерской компании ПИК\n—  Более 30 лет оберегаю бизнес от ошибок\n\nКонсультирую @OlgaTaxBot\n\nЗаявка в РКН N 7828060180",
+      "subscribers": 23546,
+      "url": "https://t.me/olga_pikuchet",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:47.737702+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:налоговый",
+        "description:бухгалтер",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "taxes",
+          "score": 8
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "olgasabitova",
       "telegram_id": null,
       "username": "olgasabitova",
@@ -76353,6 +90711,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "omanair_russia",
+      "telegram_id": null,
+      "username": "omanair_russia",
+      "name": "Oman Air - Russia",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Авиакомпания Oman Air - прямые рейсы Москва - Маскат  (Султанат Оман)",
+      "subscribers": 1399,
+      "url": "https://t.me/omanair_russia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:18.332733+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -77234,6 +91670,93 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "onlineveteranyirzd",
+      "telegram_id": null,
+      "username": "onlineveteranyirzd",
+      "name": "Ветераны РЖД | ОНЛАЙН",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Онлайн-клуб «Ветераны РЖД» - проект фонда «Почёт», который меняет отношение к возрасту!\n\nС нами можно изучать языки, заниматься спортом, тренировать мозг и память, изучать закон и даже вырастить любовь к себе!\n\nНаш VK: https://vk.com/veterany_rzd",
+      "subscribers": 2629,
+      "url": "https://t.me/onlineveteranyirzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:42.656834+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "community"
+      ],
+      "format_evidence": [
+        "description:клуб"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "education",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "openparad",
@@ -78424,6 +92947,89 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "otvinta_by",
+      "telegram_id": null,
+      "username": "otvinta_by",
+      "name": "ОтВинта | Авиация Беларуси",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Авторский взгляд на гражданскую и военную авиацию Беларуси.\nДля связи: @OTvintamail_bot \nАдмин: @otvinta_tlg",
+      "subscribers": 4910,
+      "url": "https://t.me/otvinta_by",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:51.884161+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "opinion"
+      ],
+      "format_evidence": [
+        "description:авторский"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиаци",
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "military",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "otyumen",
       "telegram_id": null,
       "username": "otyumen",
@@ -78925,6 +93531,249 @@ window.TG_DATA = {
         },
         {
           "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "p_r_o_traffic",
+      "telegram_id": null,
+      "username": "p_r_o_traffic",
+      "name": "PRO трафик ™",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Как говорят трафик это нефть 21века..так и есть!Тут ты узнаешь подробней как добывать золото сети! PRO трафик,PRO маркетинг,PRO деньги.. \n\nНа бирже: telega.in/c/P_R_O_traffic\n\nCEO: @O_K_TOP @Spiral_Yuri\n\nРегистрация РКН: https://kurl.ru/tDWTC",
+      "subscribers": 24378,
+      "url": "https://t.me/p_r_o_traffic",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:45.056610+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:бирж",
+        "description:деньги"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "marketing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "paachat",
+      "telegram_id": null,
+      "username": "paachat",
+      "name": "АЧат инвесторов в займы под залог",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Инвестиции в залоговую недвижимость.\nВ нашем комьюнити - профессиональные инвесторы, начинающие, смежники и те, кто имеет интерес развиваться в этой сфере.\n\nАвторский канал Андрея Половкова.\nВопросы и соинвестирование @apolovkov",
+      "subscribers": 2319,
+      "url": "https://t.me/paachat",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:04.750677+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "opinion"
+      ],
+      "format_evidence": [
+        "description:авторский"
+      ],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pampaducpa",
+      "telegram_id": null,
+      "username": "pampaducpa",
+      "name": "Pampadu CPA — канал 💎",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Pampadu — партнерка с мгновенными выплатами.\n\nВертикали:\n🔸 Финансы\n🔸 HR\n🔸 Страхование (RevShare)\n🔸 E-commerce\n🔸 Недвижимость\n🔸 Беттинг (Betting)\n\nПодробнее о всех преимуществах рассказали тут — https://u.to/vMZQIg\n\nРегистрация — https://u.to/vVK9IA",
+      "subscribers": 3555,
+      "url": "https://t.me/pampaducpa",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:40.671905+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "hr",
           "score": 2
         }
       ],
@@ -81336,6 +96185,82 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "pilotslife",
+      "telegram_id": null,
+      "username": "pilotslife",
+      "name": "Жизнь Пилота👨‍✈️",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "«Полёт» – моя жизнь. Дневник пилота гражданской авиации. Уникальные фотографии и статьи на тему Авиация.\n\nРеклама: @takeoffmolkov \n\nInstagram: https://www.instagram.com/takeoffmolkov/\n\n☑️ https://gosuslugi.ru/snet/67ae8a93be63a80aa9b9fba5",
+      "subscribers": 11603,
+      "url": "https://t.me/pilotslife",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:43.415462+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:пилот",
+        "description:авиаци",
+        "description:пилот"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 8
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "piter",
       "telegram_id": null,
       "username": "piter",
@@ -82362,6 +97287,163 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "plan_biz",
+      "telegram_id": null,
+      "username": "plan_biz",
+      "name": "Инвестиции / Акции компаний / Фондовые рынки",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Последние новости о том что происходит с деньгами в мире, почему дорожает нефть и акции, а денег нет🥳\n\nМенеджер по рекламе:\n @Social_Admarketing\n\nАдмин @echemezov",
+      "subscribers": 5236,
+      "url": "https://t.me/plan_biz",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:53.562329+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 10
+        },
+        {
+          "id": "investing",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "platshit",
+      "telegram_id": null,
+      "username": "platshit",
+      "name": "Платежный ЩИТ",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Пресекаем банки, обслуживающие нелегальные казино, беттинг-платформы и теневой бизнес\n\nЗапросы на: platshield@proton.me\nСайт: platshield.com",
+      "subscribers": 12284,
+      "url": "https://t.me/platshit",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:45.232899+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:банк"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "plsovetov",
       "telegram_id": null,
       "username": "plsovetov",
@@ -82691,6 +97773,255 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pobeda_smi",
+      "telegram_id": null,
+      "username": "pobeda_smi",
+      "name": "Голос Победы",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал пресс-службы Победы. Главные новости и комментарии авиакомпании 💙✈️\n\nМы на связи здесь: presscentr@flypobeda.ru",
+      "subscribers": 5494,
+      "url": "https://t.me/pobeda_smi",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:04.800733+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pobedaairlines",
+      "telegram_id": null,
+      "username": "pobedaairlines",
+      "name": "Авиакомпания «Победа» ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «Победа» ✈️\n\n🩵 Вдохновляем на путешествия, делая перелёты доступными!\n\n📩 По вопросам рекламы:\nclck.ru/3EiJA8\n\nРегистрация в РКН: clck.ru/3NtdBz",
+      "subscribers": 1019864,
+      "url": "https://t.me/pobedaairlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:28.441482+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pod_zalogl",
+      "telegram_id": null,
+      "username": "pod_zalogl",
+      "name": "ЗАЙМЫ ОНЛАЙН КРЕДИТЫ",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Помощь в получении займа на самых выгодных условиях!",
+      "subscribers": 1092,
+      "url": "https://t.me/pod_zalogl",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:27.815941+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 10
+        },
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -84115,6 +99446,171 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "potok_new_projects",
+      "telegram_id": null,
+      "username": "potok_new_projects",
+      "name": "Поток: займы для бизнеса",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал займов potok.digital\n\nПоддержка\nok@potok.digital\n@OkPotokDigitalBot\n\nПоток: инвестиции\n@potok_digital канал\n@potok_digital_chat чат\n\nПоток: займы\n@potok_new_projects канал\n@potok_new_projects_chat чат\n\nПо работе канала и группы\n@potok_dgtl",
+      "subscribers": 2603,
+      "url": "https://t.me/potok_new_projects",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:02.529162+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 6
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pr_airastana",
+      "telegram_id": null,
+      "username": "pr_airastana",
+      "name": "Air Astana press-releases",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "әуекомпанияның БАҚ үшін ресми ақпараты / официальные сообщения авиакомпании для СМИ",
+      "subscribers": 3097,
+      "url": "https://t.me/pr_airastana",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:10.534107+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "prapalitiku",
       "telegram_id": null,
       "username": "prapalitiku",
@@ -84719,6 +100215,79 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "government"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "pravoidengi",
+      "telegram_id": null,
+      "username": "pravoidengi",
+      "name": "Право & Деньги",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Выход из долгов — просто и безопасно. Канал про законные способы выбраться: возврат страховок, снижение платежей, рефинансирование, банкротство.\n\nСвязь с нами: https://t.me/m/gukgbcJDMmRi",
+      "subscribers": 6414,
+      "url": "https://t.me/pravoidengi",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:12.230691+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:деньги",
+        "description:банк"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -85686,6 +101255,83 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "pro_nalogi_prosto",
+      "telegram_id": null,
+      "username": "pro_nalogi_prosto",
+      "name": "pro.nalogi_prosto",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Говорим ПРО НАЛОГИ на вашем языке\n\nДелимся своим опытом общения с ФНС и не только",
+      "subscribers": 1123,
+      "url": "https://t.me/pro_nalogi_prosto",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:18.761086+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:налоги",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "taxes",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "pro100ipo",
       "telegram_id": null,
       "username": "pro100ipo",
@@ -86016,6 +101662,83 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "prof_belenergotopgas",
+      "telegram_id": null,
+      "username": "prof_belenergotopgas",
+      "name": "Профсоюз Белэнерготопгаз",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный telegram-канал Белорусского профессионального союза работников энергетики, газовой и топливной промышленности",
+      "subscribers": 3164,
+      "url": "https://t.me/prof_belenergotopgas",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:23.121983+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:промышлен",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "profinansy",
       "telegram_id": null,
       "username": "profinansy",
@@ -86251,6 +101974,87 @@ window.TG_DATA = {
         {
           "id": "investing",
           "score": 6
+        }
+      ],
+      "topic_tags": [
+        "investing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "profitking",
+      "telegram_id": null,
+      "username": "profitking",
+      "name": "Роман Дмитриев. Инвестиции и трейдинг ProfitKing",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Частный инвестор с 1999 года. \n\nВся информация не является индивидуальной инвестиционной рекомендацией. \n \nОф.бот/платежи \n\n@profitkingsuper_bot",
+      "subscribers": 67575,
+      "url": "https://t.me/profitking",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:22.459193+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "investing",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
         }
       ],
       "topic_tags": [
@@ -87164,6 +102968,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "promotebudget",
+      "telegram_id": null,
+      "username": "promotebudget",
+      "name": "Портал для бизнеса",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Минфина России о Портале предоставления мер финансовой государственной поддержки. Актуальные отборы на получение субсидий (грантов), участие в социальных заказах, новости, инструкции, полезные кейсы #KMNXY\nhttps://promote.budget.gov.ru/",
+      "subscribers": 12213,
+      "url": "https://t.me/promotebudget",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:44.978811+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:бизнес",
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "propbru",
       "telegram_id": null,
       "username": "propbru",
@@ -87392,6 +103278,84 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "prostochina_ru",
+      "telegram_id": null,
+      "username": "prostochina_ru",
+      "name": "🇨🇳 TURPAL l КИТАЙ l ЛОГИСТИКА l ОБМЕН ЮАНЕЙ",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Заказать товар: @turpalresale \nОтзывы: @prosttochina_ru ‼️\nБУДЬТЕ ВНИМАТЕЛЬНЫ!\nСРАВНИВАЙТЕ МОЙ ПРОФИЛЬ!",
+      "subscribers": 3503,
+      "url": "https://t.me/prostochina_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:46.052224+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "prostoobavia",
       "telegram_id": null,
       "username": "prostoobavia",
@@ -87471,6 +103435,81 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "protok50hz",
+      "telegram_id": null,
+      "username": "protok50hz",
+      "name": "50 Гц | ПроТок",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Системный оператор Единой Энергетической Системы просто и познавательно рассказывает об энергосистеме, электроэнергетике, ее истории, жизни большого коллектива\n\nhttps://t.me/so_ups_official",
+      "subscribers": 2370,
+      "url": "https://t.me/protok50hz",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:02.436552+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:электроэнергет",
+        "description:энергосистем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "prudent_invest",
       "telegram_id": null,
       "username": "prudent_invest",
@@ -87545,6 +103584,88 @@ window.TG_DATA = {
         },
         {
           "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "psmmedved",
+      "telegram_id": null,
+      "username": "psmmedved",
+      "name": "ПСМ-Медведь",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Андрей Медведев\nCEO и собственник ПСМ ⚡️\n\nБольше 20 лет создаю и развиваю бизнес в реальном секторе: заводы, энергетика, оборудование, инжиниринг и крупные проекты. Пишу про экономику, технологии, деньги, людей и решения. Все посты пишу лично.",
+      "subscribers": 13526,
+      "url": "https://t.me/psmmedved",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:25.684023+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:экономик",
+        "description:деньги"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "industry",
           "score": 2
         }
       ],
@@ -88024,6 +104145,86 @@ window.TG_DATA = {
         },
         {
           "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "qifaopt",
+      "telegram_id": null,
+      "username": "qifaopt",
+      "name": "КИФА — ваш бизнес с Китаем",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "КИФА — ваш отдел ВЭД для работы с Китаем под ключ:\n\n— закупки без посредников\n— официальная логистика и таможня\n— оплата в рублях\n— сертификация и маркировка «Честный ЗНАК»\n— закрывающие документы для ФНС\n\nwww.qifa.ru\n8-800-555-07-62\nsupport@qifa",
+      "subscribers": 1028,
+      "url": "https://t.me/qifaopt",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:21.382777+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:бизнес"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
           "score": 2
         }
       ],
@@ -89066,6 +105267,88 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "reallogistik",
+      "telegram_id": null,
+      "username": "reallogistik",
+      "name": "Реальная логистика",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Изнанка транспортных компаний.",
+      "subscribers": 2358,
+      "url": "https://t.me/reallogistik",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:23:03.612347+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "realty_rbc",
       "telegram_id": null,
       "username": "realty_rbc",
@@ -89217,6 +105500,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "redc4",
+      "telegram_id": null,
+      "username": "redc4",
+      "name": "Займы Кредиты Микрозаймы Онлайн",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 2650,
+      "url": "https://t.me/redc4",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:53.708175+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -90619,6 +106981,80 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "rosenergoatom",
+      "telegram_id": null,
+      "username": "rosenergoatom",
+      "name": "Росэнергоатом",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "📍MAX: https://max.ru/rearu\n\nОфициальный канал концерна «Росэнергоатом» — Электроэнергетического дивизиона Росатома. Мы производим электроэнергию для страны и делаем будущее безопасным и комфортным.\n\nСайт: www.rosenergoatom.ru\nВК: https://vk.com/rearu",
+      "subscribers": 7849,
+      "url": "https://t.me/rosenergoatom",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:08:53.183281+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "rosmining_ru",
       "telegram_id": null,
       "username": "rosmining_ru",
@@ -90860,6 +107296,172 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "emergencies"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rossiya_airlines",
+      "telegram_id": null,
+      "username": "rossiya_airlines",
+      "name": "Авиакомпания «Россия»",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Приветствуем вас на борту новостного канала авиакомпании с родным именем «Россия» 🇷🇺 \n\nПристегните ремни и полетели! ✈️\n\n✅ Читайте новости авиакомпании\n✅ Будьте в курсе новых маршрутов\n✅ Участвуйте в конкурсах и розыгрышах",
+      "subscribers": 3238,
+      "url": "https://t.me/rossiya_airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:12.782238+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rossiya_airlines_official",
+      "telegram_id": null,
+      "username": "rossiya_airlines_official",
+      "name": "Авиакомпания «Россия» ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Добро пожаловать в официальный телеграм-канал авиакомпании «Россия»! \nВаше #настроениепутешествий ✈️\n___\nРегистрация в перечне РКН: https://gosuslugi.ru/snet/67a47ec724c8ba6dca91bbcb",
+      "subscribers": 21203,
+      "url": "https://t.me/rossiya_airlines_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:38.851792+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -91536,6 +108138,176 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "rreda_official",
+      "telegram_id": null,
+      "username": "rreda_official",
+      "name": "АРВЭ | Ассоциация развития возобновляемой энергетики",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "⚡ Официальный канал Ассоциации развития возобновляемой энергетики (АРВЭ)\n\n🌍 Новости, аналитика и тренды возобновляемой энергетики\n📊 Экспертные мнения и инфографика\n\nСайт: https://rreda.ru/\nСотрудничество: @rredaofficial (Марина)",
+      "subscribers": 4379,
+      "url": "https://t.me/rreda_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:06.619747+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rshb_insurance",
+      "telegram_id": null,
+      "username": "rshb_insurance",
+      "name": "РСХБ–Страхование",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал АО СК «РСХБ-Страхование» — лидера агрострахования в России по данным ЦБ РФ 🚜\n\nДелимся интересными новостями, полезными советами в страховании финансовых рисков участников отрасли АПК, актуальными продуктами и предложениями.\n\n📌 rshbins.",
+      "subscribers": 10643,
+      "url": "https://t.me/rshb_insurance",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:09.843945+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:финанс",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "rstv01",
       "telegram_id": null,
       "username": "rstv01",
@@ -91946,6 +108718,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ruenergy",
+      "telegram_id": null,
+      "username": "ruenergy",
+      "name": "⚡️В энергетике",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Главные события в электроэнергетике. Ежедневно. Коротко. С фактчекингом и пруфами.\n\nБот для связи: @ruenergyfeedbackbot\nМы в Max: https://max.ru/id667008629609_biz",
+      "subscribers": 5480,
+      "url": "https://t.me/ruenergy",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:52.854823+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "rupec",
       "telegram_id": null,
       "username": "rupec",
@@ -92265,6 +109116,78 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ruselectronics_official",
+      "telegram_id": null,
+      "username": "ruselectronics_official",
+      "name": "Росэл",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Холдинг Росэл является национальным вендором по электронике и объединяет крупнейшие концерны радиоэлектронной промышленности страны. Управляющей компанией является АО «Объединенная приборостроительная корпорация». Входит в Госкорпорацию Ростех.",
+      "subscribers": 4789,
+      "url": "https://t.me/ruselectronics_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:08:19.171062+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:промышлен"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "rusfleet",
       "telegram_id": null,
       "username": "rusfleet",
@@ -92338,6 +109261,175 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "defense_industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rusiranexpo22",
+      "telegram_id": null,
+      "username": "rusiranexpo22",
+      "name": "РусИранЭкспо",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "МТК Север-Юг,Восток-Запад.Логистика.\nБизнес с Ираном, Ираком, Афганистаном,Пакистаном,странами Перс залива,Вост Африки,Индией,АСЕАН.\nКультура.История.\n\nhttps://www.youtube.com/@RusIranExpo\nwww.rusiranexpo.ru\ntbc1@mail.ru\n+7 901-547-83-66, +7 909-663-87-39",
+      "subscribers": 3025,
+      "url": "https://t.me/rusiranexpo22",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:52.599738+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "culture",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rusline_airlines",
+      "telegram_id": null,
+      "username": "rusline_airlines",
+      "name": "Авиакомпания «РусЛайн»",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «РусЛайн» - www.rusline.aero\nСледите за нашими новостями, узнавайте о новых направлениях и интересных предложениях, планируйте путешествия.",
+      "subscribers": 1603,
+      "url": "https://t.me/rusline_airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:16.066127+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -93296,6 +110388,943 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "rzd_museum",
+      "telegram_id": null,
+      "username": "rzd_museum",
+      "name": "Музей РЖД 🚂 ✔",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "rzd-museum.ru\n\nОфициальный канал Музея железных дорог России (ОАО «РЖД») – одного из крупнейших историко-культурных пространств Европы.\n\n📍 Россия, Санкт-Петербург\n\nКупить билет: https://clck.ru/3FbpdG",
+      "subscribers": 3113,
+      "url": "https://t.me/rzd_museum",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:37.681588+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "culture",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzd_partner_news",
+      "telegram_id": null,
+      "username": "rzd_partner_news",
+      "name": "РЖД-Партнер.ру",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "РЖД-Партнер — новости и аналитика о транспорте, логистике и железных дорогах. Является составной частью информационного проекта РЖД-Партнер.\nГлавные события отрасли, экспертные мнения и тенденции рынка России и СНГ — все, что важно знать профессионалам.",
+      "subscribers": 2846,
+      "url": "https://t.me/rzd_partner_news",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:36.563510+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:ржд",
+        "description:логистик",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 10
+        },
+        {
+          "id": "logistics",
+          "score": 8
+        },
+        {
+          "id": "general",
+          "score": 3.5
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzd_rzd",
+      "telegram_id": null,
+      "username": "rzd_rzd",
+      "name": "Новости РЖД | Российские Железные Дороги",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "РЖД / Логистика / Инсайды ⚡️\n\nГлавный информационный узел ж/д отрасли.\n\n📍 Оперативные сводки 24/7\n📍 Закрытая аналитика и маршруты\n📍 Первые в теме, пока другие спят\n\nПервый неофициальный. \n\nАдмин: @PozhiloyArtem 📩\nЧат: @rzd_chat ☕️",
+      "subscribers": 2729,
+      "url": "https://t.me/rzd_rzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:43.790399+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "name:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:ржд",
+        "description:логистик",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 8
+        },
+        {
+          "id": "logistics",
+          "score": 8
+        },
+        {
+          "id": "general",
+          "score": 4.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzd2025",
+      "telegram_id": null,
+      "username": "rzd2025",
+      "name": "Российские желеzные дороги РЖД",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Мы в VK   https://vk.com/rzd_novosti\n\nКупить рекламу: https://telega.in/c/RZD2025\n\n@Nikola_ad_bot",
+      "subscribers": 9802,
+      "url": "https://t.me/rzd2025",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:19.088829+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzddigital",
+      "telegram_id": null,
+      "username": "rzddigital",
+      "name": "РЖД Цифровой",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Медиа о цифровых технологиях РЖД и не только. Сайт проекта - https://rzddigital.ru   \n\nПо всем вопросам: pr@rzddigital.ru",
+      "subscribers": 5812,
+      "url": "https://t.me/rzddigital",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:27.927199+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdhalyava",
+      "telegram_id": null,
+      "username": "rzdhalyava",
+      "name": "РЖД ХАЛЯВА - Дешевые билеты на поезд",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Дешевые билеты на поезда РЖД - АКЦИИ И СКИДКИ РЖД.  Лайфхаки. ☝ Друзья! Мы не сотрудничаем с различного рода агрегаторами по продаже билетов! Все ссылки в постах ведут исключительно на систему бронирования ОАО \"РЖД\".\n\nКонтакт и реклама: @backrzd_bot",
+      "subscribers": 1359,
+      "url": "https://t.me/rzdhalyava",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:54.593918+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdjob",
+      "telegram_id": null,
+      "username": "rzdjob",
+      "name": "Ржд - Моя Работа",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал трудящихся в РЖД\n---\nОбщий чат РЖД: @chatrzd",
+      "subscribers": 1789,
+      "url": "https://t.me/rzdjob",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:47.845629+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "career",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics",
+        "career"
+      ],
+      "secondary_topics": [
+        "career"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdlogistics",
+      "telegram_id": null,
+      "username": "rzdlogistics",
+      "name": "РЖД Логистика 🚂",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Многопрофильный сервисно-логистический холдинг, реализующий полный комплекс транспортно-логистических сервисов.\nrzdlog.ru\nМультимодальный сервис: CONT@rzdlog.ru\nГрузовая логистика: GL@rzdlog.ru\nПроектная логистика: H8888@rzdlog.ru\nУЦП: LA@rzdlog.ru",
+      "subscribers": 1114,
+      "url": "https://t.me/rzdlogistics",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:57.487046+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:логистик",
+        "name:ржд",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 12
+        },
+        {
+          "id": "logistics",
+          "score": 10
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdte",
+      "telegram_id": null,
+      "username": "rzdte",
+      "name": "Энергетик Трансэнерго",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Электроэнергетика Российских железных дорог. Только свежие и актуальные новости, вебинары, дистанционное обучение. \nБудь первым!",
+      "subscribers": 2128,
+      "url": "https://t.me/rzdte",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:48.148356+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "education"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:обучени"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "education",
+          "score": 4
+        },
+        {
+          "id": "industry",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "energy",
+        "education"
+      ],
+      "secondary_topics": [
+        "education"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdtg",
+      "telegram_id": null,
+      "username": "rzdtg",
+      "name": "Новости РЖД",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Неофициальный канал с новостями ОАО \"Российские железные дороги\"\n\nПо всем вопросам: @IndustryRu_Bot",
+      "subscribers": 3346,
+      "url": "https://t.me/rzdtg",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:33.452570+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "name:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 3.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "rzdtour",
+      "telegram_id": null,
+      "username": "rzdtour",
+      "name": "РЖД Тур",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Путешествия по железной дороге\nhttp://rzdtour.com",
+      "subscribers": 5241,
+      "url": "https://t.me/rzdtour",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:23.352049+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "rzncity",
       "telegram_id": null,
       "username": "rzncity",
@@ -93383,6 +111412,174 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "s4consulting",
+      "telegram_id": null,
+      "username": "s4consulting",
+      "name": "S4 Consulting",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал для предпринимателей. Рассказываем, как уменьшить налоги, защитить бизнес от ФНС и эффективно управлять бухгалтерией.\n\nПомогаем с бухгалтерией, юридическими услугами, консультациями по налогам.\n\nСайт: s4consulting.ru\nНаписать: @s4_consulting",
+      "subscribers": 5556,
+      "url": "https://t.me/s4consulting",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:01.234355+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:налоги",
+        "description:бухгалтер",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "taxes",
+          "score": 6
+        },
+        {
+          "id": "entrepreneurship",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "s7airlines",
+      "telegram_id": null,
+      "username": "s7airlines",
+      "name": "S7 Airlines ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании S7 Airlines.\nУзнавайте первыми о наших новостях и акциях, следите за открытиями новых рейсов, получайте вдохновение на новые путешествия. Билеты на s7.ru\n\nРегистрация в перечне РКН: https://gclnk.com/DyLYYtv8",
+      "subscribers": 287211,
+      "url": "https://t.me/s7airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:26.513123+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -93706,6 +111903,170 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "saletur_ru",
+      "telegram_id": null,
+      "username": "saletur_ru",
+      "name": "Горящие туры и скидки от авиакомпаний",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Отдыхайте больше, платите меньше!  Скидки и спецпредложения на авиабилеты, горящие туры и акции от туроператоров.",
+      "subscribers": 1007,
+      "url": "https://t.me/saletur_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:24.854633+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 4
+        },
+        {
+          "id": "aviation",
+          "score": 4
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "samara_letim",
+      "telegram_id": null,
+      "username": "samara_letim",
+      "name": "Самара Летим",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Бесплатно рассказываем, как выгодно покупать авиабилеты и туры из Самары.\n\nЛовим авиакомпании на ошибках и распродажах. \n\n\"Летим\" в др. городах @letim_russia\n\nРеклама: 👉🏻@tatyana_letim\n\nManagers: @tatyana_letim @Spiral_Yuri",
+      "subscribers": 8875,
+      "url": "https://t.me/samara_letim",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:52.061719+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -95772,6 +114133,85 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "sasha_rjdddd",
+      "telegram_id": null,
+      "username": "sasha_rjdddd",
+      "name": "САША РЖД",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "САША РЖД\n\nРеклама — @elenaDavs47\nЭто фан канал! Всё - осуждаю и не поддерживаю!!!",
+      "subscribers": 7359,
+      "url": "https://t.me/sasha_rjdddd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:21.170832+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "savin",
       "telegram_id": null,
       "username": "savin",
@@ -95994,6 +114434,93 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "sbslogisticsasia",
+      "telegram_id": null,
+      "username": "sbslogisticsasia",
+      "name": "Логистика, таможня, склад",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🚧 Актуальные новости о ситуации на границах Европы и Азии\n🚀 Цифровые технологии в логистике\n🌍 Международные перевозки с немецкими стандартами сервиса\n\nБот: @sbslogistics_bot\nСайт: https://sbslogistics.com\nInstagram:https://www.instagram.com/sbs__logistics",
+      "subscribers": 3870,
+      "url": "https://t.me/sbslogisticsasia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:40.648472+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -96462,6 +114989,89 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "secreti_investora",
+      "telegram_id": null,
+      "username": "secreti_investora",
+      "name": "СЕКРЕТЫ ИНВЕСТОРА",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Частный инвестор. Сооснователь Синдиката.\n\n📚 в Бизнесе - 25 лет\n🧰 в Инвестициях - 15 лет\n\n✅ Займы бизнесу с залогом от 30%\n✅ Мои опыт и знания\n✅ Синдикат - совместные инвестиции\n✅ Чат инвесторов\n\n💵 Нужны Инвестиции?\n\n👉 @Oleg_Secreti_Investora",
+      "subscribers": 4497,
+      "url": "https://t.me/secreti_investora",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:47.262845+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 11,
+      "topic_evidence": [
+        "name:инвест",
+        "username:invest",
+        "description:бизнес",
+        "description:инвест"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 11
+        },
+        {
+          "id": "credit",
+          "score": 2
+        },
+        {
+          "id": "investing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -97107,6 +115717,88 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "severstalavia",
+      "telegram_id": null,
+      "username": "severstalavia",
+      "name": "Severstal Avia",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный телеграмм-канал авиакомпании✈️\n \n▫️Регулярные рейсы\n▫️Чартерные перевозки по миру\n▫️Актуальное расписание, акции",
+      "subscribers": 2908,
+      "url": "https://t.me/severstalavia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:17.176518+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "sevinfo92",
       "telegram_id": null,
       "username": "sevinfo92",
@@ -97266,6 +115958,91 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "sewing_industries",
+      "telegram_id": null,
+      "username": "sewing_industries",
+      "name": "🔺Швейные производства • Каталог",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Каталог B2B‑площадки швейных производств для WB/Ozon: поиск цехов, фабрик, поставщиков тканей и фурнитуры, карго и логистика. География: Китай, Киргизия, Турция, РФ.\n\nРазместить пост: \n@sewing_industriesbot",
+      "subscribers": 6464,
+      "url": "https://t.me/sewing_industries",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:17.421949+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "offers"
+      ],
+      "format_evidence": [
+        "name:каталог"
+      ],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:производств",
+        "description:производств"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "industry"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -97557,6 +116334,89 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "shumeikod76",
+      "telegram_id": null,
+      "username": "shumeikod76",
+      "name": "Дмитрий Шумейко | Налоговая безопасность бизнеса👉",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Помогаю собственникам законно снижать налоговые риски и защищать бизнес от доначислений.\nТребования ФНС, дробление, самозанятые, льготные регионы и реальные налоговые дела. 25+ лет практики. Основатель «Шумейко и партнёры».\nРазбор вашей ситуации@shumeikod",
+      "subscribers": 9716,
+      "url": "https://t.me/shumeikod76",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:58.862463+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:разбор"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 12,
+      "topic_evidence": [
+        "name:бизнес",
+        "name:налог",
+        "description:бизнес",
+        "description:налог"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 12
+        },
+        {
+          "id": "taxes",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "shumilovpavel",
@@ -97885,6 +116745,89 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "silkavia_live",
+      "telegram_id": null,
+      "username": "silkavia_live",
+      "name": "Silk Avia",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🔺 Региональная лоукост-авиакомпания \n🔺 Официальный сайт: www.silk-avia.com\n\nПриобретайте авиабилеты во всех международных аэропортах Узбекистана и в филиале Uzbekistan Airways Sales\n📲 Контакт-центр: +998 55 501 22 12",
+      "subscribers": 4207,
+      "url": "https://t.me/silkavia_live",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:29.843781+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:авиакомпан",
+        "description:аэропорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 4
+        },
+        {
+          "id": "aviation",
+          "score": 4
+        },
+        {
+          "id": "travel",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -98237,6 +117180,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "sinokor_ru",
+      "telegram_id": null,
+      "username": "sinokor_ru",
+      "name": "ВЭД/ИМПОРТ/ЛОГИСТИКА",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Будь в курсе. Простыми словами о сложных процессах.\nМы изнутри видим, знаем и понимаем, что происходит в мире логистики и ВЭД.\nОбратная связь: @Sinokorium_bot",
+      "subscribers": 5748,
+      "url": "https://t.me/sinokor_ru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:19.614513+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "skfo_telegraph",
       "telegram_id": null,
       "username": "skfo_telegraph",
@@ -98381,6 +117403,88 @@ window.TG_DATA = {
       "secondary_topics": [
         "realestate"
       ],
+      "topic_review_required": false
+    },
+    {
+      "id": "skladexpert",
+      "telegram_id": null,
+      "username": "skladexpert",
+      "name": "Skladexpert 🏭 🚚 🚛",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Логистика. Складская недвижимость. Все о складах. Канал Александра Перфильева.\n\nРеклама на канале: skladexpromo@yandex.ru\nКонсалтинг и консультации: Skladexpertap@gmail.com",
+      "subscribers": 3344,
+      "url": "https://t.me/skladexpert",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:45.067049+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        },
+        {
+          "id": "realestate",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
       "topic_review_required": false
     },
     {
@@ -100513,6 +119617,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "solnyshkina_oksana",
+      "telegram_id": null,
+      "username": "solnyshkina_oksana",
+      "name": "Солнышкина Оксана",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Блог о❤️деле,❤️к жизни и людях\nВы не можете повторить 1у и ту же ошибку дважды.Во 2ой раз это уже выбор\n\n#бизнес #инвестиции #лизинг #банки #технологии",
+      "subscribers": 9250,
+      "url": "https://t.me/solnyshkina_oksana",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:34.274745+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:бизнес",
+        "description:инвест",
+        "description:банк"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "investing",
+          "score": 2
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "somethg",
       "telegram_id": null,
       "username": "somethg",
@@ -100589,6 +119775,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "banking"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "somonair",
+      "telegram_id": null,
+      "username": "somonair",
+      "name": "Авиакомпания Сомон Эйр",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Добро пожаловать в официальный Telegram канал авиакомпании Сомон Эйр.\n\n⌨️ www.somonair.com\n📧 call-center@somonair.com\n☎️ +992 (44) 640 40 49\n📱 +992 (93) 777 74 59",
+      "subscribers": 1064,
+      "url": "https://t.me/somonair",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:23.746909+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -100745,6 +120010,80 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "sovetbezrynka1",
+      "telegram_id": null,
+      "username": "sovetbezrynka1",
+      "name": "СоветБезРынка",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Электроэнергетика России. \nРеклама, вопросы и предложения по ссылке: https://t.me/SBR_Ivanovich",
+      "subscribers": 6616,
+      "url": "https://t.me/sovetbezrynka1",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:51.134326+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "sp_1703",
@@ -102519,6 +121858,87 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "sravnilabsru",
+      "telegram_id": null,
+      "username": "sravnilabsru",
+      "name": "Сравни Лабс | Платформа для агентов",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "👉🏻 Платформа для заработка на ОСАГО, страховании, банковских гарантиях, РКО, кредитах для бизнеса: https://clck.ru/3PtAN4\n\nЗдесь мы делимся информацией о финансовых и страховых продуктах и помогаем выбрать наиболее выгодные предложения",
+      "subscribers": 5278,
+      "url": "https://t.me/sravnilabsru",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:19:27.691481+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банковск",
+        "description:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "banking",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "banking"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "sromir",
       "telegram_id": null,
       "username": "sromir",
@@ -103040,6 +122460,85 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "space_industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "starobeshevo1923",
+      "telegram_id": null,
+      "username": "starobeshevo1923",
+      "name": "Администрация Старобешевского муниципального округа",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Вас приветствует Старобешевский муниципальный округ! Земля хлеборобов, энергетиков и горняков.\n\nОфициальный канал администрации Старобешевского муниципального округа\n\nКонтакты для связи:\nТелефон: +7(856)53 2-12-65\nЭл. почта: starobeshevo@admstb.gov-dpr.ru",
+      "subscribers": 1670,
+      "url": "https://t.me/starobeshevo1923",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:02.794527+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+      "geography_relevance": "undetermined",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [],
+      "geography_scope": "unknown",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": true,
+      "geography_source": "none",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:администраци",
+        "description:администраци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "government",
+          "score": 6
+        },
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "industry",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "government"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -105197,6 +124696,85 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "systeme_energy",
+      "telegram_id": null,
+      "username": "systeme_energy",
+      "name": "Systeme Electric: Энергетика",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "⚡️Телеграм-канал компании Systeme Electric по энергетике 🏭 Systeme Electric (Систэм Электрик) - российский производитель оборудования по управлению электроэнергией                          \n\n🌐 Больше о нас systeme.ru",
+      "subscribers": 1684,
+      "url": "https://t.me/systeme_energy",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:06.845094+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "szao_ms",
       "telegram_id": null,
       "username": "szao_ms",
@@ -106281,6 +125859,83 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "taxandthecity",
+      "telegram_id": null,
+      "username": "taxandthecity",
+      "name": "Юрий Кормушаков | Налоговые грани",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал трех специалистов о налогах и проверках ФНС.\nПроводим налоговый аудит, консультируем, сопровождаем проверки, анализируем сделки, компании и налоговые риски.\n📩 Связь\n💬 Через сообщения канала — иконка слева внизу.\n🌐 Сайт: https://poli-expert.ru",
+      "subscribers": 1952,
+      "url": "https://t.me/taxandthecity",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:14:12.239616+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:налоговый",
+        "description:фнс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "taxes",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "taxiafschannel",
       "telegram_id": null,
       "username": "taxiafschannel",
@@ -106364,6 +126019,162 @@ window.TG_DATA = {
       "secondary_topics": [
         "career"
       ],
+      "topic_review_required": false
+    },
+    {
+      "id": "taxlabbb",
+      "telegram_id": null,
+      "username": "taxlabbb",
+      "name": "Максим Рукинов налоги",
+      "category": "other",
+      "subcategory": "taxes",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Решение налоговых споров без суда.\n\nПомощь с претензиями на этапе камеральных и выездных налоговых проверок.\n\nМедиация с налоговой — возможность защитить Ваш бизнес от лишних платежей.  \n\nПервичная  бесплатная консультация → @maksimRukinov",
+      "subscribers": 6511,
+      "url": "https://t.me/taxlabbb",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:16.976056+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "taxes"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "taxes",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:налоги"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "taxes",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "taxes"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "taxletters",
+      "telegram_id": null,
+      "username": "taxletters",
+      "name": "Письма по налогам",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Важные письма Минфина России и ФНС России!\nMAX - https://max.ru/join/WIgjU_8ZBeuXsx6bPbasqjeYq2KklbQ3OKPbD1qulUY\n\nКупить рекламу: @Reklama_persontaxes_bot\nили\nhttps://telega.in/c/taxletters",
+      "subscribers": 5920,
+      "url": "https://t.me/taxletters",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:47.224869+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:налог"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "taxes",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
       "topic_review_required": false
     },
     {
@@ -107163,6 +126974,80 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "tehprispro",
+      "telegram_id": null,
+      "username": "tehprispro",
+      "name": "Техприспро",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "«Техприспро» – это инженерно-правовая система по электроэнергетике. Резидент ИЦ «Сколково»\n\nОфициальный сайт: www.tehprispro.ru\n\nЗаказать обучающие курсы или презентацию системы +7 (995) 414-93-14",
+      "subscribers": 1894,
+      "url": "https://t.me/tehprispro",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:11.140975+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "tek_teploset",
       "telegram_id": null,
       "username": "tek_teploset",
@@ -107569,6 +127454,93 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "telerzd",
+      "telegram_id": null,
+      "username": "telerzd",
+      "name": "Телеграмма РЖД ✔",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный новостной канал РЖД\n\nМы в MAX\nhttps://max.ru/rzd\n\nПоддержка пассажиров по телефону 8-800-775-00-00 \nПо электронным билетам ticket@rzd.ru\nПо грузовым перевозкам 8-800-755-00-00\n\nРКН: https://u.to/HG8PIQ",
+      "subscribers": 68020,
+      "url": "https://t.me/telerzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:13.288917+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "telesputnik",
@@ -109675,6 +129647,84 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "tkani_lastella",
+      "telegram_id": null,
+      "username": "tkani_lastella",
+      "name": "Tkani_LaStella",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Приветствуем вас на нашем телеграмм канале LaStella🌟\n\n🇮🇹 Итальянские ткани \n💃Эксклюзивные и модные новинки на постоянной основе\n💎Премиальное качество\n\nзаказы ➡️ @zakaz_lastella\n\nЛогистика и доставка:\n🪡Склад в Москве\n🌍 Отправки по всей России, СНГ",
+      "subscribers": 2818,
+      "url": "https://t.me/tkani_lastella",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:57.150585+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "tlk_group",
       "telegram_id": null,
       "username": "tlk_group",
@@ -110613,6 +130663,80 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "tokmak_today",
+      "telegram_id": null,
+      "username": "tokmak_today",
+      "name": "Токмак Пресс-центр",
+      "category": "other",
+      "subcategory": "government",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Администрации Токмакского муниципального округа. Актуальная и достоверная информация о работе государственных учреждений и жизни города и района.",
+      "subscribers": 15364,
+      "url": "https://t.me/tokmak_today",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:24:14.774900+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+      "geography_relevance": "undetermined",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [],
+      "geography_scope": "unknown",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": true,
+      "geography_source": "none",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "state",
+      "topic_group_label": "Органы государственной власти",
+      "topic_path": [
+        "state",
+        "government"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "government",
+      "topic_category": "society",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:администраци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "government",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "government"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -111698,6 +131822,236 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "tplus63",
+      "telegram_id": null,
+      "username": "tplus63",
+      "name": "«Т Плюс» в Самарской области",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал группы Самарского филиала компании «Т Плюс» - крупнейшей Российской частной компании, работающей в сфере электроэнергетики и теплоснабжения. \n📎 https://www.tplusgroup.ru/org/samara/",
+      "subscribers": 1939,
+      "url": "https://t.me/tplus63",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:08.750901+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "tplusgrouprus",
+      "telegram_id": null,
+      "username": "tplusgrouprus",
+      "name": "T Плюс",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал ПАО «Т Плюс» — российской компании в сфере электроэнергетики и теплоснабжения.\n\n📎 tplusgroup.ru\n📱vk.ru/tplusgroup, max.ru/TPlus",
+      "subscribers": 5489,
+      "url": "https://t.me/tplusgrouprus",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:45.643164+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "tplussaratov64",
+      "telegram_id": null,
+      "username": "tplussaratov64",
+      "name": "«Т Плюс» в Саратовской области",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал группы Саратовского филиала компании \"Т Плюс\" - крупнейшей российской частной компании, работающей в сфере электроэнергетики и теплоснабжения.\n\nВНИМАНИЕ! В чате действуют правила общения. Рекомендуем ознакомиться: https://clck.ru/3SJCKa",
+      "subscribers": 8365,
+      "url": "https://t.me/tplussaratov64",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:39.026528+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "career",
+          "score": 2
+        },
+        {
+          "id": "energy",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "tradeho",
       "telegram_id": null,
       "username": "tradeho",
@@ -111774,6 +132128,89 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "tradewithoutborders",
+      "telegram_id": null,
+      "username": "tradewithoutborders",
+      "name": "Торговля без границ ( Экспорт из РФ | ВЭД 🇷🇺 / Платежи 🇨🇳 | Логистика | Таможня )",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🇷🇺\"Торговля без границ\" - первый Telegram - канал рассказывающий зрителям как вести бизнес с партнерами из-за границы. \n👉Всё о нюансах экспорта (импорта/логистика) из РФ и ВЭД в России💻🌍\nПо всем вопросам: tradewithoutborders3@mail.ru\n@AnatolyV_Smir",
+      "subscribers": 2965,
+      "url": "https://t.me/tradewithoutborders",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:42.621699+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -111861,6 +132298,82 @@ window.TG_DATA = {
       "secondary_topics": [
         "crypto"
       ],
+      "topic_review_required": false
+    },
+    {
+      "id": "transneft_zs",
+      "telegram_id": null,
+      "username": "transneft_zs",
+      "name": "Транснефть – Западная Сибирь",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Транспортирует нефть и нефтепродукты в шести регионах страны — от Тюменской области до Красноярского края",
+      "subscribers": 2012,
+      "url": "https://t.me/transneft_zs",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:05.899494+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
       "topic_review_required": false
     },
     {
@@ -112176,6 +132689,91 @@ window.TG_DATA = {
         {
           "id": "general",
           "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "transportweek",
+      "telegram_id": null,
+      "username": "transportweek",
+      "name": "Транспортная неделя – 2026",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Транспортная неделя – главное деловое событие отрасли, которое ежегодно проводится Минтрансом России. Ключевыми мероприятиями станут XX Международный форум и выставка «Транспорт России». \n\nОфициальный сайт: https://2026.transweek.digital/ru/",
+      "subscribers": 1110,
+      "url": "https://t.me/transportweek",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:07.464305+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "events"
+      ],
+      "format_evidence": [
+        "description:мероприят"
+      ],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:транспорт",
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "transport",
+          "score": 6
+        },
+        {
+          "id": "culture",
+          "score": 2
         }
       ],
       "topic_tags": [
@@ -113331,6 +133929,79 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "turbine_diesel",
+      "telegram_id": null,
+      "username": "turbine_diesel",
+      "name": "Турбины и Дизели",
+      "category": "other",
+      "subcategory": "industry",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Журнал «Турбины и дизели» посвящен вопросам применения газовых и паровых турбин, дизельных и газовых двигателей для производства электроэнергии и в качестве механического привода в различных отраслях промышленности",
+      "subscribers": 1479,
+      "url": "https://t.me/turbine_diesel",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:12.163693+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "industry"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "industry",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:промышлен",
+        "description:производств"
+      ],
+      "topic_candidates": [
+        {
+          "id": "industry",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "industry"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "turizm_rossiya",
       "telegram_id": null,
       "username": "turizm_rossiya",
@@ -113474,6 +134145,84 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "travel"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "turkmenistanairlines",
+      "telegram_id": null,
+      "username": "turkmenistanairlines",
+      "name": "Генеральный агент Turkmenistan airlines в РФ",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал Генерального агента авиакомпании TURKMENISTAN Airlines в РФ.Узнавайте первыми о специальных предложениях, новых услугах, направлениях и о многом другом, что полезно для авиапутешественников.\n\nhttps://turkmenistanairlines.ru",
+      "subscribers": 6095,
+      "url": "https://t.me/turkmenistanairlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:57.084807+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -116740,6 +137489,96 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "umnayalogistika",
+      "telegram_id": null,
+      "username": "umnayalogistika",
+      "name": "Умная Логистика",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "IT-экосистема для автоматизации логистики\n\nТут об актуальных ставках, новых требованиях в законах и последних новостях рынка.\n\n🔥 Полезные материалы — в одном месте: https://lp.ul.su/links-tg\n\nВозникли вопросы? \n+7 (495) 120-05-90",
+      "subscribers": 7139,
+      "url": "https://t.me/umnayalogistika",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:13.189958+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "tech",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics",
+        "tech"
+      ],
+      "secondary_topics": [
+        "tech"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "umorplusru",
       "telegram_id": null,
       "username": "umorplusru",
@@ -116890,6 +137729,263 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "uneco_bigcitylights",
+      "telegram_id": null,
+      "username": "uneco_bigcitylights",
+      "name": "ОЭК",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Вся энергия города на одном канале городской электросетевой компании АО «ОЭК»! ⚡️\nОткрытия, удивительные факты, новости в области электроэнергетики Москвы и не только!\nПрисоединяйтесь к нам ВК https://vk.com/uneco_bigcitylights\n\nN° 4904560916\n\n#L5O6H",
+      "subscribers": 18714,
+      "url": "https://t.me/uneco_bigcitylights",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:15:28.038617+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [
+        {
+          "id": "ru:moscow",
+          "label": "Москва",
+          "region": "Москва",
+          "country": "RU",
+          "kind": "city"
+        }
+      ],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "description"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Москва"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "description",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:электроэнергет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "unionautorussia",
+      "telegram_id": null,
+      "username": "unionautorussia",
+      "name": "Авто и Спецтехника. Автокредит и лизинг",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "В наличии и под заказ 👇🏻 \n https://unionauto.org\n@UnionAutoAdmin 👈 по всем вопросам  \n5 филиалов по стране 🇷🇺Мск,Владивосток,Край,Нск.📍\nСвоя транспортная компания ✔️\nПодбор любого авто под ключ 🔑 \nНовости, авто каждый день✔️",
+      "subscribers": 6853,
+      "url": "https://t.me/unionautorussia",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:39.318953+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 8
+        },
+        {
+          "id": "transport",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "unistreambank",
+      "telegram_id": null,
+      "username": "unistreambank",
+      "name": "Юнистрим",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Банк Юнистрим💸\n– Денежные переводы за границу и по России\n– Выдача наличными в офисах Банка \n– Займы от партнеров\n– Обмен валюты https://t.me/unistream_exchange\n\nБольше информации https://clck.ru/3NLTmx\nСделать перевод  https://clck.ru/3NLUEd",
+      "subscribers": 19407,
+      "url": "https://t.me/unistreambank",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:16.191832+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банк",
+        "description:валют"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 2
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "unity_company74",
@@ -117111,6 +138207,170 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "housing"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "uralairlines",
+      "telegram_id": null,
+      "username": "uralairlines",
+      "name": "Уральские авиалинии ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «Уральские авиалинии».\n\nАкции, распродажи, советы и просто красивые фото!\n\nКешбэк и другие преимущества с программой «Крылья» ➡️ https://clck.ru/3FLZKh\n\nПо всем вопросам ➡️ @uralairlines_bot",
+      "subscribers": 99291,
+      "url": "https://t.me/uralairlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:29.206326+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "education"
+      ],
+      "format_evidence": [
+        "description:советы"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "uralairlines_official",
+      "telegram_id": null,
+      "username": "uralairlines_official",
+      "name": "UralAirlines_Official ✔",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал пресс-службы авиакомпании «Уральские авиалинии»",
+      "subscribers": 5712,
+      "url": "https://t.me/uralairlines_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:07:04.828025+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -117588,6 +138848,84 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "utair",
+      "telegram_id": null,
+      "username": "utair",
+      "name": "Utair",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании Utair\nЧат поддержки: https://t.me/utair_support_bot\nМерч: merch.utair.ru\n\nРегистрация в перечне РКН:\nhttps://gosuslugi.ru/snet/67a336e201234b6988220b2f\n\n#JFNKT",
+      "subscribers": 83428,
+      "url": "https://t.me/utair",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:30.206102+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 2
+        },
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "uuee_aprch",
       "telegram_id": null,
       "username": "uuee_aprch",
@@ -117939,6 +139277,86 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "uvomintransarf",
+      "telegram_id": null,
+      "username": "uvomintransarf",
+      "name": "Ведомственная охрана Минтранса России",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальное сообщество управления ведомственной охраны Министерства транспорта Российской Федерации\nuvomintrans.ru\n\nГруппа в ВК https://vk.com/uvomintransa\n\nГруппа в одноклассниках https://ok.ru/group/68856347820081",
+      "subscribers": 1586,
+      "url": "https://t.me/uvomintransarf",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:06.161442+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "community"
+      ],
+      "format_evidence": [
+        "description:сообщество"
+      ],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "uyutniydom_mrpl",
       "telegram_id": null,
       "username": "uyutniydom_mrpl",
@@ -118281,6 +139699,94 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "uzbekfintech",
+      "telegram_id": null,
+      "username": "uzbekfintech",
+      "name": "Узбекский ФинТех",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Аналитика, экспертные материалы и новости финансовых технологий, банков, электронных платежных систем.\n\nПо всем вопросам сотрудничества обращайтесь к @tezchoparCEO",
+      "subscribers": 6674,
+      "url": "https://t.me/uzbekfintech",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:14.806756+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:аналитик"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "description:финанс",
+        "description:банк",
+        "description:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "banking",
+          "score": 2
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "uzelsv",
@@ -118785,6 +140291,170 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "vash_finconsultant",
+      "telegram_id": null,
+      "username": "vash_finconsultant",
+      "name": "Ваш финансовый помощник - Бигин Сергей",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Страхование для тех, кто ценит время - быстрое оформление полисов онлайн.\n\nСтрахование: Авто, Ипотечное, Имущество, ВЗР, Жизни и здоровья, от несчастного случая, в том числе спортивное страхование, антиклещ, пдс. \n\nВыдача карты рассрочки Халва.",
+      "subscribers": 1653,
+      "url": "https://t.me/vash_finconsultant",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:20:12.412173+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:финанс",
+        "name:финансов"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 8
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "health",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vdemidoff",
+      "telegram_id": null,
+      "username": "vdemidoff",
+      "name": "Владимир Демидов | Энергетика и государство",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "▫️Ресурсы и политика государств простым языком\n▫️Ключевые инсайты и тенденции развития энергетики\n▫️Наблюдения и заметки \n\n▫️Обо мне  t.me/vdemidoff/4",
+      "subscribers": 3348,
+      "url": "https://t.me/vdemidoff",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:04.398844+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "politics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "vecherniylugansk",
       "telegram_id": null,
       "username": "vecherniylugansk",
@@ -118938,6 +140608,93 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vedpathway",
+      "telegram_id": null,
+      "username": "vedpathway",
+      "name": "ВЭД платежи в Азию и не только.",
+      "category": "other",
+      "subcategory": "banking",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ВЭД информация для ЮЛ. Отборные новости в канале, экспертные советы учвэдов в чате. Импортёры, экспортёры, агенты, банки. Живой канал. Живые люди.\n\nПо рекламе к @AnnPir (тг-ин #12825)\nБанковским сюда @AlexEyud\nМедиакит @leadkit",
+      "subscribers": 6787,
+      "url": "https://t.me/vedpathway",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:13.093884+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "banking"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "education"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:советы"
+      ],
+      "primary_category": "banking",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:банковск",
+        "description:банков"
+      ],
+      "topic_candidates": [
+        {
+          "id": "banking",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 3.0
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "banking"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -119272,6 +141029,410 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vikiwelt",
+      "telegram_id": null,
+      "username": "vikiwelt",
+      "name": "VIKI Википедия финансов. Германия: Страхование, инвестиции, банки",
+      "category": "other",
+      "subcategory": "investing",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Первые шаги в интеграции: все антраги, страхование, инвестиции, пенсии, покупка недвижимости, открытие бесплатного банковского счета, кредитование, онлайн-консультации \n\nБольше информации на моём сайте - www.vikiwelt.de",
+      "subscribers": 1651,
+      "url": "https://t.me/vikiwelt",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:20:09.372812+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "investing"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "investing",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:инвестиц",
+        "description:инвестиц"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 18
+        },
+        {
+          "id": "banking",
+          "score": 6
+        },
+        {
+          "id": "investing",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "investing",
+        "credit"
+      ],
+      "secondary_topics": [
+        "credit"
+      ],
+      "topic_review_required": false
+    },
+    {
+      "id": "viktorymart_19",
+      "telegram_id": null,
+      "username": "viktorymart_19",
+      "name": "Бизнес-туры в Китай🇨🇳Байер Виктория",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Сделать заказ @Viktoria_Kitai\n\n🇨🇳 Бизнес-туры в Китай\n🚚Оптовые поставки напрямую из Китая\n👩‍💻Поиск проверенных поставщиков/фабрик\n💰Торг за ваш товар/выкуп/логистика\n🔑Работа под ключ\n\nОтзывы: https://t.me/china_buyer_reviews",
+      "subscribers": 2587,
+      "url": "https://t.me/viktorymart_19",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:23:01.381605+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:бизнес",
+        "description:бизнес"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "career",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vipservicepattaya",
+      "telegram_id": null,
+      "username": "vipservicepattaya",
+      "name": "СЕРВИС ПАТТАЙЯ",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Качественный сервис в Паттайе \nНаши направления:\n• обмен валют цифровых активов\n• сопровождение покупки / продажи \n• брокерские услуги по ипотеке\n• займы под залог\n• срочный выкуп\n• финансовый и бизнес консалтинг\nВсе вопросы @atadelrent",
+      "subscribers": 1261,
+      "url": "https://t.me/vipservicepattaya",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:14.770541+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "description:займ",
+        "description:ипотек"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "credit",
+          "score": 4
+        },
+        {
+          "id": "realestate",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "visalight_channel",
+      "telegram_id": null,
+      "username": "visalight_channel",
+      "name": "VISA LIGHT | CONCIERGE SERVICE",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🪪Оформление Виз | ВНЖ | Гражданств\n🎟️Мировые мероприятия\n✈️Туры | Мероприятия | Аренда | Авиация\n🌐Попробуй мир с нами!\n📞 8 926 533-91-43\n🛜 visa-light.com\n\nПо всем вопросам: @visalightlux @visa4light",
+      "subscribers": 1069,
+      "url": "https://t.me/visalight_channel",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:08.745821+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "events"
+      ],
+      "format_evidence": [
+        "description:мероприят"
+      ],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "visalight_official",
+      "telegram_id": null,
+      "username": "visalight_official",
+      "name": "VISA_LIGHT | TOMAS MART - Оформление Виз, Консерж Сервис , Гражданства",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "✅ Визы | ВНЖ | Гражданства \n🌐 Премиальные туры: Европа 🇫🇷 |Азия 🇦🇪 | Африка 🐘 | Сафари 🦁\n🏡 Виллы, шале, яхты, бизнес-авиация ✈️\n💍 Свадьбы и ивенты мирового уровня\nЖдём Ваших заявок: @visa4light/ @visalightlux",
+      "subscribers": 8366,
+      "url": "https://t.me/visalight_official",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:13.711827+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -119814,6 +141975,82 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "emergencies"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vleasing",
+      "telegram_id": null,
+      "username": "vleasing",
+      "name": "В лизинг изъятое, новое, б/у",
+      "category": "other",
+      "subcategory": "transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🚛 Лизинг транспорта и спецтехники| Выгодные условия\nУникальные предложения по лизингу изъятого имущества, новой и проверенной б/у техники.\nПодберу идеальный вариант.\n💬 Написать в TG: @ivan_v_leasing\n📞 Телефон +79616678181",
+      "subscribers": 8908,
+      "url": "https://t.me/vleasing",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:32.431140+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "transport"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:транспорт"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "transport",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -121942,6 +144179,252 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "vospol",
+      "telegram_id": null,
+      "username": "vospol",
+      "name": "Эксперты РЖД|Решение задач",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "vpolygon@mail.ru\nОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОСТОЧНЫЙ ПОЛИГОН\" \nГ.МОСКВА, Большой Трёхсвятительский переулок, 2/1с3\n\nАдминистратор -  https://t.me/prom_vp",
+      "subscribers": 2670,
+      "url": "https://t.me/vospol",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:38.775940+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vottak_me",
+      "telegram_id": null,
+      "username": "vottak_me",
+      "name": "ВТ: Новости страхования, экономики и общества для профессионалов и страхователей",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "📈 ВТ — новости страхования, экономики и общества для профессионалов и страхователей. \n\n🌐 Подписывайтесь и присоединяйтесь на VotTak.me!\n\nЕсть идея для новости? Пишите!\n📩 Контакт: @bot_vottaka_bot",
+      "subscribers": 46967,
+      "url": "https://t.me/vottak_me",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:18:57.397992+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "name:новост"
+      ],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:экономик",
+        "description:экономик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 3.0
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "vovik933",
+      "telegram_id": null,
+      "username": "vovik933",
+      "name": "vovik933 Масштабные модели самолетов и другая авиация. Моделизм. 1/144 1/72 1/48",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Модели самолётов в масштабе 1/144\nПо вопросам приобретения моих работ пишите @SavelievVV933\n Plane scale models\n1/144 1/72 1/48",
+      "subscribers": 1698,
+      "url": "https://t.me/vovik933",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:17:02.750120+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 10,
+      "topic_evidence": [
+        "name:авиаци",
+        "name:самолет",
+        "description:самолет"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 10
+        },
+        {
+          "id": "culture",
+          "score": 6
+        },
+        {
+          "id": "design_fashion",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "aviation",
+        "design_fashion"
+      ],
+      "secondary_topics": [
+        "design_fashion"
+      ],
+      "topic_review_required": false
+    },
+    {
       "id": "vovknn",
       "telegram_id": null,
       "username": "vovknn",
@@ -122023,6 +144506,93 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "vozobnovlyaemaya_energetika",
+      "telegram_id": null,
+      "username": "vozobnovlyaemaya_energetika",
+      "name": "Возобновляемая Энергетика",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Информация о возобновляемой энергетике, энергосбережении и устойчивом развитии. Обсуждение возможностей использования возобновляемых источников, мировые новости и опыт реальных людей.",
+      "subscribers": 47730,
+      "url": "https://t.me/vozobnovlyaemaya_energetika",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:03:14.999338+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:энергетик",
+        "description:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 6
+        },
+        {
+          "id": "industry",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 2.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
     },
     {
       "id": "vozvrat_pereplat_po_kreditam",
@@ -122697,6 +145267,82 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "vtbleasing",
+      "telegram_id": null,
+      "username": "vtbleasing",
+      "name": "ВТБ Лизинг",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Одна из крупнейших лизинговых компаний России. Финансируем покупку: \n🚙 легковых авто\n🚚 грузовых авто\n🚜 спецтехники\n\nКонсультация и заявка на расчёт:\n🖥 vtb-leasing.ru\n🤳 88005511918\n🙋 @vtbleasingbot",
+      "subscribers": 3436,
+      "url": "https://t.me/vtbleasing",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:35.365428+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "vtomskeru",
       "telegram_id": null,
       "username": "vtomskeru",
@@ -122955,6 +145601,81 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "webbankircom",
+      "telegram_id": null,
+      "username": "webbankircom",
+      "name": "WEBBANKIR - займы онлайн",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ВЭББАНКИР Подать заявку на заём: https://clck.ru/3S6SDF\n\nМобильное приложение:\nGoogle Play: https://clck.ru/32pNgC\nAppStore: https://clck.ru/32pNhg\nОфициальный канал. Включена РКН в перечень персональных страниц: https://gosuslugi.ru/snet/67a30c0ad6fa9210",
+      "subscribers": 16703,
+      "url": "https://t.me/webbankircom",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:28.432368+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:займ",
+        "description:заем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "who_the_best",
       "telegram_id": null,
       "username": "who_the_best",
@@ -123201,6 +145922,88 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "x5logistika",
+      "telegram_id": null,
+      "username": "x5logistika",
+      "name": "Х5 Логистика",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "📦 Каждый день мы обеспечиваем движение товаров и посылок по всей стране — доставляем продукцию в торговые сети, а заказы из интернет-магазинов и маркетплейсов — в постоматы и пункты выдачи в «Пятерочка» и «Перекресток».",
+      "subscribers": 2514,
+      "url": "https://t.me/x5logistika",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:23:00.298882+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 4
+        },
+        {
+          "id": "logistics",
+          "score": 4
+        },
+        {
+          "id": "sales",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "xibusiness",
       "telegram_id": null,
       "username": "xibusiness",
@@ -123356,6 +146159,176 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "yagudina_oxana_prokitai",
+      "telegram_id": null,
+      "username": "yagudina_oxana_prokitai",
+      "name": "Доставка из КИТАЯ 🇨🇳 ВЭД, карго и логистика |China Optom",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Простыми словами о ВЭД • белом импорте • логистике • бизнесе с Китаем.\n\nПрактика, кейсы, новости и разборы от Оксаны Ягудиной, основателя China Optom.\n\n📲По всем вопросам:\n@YagudinaOxana | info@china-optom.com",
+      "subscribers": 4371,
+      "url": "https://t.me/yagudina_oxana_prokitai",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:42.697859+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news",
+        "analysis"
+      ],
+      "format_evidence": [
+        "description:новост",
+        "description:разбор"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "business",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "yakutia_aero",
+      "telegram_id": null,
+      "username": "yakutia_aero",
+      "name": "Авиакомпания «Якутия»",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный канал авиакомпании «Якутия».\nПодписывайтесь и узнавайте первыми о наших событиях, акциях, новых услугах, направлениях.\nwww.yakutia.aero. \nhttps://www.gosuslugi.ru/snet/67ac30628a84ac04ab2d4cde",
+      "subscribers": 15173,
+      "url": "https://t.me/yakutia_aero",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:43.243383+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Республика Саха"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "yakutsk_vecherniy",
       "telegram_id": null,
       "username": "yakutsk_vecherniy",
@@ -123443,6 +146416,94 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "politics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "yakutskenergo",
+      "telegram_id": null,
+      "username": "yakutskenergo",
+      "name": "ПАО «Якутскэнерго» | Графики ремонтных работ энергетиков",
+      "category": "other",
+      "subcategory": "energy",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "ПАО «Якутскэнерго» – дочернее общество Группы «РусГидро».\n\nВ случае отключения обращайтесь по телефонам:\n005, +7(4112)21-55-68\n\nНовостной канал @Yakutskenergo_news",
+      "subscribers": 5441,
+      "url": "https://t.me/yakutskenergo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:04:07.772127+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Республика Саха"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "industry_group",
+      "topic_group_label": "Промышленность и энергетика",
+      "topic_path": [
+        "industry_group",
+        "energy"
+      ],
+      "broader_topics": [
+        "industry"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "energy",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:энергетик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "energy",
+          "score": 4
+        },
+        {
+          "id": "industry",
+          "score": 4
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "energy"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -123631,6 +146692,95 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "emergencies"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "yamal_airlines",
+      "telegram_id": null,
+      "username": "yamal_airlines",
+      "name": "Авиакомпания Ямал",
+      "category": "other",
+      "subcategory": "air_transport",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Официальный сайт авиакомпании «Ямал» www.yamalaero.ru\n\n✈️Новости и события авиакомпании\n\n#EMKKR\nСоц. сети:\nVK https://vk.com/yamal_airlines\n\nСлужба поддержки:\n8-800-444-02-55\n\nhttps://gosuslugi.ru/snet/67c02d1570370f372d6e5df4",
+      "subscribers": 12707,
+      "url": "https://t.me/yamal_airlines",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:06:45.450032+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Установлена территориальная направленность на один регион.",
+      "geography_relevance": "territorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "name"
+      ],
+      "geography_scope": "region",
+      "geography_regions": [
+        "Ямало-Ненецкий автономный округ"
+      ],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "name",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "air_transport"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "air_transport",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:авиакомпан",
+        "description:авиакомпан"
+      ],
+      "topic_candidates": [
+        {
+          "id": "air_transport",
+          "score": 6
+        },
+        {
+          "id": "aviation",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "air_transport"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -124399,6 +147549,93 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "ymtransgroup",
+      "telegram_id": null,
+      "username": "ymtransgroup",
+      "name": "Логистика из Китая YM Trans Group",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Актуальные новости мировой логистики. \nВсе о доставке из Китая, регулярные и сборные рейсы. \n\nПо вопросам бронирования\n+7 (499) 647 77 25\nzakaz@ymtrans.ru\n\nОтследить груз или оставить заявку (бот)\nhttps://t.me/ymTransGroupBot",
+      "subscribers": 5715,
+      "url": "https://t.me/ymtransgroup",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:27.296130+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:логистик",
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "yo_burg",
       "telegram_id": null,
       "username": "yo_burg",
@@ -124833,6 +148070,239 @@ window.TG_DATA = {
       "topic_review_required": false
     },
     {
+      "id": "yulia_china",
+      "telegram_id": null,
+      "username": "yulia_china",
+      "name": "Юлия | Китай без риска| Закупки в Китае",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🇨🇳 Как привезти товар из Китая без рисков?\n🚚Берём всё под ключ: поиск, выкуп, контроль, логистика, белый ввоз \n🛃15 лет, склады в Китае, селлер  Озон, \n✍️Пишите — найдем и рассчитаем поставку\n\nПиши сюда и рассчитаем доставку @YuliaChina_bot",
+      "subscribers": 3060,
+      "url": "https://t.me/yulia_china",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:49.284408+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaimq",
+      "telegram_id": null,
+      "username": "zaimq",
+      "name": "Займ 0 % 😍💰",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "",
+      "subscribers": 2466,
+      "url": "https://t.me/zaimq",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:52.586491+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaimydengi",
+      "telegram_id": null,
+      "username": "zaimydengi",
+      "name": "ЗАЙМЫ | КРЕДИТЫ",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Займы и кредиты из реестра ЦБ России. Можно взять на карту, счет, электронный кошелек. Оформление заявки через бота",
+      "subscribers": 4784,
+      "url": "https://t.me/zaimydengi",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:44.140535+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 12,
+      "topic_evidence": [
+        "name:кредит",
+        "name:займ",
+        "description:кредит",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 12
+        },
+        {
+          "id": "business",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "zakazanb",
       "telegram_id": null,
       "username": "zakazanb",
@@ -124918,6 +148388,93 @@ window.TG_DATA = {
       ],
       "secondary_topics": [],
       "topic_review_required": true
+    },
+    {
+      "id": "zalog_doveriya",
+      "telegram_id": null,
+      "username": "zalog_doveriya",
+      "name": "Залог Доверия | Инвестиции в займы под залог недвижимости",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Залог Доверия | Займы бизнесу под залог недвижимости \n\nСтать займодавцем: https://moneylender.info/\n\n▫️ Выгодные объекты для займов\n▫️ Проверенные заёмщики\n\nМы в Макс https://max.ru/id2366033467_biz\nМы ВКонтакте https://vk.com/zalog_doveriya",
+      "subscribers": 1115,
+      "url": "https://t.me/zalog_doveriya",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:19.018952+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ",
+        "description:заем"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "business",
+          "score": 6
+        },
+        {
+          "id": "realestate",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "credit",
+        "realestate"
+      ],
+      "secondary_topics": [
+        "realestate"
+      ],
+      "topic_review_required": false
     },
     {
       "id": "zametki_avia",
@@ -125444,6 +149001,546 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zashitim_biznes",
+      "telegram_id": null,
+      "username": "zashitim_biznes",
+      "name": "Защитим Бизнес",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Канал Президента Московской коллегии адвокатов «Филиппов и партнеры»—Дениса Филиппова\nВы узнаете о том, как:\n— Пройти проверку ФНС/ОЭБиПК.\n— Защитить интеллектуальную собственность.\n— Выиграть дело без суда. \n\nhttps://www.filippov.msk.ru/",
+      "subscribers": 10855,
+      "url": "https://t.me/zashitim_biznes",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:13:48.578782+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:бизнес"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "law",
+          "score": 2
+        },
+        {
+          "id": "politics",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zavtrazapustim",
+      "telegram_id": null,
+      "username": "zavtrazapustim",
+      "name": "Славгородский!",
+      "category": "other",
+      "subcategory": "business",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Гедонист-трудоголик.\nДелаю хорошую работу в маркетинге, финансах и стратегии. \n🥤Развиваю бренд напитков.\nslavgorodsky.com\n\nМеня видели в вшэ, рудн,русал, ростех, билайн, vk, депздрав, мтс и в бассейне\nличка @vslavgorodsky\nзаплыв 25km @scoofmarafon",
+      "subscribers": 3257,
+      "url": "https://t.me/zavtrazapustim",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:08:23.572013+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "business"
+      ],
+      "broader_topics": [],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "business",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:финанс"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 2
+        },
+        {
+          "id": "marketing",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "business"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaymer_online",
+      "telegram_id": null,
+      "username": "zaymer_online",
+      "name": "Займер - Онлайн займы",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Получите от 2 000 на карту быстро онлайн:\nна сайте: http://bit.ly/2TRzb1e ✅\nв мобильном приложении: https://bit.ly/3vs6KwH ✅\n\nНа ваши вопросы ответим в чате на нашем сайте: https://vk.cc/cQPu86 💬\n\nРегистрация в РКН https://vk.cc/cGvs6x\n№6619026290\n\n#WOLAH",
+      "subscribers": 19385,
+      "url": "https://t.me/zaymer_online",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:17.695042+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaymirubl",
+      "telegram_id": null,
+      "username": "zaymirubl",
+      "name": "ЗАЙМЫ МИКРОЗАЙМЫ ДЕНЬГИ В ДОЛГ НА КАРТУ",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Хочешь получить что-то за 1 рубль? тогда подпишись на наш канал и будь вкурсе такой возможности💎\nGB",
+      "subscribers": 2413,
+      "url": "https://t.me/zaymirubl",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:59.234567+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "business",
+          "score": 4
+        },
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaymonlayn1",
+      "telegram_id": null,
+      "username": "zaymonlayn1",
+      "name": "Займы Онлайн",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Неофициальные мысли о войне. НЕЧастный канал Александра Сладкова.\n\n🔗 Ссылка — t.me/sladkov_live\nПо вопросам рекламы: @alberto_gog",
+      "subscribers": 5151,
+      "url": "https://t.me/zaymonlayn1",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:39.427666+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 4,
+      "topic_evidence": [
+        "name:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 4
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaymumfo",
+      "telegram_id": null,
+      "username": "zaymumfo",
+      "name": "Займы мфо",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "⚡️АКТУАЛЬНЫЕ НОВОСТИ⚡️\n♻️ТОЛЬКО ПРАВДИВЫЕ ПОСТЫ♻️\n\nПо рекламе: @kepa1950",
+      "subscribers": 1613,
+      "url": "https://t.me/zaymumfo",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:12:10.808922+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [
+        "news"
+      ],
+      "format_evidence": [
+        "description:новост"
+      ],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 8,
+      "topic_evidence": [
+        "name:займ",
+        "name:мфо"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 8
+        },
+        {
+          "id": "general",
+          "score": 1.0
+        }
+      ],
+      "topic_tags": [
+        "credit"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zaymy_na_onlayn_kartu",
+      "telegram_id": null,
+      "username": "zaymy_na_onlayn_kartu",
+      "name": "займы на карту онлайн",
+      "category": "other",
+      "subcategory": "credit",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "займы на карту онлайн\n\nУВЕДОМЛЕНИЕ № 7001470886 (РОСКОМНАДЗОР)",
+      "subscribers": 14424,
+      "url": "https://t.me/zaymy_na_onlayn_kartu",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:11:21.920663+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "finance",
+      "topic_group_label": "Экономика и финансы",
+      "topic_path": [
+        "finance",
+        "credit"
+      ],
+      "broader_topics": [
+        "banking"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "credit",
+      "topic_category": "business",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:займ",
+        "description:займ"
+      ],
+      "topic_candidates": [
+        {
+          "id": "credit",
+          "score": 6
+        }
+      ],
+      "topic_tags": [
+        "credit"
       ],
       "secondary_topics": [],
       "topic_review_required": false
@@ -126213,6 +150310,171 @@ window.TG_DATA = {
       "topic_review_required": true
     },
     {
+      "id": "zozh_rzd",
+      "telegram_id": null,
+      "username": "zozh_rzd",
+      "name": "ЗОЖ РЖД🍀",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "🍀 Привет! Ты попал на канал железного здоровья РЖД!\n\nНаши другие соцсети: \nMAX\nhttps://max.ru/zozh_rzd\nВконтакте\nhttps://vk.com/zozh_rzd \nRutube\nhttps://rutube.ru/channel/38814399/\nYou-Tube\nhttps://www.youtube.com/@zozh_rzd\n\nРКН - https://surl.li/tlmrtx",
+      "subscribers": 13208,
+      "url": "https://t.me/zozh_rzd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:05:18.147112+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 6,
+      "topic_evidence": [
+        "name:ржд",
+        "description:ржд"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 6
+        },
+        {
+          "id": "logistics",
+          "score": 6
+        },
+        {
+          "id": "health",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zparabellummd",
+      "telegram_id": null,
+      "username": "zparabellummd",
+      "name": "Z ParaBellum MD",
+      "category": "other",
+      "subcategory": "logistics",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Помощь фронту! Без тыла нет победы. Снабжение и логистика для воинов СВО\n\nДля связи с администрацией и отправки интересного контента с фронта пишите в ЛС канала",
+      "subscribers": 4777,
+      "url": "https://t.me/zparabellummd",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:22:37.751958+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "logistics"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "logistics",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:логистик"
+      ],
+      "topic_candidates": [
+        {
+          "id": "auto",
+          "score": 2
+        },
+        {
+          "id": "logistics",
+          "score": 2
+        },
+        {
+          "id": "military",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "logistics"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
       "id": "zpregion",
       "telegram_id": null,
       "username": "zpregion",
@@ -126364,6 +150626,88 @@ window.TG_DATA = {
       ],
       "topic_tags": [
         "general"
+      ],
+      "secondary_topics": [],
+      "topic_review_required": false
+    },
+    {
+      "id": "zvozduh",
+      "telegram_id": null,
+      "username": "zvozduh",
+      "name": "Zемля-Vоздух",
+      "category": "other",
+      "subcategory": "aviation",
+      "region": null,
+      "region_hint": null,
+      "country": null,
+      "source": "catalog_growth",
+      "sources": [
+        "tgramsearch"
+      ],
+      "channel_type": "unknown",
+      "region_confidence": 0.0,
+      "region_source": null,
+      "region_reason": null,
+      "region_candidates": [],
+      "region_review_required": false,
+      "description": "Новые технологии: авиация, дроны, ракеты\n\nПишите нам @zvozduh_bot\n\nПодписывайтесь на канал \nhttps://t.me/joinchat/AAAAAE6LVQdMRVP-pn8MqA",
+      "subscribers": 2013,
+      "url": "https://t.me/zvozduh",
+      "last_parsed_at": null,
+      "last_meta_at": "2026-11-13T16:16:54.984201+03:00",
+      "last_meta_attempt_at": null,
+      "last_meta_error": null,
+      "original_subcategory": null,
+      "geography_explanation": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+      "geography_relevance": "nonterritorial",
+      "geography_places": [],
+      "geography_candidates": [],
+      "geography_evidence": [
+        "subject_policy"
+      ],
+      "geography_scope": "nonlocal",
+      "geography_regions": [],
+      "geography_country": "",
+      "geography_review_required": false,
+      "geography_source": "subject_policy",
+      "classification_review_stale": false,
+      "classification_version": 2,
+      "topic_group": "transport",
+      "topic_group_label": "Транспорт и логистика",
+      "topic_path": [
+        "transport",
+        "aviation"
+      ],
+      "broader_topics": [
+        "transport"
+      ],
+      "topic_granularity": "topic",
+      "publication_formats": [],
+      "format_evidence": [],
+      "primary_category": "aviation",
+      "topic_category": "other",
+      "topic_source": "heuristic",
+      "topic_version": 8,
+      "topic_score": 2,
+      "topic_evidence": [
+        "description:авиаци"
+      ],
+      "topic_candidates": [
+        {
+          "id": "aviation",
+          "score": 2
+        },
+        {
+          "id": "military",
+          "score": 2
+        },
+        {
+          "id": "tech",
+          "score": 2
+        }
+      ],
+      "topic_tags": [
+        "aviation"
       ],
       "secondary_topics": [],
       "topic_review_required": false
