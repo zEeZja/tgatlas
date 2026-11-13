@@ -46,7 +46,7 @@ class PostgresCase(unittest.TestCase):
             cursor.execute(statement, params)
             return cursor.fetchall() if cursor.description else None
 
-    def snapshot(self):
+    def snapshot(self, columns=None):
         tables = [
             "channels",
             "posts",
@@ -56,7 +56,21 @@ class PostgresCase(unittest.TestCase):
         ]
         return {
             table: self.query(
-                sql.SQL("SELECT * FROM {} ORDER BY 1").format(sql.Identifier(table))
+                sql.SQL("SELECT {} FROM {} ORDER BY 1").format(
+                    sql.SQL(", ").join(map(sql.Identifier, columns[table]))
+                    if columns
+                    else sql.SQL("*"),
+                    sql.Identifier(table),
+                )
             )
             for table in tables
         }
+
+    def snapshot_columns(self):
+        """Capture old columns so additive migrations cannot hide data changes."""
+        rows = self.query("""SELECT table_name,column_name FROM information_schema.columns
+            WHERE table_schema=current_schema() ORDER BY table_name,ordinal_position""")
+        result = {}
+        for table, column in rows:
+            result.setdefault(table, []).append(column)
+        return result

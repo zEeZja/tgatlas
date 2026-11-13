@@ -15,17 +15,29 @@
       )
     )
       throw new Error("Повреждён формат записи канала");
+    const seen = new Set();
+    for (const row of rows) {
+      const username = row.username.trim().replace(/^@/, "").toLowerCase();
+      if (!username || seen.has(username))
+        throw new Error("Пустой или повторный username в каталоге: " + username);
+      seen.add(username);
+    }
     return rows;
   }
-  async function demo() {
-    await new Promise((resolve, reject) => {
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.src = "./demo.js";
+      script.src = src;
       script.onload = resolve;
       script.onerror = () =>
         reject(new Error("Данные и демонстрационный каталог не найдены"));
       document.head.appendChild(script);
     });
+  }
+  async function demo() {
+    // HTTP must not resurrect an old JS snapshot when JSON is absent.
+    window.TG_DATA = undefined;
+    await loadScript("./demo.js");
     return unpack(window.TG_DATA);
   }
   async function getChannels() {
@@ -36,9 +48,16 @@
         throw new Error(`HTTP ${response.status} при запросе ${url}`);
       return unpack(await response.json());
     }
-    if (window.TG_DATA !== undefined) return unpack(window.TG_DATA);
-    if (location.protocol === "file:") return demo();
-    const response = await fetch("./data/channels.json");
+    if (location.protocol === "file:") {
+      if (window.TG_DATA !== undefined) return unpack(window.TG_DATA);
+      try {
+        await loadScript("./data/channels.js");
+      } catch (_) {
+        return demo();
+      }
+      return window.TG_DATA === undefined ? demo() : unpack(window.TG_DATA);
+    }
+    const response = await fetch("./data/channels.json", { cache: "no-store" });
     if (response.status === 404) return demo();
     if (!response.ok)
       throw new Error(`HTTP ${response.status} при загрузке channels.json`);

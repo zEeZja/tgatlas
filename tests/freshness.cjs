@@ -1,0 +1,18 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const vm = require("node:vm");
+const c = { window: {} };
+vm.createContext(c);
+vm.runInContext(fs.readFileSync("web/freshness.js", "utf8"), c);
+const F = c.window.Freshness;
+const now = Date.parse("2026-11-12T12:00:00Z");
+assert.equal(F.status({}, now), "unknown");
+assert.equal(F.status({ last_meta_at: "invalid" }, now), "unknown");
+assert.equal(F.status({ last_meta_at: "2027-01-01T00:00:00Z" }, now), "unknown");
+assert.equal(F.status({ last_meta_at: "2026-11-12T11:00:00Z" }, now), "fresh");
+assert.equal(F.status({ last_meta_at: "2026-11-11T12:00:00Z" }, now), "stale");
+assert.equal(F.status({ generated_at: "2026-11-12T12:00:00Z", last_parsed_at: "2026-11-12T12:00:00Z" }, now), "unknown");
+assert.equal(F.status({ last_meta_at: "2026-11-12T11:00:00Z", last_meta_error: "timeout" }, now), "fresh");
+assert.equal(F.errorLabel("<private>"), "не удалось обновить данные");
+assert.equal(F.counts([{}, { last_meta_at: "2026-11-12T11:00:00Z" }], now).unknown, 1);
+console.log("Metadata freshness checks passed");

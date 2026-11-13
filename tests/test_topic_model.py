@@ -115,3 +115,18 @@ class TopicModelTests(unittest.TestCase):
         write_review(path, rows)
         with self.assertRaises(ValueError):
             train(path, self.path / "must_not_exist.json")
+
+    def test_group_model_can_use_confirmed_group_without_a_leaf(self):
+        rows = training_rows()
+        for row in rows:
+            row["expected_group"] = "sport_group" if row["expected_topic"] == "sport" else "technology"
+            row["expected_topic"] = "other"
+        review, output = self.path / "groups.csv", self.path / "group-model.json"
+        write_review(review, rows)
+        result = train(review, output, threshold=0.5, target="group")
+        self.assertEqual(result["evaluation"]["fields_trained"], ["topic_group"])
+        self.assertGreaterEqual(result["evaluation"]["model"]["topic_group_accuracy"], 0.9)
+        suggestion = predict(output, [dict(name="Футбол хоккей спорт стадион")])[0]
+        self.assertEqual(suggestion["suggested_group"], "sport_group")
+        self.assertEqual(suggestion["suggested_topic"], "other")
+        self.assertFalse(suggestion["reviewed"])

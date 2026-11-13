@@ -17,18 +17,26 @@ const editable = (k) =>
     "review_reason",
     "proposed_topic",
     "review_schema_version",
-    "taxonomy_version",
+     "taxonomy_version",
+     "topic_reviewed",
+     "geography_reviewed",
+     "formats_reviewed",
   ].includes(k);
 function adopt(target, saved) {
   for (const key of payload.fields)
     if (editable(key) && saved[key] !== undefined) target[key] = saved[key];
   target.review_schema_version = saved.review_schema_version || "1";
   target.taxonomy_version = saved.taxonomy_version || "5";
+  const legacy = saved.review_schema_version !== "3" && saved.reviewed === "yes";
+  for (const name of ["topic", "geography"])
+    target[name + "_reviewed"] = saved[name + "_reviewed"] || (legacy ? "yes" : "no");
+  target.formats_reviewed = saved.formats_reviewed || (saved.review_schema_version === "2" && legacy ? "yes" : "no");
   if (!byTopic[target.expected_topic]) {
     target.proposed_topic = target.expected_topic;
     target.expected_topic = "other";
     target.review_reason = "missing_topic";
     target.reviewed = "no";
+    target.topic_reviewed = "no";
   }
   target.expected_group =
     target.expected_topic !== "other"
@@ -67,8 +75,11 @@ function show() {
   el("channel").textContent = "@" + row.username;
   el("channel").href = "https://t.me/" + encodeURIComponent(row.username);
   el("description").textContent = row.description;
+  const current = row.current_suggestion;
+  el("new-suggestion").textContent = current ? `Предложение правил V${payload.taxonomyVersion}: ${byTopic[current.expected_topic]?.label || current.expected_topic} · ${payload.scopes.find(s => s.id === current.expected_scope)?.label || current.expected_scope}. Это не подтверждённый ответ.` : "";
   options(el("topic-group"), payload.groups, [row.expected_group]);
   options(el("topic"), payload.topics, [row.expected_topic]);
+  el("topic-help").textContent = byTopic[row.expected_topic]?.definition || "Можно подтвердить только крупную группу, не выбирая случайную подтему.";
   options(
     el("tags"),
     payload.topics.filter(
@@ -87,15 +98,45 @@ function show() {
   el("note").value = row.note;
   el("reason").value = row.review_reason || "";
   el("proposed-topic").value = row.proposed_topic || "";
-  el("reviewed").checked = row.reviewed === "yes";
+  el("topic-reviewed").checked = row.topic_reviewed === "yes";
+  el("geography-reviewed").checked = row.geography_reviewed === "yes";
+  el("reviewed").checked = row.topic_reviewed === "yes" && row.geography_reviewed === "yes";
   el("regions").disabled = !["region", "multi_region"].includes(
     row.expected_scope,
   );
   el("country").disabled = row.expected_scope === "nonlocal";
+  el("scope-help").textContent = {
+    nonlocal: "Регион не требуется: предмет канала не ограничен территорией. Это полноценная классификация, не неопределённость.",
+    country: "Выберите страну по направленности содержания. Русский язык сам по себе не означает Россию.",
+    unknown: "Не хватает сведений или есть противоречие. Не выбирайте это для заведомо нетерриториального канала.",
+    global: "Международная повестка, а не просто отсутствие города.",
+    region: "Один субъект или однозначно определённый город. Биография автора и разовая новость не считаются охватом.",
+    multi_region: "Несколько подтверждённых регионов, разделённых символом |.",
+  }[row.expected_scope] || "";
+  const problems = validation(row);
+  el("validation").textContent = problems.join(" ");
   el("progress").textContent =
-    `${index + 1} / ${rows.length} · проверено ${rows.filter((r) => r.reviewed === "yes").length}`;
+    `${index + 1} / ${rows.length} · проверено ${rows.filter((r) => r.topic_reviewed === "yes" && r.geography_reviewed === "yes").length} · тем: ${rows.filter(r => r.topic_reviewed === "yes").length} · география: ${rows.filter(r => r.geography_reviewed === "yes").length}`;
   el("previous").disabled = index === 0;
   el("next").disabled = index === rows.length - 1;
+}
+function validation(row, dimension = "all") {
+  const errors = [];
+  if (dimension !== "geography" && row.topic_reviewed === "yes") {
+    if (!byTopic[row.expected_topic] || (row.expected_topic !== "other" && byTopic[row.expected_topic].group !== row.expected_group))
+      errors.push("Тема не соответствует выбранной группе.");
+  }
+  if (dimension !== "topic" && row.geography_reviewed === "yes") {
+    const regions = [...new Set(row.expected_regions.split("|").map(x => x.trim()).filter(Boolean))];
+    if (!payload.scopes.some(s => s.id === row.expected_scope)) errors.push("Выберите корректную направленность.");
+    if (row.expected_scope === "country" && !/^[A-Z]{2}$/.test(row.expected_country))
+      errors.push("Для страновой направленности укажите двухбуквенный код страны, например RU. Или выберите «Без территориальной привязки».");
+    if (row.expected_country && !/^[A-Z]{2}$/.test(row.expected_country)) errors.push("Код страны: две латинские буквы.");
+    if (row.expected_scope === "region" && regions.length !== 1) errors.push("Нужен один регион.");
+    if (row.expected_scope === "multi_region" && regions.length < 2) errors.push("Нужны минимум два региона.");
+    if (!["region", "multi_region"].includes(row.expected_scope) && regions.length) errors.push("Для этой направленности регионы должны быть пустыми. Измените направленность явно, чтобы очистить их.");
+  }
+  return errors;
 }
 function save(event) {
   const row = rows[index];
@@ -121,14 +162,31 @@ function save(event) {
   row.note = el("note").value;
   row.review_reason = el("reason").value;
   row.proposed_topic = el("proposed-topic").value;
-  row.reviewed = el("reviewed").checked ? "yes" : "no";
-  if (event?.target) {
-    row.review_schema_version = "2";
+  const id = event?.target?.id;
+  row.topic_reviewed = el("topic-reviewed").checked ? "yes" : "no";
+  row.geography_reviewed = el("geography-reviewed").checked ? "yes" : "no";
+  if (id === "reviewed") {
+    row.topic_reviewed = row.geography_reviewed = el("reviewed").checked ? "yes" : "no";
+    row.formats_reviewed = row.topic_reviewed;
+  } else if (id === "topic-reviewed") row.formats_reviewed = row.topic_reviewed;
+  else if (["topic", "topic-group", "tags", "formats"].includes(id)) {
+    row.topic_reviewed = "no";
+    row.formats_reviewed = "no";
+  } else if (["scope", "regions", "country"].includes(id)) row.geography_reviewed = "no";
+  if (id && !["note", "reason", "proposed-topic"].includes(id)) {
+    row.review_schema_version = "3";
     row.taxonomy_version = String(payload.taxonomyVersion);
   }
-  if (["country", "global", "unknown", "nonlocal"].includes(row.expected_scope))
+  if (id === "scope" && ["country", "global", "unknown", "nonlocal"].includes(row.expected_scope))
     row.expected_regions = "";
-  if (row.expected_scope === "nonlocal") row.expected_country = "";
+  if (id === "scope" && row.expected_scope === "nonlocal") row.expected_country = "";
+  let blocked = false;
+  for (const dimension of ["topic", "geography"])
+    if (validation(row, dimension).length && row[dimension + "_reviewed"] === "yes" && id) {
+      row[dimension + "_reviewed"] = "no";
+      blocked = true;
+    }
+  row.reviewed = row.topic_reviewed === "yes" && row.geography_reviewed === "yes" ? "yes" : "no";
   try {
     localStorage.setItem(storageKey, JSON.stringify(rows));
     el("status").textContent =
@@ -138,6 +196,7 @@ function save(event) {
       "Скачайте CSV: сохранение в браузере недоступно.";
   }
   show();
+  if (blocked) el("validation").textContent = "Подтверждение не принято: проверьте страну, регионы и соответствие темы группе. Другая проверенная часть сохранена.";
 }
 for (const id of [
   "topic",
@@ -151,6 +210,8 @@ for (const id of [
   "reason",
   "proposed-topic",
   "reviewed",
+  "topic-reviewed",
+  "geography-reviewed",
 ])
   el(id).onchange = save;
 el("previous").onclick = () => {
@@ -158,6 +219,20 @@ el("previous").onclick = () => {
     index--;
     show();
   }
+};
+el("choose-nonlocal").onclick = () => {
+  el("scope").value = "nonlocal";
+  save({target: el("scope")});
+};
+el("use-suggestion").onclick = () => {
+  const row = rows[index], current = row.current_suggestion;
+  if (!current) return;
+  for (const key of ["topic", "group", "secondary_topics", "formats"])
+    if (row.topic_reviewed !== "yes") row["expected_" + key] = current["expected_" + key];
+  for (const key of ["scope", "regions", "country"])
+    if (row.geography_reviewed !== "yes") row["expected_" + key] = current["expected_" + key];
+  show();
+  save();
 };
 el("next").onclick = () => {
   if (index < rows.length - 1) {
@@ -168,7 +243,7 @@ el("next").onclick = () => {
 el("next-unreviewed").onclick = () => {
   for (let n = 1; n <= rows.length; n++) {
     const next = (index + n) % rows.length;
-    if (rows[next].reviewed !== "yes") {
+    if (rows[next].topic_reviewed !== "yes" || rows[next].geography_reviewed !== "yes") {
       index = next;
       show();
       return;
@@ -258,6 +333,7 @@ el("import").onchange = async () => {
       matched++;
       if (saved.group_id && saved.group_id !== target.group_id) {
         target.reviewed = "no";
+        target.topic_reviewed = target.geography_reviewed = target.formats_reviewed = "no";
         target.review_reason = "profile_changed";
         stale++;
       }

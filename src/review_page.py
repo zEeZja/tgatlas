@@ -2,18 +2,32 @@
 
 import json
 from pathlib import Path
-from .topic_keywords import TAXONOMY
+from .topic_keywords import TAXONOMY, load_classification_rules, resolve_topic
 from .classification_review import FIELDS, upgrade_record
 
 ROOT = Path(__file__).resolve().parent.parent
 
 
 def render_review(records):
+    rules = load_classification_rules()
+    prepared = []
+    for record in records:
+        row = upgrade_record(record)
+        current = resolve_topic(dict(username=row["username"], name=row["name"], description=row["description"],
+                                     country=row.get("input_country", ""), region_hint=row.get("input_region_hint", "")),
+                                {}, geography_overrides={}, tag_overrides={}, federal_channels=rules["federal_channels"])
+        row["current_suggestion"] = dict(
+            expected_topic=current["subcategory"], expected_group=current["topic_group"],
+            expected_secondary_topics=",".join(current["secondary_topics"]),
+            expected_formats=",".join(current["publication_formats"]),
+            expected_scope=current["geography_scope"], expected_regions="|".join(current["geography_regions"]),
+            expected_country=current["geography_country"])
+        prepared.append(row)
     data = dict(
-        records=[upgrade_record(r) for r in records],
+        records=prepared,
         fields=FIELDS,
         topics=[
-            dict(id=t["id"], label=t["label"], group=t["group"])
+            dict(id=t["id"], label=t["label"], group=t["group"], definition=t["definition"])
             for t in TAXONOMY["topics"]
         ],
         groups=TAXONOMY["groups"],

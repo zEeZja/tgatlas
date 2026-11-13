@@ -87,6 +87,10 @@
     const ranked = [];
     const strongDescription = new Set();
     for (const topic of taxonomy.topics) {
+      const profileFields = [fields[0], fields[2]];
+      if ((topic.exclude_phrases || []).some(k => profileFields.some(([field, text]) => matches(k, text, field)))) continue;
+      const prefix = (topic.name_prefixes || []).some(p => (fields[0][1] + " ").startsWith(normalize(p) + " "));
+      if (topic.require_any && !prefix && !topic.require_any.some(k => profileFields.some(([field, text]) => matches(k, text, field)))) continue;
       let score = 0;
       const evidence = [];
       for (const [field, text, weight] of fields) {
@@ -95,6 +99,10 @@
           score += weight * Math.min(found.length, 3);
           evidence.push(...found.slice(0, 3).map((k) => `${field}:${k}`));
         }
+      }
+      if (prefix && !score) {
+        score = 4;
+        evidence.push("name:наименование органа власти");
       }
       if (
         (topic.strong_description_keywords || []).some((k) =>
@@ -274,8 +282,10 @@
     if (!region && !(foreign && foreign.scope === "region")) {
       const desc = informativeDescription(description),
         tokens = normalize(desc).split(" ");
+      const [places, ambiguous] = resolvePlaces(desc, "", true);
+      const oneRegion = findTitleRegions(desc, true).length === 1 || (places.length && !ambiguous && new Set(places.map(p => p.region)).size === 1);
       if (
-        findTitleRegions(desc, true).length === 1 &&
+        oneRegion &&
         tokens.some(
           (t) => ["медиа", "мультимедиа"].includes(t) || t.startsWith("новост"),
         )
@@ -298,6 +308,7 @@
       "события",
       "жесть",
       "чпн",
+      "афиша",
     ];
     if (
       words.some((t) => markers.includes(t)) ||
@@ -342,6 +353,7 @@
     "жителей",
     "жители",
     "медиа",
+    "мультимедиа",
     "события",
     "сообщество",
     "канал",
@@ -374,7 +386,7 @@
         const end = start + parts.length;
         if (!parts.every((p, i) => words[start + i] === p)) continue;
         const nearby = words.slice(
-          Math.max(0, start - 4),
+          Math.max(0, start - 12),
           Math.min(words.length, end + 4),
         );
         if (
@@ -466,11 +478,13 @@
     if (hint.length === 1) return [hint, null, "hint"];
     return [[], null, "none"];
   }
-  function geography(channel) {
+  function geography(channel, territorial = null) {
     const key = String(channel.username || "")
       .replace(/^@/, "")
       .toLowerCase();
     const override = taxonomy.geography_overrides?.[key];
+    const subjectPolicy = territorial === false && !override && !channel.geographic_scope;
+    if (subjectPolicy) channel = {...channel, geographic_scope: "nonlocal"};
     if (override) {
       if (
         ![
@@ -510,7 +524,7 @@
       channel.channel_type === "federal" ||
       taxonomy.federal_channels.some((x) => x.toLowerCase() === key);
     let foreign = null,
-      source = override ? "manual" : regions.length ? "stored" : "none";
+      source = override ? "manual" : subjectPolicy ? "subject_policy" : regions.length ? "stored" : "none";
     if (federal && !override && !channel.geographic_scope) {
       regions = [];
       source = "federal";
@@ -538,9 +552,10 @@
         foreign = f;
         source = "description";
       } else if (
+        !f &&
         !findTitleRegions(cleaned).length &&
         taxonomy.nonlocal_evidence.some((p) =>
-          (" " + words + " ").includes(" " + normalize(p) + " "),
+          (" " + normalize((channel.name || "") + " " + cleaned) + " ").includes(" " + normalize(p) + " "),
         )
       )
         source = "nonlocal_evidence";
@@ -564,17 +579,22 @@
       .toUpperCase();
     if (scope === "country" && !country) scope = "unknown";
     if (scope === "nonlocal") country = "";
-    let [places, ambiguous] = resolvePlaces(
-      channel.name || "",
-      channel.region_hint || "",
-    );
-    if (!places.length)
+    let [places, ambiguous] = scope === "nonlocal" ? [[], false] : resolvePlaces(channel.name || "", channel.region_hint || "");
+    if (scope !== "nonlocal" && !places.length)
       [places, ambiguous] = resolvePlaces(
         cleaned,
         channel.region_hint || "",
         true,
       );
     return {
+      geography_explanation: {
+        nonlocal: "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+        unknown: "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+        country: "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+        global: "Международная направленность содержания, а не измеренная география подписчиков.",
+        region: "Установлена территориальная направленность на один регион.",
+        multi_region: "Установлена направленность на несколько регионов.",
+      }[scope],
       geography_relevance:
         scope === "nonlocal"
           ? "nonterritorial"
@@ -681,12 +701,13 @@
     return {
       ...channel,
       original_subcategory: original ?? null,
-      ...geography(channel),
+      ...geography(channel, topic === "other" && group === "other_group" ? null : taxonomy.geography_topics.includes(topic) || !!localNewsEvidence(channel.name || "", channel.description || "")),
       classification_review_stale: stale,
       classification_version: 2,
       topic_group: group,
       topic_group_label: groups[group].label,
       topic_path: topic !== "other" ? [group, topic] : [group],
+      broader_topics: byId[topic].parent_topics || [],
       topic_granularity:
         topic !== "other"
           ? "topic"

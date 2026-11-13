@@ -173,7 +173,11 @@ def local_news_evidence(name, description):
     if not region and not (foreign and foreign["scope"] == "region"):
         desc = informative_description(description)
         tokens_desc = normalize_text(desc).split()
-        if len(find_title_regions(desc, True)) == 1 and any(
+        places, ambiguous = resolve_places(desc, contextual=True)
+        one_region = len(find_title_regions(desc, True)) == 1 or (
+            bool(places) and not ambiguous and len({p["region"] for p in places}) == 1
+        )
+        if one_region and any(
             t in {"медиа", "мультимедиа"} or t.startswith("новост") for t in tokens_desc
         ):
             return "description:городское медиа (требует проверки темы)"
@@ -193,6 +197,7 @@ def local_news_evidence(name, description):
         "события",
         "жесть",
         "чпн",
+        "афиша",
     }
     if (
         markers.intersection(tokens)

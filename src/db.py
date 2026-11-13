@@ -184,7 +184,8 @@ def update_channel_meta(
     name: str = None,
     telegram_id: int = None,
 ) -> None:
-    """Обновить только известные метаданные, не затирая неполными ответами."""
+    """Частичный ответ дополняет поля, но не переносит дату полной проверки."""
+    complete = bool(name) and description is not None and subscribers is not None
     with _cursor(conn) as cur:
         cur.execute(
             """
@@ -193,11 +194,40 @@ def update_channel_meta(
                    description  = COALESCE(%s, description),
                    subscribers  = COALESCE(%s, subscribers),
                    telegram_id  = COALESCE(telegram_id, %s),
-                   last_meta_at = NOW(),
+                    last_meta_at = CASE WHEN %s THEN NOW() ELSE last_meta_at END,
+                    last_meta_attempt_at = NOW(),
+                    last_meta_error = %s,
                    updated_at   = NOW()
              WHERE id = %s
             """,
-            (name, description, subscribers, telegram_id, channel_id),
+            (
+                name,
+                description,
+                subscribers,
+                telegram_id,
+                complete,
+                None if complete else "incomplete_metadata",
+                channel_id,
+            ),
+        )
+
+
+def mark_metadata_failure(conn, channel_id: int, error_code: str) -> None:
+    """Сохранить безопасный код ошибки, не меняя успешную проверку и метаданные."""
+    allowed = {
+        "timeout",
+        "network_error",
+        "unavailable",
+        "invalid_or_limited_response",
+        "update_failed",
+        "incomplete_metadata",
+    }
+    code = error_code if error_code in allowed else "update_failed"
+    with _cursor(conn) as cur:
+        cur.execute(
+            """UPDATE channels SET last_meta_attempt_at=NOW(),
+            last_meta_error=%s, updated_at=NOW() WHERE id=%s""",
+            (code, channel_id),
         )
 
 
@@ -266,7 +296,8 @@ def get_active_channels(conn) -> List[dict]:
         cur.execute(
             """
             SELECT id, telegram_id, username, name, category, subcategory,
-                   country, region, region_hint, source
+                   country, region, region_hint, source,
+                   last_meta_at, last_meta_attempt_at, last_meta_error
               FROM channels WHERE is_active = TRUE
              ORDER BY username
             """
@@ -284,6 +315,7 @@ def get_channels_with_meta(conn) -> List[dict]:
                    ch.region_confidence, ch.region_source, ch.region_reason,
                    ch.region_candidates, ch.region_review_required,
                    ch.last_parsed_at, ch.last_meta_at,
+                   ch.last_meta_attempt_at, ch.last_meta_error,
                    COALESCE(array_agg(DISTINCT cs.source_name)
                        FILTER (WHERE cs.source_name IS NOT NULL), ARRAY[]::TEXT[]) AS sources
               FROM channels ch

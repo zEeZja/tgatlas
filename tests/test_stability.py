@@ -50,7 +50,9 @@ class StabilityTests(unittest.TestCase):
             return original(path, *args, **kwargs)
 
         with patch.object(Path, "read_text", read):
-            rows = exporter.channel_rows([row.copy() for _ in range(100)])
+            rows = exporter.channel_rows(
+                [{**row, "username": f"test_{i}"} for i in range(100)]
+            )
         self.assertEqual(len(rows), 100)
         self.assertEqual(
             sorted(reads),

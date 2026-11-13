@@ -111,7 +111,8 @@ def migration_status(conn, directory=MIGRATIONS_DIR):
 
 # Probe the columns used by the main read/write paths, without loading rows.
 REQUIRED_COLUMNS = {
-    "channels": "id username name category country description subscribers is_active last_parsed_at last_meta_at created_at updated_at subcategory region region_hint source channel_type region_confidence region_source region_reason region_candidates region_review_required telegram_id",
+    "channels": "id username name category country description subscribers is_active last_parsed_at last_meta_at created_at updated_at subcategory region region_hint source channel_type region_confidence region_source region_reason region_candidates region_review_required telegram_id last_meta_attempt_at last_meta_error",
+    "channel_merge_archive": "id canonical_username kept_channel_id archived_at records",
     "posts": "id channel_id tg_message_id url text title posted_at views fetched_at",
     "channel_candidates": "username telegram_id name category subcategory country region_hint description subscribers validation_note status first_seen_at last_seen_at validated_at imported_at imported_channel_id raw_data updated_at",
     "channel_candidate_sources": "username source_name source_ref source_url first_seen_at last_seen_at raw_data",

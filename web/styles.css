@@ -432,6 +432,15 @@ code {
   flex-shrink: 0;
 }
 
+.metadata-freshness {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.metadata-freshness p { margin: 4px 0; }
+.metadata-error { color: #dcc39b; }
+.freshness-summary { display: block; font-size: 10px; line-height: 1.5; }
 .detail-head h2 {
   margin: 0;
   font-size: 16px;
@@ -1465,7 +1474,8 @@ select:focus-visible {
 .legend-item:hover {
   background: #2b4233;
 }
-.topic-explanation {
+.topic-explanation,
+.geography-explanation {
   font-size: 11px;
   line-height: 1.6;
   background: #23362a;

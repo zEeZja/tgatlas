@@ -14,7 +14,7 @@ from .classification_review import (
     load_channels,
 )
 from .file_io import atomic_write_text
-from .topic_keywords import TOPICS, TAXONOMY
+from .topic_keywords import TOPICS, GROUPS, TAXONOMY
 
 
 def _dependencies():
@@ -29,11 +29,11 @@ def _dependencies():
     return np, TfidfVectorizer, LogisticRegression
 
 
-def _deduplicate(rows):
+def _deduplicate(rows, label_key="expected_topic"):
     unique = {}
     for row in rows:
         key = feature_text(row)
-        if key in unique and unique[key]["expected_topic"] != row["expected_topic"]:
+        if key in unique and unique[key][label_key] != row[label_key]:
             raise ValueError(
                 "Одинаковые тексты имеют разные основные темы; уточните разметку"
             )
@@ -41,23 +41,27 @@ def _deduplicate(rows):
     return list(unique.values())
 
 
-def train(review_path, output_path, threshold=0.8):
+def train(review_path, output_path, threshold=0.8, *, target="topic"):
+    if target not in ("topic", "group"):
+        raise ValueError("Неизвестная цель обучения")
+    label_key = "expected_topic" if target == "topic" else "expected_group"
+    unknown = "other" if target == "topic" else "other_group"
     if not 0.5 <= threshold <= 1:
         raise ValueError("Порог должен быть от 0.5 до 1")
     if Path(review_path).resolve() == Path(output_path).resolve():
         raise ValueError("Модель не должна заменять разметку")
-    rows = read_review(review_path)
+    rows = read_review(review_path, dimension="topic")
     train_rows = _deduplicate(
-        [r for r in rows if r["split"] == "train" and r["expected_topic"] != "other"]
+        [r for r in rows if r["split"] == "train" and r[label_key] != unknown], label_key
     )
-    test_rows = _deduplicate([r for r in rows if r["split"] == "test"])
-    supports = Counter(r["expected_topic"] for r in train_rows)
+    test_rows = _deduplicate([r for r in rows if r["split"] == "test"], label_key)
+    supports = Counter(r[label_key] for r in train_rows)
     excluded = {key: count for key, count in supports.items() if count < 3}
-    train_rows = [r for r in train_rows if supports[r["expected_topic"]] >= 3]
+    train_rows = [r for r in train_rows if supports[r[label_key]] >= 3]
     if (
         len(train_rows) < 40
         or len(test_rows) < 10
-        or len({r["expected_topic"] for r in train_rows}) < 2
+        or len({r[label_key] for r in train_rows}) < 2
     ):
         raise ValueError(
             "Нужно не менее 40 уникальных подтверждённых train, 10 test и двух тем минимум с 3 примерами каждая. Непроверенные предложения не обучают модель."
@@ -73,12 +77,13 @@ def train(review_path, output_path, threshold=0.8):
     classifier = LogisticRegression(
         C=2, max_iter=1000, class_weight="balanced", random_state=42
     )
-    classifier.fit(features, [r["expected_topic"] for r in train_rows])
+    classifier.fit(features, [r[label_key] for r in train_rows])
     artifact = dict(
         format="atlas-topic-linear-v1",
         taxonomy_version=TAXONOMY["version"],
         classification_version=2,
         active=False,
+        target=target,
         created_at=datetime.now(timezone.utc).isoformat(),
         threshold=threshold,
         minimum_margin=0.15,
@@ -92,7 +97,7 @@ def train(review_path, output_path, threshold=0.8):
         excluded_training_topics=excluded,
         training_fingerprint=hashlib.sha256(
             "\n".join(
-                sorted(r["group_id"] + ":" + r["expected_topic"] for r in train_rows)
+                sorted(r["group_id"] + ":" + r[label_key] for r in train_rows)
             ).encode()
         ).hexdigest(),
     )
@@ -106,9 +111,7 @@ def train(review_path, output_path, threshold=0.8):
     model_predictions = [
         {
             **base,
-            "topic_group": TOPICS[
-                suggestion["suggested_topic"] if suggestion["accepted"] else "other"
-            ]["group"],
+            "topic_group": suggestion["suggested_group"] if suggestion["accepted"] else "other_group",
             "subcategory": suggestion["suggested_topic"]
             if suggestion["accepted"]
             else "other",
@@ -119,7 +122,7 @@ def train(review_path, output_path, threshold=0.8):
         baseline=metrics(test_rows, baseline),
         model=metrics(test_rows, model_predictions),
         split="test",
-        fields_trained=["primary_topic"],
+        fields_trained=["primary_topic" if target == "topic" else "topic_group"],
         owner_overrides_used=False,
         warning="Стратифицированная выборка: метрики не равны точности на всём каталоге. Модель не активируется автоматически.",
     )
@@ -156,13 +159,18 @@ def predict(model, rows):
             "Версия таксономии модели устарела; переобучите и проверьте её на текущей разметке"
         )
     classes = model.get("classes", [])
+    target = model.get("target", "topic")
+    if target not in ("topic", "group"):
+        raise ValueError("Неизвестная цель модели")
+    labels = TOPICS if target == "topic" else GROUPS
+    unknown = "other" if target == "topic" else "other_group"
     vocabulary = model.get("vocabulary", {})
     if (
         not isinstance(classes, list)
         or any(not isinstance(c, str) for c in classes)
-        or not 2 <= len(classes) <= len(TOPICS)
+        or not 2 <= len(classes) <= len(labels)
         or len(set(classes)) != len(classes)
-        or any(c not in TOPICS or c == "other" for c in classes)
+        or any(c not in labels or c == unknown for c in classes)
     ):
         raise ValueError("Некорректные классы модели")
     if (
@@ -223,7 +231,9 @@ def predict(model, rows):
         result.append(
             dict(
                 username=row.get("username"),
-                suggested_topic=classes[top],
+                suggested_topic=classes[top] if target == "topic" else "other",
+                suggested_group=TOPICS[classes[top]]["group"] if target == "topic" else classes[top],
+                granularity=target,
                 model_score=score,
                 margin=gap,
                 accepted=score >= threshold and gap >= margin,

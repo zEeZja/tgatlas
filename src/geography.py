@@ -15,7 +15,7 @@ POLICY = json.loads(
 
 
 def resolve_geography(
-    channel: dict, overrides: dict | None = None, *, federal_channels=None
+    channel: dict, overrides: dict | None = None, *, federal_channels=None, territorial=None
 ) -> dict:
     if overrides is None:
         path = (
@@ -32,11 +32,14 @@ def resolve_geography(
             **overrides,
             **{
                 u: {k: v[k] for k in ("scope", "regions", "country")}
-                for u, v in labels.items()
+                for u, v in labels.items() if all(k in v for k in ("scope", "regions", "country"))
             },
         }
     key = str(channel.get("username") or "").lstrip("@").lower()
     override = overrides.get(key)
+    subject_policy = territorial is False and not override and not channel.get("geographic_scope")
+    if subject_policy:
+        channel = {**channel, "geographic_scope": "nonlocal"}
     if override:
         if override.get("scope") not in (
             "region",
@@ -80,7 +83,7 @@ def resolve_geography(
         }
     federal = federal or key in federal_channels
     foreign = None
-    source = "manual" if override else "stored" if regions else "none"
+    source = "manual" if override else "subject_policy" if subject_policy else "stored" if regions else "none"
     if federal and not override and not channel.get("geographic_scope"):
         regions = []
         source = "federal"
@@ -114,8 +117,9 @@ def resolve_geography(
         ):
             foreign = foreign_desc
             source = "description"
-        elif not find_title_regions(cleaned) and any(
-            " " + normalize_text(phrase) + " " in " " + words + " "
+        elif not foreign_desc and not find_title_regions(cleaned) and any(
+            " " + normalize_text(phrase) + " "
+            in " " + normalize_text(str(channel.get("name") or "") + " " + cleaned) + " "
             for phrase in POLICY["nonlocal_evidence"]
         ):
             source = "nonlocal_evidence"
@@ -141,14 +145,22 @@ def resolve_geography(
         scope = "unknown"
     if scope == "nonlocal":
         country = ""
-    places, ambiguous = resolve_places(
-        channel.get("name") or "", channel.get("region_hint") or ""
-    )
-    if not places:
+    places, ambiguous = [], False
+    if scope != "nonlocal":
+        places, ambiguous = resolve_places(channel.get("name") or "", channel.get("region_hint") or "")
+    if scope != "nonlocal" and not places:
         places, ambiguous = resolve_places(
             cleaned, channel.get("region_hint") or "", True
         )
     return dict(
+        geography_explanation={
+            "nonlocal": "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+            "unknown": "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+            "country": "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+            "global": "Международная направленность содержания, а не измеренная география подписчиков.",
+            "region": "Установлена территориальная направленность на один регион.",
+            "multi_region": "Установлена направленность на несколько регионов.",
+        }[scope],
         geography_relevance="nonterritorial"
         if scope == "nonlocal"
         else "undetermined"

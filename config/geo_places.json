@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "Curated initial catalogue; expand with reviewed places. Not a complete gazetteer.",
   "places": [
     {
@@ -1085,8 +1085,28 @@
       "kind": "city",
       "aliases": [
         "ярославль",
-        "ярославли"
+        "ярославли", "ярославля", "ярославле"
       ]
-    }
+    },
+    {"id":"ru:abakan","label":"Абакан","region":"Республика Хакасия","country":"RU","kind":"city","aliases":["абакан","абакана","абакане"]},
+    {"id":"ru:anadyr","label":"Анадырь","region":"Чукотский автономный округ","country":"RU","kind":"city","aliases":["анадырь","анадыря","анадыре"]},
+    {"id":"ru:yuzhno-sakhalinsk","label":"Южно-Сахалинск","region":"Сахалинская область","country":"RU","kind":"city","aliases":["южно-сахалинск","южно-сахалинска","южно-сахалинске"]},
+    {"id":"ru:veliky-novgorod","label":"Великий Новгород","region":"Новгородская область","country":"RU","kind":"city","aliases":["великий новгород","великого новгорода","великом новгороде"]},
+    {"id":"ru:sochi","label":"Сочи","region":"Краснодарский край","country":"RU","kind":"city","aliases":["сочи"]},
+    {"id":"ru:surgut","label":"Сургут","region":"Ханты-Мансийский автономный округ","country":"RU","kind":"city","aliases":["сургут","сургута","сургуте"]},
+    {"id":"ru:nizhnevartovsk","label":"Нижневартовск","region":"Ханты-Мансийский автономный округ","country":"RU","kind":"city","aliases":["нижневартовск","нижневартовска","нижневартовске"]},
+    {"id":"ru:tolyatti","label":"Тольятти","region":"Самарская область","country":"RU","kind":"city","aliases":["тольятти"]},
+    {"id":"ru:naberezhnye-chelny","label":"Набережные Челны","region":"Республика Татарстан","country":"RU","kind":"city","aliases":["набережные челны","набережных челнах","набережных челнов"]},
+    {"id":"ru:magnitogorsk","label":"Магнитогорск","region":"Челябинская область","country":"RU","kind":"city","aliases":["магнитогорск","магнитогорска","магнитогорске"]},
+    {"id":"ru:novokuznetsk","label":"Новокузнецк","region":"Кемеровская область","country":"RU","kind":"city","aliases":["новокузнецк","новокузнецка","новокузнецке"]},
+    {"id":"ru:sterlitamak","label":"Стерлитамак","region":"Республика Башкортостан","country":"RU","kind":"city","aliases":["стерлитамак","стерлитамака","стерлитамаке"]},
+    {"id":"ru:korolev","label":"Королёв","region":"Московская область","country":"RU","kind":"city","aliases":["город королев","городе королеве","новости королева"]},
+    {"id":"ru:podolsk","label":"Подольск","region":"Московская область","country":"RU","kind":"city","aliases":["подольск","подольска","подольске"]},
+    {"id":"ru:balashikha","label":"Балашиха","region":"Московская область","country":"RU","kind":"city","aliases":["балашиха","балашихи","балашихе"]},
+    {"id":"ru:odintsovo","label":"Одинцово","region":"Московская область","country":"RU","kind":"city","aliases":["одинцово"]},
+    {"id":"ru:mytishchi","label":"Мытищи","region":"Московская область","country":"RU","kind":"city","aliases":["мытищи","мытищах","мытищ"]},
+    {"id":"ru:sergiev-posad","label":"Сергиев Посад","region":"Московская область","country":"RU","kind":"city","aliases":["сергиев посад","сергиева посада","сергиевом посаде"]},
+    {"id":"ru:vyborg","label":"Выборг","region":"Ленинградская область","country":"RU","kind":"city","aliases":["выборг","выборга","выборге"]},
+    {"id":"ru:luga","label":"Луга","region":"Ленинградская область","country":"RU","kind":"city","aliases":["город луга","городе луге"]}
   ]
 }

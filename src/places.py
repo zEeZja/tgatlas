@@ -27,6 +27,7 @@ CONTEXT = {
     "жителей",
     "жители",
     "медиа",
+    "мультимедиа",
     "события",
     "сообщество",
     "канал",
@@ -56,7 +57,7 @@ def place_candidates(text, contextual=False):
             end = start + len(parts)
             if words[start:end] != parts:
                 continue
-            nearby = words[max(0, start - 4) : min(len(words), end + 4)]
+            nearby = words[max(0, start - 12) : min(len(words), end + 4)]
             if contextual and (
                 not CONTEXT.intersection(nearby) or BIO.intersection(nearby)
             ):

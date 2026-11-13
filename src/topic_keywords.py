@@ -82,6 +82,16 @@ def classify_topic(
     ranked = []
     strong_description = set()
     for topic in TAXONOMY["topics"]:
+        profile_fields = fields[0:1] + fields[2:3]
+        if any(_matches(k, text, field) for field, text, _ in profile_fields
+               for k in topic.get("exclude_phrases", [])):
+            continue
+        prefix = any((fields[0][1] + " ").startswith(_normalize(p) + " ")
+                     for p in topic.get("name_prefixes", []))
+        if topic.get("require_any") and not prefix and not any(
+                _matches(k, text, field) for field, text, _ in profile_fields
+                for k in topic["require_any"]):
+            continue
         score = 0
         evidence = []
         for field, text, weight in fields:
@@ -90,6 +100,9 @@ def classify_topic(
             if matches:
                 score += weight * min(len(matches), 3)
                 evidence.extend(f"{field}:{k}" for k in matches[:3])
+        if prefix and not score:
+            score = 4
+            evidence.append("name:наименование органа власти")
         if any(
             _matches(k, fields[-1][1], "description")
             for k in topic.get("strong_description_keywords", [])
@@ -161,13 +174,13 @@ def load_classification_rules():
     return dict(
         overrides={
             **read("topic_overrides.json"),
-            **{u: v["topic"] for u, v in labels.items()},
+            **{u: v["topic"] for u, v in labels.items() if "topic" in v},
         },
         geography_overrides={
             **read("geography_overrides.json"),
             **{
                 u: {k: v[k] for k in ("scope", "regions", "country")}
-                for u, v in labels.items()
+                for u, v in labels.items() if all(k in v for k in ("scope", "regions", "country"))
             },
         },
         review_metadata={
@@ -177,9 +190,9 @@ def load_classification_rules():
         },
         format_overrides={u: v["formats"] for u, v in labels.items() if "formats" in v},
         group_overrides={
-            u: v.get("group", TOPICS[v["topic"]]["group"]) for u, v in labels.items()
+            u: v.get("group", TOPICS[v["topic"]]["group"]) for u, v in labels.items() if "topic" in v
         },
-        tag_overrides={u: v.get("secondary_topics", []) for u, v in labels.items()},
+        tag_overrides={u: v.get("secondary_topics", []) for u, v in labels.items() if "topic" in v},
         federal_channels=frozenset(
             x.lower() for x in read("federal_channels.json")["channels"]
         ),
@@ -286,13 +299,17 @@ def resolve_topic(
     )
     return dict(
         **resolve_geography(
-            channel, geography_overrides, federal_channels=federal_channels
+            channel, geography_overrides, federal_channels=federal_channels,
+            territorial=None if topic == "other" and group == "other_group"
+            else topic in TAXONOMY["geography_topics"] or bool(local_news_evidence(
+                channel.get("name") or "", channel.get("description") or "")),
         ),
         classification_review_stale=stale,
         classification_version=2,
         topic_group=group,
         topic_group_label=GROUPS[group]["label"],
         topic_path=[group, topic] if topic != "other" else [group],
+        broader_topics=TOPICS[topic].get("parent_topics", []),
         topic_granularity="topic"
         if topic != "other"
         else "group"

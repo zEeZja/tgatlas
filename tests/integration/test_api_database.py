@@ -37,7 +37,7 @@ class ApiDatabaseTests(PostgresCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
             response.json(),
-            {"status": "ready", "database": "ok", "schema_version": "0002"},
+            {"status": "ready", "database": "ok", "schema_version": "0004"},
         )
         self.assertTrue(all(conn.closed for conn in self.connections[1:]))
 
