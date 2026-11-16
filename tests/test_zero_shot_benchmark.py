@@ -49,6 +49,21 @@ class FakeClassifier:
 
 
 class ZeroShotBenchmarkTests(unittest.TestCase):
+    def test_default_labels_are_subjects_without_taxonomy_editorial_notes(self):
+        labels = bench.label_map()
+        self.assertIn("искусственный интеллект", labels["ai"])
+        for text in labels.values():
+            self.assertNotIn("Упоминание в рекламе", text)
+            self.assertNotIn("Материалы, основная", text)
+            self.assertLess(len(text), 160)
+
+    def test_custom_labels_must_cover_current_taxonomy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "labels.json"
+            path.write_text('{"ai": "нейросети"}', encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "все ID"):
+                bench.label_map(path)
+
     def test_loaded_half_weights_are_converted_and_recorded(self):
         classifier = FakeClassifier()
         self.assertEqual(

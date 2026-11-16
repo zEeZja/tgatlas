@@ -20,37 +20,14 @@ from src.file_io import atomic_write_text  # noqa: E402
 from src.topic_keywords import TAXONOMY, load_classification_rules, resolve_topic  # noqa: E402
 
 MODEL = "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli"
-# Explicit subject boundaries matter more than short ambiguous names for NLI.
-BOUNDARIES = {
-    "aircraft_manufacturing": "Разработка, испытания и производство самолётов, вертолётов и авиационных двигателей",
-    "air_transport": "Перевозка пассажиров и грузов авиакомпаниями, рейсы, аэропорты и авиабилеты",
-    "aviation": "Авиация, пилотирование и авиационная техника в целом",
-    "defense_industry": "Разработка и производство вооружений, оборонные предприятия и оборонные заказы",
-    "military": "Военная аналитика, вооружённые силы, военная история и боевые действия",
-    "space_industry": "Ракетно-космическая промышленность, производство ракет, спутников и космической техники",
-    "space": "Исследование космоса, астрономия и космические открытия",
-    "banking": "Деятельность банков, банковские услуги, платежи и банковское регулирование",
-    "credit": "Кредиты, займы, ипотека, микрофинансирование и условия заимствования",
-    "investing": "Инвестиции в акции, облигации, фонды и другие активы, фондовый рынок",
-    "economics": "Макроэкономика, инфляция, экономический рост, валютные курсы и экономическая политика",
-    "government": "Деятельность органов государственной власти, официальные решения и государственные услуги",
-    "general": "Общие общественные, городские или региональные новости без одной узкой предметной темы",
-}
 
 
 def label_map(path=None):
     topics = [t for t in TAXONOMY["topics"] if t["id"] != "other"]
-    if path:
-        result = json.loads(Path(path).read_text(encoding="utf-8-sig"))
-        if not isinstance(result, dict) or set(result) != {t["id"] for t in topics}:
-            raise ValueError(
-                "Файл меток должен содержать все ID текущих тем, кроме other"
-            )
-    else:
-        result = {
-            t["id"]: BOUNDARIES.get(t["id"], t["label"] + ". " + t["definition"])
-            for t in topics
-        }
+    source = Path(path) if path else ROOT / "config/zero_shot_labels.json"
+    result = json.loads(source.read_text(encoding="utf-8-sig"))
+    if not isinstance(result, dict) or set(result) != {t["id"] for t in topics}:
+        raise ValueError("Файл меток должен содержать все ID текущих тем, кроме other")
     if any(not isinstance(v, str) or not v.strip() for v in result.values()) or len(
         set(result.values())
     ) != len(result):
@@ -228,7 +205,7 @@ def run(args, factory=None):
             )
         )
     settings = dict(
-        experiment_version=2,
+        experiment_version=3,
         requested_dtype="float32",
         device=args.device,
         model=args.model,
