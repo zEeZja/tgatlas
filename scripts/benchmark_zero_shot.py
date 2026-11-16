@@ -6,6 +6,7 @@ import csv
 from datetime import datetime, timezone
 import hashlib
 import io
+from importlib.metadata import PackageNotFoundError, version
 import json
 from pathlib import Path
 import random
@@ -164,6 +165,42 @@ def save_report(base, manifest, results):
     )
 
 
+def prepare_model(classifier):
+    """Pipeline loaders may choose checkpoint FP16 despite requested dtype.
+
+    Cast the actual loaded module and check every floating parameter before
+    inference. This is deliberately independent of Transformers dtype kwargs.
+    """
+    model = classifier.model
+    model.float()
+    model.eval()
+    dtypes = {str(p.dtype) for p in model.parameters() if p.is_floating_point()}
+    if dtypes != {"torch.float32"}:
+        raise ValueError(
+            f"Не удалось включить float32: фактические типы {sorted(dtypes)}"
+        )
+    id2label = {str(k): str(v) for k, v in model.config.id2label.items()}
+    entailment_id = getattr(classifier, "entailment_id", None)
+    if entailment_id is not None:
+        if not id2label.get(str(entailment_id), "").lower().startswith("entail"):
+            raise ValueError(
+                "Pipeline не распознал класс entailment; проверьте конфигурацию NLI"
+            )
+    versions = {}
+    for package in ("torch", "transformers", "tokenizers", "sentencepiece"):
+        try:
+            versions[package] = version(package)
+        except PackageNotFoundError:
+            versions[package] = None
+    return dict(
+        actual_dtype="torch.float32",
+        id2label=id2label,
+        entailment_id=entailment_id,
+        package_versions=versions,
+        python_version=sys.version,
+    )
+
+
 def run(args, factory=None):
     rows, source = load_source(args)
     rules = load_classification_rules()
@@ -191,6 +228,9 @@ def run(args, factory=None):
             )
         )
     settings = dict(
+        experiment_version=2,
+        requested_dtype="float32",
+        device=args.device,
         model=args.model,
         revision=args.revision,
         taxonomy_version=TAXONOMY["version"],
@@ -222,7 +262,6 @@ def run(args, factory=None):
         fingerprint=fingerprint,
         source=source,
         created_at=datetime.now(timezone.utc).isoformat(),
-        device=args.device,
         score_note="Relative NLI scores among the supplied labels; not calibrated correctness probabilities.",
     )
     report = Path(str(base) + ".json")
@@ -261,6 +300,10 @@ def run(args, factory=None):
     if args.revision:
         kwargs["revision"] = args.revision
     classifier = factory("zero-shot-classification", **kwargs)
+    runtime = prepare_model(classifier)
+    manifest["runtime"] = runtime
+    print("Фактический тип весов:", runtime["actual_dtype"], flush=True)
+    print("NLI-классы:", runtime["id2label"], flush=True)
     resolved_revision = getattr(
         getattr(classifier.model, "config", None), "_commit_hash", None
     )

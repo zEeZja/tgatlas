@@ -10,8 +10,38 @@ from unittest.mock import patch
 from scripts import benchmark_zero_shot as bench
 
 
+class FakeParameter:
+    dtype = "torch.float16"
+
+    def is_floating_point(self):
+        return True
+
+
+class FakeModel:
+    config = SimpleNamespace(
+        _commit_hash="test-revision",
+        id2label={0: "entailment", 1: "neutral", 2: "contradiction"},
+    )
+
+    def __init__(self):
+        self.parameter = FakeParameter()
+
+    def float(self):
+        self.parameter.dtype = "torch.float32"
+        return self
+
+    def eval(self):
+        return self
+
+    def parameters(self):
+        return iter([self.parameter])
+
+
 class FakeClassifier:
-    model = SimpleNamespace(config=SimpleNamespace(_commit_hash="test-revision"))
+    entailment_id = 0
+
+    def __init__(self):
+        self.model = FakeModel()
 
     def __call__(self, text, **kwargs):
         labels = kwargs["candidate_labels"]
@@ -19,6 +49,30 @@ class FakeClassifier:
 
 
 class ZeroShotBenchmarkTests(unittest.TestCase):
+    def test_loaded_half_weights_are_converted_and_recorded(self):
+        classifier = FakeClassifier()
+        self.assertEqual(
+            str(next(classifier.model.parameters()).dtype), "torch.float16"
+        )
+        runtime = bench.prepare_model(classifier)
+        self.assertEqual(runtime["actual_dtype"], "torch.float32")
+        self.assertEqual(
+            str(next(classifier.model.parameters()).dtype), "torch.float32"
+        )
+        self.assertEqual(runtime["entailment_id"], 0)
+
+    def test_failed_cast_stops_inference(self):
+        classifier = FakeClassifier()
+        classifier.model.float = lambda: None
+        with self.assertRaisesRegex(ValueError, "Не удалось включить float32"):
+            bench.prepare_model(classifier)
+
+    def test_invalid_entailment_mapping_is_rejected(self):
+        classifier = FakeClassifier()
+        classifier.entailment_id = 2
+        with self.assertRaisesRegex(ValueError, "entailment"):
+            bench.prepare_model(classifier)
+
     def args(self, directory):
         source = Path(directory) / "channels.json"
         source.write_text(
