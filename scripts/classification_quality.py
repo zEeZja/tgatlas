@@ -15,6 +15,11 @@ def main():
 
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    merge = commands.add_parser("merge", help="объединить местные CSV от старого к новому без скачивания артефактов")
+    merge.add_argument("--review", action="append", required=True, help="повторите для каждого CSV, от старого к новому")
+    merge.add_argument("--output", required=True)
+    merge.add_argument("--unknown-topic", action="append", default=[], help="явно оставить тему username неопределённой")
+    merge.add_argument("--country-correction", action="append", default=[], help="явное уточнение username=CN")
     prepare = commands.add_parser(
         "prepare",
         help="создать CSV и автономную HTML-форму; метки пока не подтверждены",
@@ -77,7 +82,13 @@ def main():
     compare.add_argument("--output")
     args = parser.parse_args()
     try:
-        if args.command == "prepare":
+        if args.command == "merge":
+            from src.review_merge import merge_reviews
+
+            result = merge_reviews(args.review, args.output,
+                                   unknown_topics=args.unknown_topic,
+                                   country_corrections=args.country_correction)
+        elif args.command == "prepare":
             result = review.prepare(args.input, args.output, args.size, args.seed,
                                     focus_groups=[x.strip() for x in (args.focus_groups or "").split(",") if x.strip()],
                                     exclude_review=args.exclude_review)
