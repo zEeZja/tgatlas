@@ -231,7 +231,9 @@ def main():
                 ):
                     v["suggested_" + field] = v["expected_" + field]
                 v["post_evidence"] = "\n\n".join(
-                    f"#{e.get('message_id', '')} {e.get('url', '')}\n{e.get('text', '')}"
+                    f"#{e.get('message_id', '')} {e.get('url', '')}"
+                    + (f" [date={e['date']}]" if e.get("date") else "")
+                    + f"\n{e.get('text', '')}"
                     for e in r["topic_evidence"]
                     if e["source"] == "post"
                 )
