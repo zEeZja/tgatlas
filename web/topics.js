@@ -88,9 +88,23 @@
     const strongDescription = new Set();
     for (const topic of taxonomy.topics) {
       const profileFields = [fields[0], fields[2]];
-      if ((topic.exclude_phrases || []).some(k => profileFields.some(([field, text]) => matches(k, text, field)))) continue;
-      const prefix = (topic.name_prefixes || []).some(p => (fields[0][1] + " ").startsWith(normalize(p) + " "));
-      if (topic.require_any && !prefix && !topic.require_any.some(k => profileFields.some(([field, text]) => matches(k, text, field)))) continue;
+      if (
+        (topic.exclude_phrases || []).some((k) =>
+          profileFields.some(([field, text]) => matches(k, text, field)),
+        )
+      )
+        continue;
+      const prefix = (topic.name_prefixes || []).some((p) =>
+        (fields[0][1] + " ").startsWith(normalize(p) + " "),
+      );
+      if (
+        topic.require_any &&
+        !prefix &&
+        !topic.require_any.some((k) =>
+          profileFields.some(([field, text]) => matches(k, text, field)),
+        )
+      )
+        continue;
       let score = 0;
       const evidence = [];
       for (const [field, text, weight] of fields) {
@@ -283,7 +297,11 @@
       const desc = informativeDescription(description),
         tokens = normalize(desc).split(" ");
       const [places, ambiguous] = resolvePlaces(desc, "", true);
-      const oneRegion = findTitleRegions(desc, true).length === 1 || (places.length && !ambiguous && new Set(places.map(p => p.region)).size === 1);
+      const oneRegion =
+        findTitleRegions(desc, true).length === 1 ||
+        (places.length &&
+          !ambiguous &&
+          new Set(places.map((p) => p.region)).size === 1);
       if (
         oneRegion &&
         tokens.some(
@@ -483,8 +501,9 @@
       .replace(/^@/, "")
       .toLowerCase();
     const override = taxonomy.geography_overrides?.[key];
-    const subjectPolicy = territorial === false && !override && !channel.geographic_scope;
-    if (subjectPolicy) channel = {...channel, geographic_scope: "nonlocal"};
+    const subjectPolicy =
+      territorial === false && !override && !channel.geographic_scope;
+    if (subjectPolicy) channel = { ...channel, geographic_scope: "nonlocal" };
     if (override) {
       if (
         ![
@@ -524,7 +543,13 @@
       channel.channel_type === "federal" ||
       taxonomy.federal_channels.some((x) => x.toLowerCase() === key);
     let foreign = null,
-      source = override ? "manual" : subjectPolicy ? "subject_policy" : regions.length ? "stored" : "none";
+      source = override
+        ? "manual"
+        : subjectPolicy
+          ? "subject_policy"
+          : regions.length
+            ? "stored"
+            : "none";
     if (federal && !override && !channel.geographic_scope) {
       regions = [];
       source = "federal";
@@ -555,7 +580,11 @@
         !f &&
         !findTitleRegions(cleaned).length &&
         taxonomy.nonlocal_evidence.some((p) =>
-          (" " + normalize((channel.name || "") + " " + cleaned) + " ").includes(" " + normalize(p) + " "),
+          (
+            " " +
+            normalize((channel.name || "") + " " + cleaned) +
+            " "
+          ).includes(" " + normalize(p) + " "),
         )
       )
         source = "nonlocal_evidence";
@@ -579,7 +608,10 @@
       .toUpperCase();
     if (scope === "country" && !country) scope = "unknown";
     if (scope === "nonlocal") country = "";
-    let [places, ambiguous] = scope === "nonlocal" ? [[], false] : resolvePlaces(channel.name || "", channel.region_hint || "");
+    let [places, ambiguous] =
+      scope === "nonlocal"
+        ? [[], false]
+        : resolvePlaces(channel.name || "", channel.region_hint || "");
     if (scope !== "nonlocal" && !places.length)
       [places, ambiguous] = resolvePlaces(
         cleaned,
@@ -588,10 +620,14 @@
       );
     return {
       geography_explanation: {
-        nonlocal: "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
-        unknown: "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
-        country: "Содержание ориентировано на указанную страну, без одного конкретного региона.",
-        global: "Международная направленность содержания, а не измеренная география подписчиков.",
+        nonlocal:
+          "Для тематического канала географическое деление не применяется. Это не неопределённый регион.",
+        unknown:
+          "Недостаточно данных или есть конфликт мест. Это не означает всю страну.",
+        country:
+          "Содержание ориентировано на указанную страну, без одного конкретного региона.",
+        global:
+          "Международная направленность содержания, а не измеренная география подписчиков.",
         region: "Установлена территориальная направленность на один регион.",
         multi_region: "Установлена направленность на несколько регионов.",
       }[scope],
@@ -698,10 +734,19 @@
       (reviewed.name !== (channel.name || "") ||
         reviewed.description !== informativeDescription(channel.description))
     );
-    return {
+    const enriched = {
       ...channel,
       original_subcategory: original ?? null,
-      ...geography(channel, topic === "other" && group === "other_group" ? null : taxonomy.geography_topics.includes(topic) || !!localNewsEvidence(channel.name || "", channel.description || "")),
+      ...geography(
+        channel,
+        topic === "other" && group === "other_group"
+          ? null
+          : taxonomy.geography_topics.includes(topic) ||
+              !!localNewsEvidence(
+                channel.name || "",
+                channel.description || "",
+              ),
+      ),
       classification_review_stale: stale,
       classification_version: 2,
       topic_group: group,
@@ -732,6 +777,106 @@
         source === "fallback" ||
         (source === "heuristic" && inferred.review_required),
     };
+    const snapshot = channel.classification_profile;
+    const checkedAt =
+      channel.post_routing?.status === "usable"
+        ? channel.post_routing?.fetched_at
+        : null;
+    const evidenceFresh =
+      !checkedAt ||
+      (Number.isFinite(Date.parse(checkedAt)) &&
+        Date.now() - Date.parse(checkedAt) >= 0 &&
+        Date.now() - Date.parse(checkedAt) <= 86400000);
+    if (
+      channel.classification_engine === "semantic-v9" &&
+      evidenceFresh &&
+      snapshot &&
+      snapshot.name === (channel.name || "") &&
+      snapshot.description === informativeDescription(channel.description) &&
+      byId[channel.subcategory] &&
+      groups[channel.topic_group]
+    ) {
+      const result = { ...enriched };
+      const topicKeys = [
+        "primary_category",
+        "subcategory",
+        "topic_group",
+        "topic_group_label",
+        "topic_category",
+        "topic_path",
+        "topic_granularity",
+        "topic_source",
+        "topic_score",
+        "topic_margin",
+        "topic_candidates",
+        "topic_group_candidates",
+        "topic_tags",
+        "secondary_topics",
+        "topic_evidence",
+        "topic_review_required",
+      ];
+      if (!["manual", "local"].includes(enriched.topic_source))
+        for (const key of topicKeys)
+          if (Object.hasOwn(channel, key)) result[key] = channel[key];
+      if (
+        channel.topic_review_required &&
+        channel.topic_source === "semantic-v9" &&
+        !["manual", "local"].includes(enriched.topic_source)
+      ) {
+        result.semantic_proposal = {
+          subcategory: channel.subcategory,
+          topic_group: channel.topic_group,
+          topic_score: channel.topic_score,
+        };
+        for (const key of [
+          "subcategory",
+          "primary_category",
+          "topic_group",
+          "topic_group_label",
+          "topic_category",
+          "topic_path",
+          "topic_granularity",
+          "topic_tags",
+          "secondary_topics",
+          "broader_topics",
+        ])
+          result[key] = enriched[key];
+        result.topic_source = "legacy_until_review";
+      }
+      if (
+        enriched.geography_source !== "manual" &&
+        [
+          "unknown",
+          "region",
+          "multi_region",
+          "country",
+          "global",
+          "nonlocal",
+        ].includes(channel.geography_scope)
+      )
+        for (const [key, value] of Object.entries(channel))
+          if (key.startsWith("geography_")) result[key] = value;
+      if (
+        channel.geography_review_required &&
+        enriched.geography_source !== "manual"
+      ) {
+        result.semantic_geography_proposal = {
+          geography_scope: channel.geography_scope,
+          geography_regions: channel.geography_regions,
+          geography_country: channel.geography_country,
+        };
+        for (const key of [
+          "geography_scope",
+          "geography_regions",
+          "geography_country",
+          "geography_relevance",
+        ])
+          result[key] = enriched[key];
+      }
+      result.classification_version = 9;
+      return result;
+    }
+    return enriched;
   }
   function setLocal(username, topic) {
     const key = String(username).replace(/^@/, "").toLowerCase();

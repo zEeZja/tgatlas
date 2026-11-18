@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .file_io import atomic_write_text
 from .topic_keywords import resolve_topic, load_classification_rules
+from .semantic_pipeline import load_results, merge_result
 
 log = logging.getLogger(__name__)
 
@@ -62,7 +63,8 @@ def channel_rows(channels):
             raise ValueError("Пустой или повторный username в каталоге: " + username)
         seen.add(username)
     rules = load_classification_rules()
-    return [_channel_to_row(ch, **rules) for ch in channels]
+    semantic = load_results()
+    return [merge_result(_channel_to_row(ch, **rules), semantic) for ch in channels]
 
 
 def export_channels(conn, db_module) -> int:

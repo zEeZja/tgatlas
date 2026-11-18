@@ -56,7 +56,12 @@ const server = http.createServer((req, res) => {
     page.on("pageerror", (e) => errors.push(e.message));
     page.on("request", (r) => requests.push(r.url()));
     // Demo coverage must be independent of locally generated user exports.
-    await page.route("**/data/channels.js", route => route.fulfill({contentType: "application/javascript", body: "// isolated test: no JS export"}));
+    await page.route("**/data/channels.js", (route) =>
+      route.fulfill({
+        contentType: "application/javascript",
+        body: "// isolated test: no JS export",
+      }),
+    );
     await page.route("**/data/channels.json", (route) =>
       route.fulfill({ status: 404 }),
     );
@@ -89,11 +94,22 @@ const server = http.createServer((req, res) => {
     await page.keyboard.press("Escape");
     await page.locator("#clear").click();
     await page.locator("#region").selectOption("Москва");
-    const moscowCount = await page.evaluate(() => TG_DATA.channels.map(c => Topics.enrich(c)).filter(c => c.geography_regions.includes("Москва")).length);
+    const moscowCount = await page.evaluate(
+      () =>
+        TG_DATA.channels
+          .map((c) => Topics.enrich(c))
+          .filter((c) => c.geography_regions.includes("Москва")).length,
+    );
     assert(moscowCount > 0);
-    assert.equal(await page.locator("#count").textContent(), String(moscowCount));
+    assert.equal(
+      await page.locator("#count").textContent(),
+      String(moscowCount),
+    );
     await page.locator("#group-by").selectOption("region");
-    assert.equal(await page.locator("#count").textContent(), String(moscowCount));
+    assert.equal(
+      await page.locator("#count").textContent(),
+      String(moscowCount),
+    );
     assert(
       (await page.locator("#group-caption").innerText()).includes(
         "По регионам",
@@ -410,26 +426,104 @@ const server = http.createServer((req, res) => {
     await page.locator(".reset-btn").click();
     // Sector subjects are nonterritorial even when an old row carries a region.
     const sectors = [
-      {id: "sector1", username: "sector1", name: "Кредитование", region: "Москва", country: "RU"},
-      {id: "sector2", username: "sector2", name: "Финансово-банковская сфера"},
-      {id: "sector3", username: "sector3", name: "Авиастроение"},
-      {id: "sector4", username: "sector4", name: "Авиатранспорт"},
-      {id: "sector5", username: "sector5", name: "ЧП Казань"},
+      {
+        id: "sector1",
+        username: "sector1",
+        name: "Кредитование",
+        region: "Москва",
+        country: "RU",
+      },
+      {
+        id: "sector2",
+        username: "sector2",
+        name: "Финансово-банковская сфера",
+      },
+      { id: "sector3", username: "sector3", name: "Авиастроение" },
+      { id: "sector4", username: "sector4", name: "Авиатранспорт" },
+      { id: "sector5", username: "sector5", name: "ЧП Казань" },
     ];
     await page.unroute("**/api/channels");
-    await page.route("**/api/channels", route => route.fulfill({json: {channels: sectors}}));
+    await page.route("**/api/channels", (route) =>
+      route.fulfill({ json: { channels: sectors } }),
+    );
     await page.reload();
-    await page.waitForFunction(() => document.querySelector("#count").textContent === "5");
+    await page.waitForFunction(
+      () => document.querySelector("#count").textContent === "5",
+    );
     await page.locator("#category").selectOption("banking");
     assert.equal(await page.locator("#count").textContent(), "2");
     assert(await page.locator(".geo-not-applicable").isVisible());
     await page.locator(".result").first().click();
-    assert((await page.locator(".geography-explanation").innerText()).includes("не применяется"));
+    assert(
+      (await page.locator(".geography-explanation").innerText()).includes(
+        "не применяется",
+      ),
+    );
     await page.keyboard.press("Escape");
     await page.locator(".reset-btn").click();
     await page.locator("#category").selectOption("industry");
     assert.equal(await page.locator("#count").textContent(), "1");
     await page.locator(".reset-btn").click();
+    // Pilot proposals remain separate from current labels; object evidence renders safely.
+    const semanticRow = {
+      id: "semantic_test",
+      username: "semantic_test",
+      name: "Криптовалюты",
+      description: "Рынок криптовалют",
+      original_subcategory: "crypto",
+      subcategory: "programming",
+      topic_group: "technology",
+      topic_group_label: "Технологии",
+      topic_source: "semantic-v9",
+      classification_engine: "semantic-v9",
+      classification_version: 9,
+      classification_profile: {
+        name: "Криптовалюты",
+        description: "Рынок криптовалют",
+      },
+      topic_evidence: [
+        {
+          source: "post",
+          message_id: 12,
+          text: "Разработка программ и языки программирования <script>bad()</script>",
+        },
+      ],
+      topic_candidates: [
+        { id: "programming", score: 0.6 },
+        { id: "tech", score: 0.3 },
+      ],
+      topic_review_required: true,
+      post_routing: { requested: true, status: "usable" },
+      geography_scope: "region",
+      geography_regions: ["Пермский край"],
+      geography_country: "RU",
+      geography_explanation: "Профиль и публикации",
+      url: "https://t.me/semantic_test",
+    };
+    await page.unroute("**/api/channels");
+    await page.route("**/api/channels", (route) =>
+      route.fulfill({ json: { channels: [semanticRow] } }),
+    );
+    await page.reload();
+    await page.waitForFunction(
+      () => document.querySelector("#count").textContent === "1",
+    );
+    await page.locator(".result").click();
+    assert(
+      (await page.locator(".detail-badges").innerText()).includes(
+        "Криптовалюты",
+      ),
+    );
+    assert(
+      (await page.locator(".topic-explanation").innerText()).includes("V9"),
+    );
+    assert(
+      (await page.locator(".topic-explanation").innerText()).includes(
+        "Учтены публикации: 1",
+      ),
+    );
+    assert.equal(await page.locator(".topic-explanation script").count(), 0);
+    await page.keyboard.press("Escape");
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));
@@ -442,16 +536,31 @@ const server = http.createServer((req, res) => {
     // A JSON-only live export takes priority over demo, including its audience.
     const live = await browser.newPage();
     await live.addInitScript(() => {
-      window.TG_DATA = {channels: [{username: "old_snapshot", name: "Старый JS-снимок"}]};
+      window.TG_DATA = {
+        channels: [{ username: "old_snapshot", name: "Старый JS-снимок" }],
+      };
     });
-    await live.route("**/data/channels.js", route => route.fulfill({contentType: "application/javascript", body: "// JSON-only fixture"}));
+    await live.route("**/data/channels.js", (route) =>
+      route.fulfill({
+        contentType: "application/javascript",
+        body: "// JSON-only fixture",
+      }),
+    );
     const liveRequests = [];
     live.on("request", (r) => liveRequests.push(r.url()));
     await live.route("**/data/channels.json", (route) =>
       route.fulfill({
         json: {
           _sample: false,
-          channels: [{ ...channel, url: "javascript:alert(1)", last_meta_at: new Date().toISOString(), last_meta_attempt_at: new Date().toISOString(), last_meta_error: "timeout" }],
+          channels: [
+            {
+              ...channel,
+              url: "javascript:alert(1)",
+              last_meta_at: new Date().toISOString(),
+              last_meta_attempt_at: new Date().toISOString(),
+              last_meta_error: "timeout",
+            },
+          ],
         },
       }),
     );
@@ -462,10 +571,21 @@ const server = http.createServer((req, res) => {
     assert(!liveRequests.some((u) => u.endsWith("/demo.js")));
     assert(!liveRequests.some((u) => u.endsWith("/data/channels.js")));
     assert(!(await live.locator("#banner").isVisible()));
-    assert((await live.locator(".freshness-summary").innerText()).includes("1 свежих"));
+    assert(
+      (await live.locator(".freshness-summary").innerText()).includes(
+        "1 свежих",
+      ),
+    );
     await live.locator(".result").click();
-    assert.equal(await live.locator(".metadata-freshness").getAttribute("data-status"), "fresh");
-    assert((await live.locator(".metadata-error").innerText()).includes("Прежние данные сохранены"));
+    assert.equal(
+      await live.locator(".metadata-freshness").getAttribute("data-status"),
+      "fresh",
+    );
+    assert(
+      (await live.locator(".metadata-error").innerText()).includes(
+        "Прежние данные сохранены",
+      ),
+    );
     assert.equal(
       await live.locator(".detail-open").getAttribute("href"),
       "https://t.me/api",
@@ -473,7 +593,15 @@ const server = http.createServer((req, res) => {
     for (const response of [
       { status: 500, body: "failed" },
       { status: 200, contentType: "application/json", body: "{}" },
-      { status: 200, json: {channels: [channel, {...channel, username: channel.username.toUpperCase()}]} },
+      {
+        status: 200,
+        json: {
+          channels: [
+            channel,
+            { ...channel, username: channel.username.toUpperCase() },
+          ],
+        },
+      },
     ]) {
       await live.unroute("**/data/channels.json");
       await live.route("**/data/channels.json", (route) =>

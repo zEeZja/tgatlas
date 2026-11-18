@@ -1,0 +1,5 @@
+# Optional semantic classification pilot, isolated from base runtime.
+-r requirements-training.txt
+torch>=2.6,<3
+transformers>=4.41,<5
+sentencepiece>=0.2,<1
