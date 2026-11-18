@@ -21,7 +21,13 @@ from src.semantic_pipeline import (
     load_results,
 )
 from src.classification_review import write_review
-from src.semantic_model import train_pilot, load_model, head_predict
+from src.semantic_model import (
+    train_pilot,
+    load_model,
+    head_predict,
+    review_posts,
+    documents,
+)
 from tests.test_classification_quality import record
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -47,6 +53,49 @@ def sample(username="demo", same_date=False):
 
 
 class SemanticEvidenceTests(unittest.TestCase):
+    def test_frozen_review_posts_preserve_paragraphs_and_unknown_dates(self):
+        evidence = "\n\n".join(
+            f"#{i} https://t.me/DEMO/{i}\n"
+            + (f"Публикация {i} о событиях города.\n\nВторой абзац. " * 30)
+            for i in range(1, 4)
+        )
+        posts, detail = review_posts(dict(username="demo", post_evidence=evidence))
+        self.assertEqual(len(posts), 3)
+        self.assertIn("\n\nВторой абзац.", posts[0]["text"])
+        self.assertEqual(len(posts[0]["text"]), 1000)
+        self.assertTrue(detail["dates_unknown"])
+        self.assertEqual(detail["source"], "owner_review_snapshot")
+        self.assertTrue(all(p["date"] is None for p in posts))
+        self.assertEqual(usable_posts(dict(posts=posts))[0], [])
+
+    def test_review_posts_reject_duplicates_ads_and_foreign_channel(self):
+        text = "Содержательная публикация о научных открытиях и разработках. " * 2
+        evidence = "\n\n".join(
+            [f"#{i} https://t.me/demo/{i}\n{text}" for i in range(1, 4)]
+            + [
+                f"#4 https://t.me/other/4\n{text} Другой канал",
+                f"#5 https://t.me/demo/5\n#реклама {text}",
+                f"#6 https://t.me/demo/7\n{text} Несовпадающие ID",
+            ]
+        )
+        posts, detail = review_posts(dict(username="demo", post_evidence=evidence))
+        self.assertEqual(posts, [])
+        self.assertEqual(detail["status"], "insufficient_review_evidence")
+
+    def test_review_dates_and_legacy_model_input_lengths(self):
+        evidence = "\n\n".join(
+            f"#{i} https://t.me/demo/{i} [date=2026-11-01T12:00:00+00:00]\n"
+            + f"Уникальная содержательная публикация {i} о научных открытиях."
+            for i in range(1, 4)
+        )
+        posts, detail = review_posts(dict(username="demo", post_evidence=evidence))
+        self.assertFalse(detail["dates_unknown"])
+        self.assertEqual(posts[0]["date"], "2026-11-01T12:00:00+00:00")
+        row = dict(name="Тест", description="Описание")
+        post = [dict(text="x" * 5000)]
+        self.assertEqual(len(documents(row, post)[1]), 4000)
+        self.assertEqual(len(documents(row, post, 1000)[1]), 1000)
+
     def test_founder_is_not_subject_and_boilerplate_requires_posts(self):
         row = dict(
             name="Агентство мастерства",
@@ -293,3 +342,52 @@ class SemanticTrainingTests(unittest.TestCase):
         )
         self.assertAlmostEqual(sum(x["score"] for x in result[0]), 1)
         self.assertEqual(result[0][0]["id"], "tech")
+
+    def test_geo_only_and_snapshots_do_not_leak_unconfirmed_or_test_labels(self):
+        rows = []
+        for i in range(15):
+            r = record(
+                username=f"channel_{i}",
+                name=f"Уникальный профиль {i}",
+                split="train" if i < 12 else "test",
+            )
+            r.update(
+                expected_topic="science" if i % 2 else "tech",
+                expected_group="knowledge_group" if i % 2 else "technology",
+                expected_scope="country",
+                expected_country="RU",
+            )
+            rows.append(r)
+        geo_only = record(username="geo_only", name="Только география", split="train")
+        geo_only.update(
+            review_schema_version="3",
+            topic_reviewed="no",
+            geography_reviewed="yes",
+            expected_topic="investing",
+            expected_scope="nonlocal",
+        )
+        rows.append(geo_only)
+        for r in (rows[0], rows[-2]):
+            r["post_evidence"] = "\n\n".join(
+                f"#{i} https://t.me/{r['username']}/{i}\n"
+                + f"Общая перепечатанная публикация {i} о научных исследованиях. " * 25
+                for i in range(1, 4)
+            )
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "review.csv"
+            write_review(path, rows)
+            provider = unittest.mock.Mock(
+                return_value=([], dict(status="not_requested"))
+            )
+            model = train_pilot(path, Path(d) / "model.json", self.Encoder(), provider)
+        self.assertEqual(model["training_examples"], 13)
+        self.assertEqual(sum(model["heads"]["topic"]["support"].values()), 12)
+        self.assertEqual(model["heads"]["scope"]["support"]["nonlocal"], 1)
+        self.assertNotIn("investing", model["heads"]["topic"]["classes"])
+        self.assertEqual(model["shared_test_posts_removed"], 3)
+        self.assertIn("channel_0", model["post_manifest"])
+        self.assertNotIn("channel_14", model["post_manifest"])
+        self.assertEqual(model["post_text_limit"], 1000)
+        called = [c.args[0]["username"] for c in provider.call_args_list]
+        self.assertNotIn("channel_0", called)
+        self.assertNotIn("channel_14", called)

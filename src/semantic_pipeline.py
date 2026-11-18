@@ -266,11 +266,11 @@ def predict_channel(row, model, encoder, provider=None, rules=None):
     )
     if routing and provider:
         posts, post_info = provider(row)
-    prediction = head_predict(model["heads"]["topic"], [combine(encoder, row, posts)])[
-        0
-    ]
+    post_text_limit = model.get("post_text_limit", 4000)
+    vector = combine(encoder, row, posts, post_text_limit)
+    prediction = head_predict(model["heads"]["topic"], [vector])[0]
     group = (
-        head_predict(model["heads"]["group"], [combine(encoder, row, posts)])[0]
+        head_predict(model["heads"]["group"], [vector])[0]
         if model["heads"].get("group")
         else []
     )
@@ -291,7 +291,8 @@ def predict_channel(row, model, encoder, provider=None, rules=None):
         reasons.append("uncertain_model")
     post_predictions = (
         head_predict(
-            model["heads"]["topic"], encoder.encode([p["text"] for p in posts])
+            model["heads"]["topic"],
+            encoder.encode([p["text"][:post_text_limit] for p in posts]),
         )
         if posts
         else []
@@ -323,11 +324,7 @@ def predict_channel(row, model, encoder, provider=None, rules=None):
     if username in rules["tag_overrides"]:
         tags = [t for t in rules["tag_overrides"][username] if t != topic]
     scope_head = model["heads"].get("scope")
-    scope_prediction = (
-        head_predict(scope_head, [combine(encoder, row, posts)])[0]
-        if scope_head
-        else None
-    )
+    scope_prediction = head_predict(scope_head, [vector])[0] if scope_head else None
     g = geography(
         row,
         posts,
