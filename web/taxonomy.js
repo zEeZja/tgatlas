@@ -3303,6 +3303,18 @@ window.TG_TAXONOMY = {
         "russia",
         "russian"
       ]
+    },
+    {
+      "label": "Китай",
+      "country": "CN",
+      "scope": "country",
+      "aliases": [
+        "китай",
+        "китае",
+        "китайск",
+        "china",
+        "кнр"
+      ]
     }
   ],
   "region_aliases": {

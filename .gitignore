@@ -48,3 +48,7 @@ models/*
 
 # Read-only classification post sample cache
 reports/classification-samples/
+
+# Semantic experiment artifacts and post evidence
+reports/semantic-v9/
+.venv-classification/

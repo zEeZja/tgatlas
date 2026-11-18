@@ -140,7 +140,8 @@
   function renderStats() {
     const rows = state.channels;
     const freshness = window.Freshness.counts(rows);
-    statsBar.innerHTML = `<span><b>${rows.length}</b> каналов · <b>${new Set(rows.map((c) => c.subcategory)).size}</b> тем · <b>${rows.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>` +
+    statsBar.innerHTML =
+      `<span><b>${rows.length}</b> каналов · <b>${new Set(rows.map((c) => c.subcategory)).size}</b> тем · <b>${rows.filter((c) => c.topic_review_required).length}</b> для проверки темы</span>` +
       `<span class="freshness-summary" title="Свежесть названия, описания и аудитории, не дата экспорта">Данные: ${freshness.fresh} свежих · ${freshness.stale} старше 24 ч · ${freshness.unknown} без проверки</span>`;
   }
   renderStats();
@@ -179,7 +180,8 @@
   const categoryEl = document.getElementById("category");
   const priority = window.Topics.taxonomy.priority_groups || [];
   for (const group of [...window.Topics.taxonomy.groups].sort((a, b) => {
-    const rank = id => priority.includes(id) ? priority.indexOf(id) : priority.length;
+    const rank = (id) =>
+      priority.includes(id) ? priority.indexOf(id) : priority.length;
     return rank(a.id) - rank(b.id);
   })) {
     const optgroup = document.createElement("optgroup");
@@ -319,10 +321,11 @@
   function renderChips() {
     el.chips.replaceChildren();
     const rows = categoryChannels();
-    if (rows.length && rows.every(c => c.geography_scope === "nonlocal")) {
+    if (rows.length && rows.every((c) => c.geography_scope === "nonlocal")) {
       const note = document.createElement("p");
       note.className = "muted small geo-not-applicable";
-      note.textContent = "Для этой тематической подборки география не применяется. Каналы не относятся к неопределённому региону.";
+      note.textContent =
+        "Для этой тематической подборки география не применяется. Каналы не относятся к неопределённому региону.";
       el.chips.appendChild(note);
       return;
     }
@@ -655,7 +658,13 @@
       `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
       `<p class="geography-explanation">${escapeHtml(ch.geography_explanation || "")}</p>` +
-      (ch.classification_review_stale?'<p class="topic-explanation">Профиль изменился после проверки владельцем. Сохранённая метка требует повторной проверки.</p>':'') +
+      (ch.classification_engine === "semantic-v9" &&
+      ch.geography_candidates?.length
+        ? `<p class="geography-explanation">Территории для проверки: ${escapeHtml(ch.geography_candidates.join(", "))}</p>`
+        : "") +
+      (ch.classification_review_stale
+        ? '<p class="topic-explanation">Профиль изменился после проверки владельцем. Сохранённая метка требует повторной проверки.</p>'
+        : "") +
       (ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
         : "") +
@@ -700,12 +709,24 @@
 
   function metadataFreshness(ch) {
     const status = window.Freshness.status(ch);
-    const labels = { fresh: "Данные проверены за последние 24 часа", stale: "Данные старше 24 часов", unknown: "Нет достоверной даты проверки данных" };
-    const checked = status === "unknown" ? null : window.Freshness.date(ch.last_meta_at);
+    const labels = {
+      fresh: "Данные проверены за последние 24 часа",
+      stale: "Данные старше 24 часов",
+      unknown: "Нет достоверной даты проверки данных",
+    };
+    const checked =
+      status === "unknown" ? null : window.Freshness.date(ch.last_meta_at);
     const attempted = window.Freshness.date(ch.last_meta_attempt_at);
-    return `<div class="metadata-freshness" data-status="${status}"><b>${labels[status]}</b>` +
-      (checked === null ? "" : `<p>Последняя успешная проверка: ${escapeHtml(new Date(checked).toLocaleString("ru-RU"))}</p>`) +
-      (ch.last_meta_error ? `<p class="metadata-error">Последняя попытка${attempted === null ? "" : " " + escapeHtml(new Date(attempted).toLocaleString("ru-RU"))}: ${escapeHtml(window.Freshness.errorLabel(ch.last_meta_error))}. Прежние данные сохранены.</p>` : "") + "</div>";
+    return (
+      `<div class="metadata-freshness" data-status="${status}"><b>${labels[status]}</b>` +
+      (checked === null
+        ? ""
+        : `<p>Последняя успешная проверка: ${escapeHtml(new Date(checked).toLocaleString("ru-RU"))}</p>`) +
+      (ch.last_meta_error
+        ? `<p class="metadata-error">Последняя попытка${attempted === null ? "" : " " + escapeHtml(new Date(attempted).toLocaleString("ru-RU"))}: ${escapeHtml(window.Freshness.errorLabel(ch.last_meta_error))}. Прежние данные сохранены.</p>`
+        : "") +
+      "</div>"
+    );
   }
 
   function topicExplanation(ch) {
@@ -714,23 +735,42 @@
       manual: "Правило владельца каталога",
       declared: "Тема из каталога",
       heuristic: "Определено по названию и описанию",
+      "semantic-v9": "Предложение смысловой модели V9",
+      legacy_until_review:
+        "Текущая тема сохранена; предложение V9 требует проверки",
       fallback: "Общая рубрика каталога",
       unknown: "Недостаточно данных для определения темы",
     };
     const matches = (ch.topic_evidence || []).map((x) =>
-      x.split(":").slice(1).join(":"),
+      typeof x === "string"
+        ? x.split(":").slice(1).join(":")
+        : (x.source === "post"
+            ? "Пост " + (x.message_id || "") + ": "
+            : "Профиль: ") + String(x.text || "").slice(0, 160),
     );
     const alternatives = (ch.topic_candidates || [])
-      .filter((x) => x.id !== ch.subcategory && x.score >= 3)
+      .filter(
+        (x) =>
+          x.id !== ch.subcategory &&
+          x.score >= (ch.classification_engine === "semantic-v9" ? 0 : 3),
+      )
       .slice(0, 2);
     return (
       `<div class="topic-explanation"><b>${escapeHtml(labels[ch.topic_source] || "Тема каталога")}</b>` +
-      (ch.broader_topics?.length ? `<p>Более широкая тема: ${escapeHtml(ch.broader_topics.map(t => SUB_MAP[t]?.label || t).join(" → "))}</p>` : "") +
+      (ch.semantic_proposal
+        ? `<p>Предложение V9: ${escapeHtml(SUB_MAP[ch.semantic_proposal.subcategory]?.label || ch.semantic_proposal.subcategory || "Не определено")}</p>`
+        : "") +
+      (ch.broader_topics?.length
+        ? `<p>Более широкая тема: ${escapeHtml(ch.broader_topics.map((t) => SUB_MAP[t]?.label || t).join(" → "))}</p>`
+        : "") +
       (matches.length
         ? `<p>Признаки: ${escapeHtml([...new Set(matches)].join(", "))}</p>`
         : "") +
       (alternatives.length
         ? `<p>Также близко: ${alternatives.map((x) => escapeHtml(SUB_MAP[x.id]?.label || x.id)).join(", ")}</p>`
+        : "") +
+      (ch.classification_engine === "semantic-v9" && ch.post_routing
+        ? `<p>${ch.post_routing.status === "usable" ? "Учтены публикации: " + (ch.topic_evidence || []).filter((x) => typeof x === "object" && x.source === "post").length + "." : ch.post_routing.requested ? "Для уточнения нужны содержательные публикации канала." : "Использовано название и описание профиля."}</p>`
         : "") +
       (ch.topic_review_required
         ? "<p>Тема требует проверки. Её можно уточнить ниже.</p>"

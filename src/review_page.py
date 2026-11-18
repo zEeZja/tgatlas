@@ -13,21 +13,39 @@ def render_review(records):
     prepared = []
     for record in records:
         row = upgrade_record(record)
-        current = resolve_topic(dict(username=row["username"], name=row["name"], description=row["description"],
-                                     country=row.get("input_country", ""), region_hint=row.get("input_region_hint", "")),
-                                {}, geography_overrides={}, tag_overrides={}, federal_channels=rules["federal_channels"])
-        row["current_suggestion"] = dict(
-            expected_topic=current["subcategory"], expected_group=current["topic_group"],
+        current = resolve_topic(
+            dict(
+                username=row["username"],
+                name=row["name"],
+                description=row["description"],
+                country=row.get("input_country", ""),
+                region_hint=row.get("input_region_hint", ""),
+            ),
+            {},
+            geography_overrides={},
+            tag_overrides={},
+            federal_channels=rules["federal_channels"],
+        )
+        row["current_suggestion"] = row.get("semantic_suggestion") or dict(
+            expected_topic=current["subcategory"],
+            expected_group=current["topic_group"],
             expected_secondary_topics=",".join(current["secondary_topics"]),
             expected_formats=",".join(current["publication_formats"]),
-            expected_scope=current["geography_scope"], expected_regions="|".join(current["geography_regions"]),
-            expected_country=current["geography_country"])
+            expected_scope=current["geography_scope"],
+            expected_regions="|".join(current["geography_regions"]),
+            expected_country=current["geography_country"],
+        )
         prepared.append(row)
     data = dict(
         records=prepared,
         fields=FIELDS,
         topics=[
-            dict(id=t["id"], label=t["label"], group=t["group"], definition=t["definition"])
+            dict(
+                id=t["id"],
+                label=t["label"],
+                group=t["group"],
+                definition=t["definition"],
+            )
             for t in TAXONOMY["topics"]
         ],
         groups=TAXONOMY["groups"],

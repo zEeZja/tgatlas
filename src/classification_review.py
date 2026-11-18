@@ -54,6 +54,7 @@ FIELDS += [
     "topic_reviewed",
     "geography_reviewed",
     "formats_reviewed",
+    "post_evidence",
 ]
 
 
@@ -62,9 +63,13 @@ def _yes(value):
 
 
 def confirmed_dimensions(row):
-    legacy = _yes(row.get("reviewed")) and str(row.get("review_schema_version") or "1") != "3"
+    legacy = (
+        _yes(row.get("reviewed"))
+        and str(row.get("review_schema_version") or "1") != "3"
+    )
     return {
-        name for name in ("topic", "geography")
+        name
+        for name in ("topic", "geography")
         if _yes(row.get(name + "_reviewed"))
         or (not row.get(name + "_reviewed") and legacy)
     }
@@ -72,6 +77,7 @@ def confirmed_dimensions(row):
 
 def upgrade_record(row):
     row = dict(row)
+    row["post_evidence"] = row.get("post_evidence") or ""
     row["review_schema_version"] = row.get("review_schema_version") or "1"
     row["taxonomy_version"] = row.get("taxonomy_version") or "5"
     row["expected_group"] = (
@@ -153,7 +159,15 @@ def write_review(path, records):
     atomic_write_text(path, "\ufeff" + stream.getvalue())
 
 
-def prepare(input_path, output_path, size=200, seed=42, *, focus_groups=None, exclude_review=None):
+def prepare(
+    input_path,
+    output_path,
+    size=200,
+    seed=42,
+    *,
+    focus_groups=None,
+    exclude_review=None,
+):
     if size < 1:
         raise ValueError("Размер выборки должен быть больше нуля")
     if Path(input_path).resolve() == Path(output_path).resolve():
@@ -162,8 +176,12 @@ def prepare(input_path, output_path, size=200, seed=42, *, focus_groups=None, ex
     if exclude_review:
         protected.add(Path(exclude_review).resolve())
     if Path(output_path).suffix.lower() != ".csv" or any(
-            p.resolve() in protected for p in (Path(output_path), Path(output_path).with_suffix(".html"))):
-        raise ValueError("Нужен отдельный CSV: выборка и HTML не должны заменять исходные данные или разметку")
+        p.resolve() in protected
+        for p in (Path(output_path), Path(output_path).with_suffix(".html"))
+    ):
+        raise ValueError(
+            "Нужен отдельный CSV: выборка и HTML не должны заменять исходные данные или разметку"
+        )
     channels, duplicates = load_channels(input_path)
     catalogue_total = len(channels)
     rules = load_classification_rules()
@@ -171,9 +189,20 @@ def prepare(input_path, output_path, size=200, seed=42, *, focus_groups=None, ex
     focus_groups = set(focus_groups or [])
     if focus_groups - GROUPS.keys():
         raise ValueError("Неизвестная группа в целевой выборке")
-    excluded = {r["username"] for r in read_review(exclude_review, dimension="topic")} if exclude_review else set()
-    channels = [row for row in channels if row["username"] not in excluded
-                and (not focus_groups or predicted[row["username"]]["topic_group"] in focus_groups)]
+    excluded = (
+        {r["username"] for r in read_review(exclude_review, dimension="topic")}
+        if exclude_review
+        else set()
+    )
+    channels = [
+        row
+        for row in channels
+        if row["username"] not in excluded
+        and (
+            not focus_groups
+            or predicted[row["username"]]["topic_group"] in focus_groups
+        )
+    ]
     if not channels:
         raise ValueError("Нет каналов для выбранных групп после исключения проверенных")
 
@@ -283,14 +312,28 @@ def _canonical_review_regions(regions, country):
     result, countries = set(), set()
     for value in regions:
         key = normalize_text(value)
-        candidates = {(region, "RU") for region, aliases in REGION_ALIASES.items()
-                      if key in {normalize_text(region), *(normalize_text(a) for a in aliases)}}
-        candidates |= {(p["region"], p["country"]) for p in PLACES
-                       if key in {normalize_text(p["label"]), *(normalize_text(a) for a in p["aliases"])}}
-        candidates |= {(p["label"], p["country"]) for p in FOREIGN if p["scope"] == "region"
-                       and key in {normalize_text(p["label"]), *(normalize_text(a) for a in p["aliases"])}}
+        candidates = {
+            (region, "RU")
+            for region, aliases in REGION_ALIASES.items()
+            if key in {normalize_text(region), *(normalize_text(a) for a in aliases)}
+        }
+        candidates |= {
+            (p["region"], p["country"])
+            for p in PLACES
+            if key
+            in {normalize_text(p["label"]), *(normalize_text(a) for a in p["aliases"])}
+        }
+        candidates |= {
+            (p["label"], p["country"])
+            for p in FOREIGN
+            if p["scope"] == "region"
+            and key
+            in {normalize_text(p["label"]), *(normalize_text(a) for a in p["aliases"])}
+        }
         if len(candidates) != 1:
-            raise ValueError(f"Неизвестный или неоднозначный регион/город: {value}. Укажите канонический субъект.")
+            raise ValueError(
+                f"Неизвестный или неоднозначный регион/город: {value}. Укажите канонический субъект."
+            )
         region, resolved_country = next(iter(candidates))
         result.add(region)
         countries.add(resolved_country)
@@ -308,17 +351,19 @@ def _validate_record(row, dimensions):
     for key in ("name", "description", "note", "input_region_hint"):
         # Undo the spreadsheet display guard, not arbitrary apostrophes.
         value = row[key]
-        if value.startswith("'") and value[1:].lstrip().startswith(("=", "+", "-", "@")):
+        if value.startswith("'") and value[1:].lstrip().startswith(
+            ("=", "+", "-", "@")
+        ):
             row[key] = value[1:]
     if row["split"] not in ("train", "test"):
         raise ValueError(f"Недопустимый split: {username}")
-    if (int(row["review_schema_version"]) not in (1, 2, 3)
-            or not 1 <= int(row["taxonomy_version"]) <= TAXONOMY["version"]):
+    if (
+        int(row["review_schema_version"]) not in (1, 2, 3)
+        or not 1 <= int(row["taxonomy_version"]) <= TAXONOMY["version"]
+    ):
         raise ValueError("Не поддерживается версия формы или таксономии")
     if "topic" in dimensions:
-        if (
-            row["expected_topic"] not in TOPICS
-        ):
+        if row["expected_topic"] not in TOPICS:
             raise ValueError(f"Недопустимая метка или split: {username}")
         if row["expected_group"] not in GROUPS:
             raise ValueError(f"Неизвестная крупная группа: {username}")
@@ -412,16 +457,27 @@ def inspect_review(path):
             except (ValueError, TypeError) as exc:
                 errors.append(dict(username=username, dimension=name, error=str(exc)))
     topic_rows = valid["topic"]
-    supports = {split: dict(Counter(r["expected_topic"] for r in topic_rows if r["split"] == split))
-                for split in ("train", "test")}
-    return dict(total=len(rows), confirmed_any=sum(bool(confirmed_dimensions(r)) for r in rows),
-                valid={name: len(items) for name, items in valid.items()}, errors=errors,
-                topic_support=supports,
-                group_support=dict(Counter(r["expected_group"] for r in topic_rows)),
-                missing_topic_proposals=[dict(username=r["username"], proposal=r["proposed_topic"])
-                                         for r in rows if r.get("proposed_topic")],
-                applied=False,
-                warning="Разметка, по которой меняется таксономия, является разработочной. Для итоговой оценки нужен независимый контрольный набор.")
+    supports = {
+        split: dict(
+            Counter(r["expected_topic"] for r in topic_rows if r["split"] == split)
+        )
+        for split in ("train", "test")
+    }
+    return dict(
+        total=len(rows),
+        confirmed_any=sum(bool(confirmed_dimensions(r)) for r in rows),
+        valid={name: len(items) for name, items in valid.items()},
+        errors=errors,
+        topic_support=supports,
+        group_support=dict(Counter(r["expected_group"] for r in topic_rows)),
+        missing_topic_proposals=[
+            dict(username=r["username"], proposal=r["proposed_topic"])
+            for r in rows
+            if r.get("proposed_topic")
+        ],
+        applied=False,
+        warning="Разметка, по которой меняется таксономия, является разработочной. Для итоговой оценки нужен независимый контрольный набор.",
+    )
 
 
 def metrics(rows, predictions):
@@ -504,7 +560,9 @@ def metrics(rows, predictions):
         topic_selective_precision=topic_accepted_correct / topic_accepted
         if topic_accepted
         else None,
-        topic_macro_f1=sum(v["f1"] for v in per_class.values()) / len(per_class) if per_class else None,
+        topic_macro_f1=sum(v["f1"] for v in per_class.values()) / len(per_class)
+        if per_class
+        else None,
         geography_exact_accuracy=geo_correct / geo_n if geo_n else None,
         geography_coverage=geo_accepted / geo_n if geo_n else None,
         geography_selective_precision=geo_accepted_correct / geo_accepted
@@ -534,7 +592,9 @@ def automatic_prediction(row):
 
 def evaluate(review_path, split="test", dimension="all"):
     rows = [
-        r for r in read_review(review_path, dimension=dimension) if split == "all" or r["split"] == split
+        r
+        for r in read_review(review_path, dimension=dimension)
+        if split == "all" or r["split"] == split
     ]
     # Evaluate automatic evidence, not owner overrides memorizing the same labels.
     predictions = [automatic_prediction(r) for r in rows]
@@ -569,23 +629,33 @@ def apply_review(review_path, apply=False, labels_path=None, *, dimension="all")
             note=row["note"],
             reviewed_at=datetime.now(timezone.utc).isoformat(),
         )
-        profile = dict(name=row["name"], description=informative_description(row["description"]))
+        profile = dict(
+            name=row["name"], description=informative_description(row["description"])
+        )
         dimensions = confirmed_dimensions(row)
         if "topic" in dimensions:
-            entry.update(topic=row["expected_topic"], group=row["expected_group"],
-                         secondary_topics=_list(row["expected_secondary_topics"]), reviewed_profile=profile)
+            entry.update(
+                topic=row["expected_topic"],
+                group=row["expected_group"],
+                secondary_topics=_list(row["expected_secondary_topics"]),
+                reviewed_profile=profile,
+            )
             if _yes(row.get("formats_reviewed")):
                 entry["formats"] = _list(row["expected_formats"])
         if "geography" in dimensions:
-            entry.update(scope=row["expected_scope"], regions=_list(row["expected_regions"], "|"),
-                         country=row["expected_country"], geography_reviewed_profile=profile)
+            entry.update(
+                scope=row["expected_scope"],
+                regions=_list(row["expected_regions"], "|"),
+                country=row["expected_country"],
+                geography_reviewed_profile=profile,
+            )
         entries[row["username"]] = entry
     if apply:
         atomic_write_text(
             path,
             json.dumps(
                 dict(
-                     version=3,
+                    version=3,
                     taxonomy_version=TAXONOMY["version"],
                     channels=entries,
                     updated_at=datetime.now(timezone.utc).isoformat(),
