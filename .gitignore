@@ -51,4 +51,5 @@ reports/classification-samples/
 
 # Semantic experiment artifacts and post evidence
 reports/semantic-v9/
+reports/classification-v10/
 .venv-classification/

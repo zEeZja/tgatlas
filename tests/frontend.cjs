@@ -524,6 +524,20 @@ const server = http.createServer((req, res) => {
     );
     assert.equal(await page.locator(".topic-explanation script").count(), 0);
     await page.keyboard.press("Escape");
+    semanticRow.classification_engine = "semantic-v10";
+    semanticRow.classification_version = 10;
+    semanticRow.topic_source = "semantic-v10";
+    semanticRow.topic_candidates = [
+      { id: "programming", score: -0.2 },
+      { id: "tech", score: -0.8 },
+    ];
+    await page.reload();
+    await page.waitForFunction(() => document.querySelector("#count").textContent === "1");
+    await page.locator(".result").click();
+    assert((await page.locator(".topic-explanation").innerText()).includes("V10"));
+    assert((await page.locator(".detail-badges").innerText()).includes("Криптовалюты"));
+    assert.equal(await page.locator(".topic-explanation script").count(), 0);
+    await page.keyboard.press("Escape");
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));

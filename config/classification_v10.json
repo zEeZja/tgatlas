@@ -1,0 +1,33 @@
+{
+  "format": "atlas-classification-policy-v10",
+  "version": 1,
+  "encoder": {
+    "name": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimension": 384,
+    "pooling": "mean",
+    "prefix": "query: ",
+    "precision": "fp32",
+    "max_tokens": 256,
+    "batch_size": 16,
+    "threads": 4
+  },
+  "labels": "config/zero_shot_labels.json",
+  "cache": "reports/classification-v10/embeddings.sqlite",
+  "posts": {"maximum": 4, "text_limit": 1000, "profile_weight": 0.4},
+  "selection": {
+    "seed": 42,
+    "folds": 5,
+    "anchor_weights": [0.35, 0.6, 0.85, 1.0],
+    "target_precision": 0.95,
+    "minimum_calibration_examples": 15,
+    "minimum_class_examples": 3,
+    "minimum_profile_characters": 40
+  },
+  "limits": {
+    "download_bytes": 2000000000,
+    "batch_channels": 3000,
+    "post_channels": 100,
+    "seconds": 600
+  }
+}

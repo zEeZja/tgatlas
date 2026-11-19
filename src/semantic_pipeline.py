@@ -424,6 +424,8 @@ def merge_result(row, results):
     ):
         raise ValueError("Группа semantic-v9 не соответствует теме")
     merged = {**row, **r}
+    if not r.get("topic_review_required"):
+        merged.pop("semantic_proposal", None)
     if r.get("topic_review_required") and row.get("topic_source") != "manual":
         merged["semantic_proposal"] = {
             k: r.get(k)
@@ -457,6 +459,12 @@ def merge_result(row, results):
         ):
             if key in row:
                 merged[key] = row[key]
+        merged["geography_source"] = "legacy_until_review"
+        merged["geography_explanation"] = (
+            "Текущий охват сохранён; предложение модели требует проверки."
+        )
+    else:
+        merged.pop("semantic_geography_proposal", None)
     if row.get("topic_source") == "manual":
         for key, value in row.items():
             if (
@@ -464,10 +472,6 @@ def merge_result(row, results):
                 or key == "subcategory"
             ):
                 merged[key] = value
-        merged["geography_source"] = "legacy_until_review"
-        merged["geography_explanation"] = (
-            "Текущий охват сохранён; предложение V9 требует проверки."
-        )
     if row.get("geography_source") == "manual":
         merged.update({k: v for k, v in row.items() if k.startswith("geography_")})
     return merged

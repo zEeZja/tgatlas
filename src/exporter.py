@@ -8,6 +8,7 @@ from pathlib import Path
 from .file_io import atomic_write_text
 from .topic_keywords import resolve_topic, load_classification_rules
 from .semantic_pipeline import load_results, merge_result
+from .classification_v10 import load_results as load_v10_results
 
 log = logging.getLogger(__name__)
 
@@ -64,7 +65,8 @@ def channel_rows(channels):
         seen.add(username)
     rules = load_classification_rules()
     semantic = load_results()
-    return [merge_result(_channel_to_row(ch, **rules), semantic) for ch in channels]
+    v10 = load_v10_results()
+    return [merge_result(merge_result(_channel_to_row(ch, **rules), semantic), v10) for ch in channels]
 
 
 def export_channels(conn, db_module) -> int:

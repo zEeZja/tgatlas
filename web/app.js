@@ -658,7 +658,7 @@
       `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
       `<p class="geography-explanation">${escapeHtml(ch.geography_explanation || "")}</p>` +
-      (ch.classification_engine === "semantic-v9" &&
+      (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) &&
       ch.geography_candidates?.length
         ? `<p class="geography-explanation">Территории для проверки: ${escapeHtml(ch.geography_candidates.join(", "))}</p>`
         : "") +
@@ -736,8 +736,9 @@
       declared: "Тема из каталога",
       heuristic: "Определено по названию и описанию",
       "semantic-v9": "Предложение смысловой модели V9",
+      "semantic-v10": "Смысловой классификатор V10",
       legacy_until_review:
-        "Текущая тема сохранена; предложение V9 требует проверки",
+        "Текущая тема сохранена; предложение модели требует проверки",
       fallback: "Общая рубрика каталога",
       unknown: "Недостаточно данных для определения темы",
     };
@@ -752,13 +753,13 @@
       .filter(
         (x) =>
           x.id !== ch.subcategory &&
-          x.score >= (ch.classification_engine === "semantic-v9" ? 0 : 3),
+          (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) || x.score >= 3),
       )
       .slice(0, 2);
     return (
       `<div class="topic-explanation"><b>${escapeHtml(labels[ch.topic_source] || "Тема каталога")}</b>` +
       (ch.semantic_proposal
-        ? `<p>Предложение V9: ${escapeHtml(SUB_MAP[ch.semantic_proposal.subcategory]?.label || ch.semantic_proposal.subcategory || "Не определено")}</p>`
+        ? `<p>Предложение ${ch.classification_engine === "semantic-v10" ? "V10" : "V9"}: ${escapeHtml(SUB_MAP[ch.semantic_proposal.subcategory]?.label || ch.semantic_proposal.subcategory || "Не определено")}</p>`
         : "") +
       (ch.broader_topics?.length
         ? `<p>Более широкая тема: ${escapeHtml(ch.broader_topics.map((t) => SUB_MAP[t]?.label || t).join(" → "))}</p>`
@@ -769,7 +770,7 @@
       (alternatives.length
         ? `<p>Также близко: ${alternatives.map((x) => escapeHtml(SUB_MAP[x.id]?.label || x.id)).join(", ")}</p>`
         : "") +
-      (ch.classification_engine === "semantic-v9" && ch.post_routing
+      (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) && ch.post_routing
         ? `<p>${ch.post_routing.status === "usable" ? "Учтены публикации: " + (ch.topic_evidence || []).filter((x) => typeof x === "object" && x.source === "post").length + "." : ch.post_routing.requested ? "Для уточнения нужны содержательные публикации канала." : "Использовано название и описание профиля."}</p>`
         : "") +
       (ch.topic_review_required

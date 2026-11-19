@@ -788,7 +788,7 @@
         Date.now() - Date.parse(checkedAt) >= 0 &&
         Date.now() - Date.parse(checkedAt) <= 86400000);
     if (
-      channel.classification_engine === "semantic-v9" &&
+      ["semantic-v9", "semantic-v10"].includes(channel.classification_engine) &&
       evidenceFresh &&
       snapshot &&
       snapshot.name === (channel.name || "") &&
@@ -820,7 +820,7 @@
           if (Object.hasOwn(channel, key)) result[key] = channel[key];
       if (
         channel.topic_review_required &&
-        channel.topic_source === "semantic-v9" &&
+        ["semantic-v9", "semantic-v10"].includes(channel.topic_source) &&
         !["manual", "local"].includes(enriched.topic_source)
       ) {
         result.semantic_proposal = {
@@ -873,7 +873,7 @@
         ])
           result[key] = enriched[key];
       }
-      result.classification_version = 9;
+      result.classification_version = channel.classification_engine === "semantic-v10" ? 10 : 9;
       return result;
     }
     return enriched;
