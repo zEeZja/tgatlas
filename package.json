@@ -5,6 +5,7 @@
     "test:freshness": "node tests/freshness.cjs",
     "test:layout": "node tests/layout.cjs && node tests/map.cjs",
     "test:frontend": "node tests/frontend.cjs",
+    "test:v10-view": "node tests/classification-v10-view.cjs",
     "test:review": "node tests/review.cjs"
   },
   "devDependencies": {

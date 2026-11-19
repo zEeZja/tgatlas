@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V10 — просмотр классификации</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#e6edf7;background:#101722;color-scheme:dark}*{box-sizing:border-box}body{max-width:1280px;margin:auto;padding:24px}h1{font-size:28px;margin:0}h2{font-size:19px;margin:0 0 6px}p{line-height:1.55}.muted,small{color:#aab8cb}.notice{border-left:3px solid #efbc62;background:#242333;padding:12px 16px}.stats{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.stat{background:#1c293d;padding:12px 18px;border-radius:8px}.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px}.filters label{display:flex;flex-direction:column;gap:6px}input,select,textarea,button{font:inherit;border:1px solid #43516a;border-radius:6px;padding:9px;background:#162235;color:inherit}input,select,textarea{width:100%}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}button:hover:not(:disabled){border-color:#87bbff}a{color:#8ac5ff}label{font-size:14px}.toolbar,.paging{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:16px 0}.card{background:#192437;border:1px solid #34435c;border-radius:12px;padding:20px;margin:16px 0}.card.changed{border-left:4px solid #efbc62}.description,.evidence{white-space:pre-wrap;overflow-wrap:anywhere}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.topic{background:#121c2b;padding:14px;border-radius:8px}.topic strong{display:block;font-size:19px;margin-top:8px}.predicted{background:#1d3440}.reasons{color:#eaca94;font-size:14px}.candidates{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0}.candidates li{background:#25334a;border-radius:5px;padding:6px 9px;font-size:14px}.review{display:grid;grid-template-columns:1fr 1fr 2fr;gap:12px;border-top:1px solid #34435c;padding-top:14px;margin-top:16px}.review label{display:flex;flex-direction:column;gap:6px}textarea{resize:vertical;min-height:44px}.empty{padding:40px;text-align:center}.storage-warning{color:#ffcb83}details{margin:14px 0}summary{cursor:pointer}#status{min-height:24px}.identity{font-size:12px;overflow-wrap:anywhere}.file-label{border:1px solid #43516a;padding:9px;border-radius:6px;cursor:pointer}.file-label input{display:none}@media(max-width:760px){body{padding:14px}.filters,.review{grid-template-columns:1fr}.comparison{grid-template-columns:1fr}.card{padding:14px}h1{font-size:23px}}
+</style>
+</head>
+<body>
+<header><h1>Как классифицирует V10</h1><p class="muted">Сравнение текущей темы и предложения модели на замороженном снимке. Рабочая карта не меняется.</p></header>
+<p class="notice">Это экспериментальные предложения, не подтверждённые ответы. Оценки кандидатов — не проценты уверенности. Совпадение с текущей темой не доказывает правильность, расхождение не обязательно означает ошибку.</p>
+<div id="stats" class="stats"></div>
+<section class="filters" aria-label="Фильтры">
+<label>Поиск по каналу и описанию<input id="search" type="search" placeholder="Название, @username или текст"></label>
+<label>Текущая тема<select id="current"><option value="">Все темы</option></select></label>
+<label>Предложение V10<select id="predicted"><option value="">Все темы</option></select></label>
+<label>Показать<select id="mode"><option value="all">Все каналы</option><option value="changed">Только расхождения</option><option value="same">Совпадения</option><option value="unreviewed">Без моей оценки</option><option value="wrong">Я отметил ошибку</option><option value="correct">Я согласен с V10</option><option value="unsure">Мне нужны публикации</option></select></label>
+</section>
+<div class="toolbar"><button id="export" type="button">Скачать мои оценки (JSON)</button><label class="file-label">Загрузить оценки<input id="import" type="file" accept="application/json,.json"></label><span class="muted">Оценки сохраняются в этом браузере. Для надёжности скачайте JSON.</span></div>
+<p id="status" role="status" aria-live="polite"></p>
+<nav class="paging" aria-label="Страницы"><button id="prev" type="button">← Назад</button><span id="page-info"></span><button id="next" type="button">Далее →</button></nav>
+<main id="cards"></main>
+<footer><p class="muted">Ваши оценки не обучают модель автоматически и не изменяют темы карты. Скачанный JSON можно передать для следующего разбора.</p><p id="identity" class="identity muted"></p></footer>
+<script id="view-data" type="application/json">/*__DATA__*/</script>
+<script>/*__SCRIPT__*/</script>
+</body></html>
