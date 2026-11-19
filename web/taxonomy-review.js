@@ -31,7 +31,7 @@
       const grid=n("div",undefined,"topics");
       visible.forEach((t)=>{
         const box=n("div",undefined,"topic");box.append(n("h3",t.label),n("p",t.definition),n("p",t.boundary,"boundary"));
-        const examples=rows.filter((r)=>best(r)===t.id);
+        const examples=rows.filter((r)=>best(r)===t.id).sort((a,b)=>b.combined_candidates[0].score-a.combined_candidates[0].score);
         box.append(n("p",analysis?`Примеров-кандидатов с постами: ${examples.length}`:"Примеры появятся после анализа пилота","counts"));
         examples.slice(0,5).forEach((r)=>box.append(example(r.username)));grid.append(box);
       });card.append(grid);el("taxonomy").append(card);
@@ -65,6 +65,7 @@
   }
   function renderClusters(){
     el("clusters").replaceChildren(n("p","Это группы близких по постам каналов, найденные без старых меток. Названия и границы ещё нужно обсудить. Близость не доказывает, что группа образует отдельную полезную нишу.","notice"));
+    if(analysis?.clusters.some((c)=>c.channels.length>analysis.summary.with_posts/2))el("clusters").append(n("p","В этом прогоне большая часть каналов попала в одну широкую группу. Считать её отдельной узкой темой нельзя; автоматическое обнаружение ниш пока не решено.","notice"));
     const clusters=(analysis?.clusters||[]).filter((c)=>(!el("group").value||c.nearest_draft_topics[0]?.group===el("group").value)&&matches(c.channels.map((u)=>u+" "+byUser[u]?.name).join(" ")+" "+c.nearest_draft_topics.map((t)=>label(t.id)).join(" ")));
     clusters.forEach((c)=>{const card=n("article",undefined,"card");card.append(n("h2",`Группа ${c.id+1} · каналов: ${c.channels.length}`),n("p","Ближайшие названия из черновика: "+c.nearest_draft_topics.slice(0,3).map((t)=>label(t.id)).join(", ")));
       const members=n("div",undefined,"cluster-members");c.channels.forEach((u)=>members.append(example(u)));card.append(members);el("clusters").append(card);});

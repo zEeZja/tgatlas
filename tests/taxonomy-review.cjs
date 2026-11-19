@@ -25,7 +25,7 @@ open(sys.argv[1], 'w', encoding='utf-8').write(render_review(load_taxonomy(),ana
     page.on("request", (r)=>{if(/^https?:/.test(r.url()))requests.push(r.url());});
     await page.goto(pathToFileURL(html).href);
     assert.equal(await page.locator("#taxonomy > .card").count(), 18);
-    assert((await page.locator("#stats").innerText()).includes("Подтем: 66"));
+    assert((await page.locator("#stats").innerText()).includes("Подтем: 67"));
     await page.locator("#group").selectOption("industry_transport");
     assert.equal(await page.locator("#taxonomy > .card").count(), 1);
     await page.locator("#taxonomy .example").click();

@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -10,10 +11,29 @@ from src.taxonomy_experiment import (
     legacy_mapping,
     render_review,
     analyze_pilot,
+    load_analysis,
 )
 
 
 class TaxonomyDraftTests(unittest.TestCase):
+    def test_cached_analysis_cannot_be_attached_to_different_definitions(self):
+        taxonomy = load_taxonomy()
+        result = dict(
+            format="atlas-taxonomy-experiment-v1",
+            channels=[],
+            clusters=[],
+            taxonomy_sha256=hashlib.sha256(
+                json.dumps(taxonomy, sort_keys=True, ensure_ascii=False).encode()
+            ).hexdigest(),
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "analysis.json"
+            path.write_text(json.dumps(result), encoding="utf-8")
+            self.assertEqual(load_analysis(path, taxonomy), result)
+            taxonomy["groups"][0]["definition"] += " changed"
+            with self.assertRaises(ValueError):
+                load_analysis(path, taxonomy)
+
     def test_taxonomy_inactive_defined_and_no_duplicate_leaf_ids(self):
         draft = load_taxonomy()
         self.assertFalse(draft["active"])

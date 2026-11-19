@@ -19,7 +19,11 @@ def main():
         "--pilot", type=Path, default=ROOT / "reports/classification-v11/pilot-120"
     )
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--analysis", type=Path, help="готовый JSON для нового HTML без запуска encoder"
+    )
+    mode.add_argument(
         "--analyze",
         action="store_true",
         help="локальные embeddings постов и группы-кандидаты; без HTTP",
@@ -31,11 +35,18 @@ def main():
         or args.output.with_suffix(".json").exists()
     ):
         parser.error("Нужно новое имя выходного HTML; существующие отчёты сохраняются")
-    from src.taxonomy_experiment import load_taxonomy, render_review, analyze_pilot
+    from src.taxonomy_experiment import (
+        load_taxonomy,
+        render_review,
+        analyze_pilot,
+        load_analysis,
+    )
     from src.file_io import atomic_write_text
 
     taxonomy = load_taxonomy(args.taxonomy)
     analysis = None
+    if args.analysis:
+        analysis = load_analysis(args.analysis, taxonomy)
     if args.analyze:
         from src.classification_encoder import CachedEncoder, peak_memory_mb
         from src.classification_v10 import load_policy

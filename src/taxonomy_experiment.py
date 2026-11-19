@@ -92,6 +92,21 @@ def render_review(taxonomy, analysis=None):
     return template.replace("/*__DATA__*/", data).replace("/*__SCRIPT__*/", script)
 
 
+def load_analysis(path, taxonomy):
+    analysis = json.loads(Path(path).read_text(encoding="utf-8"))
+    expected = hashlib.sha256(
+        json.dumps(taxonomy, sort_keys=True, ensure_ascii=False).encode()
+    ).hexdigest()
+    if (
+        analysis.get("format") != "atlas-taxonomy-experiment-v1"
+        or analysis.get("taxonomy_sha256") != expected
+        or not isinstance(analysis.get("channels"), list)
+        or not isinstance(analysis.get("clusters"), list)
+    ):
+        raise ValueError("Анализ относится к другой версии сетки или повреждён")
+    return analysis
+
+
 def analyze_pilot(directory, taxonomy, encoder, settings):
     import numpy as np
     from sklearn.cluster import HDBSCAN
@@ -193,7 +208,7 @@ def analyze_pilot(directory, taxonomy, encoder, settings):
     clusters = []
     if len(eligible) >= 5:
         cluster_labels = HDBSCAN(
-            min_cluster_size=3, min_samples=2, metric="euclidean"
+            min_cluster_size=3, min_samples=2, metric="euclidean", copy=True
         ).fit_predict(content_vectors)
         for label in sorted(set(cluster_labels) - {-1}):
             members = [
