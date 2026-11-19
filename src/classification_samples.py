@@ -25,6 +25,7 @@ def sample_channel(
     limit=12,
     max_age_hours=24,
     refresh=False,
+    fetcher=None,
 ):
     username = str(username).strip().lstrip("@").lower()
     if not re.fullmatch(r"[a-z][a-z0-9_]{0,31}", username):
@@ -52,7 +53,7 @@ def sample_channel(
     pages = 0
     excluded_ads = duplicates = 0
     for _ in range(max_pages):
-        html = fetch_channel_html(username, before=before)
+        html = (fetcher or fetch_channel_html)(username, before=before)
         pages += 1
         posts = parse_channel_page(html, username, 0)
         if not posts:
