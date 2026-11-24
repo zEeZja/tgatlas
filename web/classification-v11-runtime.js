@@ -21,8 +21,9 @@
     if (!["semantic-v11","semantic-v11v2"].includes(channel.classification_engine) || channel.classification_taxonomy_sha256 && channel.classification_taxonomy_sha256!==runtime.fingerprint) return base;
     const snapshot = channel.classification_profile;
     const at = channel.post_routing?.fetched_at;
-    const age = at ? Date.now()-Date.parse(at) : 0;
-    const createdAge=v2?Date.now()-Date.parse(channel.classification_created_at):0;
+    const reference=window.Api?.CONFIG.snapshotReference??Date.now();
+    const age = at ? reference-Date.parse(at) : 0;
+    const createdAge=v2?reference-Date.parse(channel.classification_created_at):0;
     if (!snapshot || snapshot.name!==(channel.name||"") || snapshot.description!==description(channel.description) ||
         !Number.isFinite(age) || age<0 || age>168*3600000 || !api.byId[channel.subcategory] ||
         !Number.isFinite(createdAge)||createdAge<0||createdAge>168*3600000||

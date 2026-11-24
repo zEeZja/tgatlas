@@ -6,7 +6,8 @@ const http = require('node:http');
 const { pathToFileURL } = require('node:url');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '../web');
-const artifact = JSON.parse(fs.readFileSync(path.join(root, 'data/atlas_layout.json'), 'utf8'));
+const bundled=!fs.existsSync(path.join(root,'data/channels.json'));
+const artifact = JSON.parse(fs.readFileSync(path.join(root, bundled?'snapshot/layout.json':'data/atlas_layout.json'), 'utf8'));
 const expected = artifact.layout.nodes.map(n => [n.id,n.x,n.y]);
 assert.equal(artifact.method, 'tsne');
 const server = http.createServer((req,res) => {
@@ -27,16 +28,21 @@ const server = http.createServer((req,res) => {
       const page=await browser.newPage({viewport:{width:1440,height:1000}});
       const errors=[];
       page.on('pageerror',e=>errors.push(e.message));
-      await page.addInitScript(()=>{
+       await page.addInitScript(()=>{
         let ctor;
         Object.defineProperty(window,'CanvasMap',{configurable:true,get:()=>ctor,set:Base=>{
           ctor=class extends Base {constructor(...args){super(...args);window.__publishedMap=this;}};
         }});
-      });
+       });
+       if(bundled)await page.addInitScript(()=>{Date.now=()=>Date.parse('2030-01-01T00:00:00Z');});
       await page.goto(url);
       await page.waitForFunction(()=>document.getElementById('layout-method')?.textContent.startsWith('TSNE'));
       const coordinates=()=>page.evaluate(()=>window.__publishedMap.layout.nodes.map(n=>[n.id,n.x,n.y]));
-      assert.deepEqual(await coordinates(),expected);
+       assert.deepEqual(await coordinates(),expected);
+       if(bundled){
+         assert.equal(await page.evaluate(()=>Api.CONFIG.snapshotInfo.channels),expected.length);
+         assert((await page.locator('.diagnostics').innerText()).includes('Публичный снимок'));
+       }
       assert.equal(await page.evaluate(()=>window.__publishedMap.layout.annotations.length),artifact.layout.annotations.filter(a=>!['region','country'].includes(a.kind)).length);
       assert(await page.locator('#search-panel').isHidden());
       await page.locator('#search-toggle').click();

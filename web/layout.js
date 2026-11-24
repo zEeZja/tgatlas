@@ -45,7 +45,7 @@
     if(!artifact)reject("missing_artifact","Снимок t-SNE не загружен");
     if(artifact.format!=="atlas-semantic-layout-v1"||!["umap","tsne"].includes(artifact.method))reject("invalid_format","Неизвестный формат семантического снимка");
     if(artifact.policy_sha256!==policy.fingerprint)reject("policy_mismatch","Версии правил карты и t-SNE различаются; обновите страницу");
-    const age=Date.now()-Date.parse(artifact.created_at);
+    const age=(window.Api?.CONFIG.snapshotReference??Date.now())-Date.parse(artifact.created_at);
     if(!Number.isFinite(age))reject("invalid_date","Некорректная дата t-SNE");
     if(age<0)reject("future_artifact","Дата t-SNE находится в будущем; проверьте часы компьютера");
     if(age>7*86400000)reject("expired_artifact","Снимку t-SNE больше 7 дней");

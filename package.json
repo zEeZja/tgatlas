@@ -2,7 +2,8 @@
   "name": "tg-atlas-frontend-checks",
   "private": true,
   "scripts": {
-    "test": "npm run test:layout && npm run test:freshness && npm run test:product-map && npm run test:frontend && npm run test:review",
+    "test": "npm run test:layout && npm run test:freshness && npm run test:product-map && npm run test:frontend && npm run test:review && npm run test:snapshot",
+    "test:snapshot": "node tests/public-snapshot.cjs && node tests/published-layout.cjs",
     "test:freshness": "node tests/freshness.cjs",
     "test:layout": "node tests/layout.cjs && node tests/map.cjs",
     "test:published-layout": "node tests/published-layout.cjs",

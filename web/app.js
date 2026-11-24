@@ -127,6 +127,11 @@
     );
   }
   const layoutArtifact = await window.Api.getLayout();
+  if(window.Api.CONFIG.snapshotInfo) {
+    const note=document.createElement('p');
+    note.textContent='Публичный снимок от '+new Date(window.Api.CONFIG.snapshotInfo.reference_at).toLocaleString('ru-RU')+'. Данные зафиксированы на эту дату, это не обновление в реальном времени.';
+    document.querySelector('.diagnostics').appendChild(note);
+  }
   const isDemo=Boolean(window.TG_DATA?._sample);
   if(isDemo)document.getElementById('mode-description').textContent='Демо-каталог · аудитория и актуальность не проверены';
   const layoutCache=new Map();

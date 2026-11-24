@@ -13,7 +13,8 @@ const server=http.createServer((req,res)=>{
  try{
   const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  await page.route('**/data/channels.json',route=>route.fulfill({status:404}));
+   await page.route('**/data/channels.json',route=>route.fulfill({status:404}));
+   await page.route('**/snapshot/channels.json',route=>route.fulfill({status:404}));
   await page.route('**/data/atlas_layout.json',route=>route.fulfill({status:404}));
   await page.goto(`http://127.0.0.1:${server.address().port}/`);
   await page.waitForFunction(()=>document.getElementById('count').textContent==='779');

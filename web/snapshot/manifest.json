@@ -1,0 +1,30 @@
+{
+  "format": "atlas-public-snapshot-v1",
+  "id": "a00829c1441008e591f82dfa29223cb0530a727e75ce7fed705d9427067fc8a5",
+  "reference_at": "2026-11-23T13:18:36.922575+00:00",
+  "published_at": "2026-11-24T10:14:22.232117+00:00",
+  "channels": 3463,
+  "method": "tsne",
+  "with_posts": 1591,
+  "source_channels_sha256": "12155801116219233761899669b51b961e65df0dc7739d81c11381e55eb5b50f",
+  "source_layout_sha256": "6b0fcaf6e2574403b47e74e3f8f689ec71512d5035fa18f19ce3f22e0fb0c666",
+  "files": {
+    "channels.json": {
+      "bytes": 13556449,
+      "sha256": "037f7b60d14378c6487425a8fd1b9f94d46a2b3427f9a3a2671182196453b90d"
+    },
+    "channels.js": {
+      "bytes": 13556499,
+      "sha256": "5edd76bc567e2ec77d0694faad711f92421a4bdef9b6902e9618908e6460547a"
+    },
+    "layout.json": {
+      "bytes": 4473628,
+      "sha256": "2ff161e188fae2cee8cd361f981750301944fdb1bee428a1586462fa93222965"
+    },
+    "layout.js": {
+      "bytes": 4473666,
+      "sha256": "b7557dbe2cb1fbdfa11ca3b5593ba89d683ba6072f8c23f942febfeef2fe9edd"
+    }
+  },
+  "privacy": "Public channel metadata and saved labels/coordinates only; no posts, cookies, DB dumps or collection state."
+}

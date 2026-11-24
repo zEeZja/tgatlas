@@ -1,3 +1,6 @@
 # Keep migration source/checksums and dependency snapshots stable across platforms.
 db/migrations/*.sql text eol=lf
 requirements/locked-*.txt text eol=lf
+# Public snapshot manifest hashes cover exact UTF-8/LF bytes.
+web/snapshot/*.json text eol=lf
+web/snapshot/*.js text eol=lf
