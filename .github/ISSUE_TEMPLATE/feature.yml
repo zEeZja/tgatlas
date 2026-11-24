@@ -1,0 +1,21 @@
+name: Предложение
+description: Улучшение интерфейса или конвейера данных
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Какую задачу нужно решить?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое поведение
+      description: Укажите ожидаемый результат и, при необходимости, пример интерфейса.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Ограничения и альтернативы
+      description: Важны сохранность ручных меток, ограничения сервисов и работа на CPU.

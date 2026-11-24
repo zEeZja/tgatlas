@@ -66,5 +66,15 @@
     window.TG_DATA = Array.isArray(data) ? { channels: rows } : data;
     return rows;
   }
-  window.Api = { getChannels, CONFIG };
+  async function getLayout() {
+    try {
+      if(location.protocol==="file:") {
+        if(window.TG_ATLAS_LAYOUT===undefined)await loadScript("./data/atlas_layout.js");
+        return window.TG_ATLAS_LAYOUT||null;
+      }
+      const response=await fetch("./data/atlas_layout.json",{cache:"no-store"});
+      return response.ok?await response.json():null;
+    } catch (_) { return null; }
+  }
+  window.Api = { getChannels, getLayout, CONFIG };
 })();

@@ -1,0 +1,21 @@
+{
+  "format": "atlas-layout-policy-v1",
+  "version": 2,
+  "seed": 42,
+  "regional_topics": ["general", "emergencies", "housing", "v11_general_news", "v11_urban_life", "v11_incidents", "v11_housing_utilities", "v11_events_leisure"],
+  "conditional_topics": ["realestate", "career", "sales", "travel", "government", "v11_property_market", "v11_careers", "v11_sales_commerce", "v11_tourism", "v11_public_services", "v11_social_issues"],
+  "local_context_pattern": "местн|городск|региональн|для жителей|жизнь города|афиш|куда пойти|встречи|митап|сосед|недвижим|жиль|ваканс|работа в|доставк",
+  "explicit_local_pattern": "для жителей|местное сообщество|городское сообщество|городские новости|местные новости|афиша|куда пойти|митап|встречи в",
+  "biography_pattern": "родил|родом|учил|окончил|регистрац|учредител|реклам|контакт",
+  "international_pattern": "международн|мировые новости|со всего мира|по всему миру|world news",
+  "proposal_region_weight": 0.5,
+  "profile_region_weight": 0.9,
+  "same_region_distance_scale": 0.3,
+  "different_region_distance_scale": 1.3,
+  "different_region_distance_offset": 0.35,
+  "country_distance_weight": 0,
+  "umap": {"n_neighbors": 30, "min_dist": 0.12, "n_epochs": 300},
+  "tsne": {"perplexity": 30, "max_iter": 1000},
+  "geometry": {"minimum_separation": 24, "collision_passes": 60},
+  "note": "География влияет на размещение локального содержания, а не меняет классификационные поля. Неуточнённая география не является отдельной темой."
+}

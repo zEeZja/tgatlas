@@ -8,13 +8,13 @@
 </style>
 </head>
 <body>
-<header><h1>Как классифицирует V10</h1><p class="muted">Сравнение текущей темы и предложения модели на замороженном снимке. Рабочая карта не меняется.</p></header>
+<header><h1 id="viewer-title">Как классифицирует V10</h1><p class="muted">Сравнение текущей темы и предложения модели на замороженном снимке. Рабочая карта не меняется.</p></header>
 <p class="notice">Это экспериментальные предложения, не подтверждённые ответы. Оценки кандидатов — не проценты уверенности. Совпадение с текущей темой не доказывает правильность, расхождение не обязательно означает ошибку.</p>
 <div id="stats" class="stats"></div>
 <section class="filters" aria-label="Фильтры">
 <label>Поиск по каналу и описанию<input id="search" type="search" placeholder="Название, @username или текст"></label>
 <label>Текущая тема<select id="current"><option value="">Все темы</option></select></label>
-<label>Предложение V10<select id="predicted"><option value="">Все темы</option></select></label>
+<label><span id="predicted-label">Предложение V10</span><select id="predicted"><option value="">Все темы</option></select></label>
 <label>Показать<select id="mode"><option value="all">Все каналы</option><option value="changed">Только расхождения</option><option value="same">Совпадения</option><option value="unreviewed">Без моей оценки</option><option value="wrong">Я отметил ошибку</option><option value="correct">Я согласен с V10</option><option value="unsure">Мне нужны публикации</option></select></label>
 </section>
 <div class="toolbar"><button id="export" type="button">Скачать мои оценки (JSON)</button><label class="file-label">Загрузить оценки<input id="import" type="file" accept="application/json,.json"></label><span class="muted">Оценки сохраняются в этом браузере. Для надёжности скачайте JSON.</span></div>

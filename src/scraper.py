@@ -31,9 +31,18 @@ MAX_BACKOFF = 30.0  # потолок своей задержки, сек
 class ScrapeError(Exception):
     """Ошибка страницы Telegram с признаком окончательной недоступности."""
 
-    def __init__(self, message: str, *, permanent: bool = False):
+    def __init__(
+        self,
+        message: str,
+        *,
+        permanent: bool = False,
+        status_code=None,
+        retry_after=None,
+    ):
         super().__init__(message)
         self.permanent = permanent
+        self.status_code = status_code
+        self.retry_after = retry_after
 
 
 _local = threading.local()
@@ -46,15 +55,21 @@ class RequestGate:
         self.lock = threading.Lock()
         self.next_at = 0.0
 
-    def wait(self):
+    def wait(self, stop_event=None):
         while True:
+            if stop_event is not None and stop_event.is_set():
+                raise ScrapeError("Запросы остановлены после ограничения Telegram")
             with self.lock:
                 now = time.monotonic()
                 delay = self.next_at - now
                 if delay <= 0:
                     self.next_at = now + config.SCRAPE_REQUEST_INTERVAL
                     return
-            time.sleep(delay)
+            if stop_event is not None:
+                if stop_event.wait(min(delay, 60)):
+                    raise ScrapeError("Запросы остановлены после ограничения Telegram")
+            else:
+                time.sleep(min(delay, 60))
 
     def pause(self, seconds):
         with self.lock:
@@ -101,7 +116,12 @@ def _backoff(attempt: int) -> float:
 
 
 def fetch_channel_html(
-    username: str, before: Optional[int] = None, *, profile: bool = False
+    username: str,
+    before: Optional[int] = None,
+    *,
+    profile: bool = False,
+    attempts: int = MAX_ATTEMPTS,
+    stop_event=None,
 ) -> str:
     """Скачать HTML страницы канала.
 
@@ -122,12 +142,19 @@ def fetch_channel_html(
     url = f"https://t.me/{username}" if profile else f"https://t.me/s/{username}"
     params = {"before": before} if before else None
 
-    for attempt in range(MAX_ATTEMPTS):
-        _gate.wait()
+    if type(attempts) is not int or not 1 <= attempts <= MAX_ATTEMPTS:
+        raise ValueError("Допускается от 1 до 4 HTTP-попыток")
+    for attempt in range(attempts):
+        if stop_event is None:
+            _gate.wait()
+        else:
+            _gate.wait(stop_event=stop_event)
+        if stop_event is not None and stop_event.is_set():
+            raise ScrapeError("Запросы остановлены после ограничения Telegram")
         try:
             r = _get_session().get(url, params=params, timeout=config.REQUEST_TIMEOUT)
         except requests.RequestException as e:
-            if attempt == MAX_ATTEMPTS - 1:
+            if attempt == attempts - 1:
                 raise
             delay = _backoff(attempt)
             log.warning("Сетевая ошибка (%s), повтор через %.1fс", e, delay)
@@ -136,11 +163,13 @@ def fetch_channel_html(
 
         # 429 — уважаем Retry-After, если он есть
         if r.status_code == 429:
-            if attempt == MAX_ATTEMPTS - 1:
+            if attempt == attempts - 1:
                 _gate.pause(_retry_after(r.headers.get("Retry-After", "")) or 30.0)
                 raise ScrapeError(
-                    f"429 Too Many Requests: {username} (попыток: {MAX_ATTEMPTS})",
+                    f"429 Too Many Requests: {username} (попыток: {attempts})",
                     permanent=False,
+                    status_code=429,
+                    retry_after=_retry_after(r.headers.get("Retry-After", "")),
                 )
             retry_after = _retry_after(r.headers.get("Retry-After", ""))
             delay = (
@@ -152,7 +181,7 @@ def fetch_channel_html(
 
         # 5xx — ретраим
         if 500 <= r.status_code < 600:
-            if attempt == MAX_ATTEMPTS - 1:
+            if attempt == attempts - 1:
                 r.raise_for_status()
             delay = _backoff(attempt)
             log.warning("HTTP %d, повтор через %.1fс", r.status_code, delay)
@@ -164,7 +193,9 @@ def fetch_channel_html(
             raise ScrapeError(f"Канал не найден: {username}", permanent=True)
         if r.status_code == 403:
             # 403 может быть ограничением доступа/сети, а не удалением канала.
-            raise ScrapeError(f"Доступ запрещён: {username}", permanent=False)
+            raise ScrapeError(
+                f"Доступ запрещён: {username}", permanent=False, status_code=403
+            )
 
         r.raise_for_status()
         return r.text

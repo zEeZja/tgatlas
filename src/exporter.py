@@ -9,6 +9,7 @@ from .file_io import atomic_write_text
 from .topic_keywords import resolve_topic, load_classification_rules
 from .semantic_pipeline import load_results, merge_result
 from .classification_v10 import load_results as load_v10_results
+from .classification_runtime import load_results as load_primary_results, merge_result as merge_primary_result
 
 log = logging.getLogger(__name__)
 
@@ -66,7 +67,8 @@ def channel_rows(channels):
     rules = load_classification_rules()
     semantic = load_results()
     v10 = load_v10_results()
-    return [merge_result(merge_result(_channel_to_row(ch, **rules), semantic), v10) for ch in channels]
+    primary = load_primary_results()
+    return [merge_primary_result(merge_result(merge_result(_channel_to_row(ch, **rules), semantic), v10), primary) for ch in channels]
 
 
 def export_channels(conn, db_module) -> int:

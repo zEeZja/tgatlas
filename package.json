@@ -2,10 +2,16 @@
   "name": "tg-atlas-frontend-checks",
   "private": true,
   "scripts": {
+    "test": "npm run test:layout && npm run test:freshness && npm run test:product-map && npm run test:frontend && npm run test:review",
     "test:freshness": "node tests/freshness.cjs",
     "test:layout": "node tests/layout.cjs && node tests/map.cjs",
-    "test:frontend": "node tests/frontend.cjs",
+    "test:published-layout": "node tests/published-layout.cjs",
+    "test:frontend": "node tests/product-demo.cjs && node tests/product-ui.cjs",
+    "test:design": "node tests/product-demo.cjs && node tests/product-ui.cjs",
+    "test:product-map": "node tests/product-map.cjs && node tests/layout-diagnostics.cjs",
     "test:v10-view": "node tests/classification-v10-view.cjs",
+    "test:v11v2-view": "node tests/classification-v11v2-view.cjs reports/classification-v11v2/pilot-5/review.html",
+    "test:v11v2-map": "node tests/classification-v11v2-map.cjs",
     "test:taxonomy": "node tests/taxonomy-review.cjs",
     "test:review": "node tests/review.cjs"
   },

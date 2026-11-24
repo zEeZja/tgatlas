@@ -1,0 +1,27 @@
+# Optional isolated RSSHub. Does not mount .env, PostgreSQL or working atlas data.
+services:
+  rsshub:
+    image: ${RSSHUB_IMAGE:-diygod/rsshub:latest}
+    ports:
+      - "127.0.0.1:1200:1200"
+    environment:
+      NODE_ENV: production
+      NODE_OPTIONS: --max-old-space-size=384
+      CACHE_TYPE: redis
+      REDIS_URL: redis://redis:6379/
+      CACHE_EXPIRE: "3600"
+      REQUEST_TIMEOUT: "20000"
+    depends_on:
+      - redis
+    mem_limit: 768m
+    cpus: 1.0
+    restart: unless-stopped
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--maxmemory", "96mb", "--maxmemory-policy", "allkeys-lru", "--appendonly", "yes"]
+    volumes:
+      - rsshub-cache:/data
+    mem_limit: 192m
+    restart: unless-stopped
+volumes:
+  rsshub-cache:

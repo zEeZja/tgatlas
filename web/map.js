@@ -13,6 +13,12 @@
   const MIN_SCALE = 0.03;
   const MAX_SCALE = 10;
   const GRID_CELL_SIZE = 50; // world units
+  const ramp=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t);};
+  function annotationOpacity(kind, zoom) {
+    if(kind==="category")return 1-ramp(1.35,2.35,zoom);
+    if(kind==="region"||kind==="country")return ramp(1.1,1.65,zoom)*(1-ramp(3,4.6,zoom));
+    return ramp(1.45,2,zoom)*(1-ramp(2.8,4,zoom));
+  }
 
   class SpatialGrid {
     constructor(nodes, cellSize) {
@@ -98,6 +104,7 @@
 
     setLayout(layout) {
       this.layout = layout;
+      this._annotations=null;
       this.hover = null;
       this.view.ready = false;
 
@@ -108,6 +115,8 @@
         if (n.radius > maxR) maxR = n.radius;
       }
       this._maxRadius = maxR;
+      const r=this.wrap.getBoundingClientRect();
+      this._overviewScale=Math.min(r.width/layout.width,r.height/layout.height)*.95 || 1;
 
       this._resize();
     }
@@ -190,7 +199,8 @@
 
     _resize() {
       const r = this.wrap.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
+      this._overviewScale=Math.min(r.width/this.layout.width,r.height/this.layout.height)*.95 || 1;
+      const dpr = Math.min(window.devicePixelRatio || 1,2);
       if (
         this.view.ready &&
         this._size &&
@@ -271,7 +281,7 @@
     _draw() {
       const ctx = this.canvas.getContext("2d");
       if (!ctx) return;
-      const dpr = window.devicePixelRatio || 1;
+      const dpr = Math.min(window.devicePixelRatio || 1,2);
       const W = this.canvas.width / dpr;
       const H = this.canvas.height / dpr;
       const v = this.view;
@@ -279,16 +289,8 @@
 
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, W, H);
-      ctx.fillStyle = "#111a18";
+      ctx.fillStyle = "#0c1916";
       ctx.fillRect(0, 0, W, H);
-
-      // Quiet coordinate grid in screen space, anchored to the projection.
-      ctx.fillStyle = "#294033";
-      const step = 60;
-      for (let x = ((v.x % step) + step) % step; x < W; x += step)
-        for (let y = ((v.y % step) + step) % step; y < H; y += step) {
-          ctx.fillRect(x, y, 1, 1);
-        }
 
       // Границы видимой области в мировых координатах (+ отступ)
       const margin = (this._maxRadius + 20) / v.scale;
@@ -301,41 +303,13 @@
       ctx.translate(v.x, v.y);
       ctx.scale(v.scale, v.scale);
 
-      const visibleCounts = new Map();
       const activeClouds = new Set();
       for (const n of nodes) {
         if (!this.visibleIds || this.visibleIds.has(n.id)) {
-          visibleCounts.set(n.cluster, (visibleCounts.get(n.cluster) || 0) + 1);
           activeClouds.add(n.neighbourhood);
         }
       }
-      // Topographic neighbourhood contours replace all category containers.
-      const labels = [];
-      const label = (text, x, y, color, size) => {
-        const sx = x * v.scale + v.x,
-          originalY = y * v.scale + v.y;
-        if (sx < 35 || sx > W - 35 || originalY < 80 || originalY > H - 65)
-          return;
-        const sy = Math.max(150, originalY);
-        y = (sy - v.y) / v.scale;
-        ctx.font = `500 ${size / v.scale}px Arial, sans-serif`;
-        const w = ctx.measureText(text).width * v.scale;
-        if (
-          labels.some(
-            (b) =>
-              Math.abs(b.x - sx) < (b.w + w) / 2 + 12 &&
-              Math.abs(b.y - sy) < 24,
-          )
-        )
-          return;
-        labels.push({ x: sx, y: sy, w });
-        ctx.textAlign = "center";
-        ctx.lineWidth = 4 / v.scale;
-        ctx.strokeStyle = "#111a18";
-        ctx.strokeText(text, x, y);
-        ctx.fillStyle = color;
-        ctx.fillText(text, x, y);
-      };
+      // Density hints only: semantic clusters are not administrative borders.
       for (const cloud of this.layout.clouds || []) {
         if (!this.showRelief) continue;
         if (!activeClouds.has(cloud.id)) continue;
@@ -354,7 +328,7 @@
           cloud.y,
           cloud.radius,
         );
-        halo.addColorStop(0, _hexA(cloud.color, 0.09));
+        halo.addColorStop(0, _hexA(cloud.color, 0.045));
         halo.addColorStop(1, _hexA(cloud.color, 0));
         ctx.fillStyle = halo;
         ctx.fillRect(
@@ -363,48 +337,7 @@
           cloud.radius * 2,
           cloud.radius * 2,
         );
-        if (cloud.outline.length > 4)
-          for (const scale of [1.07, 1.2]) {
-            const points = cloud.outline.map((p) => ({
-              x: cloud.x + (p.x - cloud.x) * scale,
-              y: cloud.y + (p.y - cloud.y) * scale,
-            }));
-            ctx.beginPath();
-            const last = points.at(-1),
-              first = points[0];
-            ctx.moveTo((last.x + first.x) / 2, (last.y + first.y) / 2);
-            for (let i = 0; i < points.length; i++) {
-              const p = points[i],
-                next = points[(i + 1) % points.length];
-              ctx.quadraticCurveTo(
-                p.x,
-                p.y,
-                (p.x + next.x) / 2,
-                (p.y + next.y) / 2,
-              );
-            }
-            ctx.closePath();
-            ctx.lineWidth = 0.7 / v.scale;
-            ctx.strokeStyle = _hexA(cloud.color, scale < 1.1 ? 0.16 : 0.075);
-            ctx.stroke();
-          }
       }
-      for (const cluster of this.layout.clusters || []) {
-        const count = visibleCounts.get(cluster.id) || 0;
-        if (!count) continue;
-        label(
-          cluster.label + " · " + count,
-          cluster.cx,
-          cluster.labelY,
-          cluster.color,
-          14,
-        );
-      }
-      if (v.scale > 0.65)
-        for (const cloud of this.layout.clouds || []) {
-          if (!activeClouds.has(cloud.id)) continue;
-          label(cloud.label, cloud.x, cloud.labelY, "#94afa0", 10);
-        }
       for (const n of nodes) {
         // Viewport culling
         if (
@@ -416,16 +349,16 @@
           continue;
 
         const active = !this.visibleIds || this.visibleIds.has(n.id);
-        const drawRadius = Math.max(n.radius, Math.min(8, 1.6 / v.scale));
+        const drawRadius = Math.max(.7,Math.min(2.8,n.radius*v.scale*.48))/v.scale;
         const isSel = n.id === this.selectedId;
         const isHov = this.hover && this.hover.id === n.id;
 
-        ctx.globalAlpha = active ? (isHov || isSel ? 1 : 0.8) : 0.08;
+        ctx.globalAlpha = active ? (isHov || isSel ? 1 : 0.72) : 0.045;
 
         if (isHov || isSel) {
           ctx.beginPath();
           ctx.fillStyle = _hexA(n.color || "#6b8afd", 0.25);
-          ctx.arc(n.x, n.y, drawRadius + 5, 0, Math.PI * 2);
+          ctx.arc(n.x, n.y, drawRadius + 5/v.scale, 0, Math.PI * 2);
           ctx.fill();
         }
 
@@ -438,13 +371,13 @@
           ctx.beginPath();
           ctx.lineWidth = 2 / v.scale;
           ctx.strokeStyle = "#ffffff";
-          ctx.arc(n.x, n.y, drawRadius + 2, 0, Math.PI * 2);
+          ctx.arc(n.x, n.y, drawRadius + 3/v.scale, 0, Math.PI * 2);
           ctx.stroke();
         }
       }
 
       // Avoid turning dense areas into overlapping labels. Hover always has a tooltip.
-      if (v.scale > 2.2) {
+      if (v.scale / (this._overviewScale||1) > 5 && v.scale > .8) {
         ctx.globalAlpha = 1;
         ctx.fillStyle = "#d8e9dc";
         ctx.font = `${11 / v.scale}px Arial, sans-serif`;
@@ -479,12 +412,61 @@
       ctx.restore();
       ctx.globalAlpha = 1;
 
+      this._drawAnnotations(ctx,W,H);
+
       if (this.hover) this._drawTooltip(ctx, this.hover);
+    }
+
+    _drawAnnotations(ctx,W,H) {
+      const v=this.view,zoom=v.scale/(this._overviewScale||1);
+      const nodes=this.layout.nodes;
+      const visible=this.visibleIds;
+      const annotations=this._annotations || (this._annotations=this.layout.annotations || [
+        ...(this.layout.clusters||[]).map(c=>({id:c.id,kind:"category",label:c.label,x:c.labelX??c.cx,y:c.cy,count:c.count,members:nodes.filter(n=>n.cluster===c.id).map(n=>n.id)})),
+        ...(this.layout.clouds||[]).map(c=>({id:c.id,kind:"topic",label:c.label,x:c.x,y:c.y,count:c.count,members:nodes.filter(n=>n.neighbourhood===c.id).map(n=>n.id)}))
+      ]);
+      const boxes=[];
+      // Regions take precedence when they appear; never a coloured headline
+      // spanning a whole island. All collision tests are in CSS screen pixels.
+      const priority={region:0,country:0,category:1,topic:2};
+      const candidates=[...annotations].sort((a,b)=>(priority[a.kind]??2)-(priority[b.kind]??2)||(b.count||0)-(a.count||0)||a.id.localeCompare(b.id));
+      ctx.save();
+      ctx.textAlign="center";ctx.textBaseline="middle";
+      for(const item of candidates) {
+        const opacity=annotationOpacity(item.kind,zoom);
+        if(opacity<.08||visible&&!(item.members||[]).some(id=>visible.has(id)))continue;
+        const x=item.x*v.scale+v.x,y=item.y*v.scale+v.y;
+        const size=item.kind==="category"?12:11;
+        ctx.font=`600 ${size}px system-ui, sans-serif`;
+        const maxWidth=Math.min(190,W*.36);
+        const words=String(item.label).split(/\s+/),lines=[];
+        let line="";
+        for(const word of words) {
+          const next=line?line+" "+word:word;
+          if(line&&ctx.measureText(next).width>maxWidth){lines.push(line);line=word;}else line=next;
+        }
+        if(line)lines.push(line);
+        if(lines.length>2){lines.length=2;lines[1]=lines[1].replace(/[,.·]$/,'')+"…";}
+        const w=Math.max(...lines.map(l=>ctx.measureText(l).width)),h=lines.length*16;
+        if(x-w/2<12||x+w/2>W-12||y-h/2<16||y+h/2>H-16)continue;
+        if(boxes.some(b=>Math.abs(b.x-x)<(b.w+w)/2+18&&Math.abs(b.y-y)<(b.h+h)/2+14))continue;
+        boxes.push({x,y,w,h});
+        ctx.globalAlpha=opacity;
+        ctx.lineJoin="round";ctx.lineWidth=3.5;ctx.strokeStyle="#0d1417";
+        ctx.fillStyle=item.kind==="region"||item.kind==="country"?"#b6cad1":"#d5dddf";
+        for(let i=0;i<lines.length;i++) {
+          const ly=y+(i-(lines.length-1)/2)*16;
+          ctx.strokeText(lines[i],x,ly);ctx.fillText(lines[i],x,ly);
+        }
+      }
+      ctx.restore();
     }
 
     _drawTooltip(ctx, node) {
       let title = node.name;
       const sub = "@" + node.username;
+      const role=this.layout.geographyVisible===false?null:node.layout_geography;
+      let location=role?.label ? role.label+(role.provisional?" · предварительно":"") : "";
       const pad = 10;
       let x = this.pointer.x + 14;
       let y = this.pointer.y + 14;
@@ -498,8 +480,9 @@
       const w1 = ctx.measureText(title).width;
       ctx.font = '12px "Inter", system-ui, sans-serif';
       const w2 = ctx.measureText(sub).width;
-      const w = Math.max(w1, w2) + pad * 2;
-      const h = 46;
+      while(location.length>1&&ctx.measureText(location).width>maxWidth)location=location.slice(0,-2)+"…";
+      const w = Math.max(w1, w2,ctx.measureText(location).width) + pad * 2;
+      const h = location?64:46;
       x = Math.max(4, Math.min(x, this.wrap.clientWidth - w - 4));
       y = Math.max(4, Math.min(y, this.wrap.clientHeight - h - 4));
 
@@ -507,12 +490,12 @@
       ctx.shadowBlur = 14;
       ctx.shadowOffsetY = 4;
       _roundRect(ctx, x, y, w, h, 10);
-      ctx.fillStyle = "#1a1a2e";
+      ctx.fillStyle = "#172124";
       ctx.fill();
 
       ctx.shadowColor = "transparent";
       ctx.lineWidth = 1;
-      ctx.strokeStyle = "#2a2a4a";
+      ctx.strokeStyle = "#34434c";
       _roundRect(ctx, x, y, w, h, 10);
       ctx.stroke();
 
@@ -522,9 +505,10 @@
       ctx.textBaseline = "alphabetic";
       ctx.fillText(title, x + pad, y + 20);
 
-      ctx.fillStyle = "#8a8fa8";
+      ctx.fillStyle = "#9cb2bc";
       ctx.font = '12px "Inter", system-ui, sans-serif';
       ctx.fillText(sub, x + pad, y + 36);
+      if(location)ctx.fillText(location,x+pad,y+53);
       ctx.restore();
     }
 
@@ -625,5 +609,6 @@
     ctx.closePath();
   }
 
+  CanvasMap.annotationOpacity=annotationOpacity;
   window.CanvasMap = CanvasMap;
 })();

@@ -5,12 +5,27 @@ const path = require("node:path");
 const root = path.join(__dirname, "..");
 const context = { window: {}, localStorage: { getItem: () => null }, console };
 vm.createContext(context);
-for (const name of ["taxonomy", "topics", "layout"])
+for (const name of ["taxonomy", "topics", "layout-policy", "layout"])
   vm.runInContext(
     fs.readFileSync(path.join(root, "web", name + ".js"), "utf8"),
     context,
   );
 const { Topics, Layout } = context.window;
+// Large islands used to exhaust the bounded spiral and form a horizontal tail.
+{
+const islands=Layout.packCircles(Array.from({length:80},(_,i)=>({id:String(i),radius:500+i*11})),80);
+for(let i=0;i<islands.length;i++)for(let j=0;j<i;j++)assert(Math.hypot(islands[i].x-islands[j].x,islands[i].y-islands[j].y)>=islands[i].radius+islands[j].radius+80-1e-6);
+assert(islands.filter(p=>p.y===0).length<3);
+const one={id:'one',username:'one',name:'One',subcategory:'crypto',topic_group:'finance'};
+const focus=Layout.geographyRole(one);
+const artifact={format:'atlas-semantic-layout-v1',method:'umap',created_at:new Date().toISOString(),policy_sha256:context.window.TG_MAP_POLICY.fingerprint,bindings:{one:Layout.rowBinding(one)},layout:{width:400,height:400,nodes:[{id:'one',x:120,y:120,topic:'crypto',group:'finance',cluster:'g',layout_geography:focus}],clusters:[{id:'g',x:0,y:0,width:200,height:200,cx:120,cy:120,labelX:120,labelY:100}],clouds:[]}};
+assert(Layout.fromArtifact([one],artifact));
+for(const alter of [a=>a.layout.nodes[0].x=NaN,a=>a.created_at='2020-01-01',a=>a.layout.clusters[0].cx=Infinity,a=>a.bindings.one='old',a=>a.layout.nodes.push(a.layout.nodes[0]),a=>a.layout.clouds=null]) {
+ const damaged=JSON.parse(JSON.stringify(artifact));alter(damaged);assert.equal(Layout.fromArtifact([one],damaged),null);
+}
+assert.equal(Layout.fromArtifact([{...one,topic_source:'local'}],artifact),null);
+assert.equal(Layout.fromArtifact([one],artifact,'region'),null);
+}
 const channels = Array.from({ length: 2200 }, (_, i) =>
   Topics.enrich({
     id: `id_${i}`,

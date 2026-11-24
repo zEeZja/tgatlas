@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "Второй этап: тематические рубрики tlgrm и открытый исследовательский channels.csv Zenodo. Старые метаданные — только поиск кандидатов; каждый профиль проверяется заново. Не продолжать этим планом старый state.",
+  "target": 6000,
+  "minimum_subscribers": 50000,
+  "auto_export": false,
+  "stop_on_telegram_block": true,
+  "allow_profile_review": true,
+  "restrict_topics_all_phases": true,
+  "priority_topics": ["general", "military", "politics", "world", "emergencies"],
+  "adjacent_topics": [],
+  "admission_patterns": ["военно.?аналит|военн.{0,20}(?:сводк|новост|обозрен)|военкор|вооруж[её]нн|боев.{0,12}действ|фронтов|військов|війна", "новост|новини|news|информационн.{0,15}агентств|политик|геополит"],
+  "strong_unknown_patterns": ["военно.?аналит|военн.{0,20}(?:сводк|обозрен)|военкор|фронтов|військова аналітика", "главные новости|новостн.{0,12}(?:агентств|издани|медиа)|информационн.{0,12}агентств|breaking news"],
+  "queries": [],
+  "catalogues": [
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/news", "pages": 1, "phase": "priority"},
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/svo", "pages": 1, "phase": "priority"},
+    {"source": "tlgrm", "url": "https://tlgrm.ru/channels/economics", "pages": 1, "phase": "priority"},
+    {"source": "zenodo_csv", "url": "https://zenodo.org/records/16949193/files/channels.csv?download=1", "pages": 1, "phase": "priority", "md5": "489228e91c8ece952a5d1336df4be570", "require_discovery_hint": true}
+  ],
+  "official_pages": []
+}

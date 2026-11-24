@@ -354,24 +354,22 @@ const server = http.createServer((req, res) => {
     await page.waitForFunction(
       () => document.querySelector("#count").textContent === "5",
     );
+    await page.locator('#territory-filters').evaluate((e)=>{e.open=true;});
     await page.locator("#category").selectOption("politics");
     assert.equal(await page.locator("#count").textContent(), "4");
     assert(!(await page.locator("#region").textContent()).includes("Омск"));
     await page
-      .locator(".chip")
-      .filter({ hasText: "Несколько регионов" })
+      .locator('.chip[data-scope="multi_region"]')
       .click();
     assert.equal(await page.locator("#count").textContent(), "1");
     await page.locator("#region").selectOption("Татарстан");
     assert.equal(await page.locator("#count").textContent(), "1");
     await page
-      .locator(".chip")
-      .filter({ hasText: "Недостаточно данных о географии" })
+      .locator('.chip[data-scope="unknown"]')
       .click();
     assert.equal(await page.locator("#count").textContent(), "1");
     await page
-      .locator(".chip")
-      .filter({ hasText: "Международная повестка" })
+      .locator('.chip[data-scope="global"]')
       .click();
     assert.equal(await page.locator("#count").textContent(), "1");
     await page.locator(".reset-btn").click();
@@ -400,6 +398,7 @@ const server = http.createServer((req, res) => {
     );
     await page.locator("#category").selectOption("group:technology");
     assert.equal(await page.locator("#count").textContent(), "2");
+    await page.locator('#advanced-filters > summary').click();
     await page.locator("#include-secondary").check();
     assert.equal(await page.locator("#count").textContent(), "3");
     await page.locator("#publication-format").selectOption("news");
@@ -538,6 +537,25 @@ const server = http.createServer((req, res) => {
     assert((await page.locator(".detail-badges").innerText()).includes("Криптовалюты"));
     assert.equal(await page.locator(".topic-explanation script").count(), 0);
     await page.keyboard.press("Escape");
+    semanticRow.classification_engine = "semantic-v11";
+    semanticRow.classification_version = 11;
+    semanticRow.topic_source = "semantic-v11-proposal";
+    semanticRow.subcategory = "v11_software_development";
+    semanticRow.topic_group = "v11_technology";
+    semanticRow.topic_group_label = "IT и технологии";
+    semanticRow.topic_candidates = [{id:"v11_software_development",score:0.6}];
+    semanticRow.geography_scope = "country";
+    semanticRow.geography_regions = [];
+    semanticRow.geography_country = "CH";
+    semanticRow.geography_candidates = [{label:"Швейцария",country:"CH",score:1}];
+    await page.reload();
+    await page.waitForFunction(() => document.querySelector("#count").textContent === "1");
+    await page.locator(".result").click();
+    assert((await page.locator(".topic-explanation").innerText()).includes("V11"));
+    assert((await page.locator(".detail-badges").innerText()).includes("Программирование"));
+    assert((await page.locator(".classification-path").innerText()).includes("Швейцария"));
+    assert(!(await page.locator("#detail").innerText()).includes("[object Object]"));
+    await page.keyboard.press("Escape");
     if (process.env.ATLAS_TEST_FILE === "1") {
       const filePage = await browser.newPage();
       filePage.on("pageerror", (e) => errors.push(e.message));
@@ -585,6 +603,7 @@ const server = http.createServer((req, res) => {
     assert(!liveRequests.some((u) => u.endsWith("/demo.js")));
     assert(!liveRequests.some((u) => u.endsWith("/data/channels.js")));
     assert(!(await live.locator("#banner").isVisible()));
+    await live.locator('#advanced-filters > summary').click();
     assert(
       (await live.locator(".freshness-summary").innerText()).includes(
         "1 свежих",

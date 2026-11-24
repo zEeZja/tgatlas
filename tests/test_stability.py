@@ -49,7 +49,12 @@ class StabilityTests(unittest.TestCase):
             reads.append(path.name)
             return original(path, *args, **kwargs)
 
-        with patch.object(Path, "read_text", read):
+        # This measures legacy rule reads, not the owner's optional V11 cache.
+        # A published local experiment must not change this fixture's I/O count.
+        with (
+            patch.object(Path, "read_text", read),
+            patch.object(exporter, "load_primary_results", return_value={}),
+        ):
             rows = exporter.channel_rows(
                 [{**row, "username": f"test_{i}"} for i in range(100)]
             )

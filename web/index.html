@@ -1,149 +1,60 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#111818" />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <title>TG Atlas — карта каналов</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="logo" href="./" aria-label="TG Atlas — главная"
-        ><span class="logo-icon">↗</span> TG<span>ATLAS</span
-        ><small>НЕЗАВИСИМЫЙ КАТАЛОГ</small></a
-      >
-      <div class="top-status">
-        <i></i> Исследуйте информационное пространство
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0c1b17" />
+  <meta name="description" content="TG ATLAS — исследуйте Telegram-каналы по темам и географии. Найдите свой круг на интерактивной карте." />
+  <link rel="icon" href="icon.svg?v=product-1" type="image/svg+xml" />
+  <title>TG ATLAS — карта Telegram-каналов</title>
+  <link rel="stylesheet" href="product.css?v=product-1" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="./" aria-label="TG ATLAS — главная"><img src="icon.svg?v=product-1" width="42" height="42" alt="" /><span>TG ATLAS</span></a>
+    <nav class="header-actions" aria-label="Навигация">
+      <button id="search-toggle" class="nav-button" aria-label="Поиск каналов" aria-controls="search-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span>Поиск</span><kbd>/</kbd></button>
+      <button id="filters-toggle" class="nav-button" aria-label="Фильтры карты" aria-controls="filter-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg><span>Фильтры</span><b id="filters-badge" hidden>0</b></button>
+      <button id="help-toggle" class="help-button" aria-expanded="false" aria-controls="help" aria-label="Как пользоваться картой">?</button>
+    </nav>
+  </header>
+  <div class="app">
+    <main id="map-wrap" class="map-wrap">
+      <canvas id="map" aria-label="Карта Telegram-каналов. Для выбора с клавиатуры откройте поиск."></canvas>
+      <div class="map-title"><span class="map-kicker">ВАШ КРУГ ИНТЕРЕСОВ</span><h1>Исследуйте связи<span id="group-caption" class="sr-only"> / По темам</span></h1><p id="mode-description">Все каналы. Близкие темы — рядом.</p></div>
+      <div class="view-control" role="group" aria-label="Вид карты">
+        <button class="view-button is-active" data-view="topic" aria-pressed="true">Темы</button><button class="view-button" data-view="region" aria-pressed="false">География</button>
+        <select id="group-by" class="sr-only" aria-label="Группировка карты" tabindex="-1"><option value="topic">По темам</option><option value="region">По географии</option></select>
       </div>
-      <button id="help-toggle" class="quiet" aria-expanded="false">
-        Как это работает <span>?</span>
-      </button>
-    </header>
-    <div class="app">
-      <aside class="sidebar">
-        <header class="head">
-          <div class="brand">
-            <span class="eyebrow">ОБЗОР КАТАЛОГА / 01</span>
-            <div>
-              <h1>У каждого канала <br />своя точка на карте.</h1>
-              <p class="muted small">Находите голоса, темы и регионы</p>
-            </div>
-          </div>
-        </header>
-
-        <div id="banner" class="banner" hidden></div>
-
-        <div class="search-box">
-          <span class="search-icon" aria-hidden="true">⌕</span>
-          <input
-            id="search"
-            type="text"
-            placeholder="Название, @канал или тема…"
-            spellcheck="false"
-            aria-label="Поиск каналов"
-          />
-          <button id="clear" class="clear" aria-label="Очистить" hidden>
-            ×
-          </button>
-        </div>
-
-        <div class="filters">
-          <label class="filter-label" for="category">Категория</label
-          ><select id="category" class="category-select">
-            <option value="">Все категории</option>
-          </select>
-          <div class="filter-label">Территориальная направленность</div>
-          <div id="chips" class="chips"></div>
-          <div class="filter-row">
-            <div id="region-block" hidden>
-              <div class="filter-label">Регион в выбранной категории</div>
-              <select id="region" aria-label="Регион">
-                <option value="">Все регионы</option>
-              </select>
-            </div>
-            <div>
-              <div class="filter-label">Страна</div>
-              <select id="country" aria-label="Страна">
-                <option value="">Все страны</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="results-head">
-          <span>КАНАЛЫ <b id="count">0</b></span
-          ><select id="sort" aria-label="Сортировка каналов">
-            <option value="popular">По аудитории ↓</option>
-            <option value="name">По названию А–Я</option>
-          </select>
-        </div>
-
-        <ul id="list" class="results"></ul>
-      </aside>
-
-      <main id="map-wrap" class="map-wrap">
-        <canvas
-          id="map"
-          aria-label="Интерактивная карта каналов. Для выбора с клавиатуры используйте список каналов."
-        ></canvas>
-        <div class="map-title">
-          <span class="eyebrow">ИНФОРМАЦИОННОЕ ПРОСТРАНСТВО</span>
-          <h2>Карта каналов<span id="group-caption"> / По темам</span></h2>
-          <p>Тематические острова · одна точка — один канал</p>
-        </div>
-        <button id="mobile-toggle" class="mobile-toggle">
-          Показать карту →
-        </button>
-        <div class="map-controls">
-          <button id="zoom-in" aria-label="Приблизить">+</button
-          ><button id="zoom-out" aria-label="Отдалить">−</button
-          ><button id="fit-map" aria-label="Показать всю карту">⤢</button>
-        </div>
-        <label class="group-control"
-          >Группировка<select id="group-by" aria-label="Группировка карты">
-            <option value="topic">По темам</option>
-            <option value="region">По регионам</option>
-          </select></label
-        >
-        <button id="relief-toggle" class="relief-toggle" aria-pressed="true">
-          Рельеф: вкл.
-        </button>
-        <div id="map-summary" class="map-summary" aria-live="polite"></div>
-        <div id="help" class="help" hidden>
-          <b>Исследуйте карту</b>
-          <p>
-            Перетаскивайте карту и меняйте масштаб колесом или кнопками + и −.
-            Нажмите на точку или канал в списке, чтобы открыть карточку.
-          </p>
-          <p>
-            Фильтры применяются к списку и карте. На карте показаны все каналы,
-            включая федеральные и каналы без региона. Цвет означает тему;
-            группировку можно переключить с тем на регионы. Нажмите тему в
-            легенде, чтобы приблизить кластер.
-          </p>
-          <p>
-            Сначала выберите категорию, затем охват и регион внутри неё.
-            Неуточнённая география не означает международный охват. Нажмите /
-            для поиска, Esc — чтобы закрыть карточку.
-          </p>
-        </div>
-        <aside id="detail" class="detail" hidden></aside>
-        <div class="map-hint">
-          <span class="hint-dot"></span> Кластеры каналов
-          <span class="hint-desktop">· Перетаскивайте, чтобы исследовать</span>
-        </div>
-      </main>
-    </div>
-
-    <script src="api.js"></script>
-    <script src="freshness.js"></script>
-    <script src="taxonomy.js"></script>
-    <script src="topics.js"></script>
-    <script src="layout.js"></script>
-    <script src="search.js"></script>
-    <script src="map.js"></script>
-    <script src="app.js"></script>
-  </body>
+      <div id="map-summary" class="map-summary" aria-live="polite"></div>
+      <div class="map-controls"><button id="zoom-in" aria-label="Приблизить">+</button><button id="zoom-out" aria-label="Отдалить">−</button><button id="fit-map" aria-label="Показать всю карту"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></button></div>
+      <div class="map-hint">Потяните карту · приблизьте, чтобы узнать больше</div>
+      <button id="legend-toggle" class="legend-toggle" aria-expanded="false">Цвета тем</button>
+      <div id="help" class="help" hidden>
+        <h2>Найдите свой круг</h2><p>Каждая точка — Telegram-канал. Нажмите на неё, чтобы открыть описание и перейти в Telegram.</p>
+        <p><b>Темы</b> — весь каталог без географических групп и подписей. Цвет показывает тематику.</p><p><b>География</b> — новости, политика, органы власти и военная повестка с указанной территорией. Каналы без определённой привязки в этом виде не показаны.</p>
+        <p>Ищите по названию и @username или откройте фильтры. Клавиша <kbd>/</kbd> открывает поиск, <kbd>Esc</kbd> закрывает окно.</p>
+        <details class="diagnostics"><summary>О данных и раскладке</summary><p>Темы и территории определены автоматически и могут требовать уточнения. Близость точек — ориентир для исследования, не оценка достоверности канала.</p><p id="layout-method"></p><div id="banner" hidden></div><div id="catalog-stats"></div></details>
+      </div>
+      <aside id="detail" class="detail" hidden></aside>
+      <p id="map-empty" class="map-empty" hidden>Здесь пока нет каналов.<br><span>Измените фильтры или вернитесь к темам.</span></p>
+    </main>
+    <aside id="filter-panel" class="drawer filter-drawer" role="dialog" aria-modal="false" aria-labelledby="filters-heading" hidden>
+      <header class="drawer-heading"><div><span class="drawer-kicker">НАСТРОЙТЕ КАРТУ</span><h2 id="filters-heading">Ваши интересы</h2></div><button class="drawer-close" data-close-panel aria-label="Закрыть фильтры">×</button></header>
+      <div class="filter-panel"><div class="filters" aria-label="Фильтры каналов">
+        <section class="filter-section"><label class="filter-heading" for="category">Тематика</label><select id="category"><option value="">Все темы</option></select></section>
+        <section id="territory-section" class="filter-section" hidden><details id="territory-filters" open><summary class="filter-heading"><span>Территория</span><span id="territory-current" class="filter-note">Любая территория</span></summary><div id="chips" class="chips"></div><div class="filter-row"><div><label class="filter-label" for="country">Страна</label><select id="country"><option value="">Все страны</option></select></div><div id="region-block" hidden><label class="filter-label" for="region">Регион России</label><select id="region"><option value="">Все регионы</option></select></div></div></details></section>
+        <details id="advanced-filters" class="advanced-filters"><summary>Дополнительно <span id="advanced-count" hidden></span></summary><div id="advanced-controls"></div></details>
+      </div></div>
+      <footer class="drawer-footer"><span id="filter-summary">Все каналы</span><div id="reset-slot"></div><button id="apply-filters" class="primary-button">Показать на карте</button></footer>
+    </aside>
+    <aside id="search-panel" class="drawer search-drawer" role="dialog" aria-modal="false" aria-labelledby="search-heading" hidden>
+      <header class="drawer-heading"><div><span class="drawer-kicker">КАТАЛОГ КАНАЛОВ</span><h2 id="search-heading">Найдите интересное</h2></div><button class="drawer-close" data-close-panel aria-label="Закрыть поиск">×</button></header>
+      <div class="search-box" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search" type="search" placeholder="Название, тема, @username" spellcheck="false" aria-label="Поиск каналов" autocomplete="off" /><button id="clear" class="clear" aria-label="Очистить поиск" hidden>×</button></div>
+      <div class="results-head"><span>Найдено <b id="count">0</b></span><select id="sort" aria-label="Сортировка каналов"><option value="popular">По аудитории</option><option value="name">По названию</option></select></div>
+      <ul id="list" class="results"></ul>
+    </aside>
+  </div>
+  <script src="api.js?v=product-1"></script><script src="freshness.js"></script><script src="taxonomy.js"></script><script src="topics.js?v=product-1"></script><script src="classification-v11-taxonomy.js?v=product-1"></script><script src="classification-v11-runtime.js?v=product-1"></script><script src="layout-policy.js?v=product-1"></script><script src="layout.js?v=product-1"></script><script src="product-map.js?v=product-1"></script><script src="search.js"></script><script src="map.js?v=product-1"></script><script src="app.js?v=product-1"></script>
+</body>
 </html>

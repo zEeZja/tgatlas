@@ -54,3 +54,21 @@ reports/semantic-v9/
 reports/classification-v10/
 reports/classification-v11/
 .venv-classification/
+
+# Runtime snapshots, post samples, owner reviews, checkpoints and ML caches.
+/reports/**
+!/reports/README.md
+/web/data/**
+!/web/data/README.md
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+.env.*
+!.env.example
+
+# Owner's local one-off experiments and duplicate historical root documents.
+/test_zero_shot.py
+/AUDIT_REPORT.md
+/PATCH_NOTES_0.7.3.md

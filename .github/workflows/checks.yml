@@ -1,4 +1,4 @@
-name: Stability checks
+name: Checks
 
 on:
   push:
@@ -46,12 +46,14 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           cache: pip
-          cache-dependency-path: requirements/locked-dev.txt
+          cache-dependency-path: |
+            requirements/locked-dev.txt
+            requirements/locked-training.txt
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install checked dependency snapshot
-        run: python -m pip install --require-hashes -r requirements/locked-dev.txt
+        run: python -m pip install --require-hashes -r requirements/locked-dev.txt -r requirements/locked-training.txt
       - name: Verify dependencies and static errors
         run: |
           python -m pip check
@@ -95,10 +97,7 @@ jobs:
           fi
           "$browser_path" --version
           echo "CHROMIUM_PATH=$browser_path" >> "$GITHUB_ENV"
-      - run: npm run test:layout
-      - run: npm run test:freshness
-      - run: npm run test:frontend
-      - run: npm run test:review
+      - run: npm test
 
   training:
     name: Local topic model / Python ${{ matrix.python }}

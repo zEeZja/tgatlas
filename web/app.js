@@ -6,6 +6,7 @@
     window.Topics.taxonomy.sections.map((s) => [s.id, s.label]),
   );
   const COUNTRY_LABELS = {
+    ...window.TG_CLASSIFICATION_V11?.country_labels,
     PT: "Португалия",
     RS: "Сербия",
     ID: "Индонезия",
@@ -44,7 +45,7 @@
   const state = {
     channels: [],
     visible: [],
-    listLimit: 200,
+    listLimit: 80,
     sort: "popular",
     group: "topic",
     category: "",
@@ -58,11 +59,46 @@
     selectedId: null,
   };
 
+  const territoryFilters = document.getElementById("territory-filters");
+  territoryFilters.open = true;
+  let activePanel = null;
+  const navigationButtons=[...document.querySelectorAll('.header-actions button')];
+  navigationButtons.forEach(button=>button.disabled=true);
+  function closePanel(returnFocus=true) {
+    const previous=activePanel;
+    for(const id of ['search','filters']) {
+      document.getElementById(id==='search'?'search-panel':'filter-panel').hidden=true;
+      document.getElementById(id+'-toggle').setAttribute('aria-expanded','false');
+    }
+    activePanel=null;
+    document.body.classList.remove('drawer-open');
+    if(returnFocus&&previous)document.getElementById(previous+'-toggle').focus();
+  }
+  function openPanel(id) {
+    if(activePanel===id){closePanel();return;}
+    closePanel(false);
+    if(!el.detail.hidden)closeDetail(false);
+    activePanel=id;
+    document.getElementById(id==='search'?'search-panel':'filter-panel').hidden=false;
+    document.getElementById(id+'-toggle').setAttribute('aria-expanded','true');
+    document.body.classList.add('drawer-open');
+    document.getElementById('help').hidden=true;
+    document.getElementById('help-toggle').setAttribute('aria-expanded','false');
+    if(id==='search'){renderList();el.search.focus();}else document.getElementById('category').focus();
+  }
+  document.getElementById('search-toggle').onclick=()=>openPanel('search');
+  document.getElementById('filters-toggle').onclick=()=>openPanel('filters');
+  document.querySelectorAll('[data-close-panel]').forEach(button=>button.onclick=()=>closePanel());
+  document.getElementById('apply-filters').onclick=()=>{closePanel();map.fitVisible();};
+
   let channels;
+  const catalogChannels = new Map();
   try {
-    channels = (await window.Api.getChannels()).map((ch) =>
-      window.Topics.enrich(ch),
-    );
+    channels = (await window.Api.getChannels()).map((ch) => {
+      const enriched=window.Topics.enrich(ch);
+      catalogChannels.set(enriched.id,{...ch});
+      return {...enriched,layout_source_binding:window.Layout.rowBinding(ch)};
+    });
   } catch (e) {
     showFatal(e.message);
     return;
@@ -78,6 +114,11 @@
     el.banner.innerHTML =
       "Демо · каналы из конфигурации проекта. Аудитория и актуальность не проверены.";
   }
+  if (channels.some((ch)=>["semantic-v11","semantic-v11v2"].includes(ch.classification_engine))) {
+    el.banner.hidden=false;
+    const engine=channels.some(ch=>ch.classification_engine==="semantic-v11v2")?"11v2":"V11";
+    el.banner.textContent=engine+" · Темы и территории предложены моделью и требуют проверки. Ручные метки в приоритете.";
+  }
 
   function colorOf(ch) {
     return (
@@ -85,7 +126,30 @@
       (SUB_MAP[ch.subcategory] || SUB_MAP.other).color
     );
   }
-  let layout = window.Layout.buildClusterLayout(channels, state.group);
+  const layoutArtifact = await window.Api.getLayout();
+  const isDemo=Boolean(window.TG_DATA?._sample);
+  if(isDemo)document.getElementById('mode-description').textContent='Демо-каталог · аудитория и актуальность не проверены';
+  const layoutCache=new Map();
+  let categoryCounts=null;
+  function createLayout() {
+    if(!layoutCache.has(state.group))layoutCache.set(state.group,state.group==='topic'
+      ?window.AtlasView.topicView(state.channels,layoutArtifact,catalogChannels)
+      :window.AtlasView.geographicView(state.channels));
+    const diagnosis=layoutCache.get(state.group);
+    const cached=diagnosis.layout;
+    const title=document.getElementById("layout-method");
+    title.dataset.layoutReason=diagnosis.code;
+    title.title=diagnosis.reason;
+    if(cached.method)title.textContent=`${cached.method.toUpperCase()} · с постами ${cached.evidence?.with_posts||0} из ${channels.length}`+(diagnosis.code==='local_overlay'?' · '+diagnosis.reason:'');
+    else title.textContent=diagnosis.reason||'Тематическая схема; близость точек не является измеренным сходством';
+    return cached;
+  }
+  function topicLabel(ch) {
+    if(ch.classification_engine==="semantic-v11v2"&&ch.topic_granularity==="abstain")return "Тема не определена";
+    if(ch.topic_granularity==="group")return (GROUP_MAP[ch.topic_group]?.label||"Раздел")+" · без уточнения подтемы";
+    return (SUB_MAP[ch.subcategory]||SUB_MAP.other).label;
+  }
+  let layout = createLayout();
   const channelsById = new Map(channels.map((ch) => [ch.id, ch]));
   for (const node of layout.nodes) {
     node.color = colorOf(channelsById.get(node.id) || node);
@@ -95,23 +159,13 @@
     onSelect: (id) => selectChannel(id),
   });
   map.setLayout(layout);
-  document.getElementById("relief-toggle").onclick = (e) => {
-    map.showRelief = !map.showRelief;
-    e.currentTarget.setAttribute("aria-pressed", String(map.showRelief));
-    e.currentTarget.textContent =
-      "Рельеф: " + (map.showRelief ? "вкл." : "выкл.");
-    map._schedule();
-  };
   document.getElementById("zoom-in").onclick = () => map.zoomBy(1.35);
   document.getElementById("zoom-out").onclick = () => map.zoomBy(1 / 1.35);
   document.getElementById("fit-map").onclick = () => map.fitVisible();
-  const mobileToggle = document.getElementById("mobile-toggle");
-  mobileToggle.onclick = () => {
-    const mode = document.querySelector(".app").classList.toggle("map-mode");
-    mobileToggle.textContent = mode ? "← К списку каналов" : "Показать карту →";
-  };
   const helpToggle = document.getElementById("help-toggle");
   helpToggle.onclick = () => {
+    closePanel(false);
+    if(!el.detail.hidden)closeDetail(false);
     const help = document.getElementById("help");
     help.hidden = !help.hidden;
     helpToggle.setAttribute("aria-expanded", String(!help.hidden));
@@ -126,9 +180,10 @@
       !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)
     ) {
       e.preventDefault();
-      el.search.focus();
+      openPanel('search');
     }
     if (e.key === "Escape") {
+      closePanel();
       closeDetail();
       document.getElementById("help").hidden = true;
       helpToggle.setAttribute("aria-expanded", "false");
@@ -145,16 +200,14 @@
       `<span class="freshness-summary" title="Свежесть названия, описания и аудитории, не дата экспорта">Данные: ${freshness.fresh} свежих · ${freshness.stale} старше 24 ч · ${freshness.unknown} без проверки</span>`;
   }
   renderStats();
-  el.chips.parentElement.insertBefore(
-    statsBar,
-    el.chips.parentElement.firstChild,
-  );
+  document.getElementById("catalog-stats").appendChild(statsBar);
 
   const resetBtn = document.createElement("button");
   resetBtn.className = "reset-btn";
   resetBtn.textContent = "Сбросить фильтры";
   resetBtn.hidden = true;
   resetBtn.addEventListener("click", () => {
+    categoryCounts=null;
     state.query = "";
     state.publicationFormat = "";
     state.includeSecondary = false;
@@ -175,7 +228,7 @@
     refresh();
     map.fit();
   });
-  el.chips.parentElement.appendChild(resetBtn);
+  document.getElementById("reset-slot").appendChild(resetBtn);
 
   const categoryEl = document.getElementById("category");
   const priority = window.Topics.taxonomy.priority_groups || [];
@@ -199,6 +252,7 @@
     categoryEl.appendChild(optgroup);
   }
   const formatLabel = document.createElement("label");
+  formatLabel.className = "filter-label";
   formatLabel.textContent = "Формат публикаций";
   formatLabel.htmlFor = "publication-format";
   const formatSelect = document.createElement("select");
@@ -212,20 +266,18 @@
     option.textContent = fmt.label;
     formatSelect.appendChild(option);
   }
-  categoryEl.parentElement.append(formatLabel, formatSelect);
+  const advancedControls = document.getElementById("advanced-controls");
+  advancedControls.append(formatLabel, formatSelect);
   const secondaryLabel = document.createElement("label");
-  secondaryLabel.style.display = "flex";
-  secondaryLabel.style.alignItems = "center";
-  secondaryLabel.style.gap = "8px";
+  secondaryLabel.className = "secondary-toggle";
   const secondaryInput = document.createElement("input");
   secondaryInput.type = "checkbox";
   secondaryInput.id = "include-secondary";
-  secondaryInput.style.width = "auto";
   secondaryLabel.append(
     secondaryInput,
     document.createTextNode("Учитывать дополнительные темы"),
   );
-  categoryEl.parentElement.append(secondaryLabel);
+  advancedControls.append(secondaryLabel);
   formatSelect.onchange = () => {
     state.publicationFormat = formatSelect.value;
     state.region = "";
@@ -235,6 +287,7 @@
     map.fitVisible();
   };
   secondaryInput.onchange = () => {
+    categoryCounts=null;
     state.includeSecondary = secondaryInput.checked;
     state.region = "";
     renderRegions();
@@ -269,18 +322,40 @@
   };
   document.getElementById("group-by").onchange = (e) => {
     state.group = e.target.value;
-    layout = window.Layout.buildClusterLayout(state.channels, state.group);
+    categoryCounts=null;
+    state.country=state.region=state.geoScope='';
+    el.country.value=el.region.value='';
+    document.querySelectorAll('[data-view]').forEach(button=>{
+      const active=button.dataset.view===state.group;
+      button.classList.toggle('is-active',active);
+      button.setAttribute('aria-pressed',String(active));
+    });
+    document.getElementById('territory-section').hidden=state.group!=='region';
+    document.getElementById('mode-description').textContent=isDemo?'Демо-каталог · аудитория и актуальность не проверены':state.group==='topic'?'Все каналы. Близкие темы — рядом.':'Местная повестка. Связи с территорией.';
+    layout = createLayout();
     map.setLayout(layout);
+    renderCountries();renderRegions();renderChips();
     refresh();
     map.fitVisible();
     document.getElementById("group-caption").textContent =
-      state.group === "topic" ? " / По темам" : " / По регионам России";
+      state.group === "topic" ? " / По темам" : " / По географии";
   };
+  document.querySelectorAll('[data-view]').forEach(button=>button.onclick=()=>{
+    const select=document.getElementById('group-by');
+    if(select.value===button.dataset.view)return;
+    select.value=button.dataset.view;select.dispatchEvent(new Event('change'));
+  });
   renderChips();
   renderRegions();
   renderCountries();
 
   let legendEl = null;
+  document.getElementById('legend-toggle').onclick=e=>{
+    const open=e.currentTarget.getAttribute('aria-expanded')!=='true';
+    e.currentTarget.setAttribute('aria-expanded',String(open));
+    renderLegend();
+    legendEl?.classList.toggle('is-open',open);
+  };
   let searchTimer = 0;
   el.search.addEventListener("input", () => {
     state.query = el.search.value;
@@ -308,9 +383,10 @@
   });
 
   refresh();
+  navigationButtons.forEach(button=>button.disabled=false);
 
   function categoryChannels() {
-    return state.channels.filter(
+    return viewChannels().filter(
       (c) =>
         matchesCategory(c, state.category) &&
         (!state.publicationFormat ||
@@ -338,11 +414,23 @@
       const count = rows.filter(
         (c) => !scope.id || c.geography_scope === scope.id,
       ).length;
+      if(state.group==='region'&&scope.id&&count===0)continue;
       const button = document.createElement("button");
       button.className =
         "chip" + (state.geoScope === scope.id ? " chip-active" : "");
       button.setAttribute("aria-pressed", String(state.geoScope === scope.id));
-      button.textContent = scope.label + " · " + count;
+      button.dataset.scope = scope.id;
+      button.setAttribute("aria-label",scope.label+" · "+count);
+      button.title = scope.label;
+      const shortNames = {"":"Любая территория",multi_region:"Несколько регионов",country:"Страна",global:"Международная",nonlocal:"Без привязки",unknown:"Не уточнена"};
+      const name = document.createElement("span");
+      name.className = "chip-name";
+      name.textContent = shortNames[scope.id] || scope.label;
+      const counter = document.createElement("span");
+      counter.className = "chip-count";
+      counter.textContent = count;
+      counter.setAttribute("aria-hidden","true");
+      button.append(name,counter);
       button.disabled = count === 0 && scope.id !== "";
       button.onclick = () => {
         state.geoScope = scope.id;
@@ -360,6 +448,7 @@
     const regions = [
       ...new Set(
         categoryChannels()
+          .filter((c) => (!state.country || c.geography_country === state.country) && (!c.geography_country || c.geography_country === "RU"))
           .filter(
             (c) => !state.geoScope || c.geography_scope === state.geoScope,
           )
@@ -386,7 +475,7 @@
 
   function renderCountries() {
     const present = new Set(
-      state.channels.map((c) => c.geography_country).filter(Boolean),
+      viewChannels().map((c) => c.geography_country).filter(Boolean),
     );
     el.country.innerHTML = '<option value="">Все страны</option>';
     for (const code of [...present].sort((a, b) =>
@@ -400,8 +489,11 @@
     }
   }
 
+  function viewChannels() {
+    return state.group==='region'?state.channels.filter(window.AtlasView.geographicChannel):state.channels;
+  }
   function refresh() {
-    let list = state.channels;
+    let list = viewChannels();
     if (state.category)
       list = list.filter((c) => matchesCategory(c, state.category));
     if (state.publicationFormat)
@@ -432,11 +524,15 @@
       list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ru"));
     if (state.selectedId && !list.some((c) => c.id === state.selectedId))
       closeDetail(false);
-    state.listLimit = 200;
+    state.listLimit = 80;
     state.visible = list;
     map.setVisibleIds(new Set(list.map((c) => c.id)));
     renderList();
     renderLegend();
+    if(!categoryCounts) {
+      const rows=viewChannels();
+      categoryCounts=new Map([...categoryEl.options].filter(o=>o.value).map(o=>[o.value,rows.filter(c=>matchesCategory(c,o.value)).length]));
+    }
     for (const option of categoryEl.options)
       if (option.value) {
         const label = option.value.startsWith("group:")
@@ -445,14 +541,14 @@
         option.textContent =
           label +
           " · " +
-          state.channels.filter((c) => matchesCategory(c, option.value)).length;
+           categoryCounts.get(option.value);
       }
     el.count.textContent = list.length;
-    renderStats();
     const visibleIds = new Set(list.map((c) => c.id));
     const mapped = layout.nodes.filter((n) => visibleIds.has(n.id)).length;
     document.getElementById("map-summary").innerHTML =
-      `<strong>${mapped.toLocaleString("ru-RU")}</strong>каналов на карте / ${list.length} в каталоге`;
+      `<strong>${mapped.toLocaleString("ru-RU")}</strong> ${state.group==='region'?'каналов с привязкой к территории':'каналов на карте'}`;
+    document.getElementById('map-empty').hidden=mapped>0;
 
     const hasFilter =
       state.query ||
@@ -464,9 +560,21 @@
       state.region ||
       state.country;
     resetBtn.hidden = !hasFilter;
+    const filterCount = [state.query.trim(),state.category,state.publicationFormat,state.includeSecondary,state.geoScope,state.subcategory,state.region,state.country].filter(Boolean).length;
+    const badge=document.getElementById('filters-badge');
+    badge.hidden=!filterCount;badge.textContent=filterCount;
+    document.getElementById('apply-filters').textContent='Показать '+list.length.toLocaleString('ru-RU')+' каналов';
+    document.getElementById("filter-summary").textContent = filterCount ? "Активных фильтров: "+filterCount : "Все каналы · без ограничений";
+    const advancedCount = Number(Boolean(state.publicationFormat)) + Number(state.includeSecondary);
+    const advancedBadge = document.getElementById("advanced-count");
+    advancedBadge.hidden = !advancedCount;
+    advancedBadge.textContent = advancedCount;
+    const geoCount = [state.geoScope,state.region,state.country].filter(Boolean).length;
+    document.getElementById("territory-current").textContent = geoCount ? "Выбрано: "+geoCount : "Любая территория";
   }
 
   function renderList() {
+    if(activePanel!=='search')return;
     el.list.innerHTML = "";
     if (state.visible.length === 0) {
       const li = document.createElement("li");
@@ -489,20 +597,19 @@
 
       const color = colorOf(ch);
       const subs = formatSubs(ch.subscribers);
-      const meta = [(SUB_MAP[ch.subcategory] || SUB_MAP.other).label];
-      if (ch.channel_type === "federal") meta.push("федеральный");
-      else if (ch.geography_regions.length)
+      const meta = [topicLabel(ch)];
+      if (state.group==='region' && ch.geography_regions.length)
         meta.push(ch.geography_regions.join(", "));
-      else if (ch.country)
+      else if (state.group==='region' && ch.geography_country)
         meta.push(COUNTRY_LABELS[ch.geography_country] || ch.geography_country);
       if (subs) meta.push(subs);
 
       btn.innerHTML =
-        `<span class="result-bar" style="background:${color}40;color:${color}">${escapeHtml((ch.name || ch.username || "?").slice(0, 1).toUpperCase())}</span>` +
+        `<span class="result-bar" style="background:${color}40;color:${color}">${escapeHtml(Array.from(ch.name || ch.username || "?")[0].toUpperCase())}</span>` +
         `<span class="result-body">` +
         `<span class="result-row"><span class="result-name">${escapeHtml(ch.name)}</span></span>` +
         `<span class="result-sub">@${escapeHtml(ch.username)}${meta.length ? " · " + escapeHtml(meta.join(" · ")) : ""}</span>` +
-        `</span><span class="result-arrow" aria-hidden="true">↗</span>`;
+        `</span>`;
 
       btn.setAttribute("aria-pressed", String(ch.id === state.selectedId));
       btn.addEventListener("click", () => selectChannel(ch.id));
@@ -517,7 +624,7 @@
       more.className = "load-more";
       more.textContent = `Показать ещё · осталось ${state.visible.length - limit}`;
       more.onclick = () => {
-        state.listLimit += 200;
+        state.listLimit += 100;
         renderList();
       };
       li.appendChild(more);
@@ -527,48 +634,40 @@
   }
 
   function renderLegend() {
+    if(document.getElementById('legend-toggle').getAttribute('aria-expanded')!=='true')return;
     if (!legendEl) {
       legendEl = document.createElement("div");
       legendEl.className = "legend";
       el.wrap.appendChild(legendEl);
     }
-    const counts = new Map();
+    const groups = new Map();
+    const clusterIds=new Map(layout.nodes.map((n)=>[n.id,n.cluster]));
+    const clustersById=new Map(layout.clusters.map(c=>[c.id,c]));
     for (const ch of state.visible) {
-      const key =
-        state.group === "topic"
-          ? "group:" + ch.topic_group
-          : window.Layout.geographyGroup(ch);
-      counts.set(key, (counts.get(key) || 0) + 1);
+      const key = state.group==='topic'?'group:'+ch.topic_group:clusterIds.get(ch.id);
+      if(!groups.has(key))groups.set(key,state.group==='topic'
+        ?{label:GROUP_MAP[ch.topic_group]?.label||topicLabel(ch),color:colorOf(ch),ids:new Set()}
+        :{...clustersById.get(key),ids:new Set()});
+      groups.get(key).ids.add(ch.id);
     }
     legendEl.replaceChildren();
-    for (const cluster of layout.clusters.filter((t) => counts.has(t.id))) {
+    for (const cluster of [...groups.values()].sort((a,b)=>b.ids.size-a.ids.size)) {
       const button = document.createElement("button");
       button.className = "legend-item";
-      button.innerHTML = `<span class="legend-dot" style="background:${cluster.color}"></span><span class="legend-label">${escapeHtml(cluster.label)}</span><span class="legend-count">${counts.get(cluster.id)}</span>`;
+      button.innerHTML = `<span class="legend-dot" style="background:${cluster.color}"></span><span class="legend-label">${escapeHtml(cluster.label)}</span><span class="legend-count">${cluster.ids.size}</span>`;
       button.setAttribute("aria-label", "Приблизить кластер: " + cluster.label);
-      button.onclick = () => {
-        const visible = new Set(state.visible.map((ch) => ch.id));
-        map.fitIds(
-          new Set(
-            layout.nodes
-              .filter((n) => n.cluster === cluster.id && visible.has(n.id))
-              .map((n) => n.id),
-          ),
-        );
-      };
+      button.onclick = () => map.fitIds(cluster.ids);
       legendEl.appendChild(button);
     }
   }
 
   function selectChannel(id) {
+    closePanel(false);
     state.selectedId = id;
     map.setSelected(id);
-    if (matchMedia("(max-width:760px)").matches) {
-      document.querySelector(".app").classList.add("map-mode");
-      mobileToggle.textContent = "← К списку каналов";
-    }
     renderList();
     renderDetail(id);
+    el.detail.querySelector('.detail-close')?.focus({preventScroll:true});
   }
 
   function renderDetail(id) {
@@ -580,20 +679,20 @@
 
     const sub =
       ch.subcategory === "other" && ch.topic_group !== "other_group"
-        ? GROUP_MAP[ch.topic_group]
+        ? GROUP_MAP[ch.topic_group] || SUB_MAP.other
         : SUB_MAP[ch.subcategory] || SUB_MAP.other;
     const color = colorOf(ch);
     const subs = formatSubs(ch.subscribers);
     const countryLabel =
       COUNTRY_LABELS[ch.geography_country] || ch.geography_country || "";
-    const initial = (ch.name || "?").slice(0, 1).toUpperCase();
+    const initial = Array.from(ch.name || "?")[0].toUpperCase();
 
     const scopeLabel =
       window.Topics.taxonomy.geography_scopes.find(
         (g) => g.id === ch.geography_scope,
       )?.label || "География не уточнена";
     const badges = [
-      `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(sub.label)}</span>`,
+      `<span class="badge" style="background:${sub.color}25;color:color-mix(in srgb, ${sub.color}, white 45%)">${escapeHtml(topicLabel(ch))}</span>`,
     ];
     for (const tag of ch.secondary_topics || []) {
       const label = SUB_MAP[tag]?.label;
@@ -611,7 +710,7 @@
           `<span class="badge badge-muted">${escapeHtml(label)}</span>`,
         );
     }
-    if (ch.geography_scope !== "region")
+    if (["country","global","nonlocal"].includes(ch.geography_scope))
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(scopeLabel)}</span>`,
       );
@@ -627,13 +726,6 @@
       badges.push(
         `<span class="badge badge-muted">${escapeHtml(ch.geography_regions[0])}</span>`,
       );
-    } else if (ch.geography_scope === "unknown") {
-      badges.push(
-        `<span class="badge badge-muted">Территория не уточнена</span>`,
-      );
-    }
-    if (ch.region_review_required && ch.geography_review_required) {
-      badges.push(`<span class="badge badge-muted">Нужна проверка</span>`);
     }
     if (countryLabel)
       badges.push(
@@ -654,21 +746,21 @@
       `</div>` +
       `</div>` +
       `<div class="detail-badges">${badges.join("")}</div>` +
-      metadataFreshness(ch) +
+      `<details class="detail-diagnostics"><summary>О данных канала</summary>`+metadataFreshness(ch) +
       `<p class="classification-path">${escapeHtml(sub.label)}${ch.geography_scope === "region" ? "" : " → " + escapeHtml(scopeLabel)}${ch.geography_regions.length ? " → " + escapeHtml(ch.geography_regions.join(", ")) : ch.geography_scope === "country" ? " → " + escapeHtml(countryLabel) : ""}</p>` +
       topicExplanation(ch) +
       `<p class="geography-explanation">${escapeHtml(ch.geography_explanation || "")}</p>` +
-      (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) &&
+      (["semantic-v9", "semantic-v10", "semantic-v11"].includes(ch.classification_engine) &&
       ch.geography_candidates?.length
-        ? `<p class="geography-explanation">Территории для проверки: ${escapeHtml(ch.geography_candidates.join(", "))}</p>`
+        ? `<p class="geography-explanation">Территории для проверки: ${escapeHtml(ch.geography_candidates.map((x)=>typeof x==="string"?x:x.label).join(", "))}</p>`
         : "") +
       (ch.classification_review_stale
         ? '<p class="topic-explanation">Профиль изменился после проверки владельцем. Сохранённая метка требует повторной проверки.</p>'
         : "") +
-      (ch.description
+      `</details>`+(ch.description
         ? `<p class="detail-desc">${escapeHtml(ch.description)}</p>`
         : "") +
-      (ch.region_review_required &&
+      (ch.classification_engine !== "semantic-v11" && ch.region_review_required &&
       ch.geography_review_required &&
       ch.region_candidates?.length
         ? `<p class="detail-desc">Кандидаты региона: ${ch.region_candidates.map((x) => `${escapeHtml(x.region)} (${Math.round(x.confidence * 100)}%)`).join(" · ")}</p>`
@@ -683,9 +775,10 @@
           document.getElementById("topic-correction").value,
         );
         state.channels = state.channels.map((c) =>
-          c.id === ch.id ? window.Topics.enrich(c) : c,
+          c.id === ch.id ? {...window.Topics.enrich(catalogChannels.get(c.id)||c),layout_source_binding:c.layout_source_binding} : c,
         );
-        layout = window.Layout.buildClusterLayout(state.channels, state.group);
+        layoutCache.clear();categoryCounts=null;
+        layout = createLayout();
         map.setLayout(layout);
         renderRegions();
         renderChips();
@@ -737,6 +830,8 @@
       heuristic: "Определено по названию и описанию",
       "semantic-v9": "Предложение смысловой модели V9",
       "semantic-v10": "Смысловой классификатор V10",
+      "semantic-v11-proposal": "V11 · предложение по новой сетке (не подтверждено)",
+      "semantic-v11v2-proposal": "11v2 · предложение гибридного классификатора (не подтверждено)",
       legacy_until_review:
         "Текущая тема сохранена; предложение модели требует проверки",
       fallback: "Общая рубрика каталога",
@@ -753,13 +848,14 @@
       .filter(
         (x) =>
           x.id !== ch.subcategory &&
-          (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) || x.score >= 3),
+          (["semantic-v9", "semantic-v10", "semantic-v11", "semantic-v11v2"].includes(ch.classification_engine) || x.score >= 3),
       )
       .slice(0, 2);
     return (
       `<div class="topic-explanation"><b>${escapeHtml(labels[ch.topic_source] || "Тема каталога")}</b>` +
+      (ch.classification_engine==="semantic-v11v2"&&ch.topic_granularity!=="topic"?`<p>${ch.topic_granularity==="group"?"Выбран только раздел. Подтема требует проверки.":"Данных недостаточно для назначения темы; кандидаты ниже не применены."}</p>`:"") +
       (ch.semantic_proposal
-        ? `<p>Предложение ${ch.classification_engine === "semantic-v10" ? "V10" : "V9"}: ${escapeHtml(SUB_MAP[ch.semantic_proposal.subcategory]?.label || ch.semantic_proposal.subcategory || "Не определено")}</p>`
+        ? `<p>Предложение ${ch.classification_engine === "semantic-v11v2" ? "11v2" : ch.classification_engine === "semantic-v11" ? "V11" : ch.classification_engine === "semantic-v10" ? "V10" : "V9"}: ${escapeHtml(SUB_MAP[ch.semantic_proposal.subcategory]?.label || ch.semantic_proposal.subcategory || "Не определено")}</p>`
         : "") +
       (ch.broader_topics?.length
         ? `<p>Более широкая тема: ${escapeHtml(ch.broader_topics.map((t) => SUB_MAP[t]?.label || t).join(" → "))}</p>`
@@ -770,8 +866,8 @@
       (alternatives.length
         ? `<p>Также близко: ${alternatives.map((x) => escapeHtml(SUB_MAP[x.id]?.label || x.id)).join(", ")}</p>`
         : "") +
-      (["semantic-v9", "semantic-v10"].includes(ch.classification_engine) && ch.post_routing
-        ? `<p>${ch.post_routing.status === "usable" ? "Учтены публикации: " + (ch.topic_evidence || []).filter((x) => typeof x === "object" && x.source === "post").length + "." : ch.post_routing.requested ? "Для уточнения нужны содержательные публикации канала." : "Использовано название и описание профиля."}</p>`
+      (["semantic-v9", "semantic-v10", "semantic-v11"].includes(ch.classification_engine) && ch.post_routing
+        ? `<p>${ch.post_routing.status === "usable" ? "Учтены публикации: " + (ch.post_routing.usable ?? (ch.topic_evidence || []).filter((x) => typeof x === "object" && x.source === "post").length) + "." : ch.post_routing.requested ? "Для уточнения нужны содержательные публикации канала." : "Использовано название и описание профиля."}</p>`
         : "") +
       (ch.topic_review_required
         ? "<p>Тема требует проверки. Её можно уточнить ниже.</p>"
@@ -781,10 +877,12 @@
   }
 
   function closeDetail(render = true) {
+    const restoreFocus=!el.detail.hidden&&el.detail.contains(document.activeElement);
     el.detail.hidden = true;
     state.selectedId = null;
     map.setSelected(null);
     if (render) renderList();
+    if(restoreFocus)document.getElementById('search-toggle').focus({preventScroll:true});
   }
 
   function showFatal(msg) {

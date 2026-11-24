@@ -24,11 +24,13 @@ from .public_catalogues import (
     PublicHTMLClient,
     SourceBudgetExhausted,
     SourceError,
+    SourceNotFound,
     page_url,
     parse_official_links,
     parse_tgramsearch_detail,
     parse_tgramsearch_listing,
     parse_tlgrm_listing,
+    parse_zenodo_channels,
     public_username,
 )
 from .scraper import ScrapeError, fetch_channel_html
@@ -71,8 +73,24 @@ def build_jobs(plan, allow_other=False):
             or job["pages"] < 1
         ):
             raise ValueError("План содержит некорректную фазу или число страниц")
-        if job["source"] not in ("official_website", "tgramsearch", "tlgrm"):
+        if job["source"] not in (
+            "official_website",
+            "tgramsearch",
+            "tlgrm",
+            "zenodo_csv",
+        ):
             raise ValueError("План содержит неизвестный источник")
+        if job["source"] == "zenodo_csv" and (
+            job["url"]
+            != "https://zenodo.org/records/16949193/files/channels.csv?download=1"
+            or job["pages"] != 1
+            or job.get("md5") != "489228e91c8ece952a5d1336df4be570"
+        ):
+            raise ValueError(
+                "Zenodo: нужен фиксированный channels.csv с контрольной суммой"
+            )
+        if job.get("require_discovery_hint") and not plan.get("admission_patterns"):
+            raise ValueError("Для тематического поиска нужны admission_patterns")
     return sorted(jobs, key=lambda j: j["phase"] != "priority")
 
 
@@ -87,6 +105,13 @@ def priority_tier(prediction, plan):
     )
 
 
+def minimum_audience(plan):
+    return max(
+        config.MIN_CHANNEL_SUBSCRIBERS,
+        int(plan.get("minimum_subscribers", config.MIN_CHANNEL_SUBSCRIBERS)),
+    )
+
+
 def decision(meta, plan, phase, rules):
     """Рубрика/запрос источника не подменяют содержимое актуального профиля."""
     if (
@@ -95,7 +120,7 @@ def decision(meta, plan, phase, rules):
         or meta.get("description") is None
     ):
         return "unverified", None
-    if meta["subscribers"] < config.MIN_CHANNEL_SUBSCRIBERS:
+    if meta["subscribers"] < minimum_audience(plan):
         return "below_minimum", None
     text = str(meta["name"]) + " " + str(meta["description"])
     if re.search(
@@ -105,9 +130,33 @@ def decision(meta, plan, phase, rules):
     ):
         return "deferred_risk", None
     prediction = resolve_topic(meta, **rules)
+    if plan.get("admission_patterns"):
+        matches = any(
+            re.search(pattern, text, re.I) for pattern in plan["admission_patterns"]
+        )
+        allowed = priority_tier(prediction, plan) <= 1
+        strong_unknown = prediction["subcategory"] == "other" and any(
+            re.search(pattern, text, re.I)
+            for pattern in plan.get("strong_unknown_patterns", [])
+        )
+        if not matches or not (allowed or strong_unknown):
+            return "deferred_topic", prediction
+        if strong_unknown:
+            # Temporary discovery hint only, never a confirmed V11/11v2 label.
+            prediction = {
+                **prediction,
+                "subcategory": "military"
+                if re.search(plan["strong_unknown_patterns"][0], text, re.I)
+                else "general",
+                "topic_review_required": True,
+            }
+        if plan.get("allow_profile_review"):
+            return "eligible", prediction
     if prediction["subcategory"] == "other" or prediction["topic_review_required"]:
         return "deferred_review", prediction
-    if phase == "priority" and priority_tier(prediction, plan) > 1:
+    if (
+        phase == "priority" or plan.get("restrict_topics_all_phases")
+    ) and priority_tier(prediction, plan) > 1:
         return "deferred_topic", prediction
     return "eligible", prediction
 
@@ -241,13 +290,15 @@ def revisit(record, phase):
 class ProfileClaims:
     """Один запрос профиля на username/фазу, включая дубли разных карточек."""
 
-    def __init__(self, known, processed, maximum):
+    def __init__(self, known, processed, maximum, stop_on_block=False):
         self.known = set(known)
         self.processed = dict(processed)
         self.maximum = maximum
         self.used = 0
         self.claimed = set()
         self.lock = threading.Lock()
+        self.stop_on_block = stop_on_block
+        self.stop_event = threading.Event()
 
     def claim(self, username, phase):
         with self.lock:
@@ -289,7 +340,13 @@ def _verify(card, client, claims, phase):
         outcome = claims.claim(username, phase)
         if outcome:
             return {**result, "outcome": outcome}
-        html = fetch_channel_html(username, profile=True)
+        html = (
+            fetch_channel_html(
+                username, profile=True, attempts=1, stop_event=claims.stop_event
+            )
+            if claims.stop_on_block
+            else fetch_channel_html(username, profile=True)
+        )
         soup = BeautifulSoup(html, "html.parser")
         if soup.select_one(".tgme_badge_scam, .tgme_badge_fake"):
             return {**result, "outcome": "deferred_risk"}
@@ -306,11 +363,21 @@ def _verify(card, client, claims, phase):
             "outcome": "verified_response",
         }
     except ScrapeError as exc:
+        blocked = claims.stop_on_block and getattr(exc, "status_code", None) in (
+            403,
+            429,
+        )
+        if blocked:
+            claims.stop_event.set()
         return {
             **result,
             "outcome": "unavailable" if exc.permanent else "retry",
             "error": str(exc)[:250],
+            "telegram_blocked": blocked,
+            "retry_after_seconds": getattr(exc, "retry_after", None),
         }
+    except SourceNotFound as exc:
+        return {**result, "outcome": "source_not_found", "error": str(exc)[:250]}
     except (requests.RequestException, SourceError) as exc:
         return {**result, "outcome": "retry", "error": str(exc)[:250]}
 
@@ -334,8 +401,12 @@ class GrowthRun:
         self.state, self.state_file = state, state_file
         self.target, self.workers = target, workers
         self.current = _channel_count(conn)
+        self.minimum = minimum_audience(plan)
         self.claims = ProfileClaims(
-            db.get_known_usernames(conn), state["processed"], max_profiles
+            db.get_known_usernames(conn),
+            state["processed"],
+            max_profiles,
+            plan.get("stop_on_telegram_block", False),
         )
         self.rules = load_classification_rules()
         self.client = PublicHTMLClient(
@@ -351,6 +422,7 @@ class GrowthRun:
     def budget(self):
         return (
             self.current >= self.target
+            or self.claims.stop_event.is_set()
             or self.claims.used >= self.claims.maximum
             or self.client.requests >= self.client.max_requests
             or time.monotonic() - self.started >= self.max_seconds
@@ -410,6 +482,13 @@ class GrowthRun:
         if outcome == "budget_deferred":
             return False
         if outcome == "retry":
+            if result.get("telegram_blocked"):
+                self.state["stop_reason"] = result.get("error", "Ограничение Telegram")
+                self.state["telegram_retry_not_before"] = max(
+                    self.state.get("telegram_retry_not_before", 0),
+                    time.time()
+                    + max(30, float(result.get("retry_after_seconds") or 0)),
+                )
             self.state["retry_cards"][key] = {
                 **card,
                 "username": username,
@@ -434,9 +513,7 @@ class GrowthRun:
                 if not stored:
                     outcome = "existing_or_historical"
                 elif outcome == "eligible" and self.current < self.target:
-                    if import_verified_new(
-                        self.conn, username, config.MIN_CHANNEL_SUBSCRIBERS
-                    ):
+                    if import_verified_new(self.conn, username, self.minimum):
                         self.current += 1
                         outcome = "imported"
                         self.topic_counts[prediction["subcategory"]] += 1
@@ -472,7 +549,11 @@ class GrowthRun:
         self.since_save += 1
         if self.since_save >= 10:
             self.save()
-        if outcome == "imported" and self.counts["imported"] % 50 == 0:
+        if (
+            self.plan.get("auto_export", True)
+            and outcome == "imported"
+            and self.counts["imported"] % 50 == 0
+        ):
             exporter.export_channels(self.conn, db)
             self.conn.commit()
         return True
@@ -524,17 +605,45 @@ class GrowthRun:
             if self.budget():
                 return
             try:
-                html = self.client.get(url, max_age_hours=24)
+                if job["source"] == "zenodo_csv":
+                    # Immutable public metadata only, never the multi-GB post files.
+                    html = self.client.get(
+                        job["url"], max_age_hours=24 * 365, max_bytes=20_000_000
+                    )
+                    if hashlib.md5(html.encode("utf-8")).hexdigest() != job["md5"]:
+                        raise SourceError(
+                            "Zenodo: контрольная сумма channels.csv не совпала"
+                        )
+                else:
+                    html = self.client.get(url, max_age_hours=24)
                 parser = {
                     "tgramsearch": parse_tgramsearch_listing,
                     "tlgrm": parse_tlgrm_listing,
                     "official_website": parse_official_links,
+                    "zenodo_csv": parse_zenodo_channels,
                 }[job["source"]]
                 listing = (
                     parser(html, url)
                     if job["source"] == "official_website"
-                    else parser(html, url, config.MIN_CHANNEL_SUBSCRIBERS)
+                    else parser(html, url, self.minimum)
                 )
+                if job.get("require_discovery_hint"):
+                    # Historical titles/descriptions only narrow discovery. Fresh
+                    # Telegram metadata still makes the admission decision.
+                    listing.cards = [
+                        card
+                        for card in listing.cards
+                        if any(
+                            re.search(
+                                pattern,
+                                str(card.get("name", ""))
+                                + " "
+                                + str(card.get("description", "")),
+                                re.I,
+                            )
+                            for pattern in self.plan["admission_patterns"]
+                        )
+                    ]
                 log.info(
                     "%s · %s · страница %d · кандидатов %d",
                     phase,
@@ -587,10 +696,13 @@ class GrowthRun:
                 if self.budget():
                     break
                 self.collect_job(job)
-        exporter.export_channels(self.conn, db)
-        self.conn.commit()
+        if self.plan.get("auto_export", True):
+            exporter.export_channels(self.conn, db)
+            self.conn.commit()
         status = (
-            "target_reached"
+            "telegram_blocked"
+            if self.claims.stop_event.is_set()
+            else "target_reached"
             if self.current >= self.target
             else "budget_exhausted"
             if self.budget()
@@ -626,6 +738,8 @@ def run(
     max_profiles=6000,
     max_requests=12000,
     max_minutes=180,
+    minimum_subscribers=None,
+    resume_after_block=False,
 ):
     if (
         not 1 <= workers <= 8
@@ -637,6 +751,11 @@ def run(
         raise ValueError("Некорректные ограничения запуска")
     plan_bytes = Path(plan_path).read_bytes()
     plan = json.loads(plan_bytes)
+    if minimum_subscribers is not None:
+        if type(minimum_subscribers) is not int or minimum_subscribers < 1:
+            raise ValueError("Некорректный порог аудитории")
+        plan["minimum_subscribers"] = minimum_subscribers
+    minimum = minimum_audience(plan)
     jobs = build_jobs(plan, allow_other)
     state_file = Path(state_path)
     if not state_file.is_absolute():
@@ -654,7 +773,8 @@ def run(
                 priority_topics=plan["priority_topics"],
                 adjacent_topics=plan["adjacent_topics"],
                 allow_other=allow_other,
-                minimum_subscribers=config.MIN_CHANNEL_SUBSCRIBERS,
+                minimum_subscribers=minimum,
+                auto_export=plan.get("auto_export", True),
             )
         with conn.cursor() as cursor:
             cursor.execute("SELECT pg_try_advisory_lock(%s)", (LOCK_ID,))
@@ -668,10 +788,20 @@ def run(
             if (
                 state.get("version") != STATE_VERSION
                 or state.get("plan_sha256") != fingerprint
-                or state.get("minimum_subscribers") != config.MIN_CHANNEL_SUBSCRIBERS
+                or state.get("minimum_subscribers") != minimum
             ):
                 raise ValueError(
                     "План, формат состояния или порог изменились: используйте новый --state"
+                )
+            if state.get("status") == "telegram_blocked" or state.get("stop_reason"):
+                if not resume_after_block:
+                    raise ValueError(
+                        "Сбор остановлен ограничением Telegram. После восстановления доступа используйте --resume-after-block с тем же --state, не новую контрольную точку."
+                    )
+                if time.time() < state.get("telegram_retry_not_before", 0):
+                    raise ValueError("Не истёк Retry-After/защитная пауза Telegram")
+                state.setdefault("block_resumptions", []).append(
+                    dict(at=utcnow(), reason=state.pop("stop_reason", None))
                 )
         else:
             state = dict(
@@ -680,7 +810,7 @@ def run(
                 started_at=utcnow(),
                 initial_count=current,
                 plan_sha256=fingerprint,
-                minimum_subscribers=config.MIN_CHANNEL_SUBSCRIBERS,
+                minimum_subscribers=minimum,
                 completed_jobs={},
                 completed_pages={},
                 processed={},
@@ -704,7 +834,11 @@ def run(
     except BaseException:
         conn.rollback()
         if runner is not None:
-            runner.save("interrupted")
+            runner.save(
+                "telegram_blocked"
+                if runner.claims.stop_event.is_set()
+                else "interrupted"
+            )
         raise
     finally:
         if locked:

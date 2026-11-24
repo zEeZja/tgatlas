@@ -1,0 +1,16 @@
+{
+  "format": "atlas-classification-evaluation-v1",
+  "split": "development",
+  "label_provenance": {"topic":"Примеры тематических ошибок владельца; допустимые границы подтем интерпретированы разработчиком.","geography":"Предложения разработчика по направленности; требуют отдельного подтверждения владельца."},
+  "note": "Примеры владельца использованы при проектировании. НЕ независимый тест и НЕ источник ручных правил по username.",
+  "cases": [
+    {"username":"abiregbel","topics":["v11_entrepreneurship","v11_political_processes"],"groups":["v11_business_work","v11_politics_world"],"allow_group_only":true,"scope":"region","country":"RU","regions":["Белгородская область"]},
+    {"username":"dolgopacity","topics":["v11_general_news","v11_urban_life"],"groups":["v11_news_society"],"scope":"region","country":"RU","regions":["Московская область"]},
+    {"username":"eduardinvest","topics":["v11_crypto_markets","v11_blockchain_technology"],"groups":["v11_crypto"],"scope":"nonlocal"},
+    {"username":"rybar","topics":["v11_military_affairs"],"groups":["v11_politics_world"],"scope":"global"},
+    {"username":"bankuralsibnews","topics":["v11_banking_payments"],"groups":["v11_finance"],"scope":"nonlocal"},
+    {"username":"dmigolub","topics":["v11_macroeconomics"],"groups":["v11_economy"],"allow_group_only":true},
+    {"username":"findir_pro","topics":["v11_management","v11_accounting_taxes"],"groups":["v11_business_work"],"allow_group_only":true},
+    {"username":"gin_bataisk","topics":["v11_medicine"],"groups":["v11_health"],"scope":"region","country":"RU","regions":["Ростовская область"]}
+  ]
+}

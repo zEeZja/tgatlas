@@ -1,0 +1,32 @@
+name: Ошибка
+description: Воспроизводимая проблема в карте, сборщике или публикации
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Не прикладывайте .env, пароли, cookies, Telegram-сессии или сырые рабочие данные."
+  - type: input
+    id: version
+    attributes:
+      label: Версия и окружение
+      placeholder: "0.8.0, Windows 11, Chrome, Python 3.12"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      description: Команда или последовательность действий; укажите HTTP или file:// для карты.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Ожидаемый и фактический результат
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Безопасный фрагмент журнала или скриншот
+      description: Удалите персональные данные и секреты перед отправкой.

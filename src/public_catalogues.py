@@ -1,7 +1,9 @@
 """Bounded, robots-aware public HTML discovery. No login or private API calls."""
 
 from dataclasses import dataclass
+import csv
 import hashlib
+import io
 import ipaddress
 import re
 import threading
@@ -28,6 +30,12 @@ class SourceBlocked(SourceError):
     pass
 
 
+class SourceNotFound(SourceError):
+    """Карточка источника отсутствует (404/410), повтор не требуется."""
+
+    pass
+
+
 class SourceBudgetExhausted(SourceError):
     pass
 
@@ -36,6 +44,46 @@ class SourceBudgetExhausted(SourceError):
 class Listing:
     cards: list
     last_page: int = 1
+
+
+def parse_zenodo_channels(text, url, minimum=1000):
+    """Открытый channels.csv: только подсказки поиска, без меток исследования."""
+    reader = csv.DictReader(io.StringIO(text.lstrip("\ufeff"), newline=""))
+    required = {"username", "title", "about", "participants_count", "fake"}
+    if not required.issubset(reader.fieldnames or []):
+        raise SourceError("Zenodo: неизвестная схема channels.csv")
+    rows = {}
+    try:
+        for index, row in enumerate(reader):
+            if index >= 100_000:
+                raise SourceError("Zenodo: превышен предел 100000 строк")
+            if None in row or any(row.get(field) is None for field in required):
+                raise SourceError("Zenodo: повреждённая строка CSV")
+            if row.get("fake", "").strip().lower() in ("true", "1"):
+                continue
+            raw = row.get("username") or ""
+            username = normalize_username(raw.strip())
+            if not username or username.endswith("bot"):
+                continue
+            count = parse_count(row.get("participants_count"))
+            if count is not None and count < minimum:
+                continue
+            rows[username] = dict(
+                username=username,
+                source="zenodo_csv",
+                source_url=url,
+                name=row.get("title") or username,
+                description=row.get("about") or "",
+                catalog_subscribers=count,
+            )
+    except csv.Error as exc:
+        raise SourceError("Zenodo: повреждён CSV") from exc
+    return Listing(
+        sorted(
+            rows.values(),
+            key=lambda r: (-(r["catalog_subscribers"] or 0), r["username"]),
+        )
+    )
 
 
 def public_username(href):
@@ -208,7 +256,7 @@ class PublicHTMLClient:
             raise SourceError("IP-адреса не допускаются в качестве источников")
         return host
 
-    def _request(self, url):
+    def _request(self, url, *, max_bytes=2_000_000):
         host = self._validate_url(url)
         while True:
             with self.lock:
@@ -246,8 +294,8 @@ class PublicHTMLClient:
         try:
             for chunk in response.iter_content(65536):
                 data.extend(chunk)
-                if len(data) > 2_000_000:
-                    raise SourceError("HTML источника превышает 2 MB")
+                if len(data) > max_bytes:
+                    raise SourceError(f"Ответ источника превышает {max_bytes} байт")
         finally:
             response.close()
         return (
@@ -256,7 +304,9 @@ class PublicHTMLClient:
             data.decode("utf-8", errors="replace"),
         )
 
-    def get(self, url, *, max_age_hours=168):
+    def get(self, url, *, max_age_hours=168, max_bytes=2_000_000):
+        if type(max_bytes) is not int or not 1 <= max_bytes <= 20_000_000:
+            raise ValueError("Лимит ответа источника: 1–20000000 байт")
         host = self._validate_url(url)
         # Check robots even for cached pages; no public/private API guessing.
         with self.robot_lock:
@@ -291,10 +341,17 @@ class PublicHTMLClient:
             target.exists()
             and 0 <= time.time() - target.stat().st_mtime < max_age_hours * 3600
         ):
-            return target.read_text(encoding="utf-8")
+            if target.stat().st_size > max_bytes:
+                raise SourceError("Кеш источника превышает лимит ответа")
+            with target.open(encoding="utf-8", newline="") as stream:
+                return stream.read()
         current = url
         for _ in range(4):
-            status, headers, text = self._request(current)
+            status, headers, text = (
+                self._request(current)
+                if max_bytes == 2_000_000
+                else self._request(current, max_bytes=max_bytes)
+            )
             if status in (301, 302, 303, 307, 308):
                 redirected = urljoin(current, headers.get("Location", ""))
                 if urlparse(redirected).netloc != urlparse(current).netloc:
@@ -305,6 +362,8 @@ class PublicHTMLClient:
                     raise SourceBlocked("Перенаправление запрещено robots.txt")
                 current = redirected
                 continue
+            if status in (404, 410):
+                raise SourceNotFound(f"{host}: HTTP {status}")
             if status != 200:
                 raise SourceError(f"{host}: HTTP {status}")
             if any(

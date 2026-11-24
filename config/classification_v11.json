@@ -1,0 +1,28 @@
+{
+  "format": "atlas-primary-classification-v11",
+  "enabled": true,
+  "taxonomy": "config/taxonomy_v11_draft.json",
+  "taxonomy_approval": "owner_approved_2026-11-19",
+  "engine": "semantic-v11",
+  "encoder": {
+    "name": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimension": 384,
+    "pooling": "mean",
+    "prefix": "query: ",
+    "precision": "fp32",
+    "max_tokens": 256,
+    "batch_size": 16,
+    "threads": 4
+  },
+  "posts": 8,
+  "minimum_posts": 3,
+  "post_characters": 1000,
+  "content_weight": 0.75,
+  "evidence_ttl_hours": 168,
+  "collection": {"pages": 1, "requests": 3000, "interval_seconds": 6, "hours": 8},
+  "geography": {"foreign_level": "country", "russia_level": "region", "maximum_candidates": 8},
+  "calibration": "not_independently_validated",
+  "publication": "explicit_apply_candidate_labels_never_confirmed",
+  "results": "reports/classification-v11/catalog.json"
+}

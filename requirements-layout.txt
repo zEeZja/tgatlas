@@ -1,0 +1,3 @@
+# Optional offline semantic atlas, never needed by export/API/browser.
+-r requirements-classification.txt
+umap-learn>=0.5.9,<0.6

@@ -56,6 +56,16 @@ def main():
         "--max-minutes", type=int, default=180, help="бюджет времени, минут"
     )
     parser.add_argument(
+        "--minimum-subscribers",
+        type=int,
+        help="порог новых каналов; изменение требует нового --state",
+    )
+    parser.add_argument(
+        "--resume-after-block",
+        action="store_true",
+        help="явное продолжение того же --state после восстановления доступа; не отменяет Retry-After",
+    )
+    parser.add_argument(
         "--log",
         type=Path,
         help="дополнительный журнал UTF-8; дополняется при продолжении",
@@ -97,6 +107,8 @@ def main():
                         "imported_topics",
                         "imported_sources",
                         "updated_at",
+                        "stop_reason",
+                        "telegram_retry_not_before",
                     )
                 },
                 ensure_ascii=False,
@@ -116,6 +128,8 @@ def main():
         max_profiles=args.max_profiles,
         max_requests=args.max_requests,
         max_minutes=args.max_minutes,
+        minimum_subscribers=args.minimum_subscribers,
+        resume_after_block=args.resume_after_block,
     )
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if not args.apply or result["status"] == "target_reached" else 1

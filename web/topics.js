@@ -27,7 +27,7 @@
       .map((line) =>
         line
           .split(
-            /(?:по (?:вопросам )?(?:реклам|сотрудничеств)|разместить реклам|реклам(?:а|ный отдел)\s*[:👉📩]|для связи\s*[:👉]|обратная связь\s*[:👉]|регистраци[яи] в|зарегистрирован|заявление (?:на|ркн)|реестр ркн|\bркн\s*[:№]|\bpr\s*:)/iu,
+            /(?:по (?:вопросам )?(?:реклам|сотрудничеств)|разместить реклам|реклам(?:а|ный отдел)\s*[:👉📩]|для связи\s*[:👉]|обратная связь\s*[:👉]|регистраци[яи] в|зарегистрирован|заявление (?:на|ркн)|реестр ркн|(?<![\p{L}\p{N}_])ркн\s*[:№]|\bpr\s*:)/iu,
           )[0]
           .replace(
             /https?:\/\/\S+|\b(?:t\.me|vk\.com|www\.)\/??\S*|[\w.+-]+@[\w.-]+\.\w+|@[\w]+/giu,
@@ -657,7 +657,7 @@
       geography_source: source,
     };
   }
-  function enrich(channel) {
+  function enrich(channel, options = {}) {
     const username = String(channel.username || "")
       .replace(/^@/, "")
       .toLowerCase();
@@ -667,7 +667,7 @@
     const declared = canonical(original);
     const inferred = classify(channel.name, username, channel.description);
     let topic, source;
-    if (byId[local[username]]) {
+    if (!options.ignoreLocal && byId[local[username]]) {
       topic = local[username];
       source = "local";
     } else if (byId[taxonomy.overrides[username]]) {
